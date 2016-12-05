@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>ポリゴンオブジェクト</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>ポリゴンオブジェクト</h2>
+
+          <h2><img src="Polygonobjecticon.jpg" alt="" height="40" width="40" border="0"></h2>
+        </div>
+
+        <p>ポリゴンオブジェクトは、Cheetah3D のシーンで表面を持つすべてのオブジェクトの元になるものです。パラメトリックポリゴンオブジェクトと、クリエータオブジェクトは、このオブジェクトに属します。このヘルプファイルでは、ポリゴンオブジェクトから派生した他のオブジェクトと混同しないように、このポリゴンオブジェクトは、しばしばロウ・ポリゴンオブジェクト (a raw Polygonobject) と呼ばれます。ポリゴンオブジェクトは、三角形（３点）、四角形（４点）と、多角形（ N 点、自然数 N）で構成されます。</p>
+
+        <p><i>注意！ ポリゴンオブジェクトは、ポリゴンツールでメッシュを編集できる唯一のオブジェクトです。その他のオブジェクトのメッシュを編集したい場合は、最初に編集可能に（ "編集可能にする" を実行）しなければなりません。</i><br>
+        （訳注：下の画像の 'Info' 欄は、現バージョンでは削除されています。ポリゴン数やポイント数を確認するには、"オブジェクト情報を見る" を使用します。）</p>
+
+        <div align="center">
+          <p><img src="PolygonobjectProps.jpg" alt="" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p>メニューコマンドから "オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴンオブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴンオブジェクト" を選択することによって、直接ポリゴンオブジェクトを作成する事ができます。このオブジェクトは空で、 ポイントやポリゴンを含んでいません。<b><i>ポイントを挿入</i></b>ツールを使用して、オブジェクトにポイントを挿入する事ができます。その後で、<b><i>ポリゴンの作成</i></b>ツールや<i><b>帯状ポリゴンの作成</b></i> ツールを使用して、これらのポイントを繋いでポリゴンメッシュを作成できます。<br>
+          （訳注：現バージョンでは、<b><i>ポリゴンの作成</i></b>ツールで、直接ポリゴンを作成していけるので、あらかじめポイントを作成しておく必要はありません。また、<i><b>帯状ポリゴンの作成</b></i>ツールは、<b><i>ポリゴンの作成</i></b>ツールに統合されています。）</p>
+
+          <p>またパラメトリックポリゴンオブジェクト（立方体、球体、など）や、クリエータオブジェクト（ブーリアン、旋盤、など）を元に作成する事も可能です。ただ、これらのオブジェクトのメッシュは、そのままでは編集できる状態ではありません。ポリゴンツールで直接このメッシュを編集したい場合、オブジェクトを編集可能にしなければなりません。このオブジェクトを選択し、メニューコマンドから "オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">編集可能にする" を選択する事で、これができるようになります。パラメトリックポリゴンオブジェクトや、クリエータオブジェクトは、設定可能なパラメータを失い、編集可能なロウ・ポリゴンオブジェクトに変化します。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="PolygonobjectMenu.jpg" alt="" height="187" width="187" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p>オブジェクトブラウザでオブジェクトアイコンをダブルクリックする事で、パラメトリックオブジェクトを編集可能にする事も可能です。</p>
+
+          <p><b>Normals（法線）<br></b> すべてのオブジェクトには、"スムース" というグループのプロパティがあります。これらのプロパティで、法線計算のアルゴリズムをコントロールする事ができます。</p>
+
+          <ul>
+            <li>
+              <b><i>タイプ:</i></b>
+
+              <ul>
+                <li><b><i>フラット:</i></b> ポリゴン面の各頂点の法線は、ちょうどポリゴン面の法線になります。</li>
+
+                <li><i><b>フォン:</b></i> すべてのポリゴンの角の法線は、そのポイントを共有するすべてのポリゴンの法線の平均によって計算されます。このアルゴリズムが望ましくない不自然な結果を生み出すかもしれないので、注意してください。（下の図を参照してください。）</li>
+
+                <li><b><i>コンストレイン:</i></b> 各ポリゴンが作る２つの平面の角度が設定より小さい場合に、そのポリゴンの法線を平均します。この操作は、フォンの設定より計算にコストがかかります。必要な場合のみ使用するように注意してください。</li>
+              </ul>
+            </li>
+
+            <li><b><i>スムースアングル:</i></b> コンストレインの場合の計算に使われる角度を決定します。この値を変えて遊んでみてください、ポリゴンオブジェクトへの効果がすぐに解るでしょう。</li>
+          </ul>
+
+          <div align="center">
+            <p><img src="SmoothTagUnConstrained.jpg" alt="" height="150" width="150" border="0"><img src="SmoothTagConstrained.jpg" alt="" height="150" width="150" border="0"></p>
+
+            <p>フォンに設定した円柱（左）コンストレインに設定した円柱（右）</p>
+          </div>
+
+          <p><b>Creases（ハードエッジ）<br></b> ハードエッジは、サブディビジョンで表面が滑らかに分割される場合に鋭い部分を作ります。Cheetah3D では、エッジモードでエッジを選択し、メニューコマンドから "選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ハードエッジの設定/解除" を選択する事で、メッシュのエッジにハードエッジとして印を付ける事ができます。 ハードエッジをとして印を付けられたエッジは、エッジモードで（もしそれが選択中でなければ）青く表示されるでしょう。ハードエッジの印を外すためには、この "選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ハードエッジの設定/解除" コマンドを再度使用します。<a href="../../Tools/Polygon/SubdivideTool/SubdivideTool.html">細分化 キャトマルクラーク</a>やサブディビジョンモディファイアを使うと、印を付けられたエッジモードはハードエッジとして操作されます。どのようにハードエッジが細分化 キャトマルクラークに影響するかの例として、下のイメージを見てください。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="Polygonobject1.jpg" alt="" height="310" width="187" border="0"> <img src="Polygonobject2.jpg" alt="" height="310" width="188" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p><b>Seams（切れ目）</b><br>
+          切れ目は、<a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">UV 展開</a>ツールでポリゴンオブジェクトの UV を展開するために使われるエッジです。例えば、球体を UV 展開したい場合にはUV 展開ツールがどこで閉じたポリゴンメッシュの UV マップを分割するのかわかるように、切れ目を割り当てなければなりません。そうでなければ球体の UV マップは、展開されずにただ押しつぶされたようになるでしょう。<br>
+          切れ目は、<a href="../../UserInterface/3dView/3dView.html">3D ビュー</a>と <a href="../../UserInterface/UVEditor/UVEditor.html">UV エディタ</a>で緑色でハイライトされます。選択されたエッジの切れ目の印を付ける／外すには、"選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">切れ目の設定/解除"コマンドを使います。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="Polygonobject3.jpg" alt="" height="300" width="305" border="0"> <img src="Polygonobject4.jpg" alt="" height="300" width="305" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p><b>Pinned UV（UV ピン）<br></b> UV ピンは、<a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">UV 展開</a>ツールで変更されない UV 座標です。またこれらは、<a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">UV 展開</a>ツールの結果に影響します。特に切れ目や UV ピンとして設定されたポイントは、展開された UV メッシュを、望むような形に伸ばすヒントになるでしょう。選択されたポイントを UV ピンとして設定するには、UV エディタでコンテキストメニュー（右クリックメニュー）の "UV ピンの設定/解除" コマンドを使います。UV ピンのポイント座標は黄色でハイライトされます。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="Polygonobject5.jpg" alt="" height="300" width="305" border="0"> <img src="Polygonobject6.jpg" alt="" height="300" width="305" border="0"><br>
+          左は UV ピンを使わずに展開された球体の UV マップ<br>
+          右は 4 つの UV ピンを使って展開した結果</p>
+        </div>
+
+        <div align="left">
+          <p><b>複数のポリゴン選択セット<br></b> すべてのポリゴンオブジェクトは、全部で 16 の独立したポリゴン選択セットを持っています。プロパティの<i><b>ポリゴン選択セット</b></i>で、これらの選択を切り替える事ができます。</p>
+
+          <p>これらの複数のポリゴン選択セットは、通常１つのメッシュ（ポリゴンオブジェクト）に複数のマテリアルを割り当てるために使用します。（上の<b>Creases（ハードエッジ）</b> のイメージのように）茶色のマテリアルを "ポリゴン選択セット - 1" へ、灰色のマテリアルを "ポリゴン選択セット - 2" へ適用する事ができます。メッシュ（ポリゴンオブジェクト）ごとに複数のマテリアルを使用する方法については、<a href="../../Tags/MaterialTag/MaterialTag.html">マテリアル</a>の項目も参照してください。</p>
+
+          <p>ポリゴンツールは、常に現在のポリゴン選択セットを使用します。通常は、ポリゴンツールによってポリゴン選択セットの選択範囲が変更される事はありません。（訳注：ポリゴンの数を変更するようなツールについては、それぞれのオプションを確認してください。）</p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>ポリゴン選択セット:</b></i> アクティブなポリゴン選択範囲の番号</li>
+
+          <li><i><b>polygons:</b></i> メッシュの三角ポリゴンと四角ポリゴンの数</li>
+
+          <li><i><b>points:</b></i> メッシュのポイント数</li>
+        </ul>
+
+        <p>（訳注：現バージョンでは、プロパティ欄にポリゴン数、ポイント数の情報は表示されません。これらの情報を確認するには、"オブジェクト情報を見る" を使用してください。）</p>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

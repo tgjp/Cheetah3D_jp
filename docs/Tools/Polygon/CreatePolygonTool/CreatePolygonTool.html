@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>ポリゴンの作成 ツール</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>ポリゴンの作成 ツール</h2>
+        </div>
+
+        <p>ポリゴンの作成 ツールは、ゼロからポリゴンを組み立てるために必要になるツールです。既存のポイントや、新しいポイントを使用して新しいポリゴンを作成する事ができます。</p>
+
+        <p><i>注意：Cheetah3D は、あなたが作成するポリゴンのワインディング（ポイントの作成順序）をもとにそのポリゴンの法線（ポリゴンの向き）を決定します。作成したポリゴンの法線が作成したビューポート（視点）の方を向いているためには、常にポイントの作成順序をビューポートに対して逆時計回りで作成します。もしそうでなければ、新しく作られたポリゴンは、（視点に対して法線が逆向きになり）ビューポート上で暗く表示されるでしょう。</i></p>
+
+        <p><b><i>編集モード<br></i></b> ポリゴンの作成 ツールは、ポイントモード、 エッジモード、 または ポリゴンモード のいずれかのモードで使用する事ができ、<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>にのみ適用する事ができます。</p>
+
+        <ul>
+          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
+          いくつかのポイントを持つローポリゴンオブジェクトが、既にあるとします。新しいポリゴンを作成するには、ただ3D ビュー上で、新しいポリゴンの頂点になるポイントをクリックして指定するだけです。クリックされ選択されたポイントは青く表示され、新しいエッジがオレンジで表示されます。全ての頂点をクリックしてから、ポリゴンの作成を確定するために、もう一度<b>はじめの頂点</b>をクリックする必要があります。代わりに、最後の頂点の選択時に<b>ダブルクリック</b>する事でポリゴンの作成する事もできます。<br>
+          ポリゴンの作成 ツールで、ポリゴンの作成するために既存のポイントではなく全く新しいポイントを作成するには、3D ビュー上の何も無い空間をクリックします。</li>
+        </ul>
+
+        <div align="center">
+          <p><img src="CreatePolygonTool1.jpg" alt="" border="0"> <img src="CreatePolygonTool2.jpg" alt="" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p><b>補助キー</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>ESC:</i></b> 選択済みのポイントをリセットします</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li>
+            <i><b>タイプ:</b></i> このプロパティーで、ポリゴンの作成 ツールの作成タイプとモードを選択する事ができます。
+
+            <ul>
+              <li>N ゴン: （任意のエッジを持つ）任意の多角形を作成します。</li>
+
+              <li>四角ポリゴン: ４角形を作成します。このタイプの場合、まず最初には選択した４点が４画ポリゴンを作成に使用されますが、次には前に指定した最後の２点がツールによって次の作成ポリゴンの２点として記憶され、新しく２点を追加するだけで次のポリゴンを作成する事ができます。</li>
+
+              <li>三角ポリゴン: 四角ポリゴンと同様に、３画ポリゴンを作成します。</li>
+            </ul>
+          </li>
+
+          <li>
+            <b><i>新規ポイント:</i></b>
+
+            <ul>
+              <li><i>カメラ平面:</i> 新しいポイントは、ビューのカメラ面（視点から一定の距離にある仮想面）に作成されます。</li>
+
+              <li><i>メイン平面:</i> 新しいポイントは、グローバルな XY / YZ / XZ 面の内、視点に対して一番直行している面に作成されます。</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

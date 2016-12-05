@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>ライト</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>ライト</h2>
+        </div>
+
+        <div align="left">
+          <p>Cheetah3D のすべての新規ドキュメントは、すでに１つのデフォルトのライトを持っています、カメラライトです。このカメラライトは、カメラ位置の減衰が一定の点ライトです。このカメラライトは、オブジェクトブラウザには表示されません。カメラライトは大抵のモデリング作業には充分でしょう。</p>
+
+          <p>しかしながら、独自のライティング環境を作成したい場合には、ライトオブジェクトを使う必要があります。シーンには好きなだけライトを追加する事が出来ますが、3D ビュー上でライティングに使用されるのは、シーンの最初の 8 個のライトのみになります。レンダラーはすべてのライトを使用してレンダリングします。（訳注：これは追加した順番ではなく、オブジェクトブラウザの上から 8 個のライト（カメラライトが On の場合、カメラライトも含む）が、3D ビュー上でのプレビューに使用されるという事になります。）</p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>軸:</b></i> 光りが向けられる方向軸を設定します。もしライトをアニメーションさせる予定なら、おそらく"-Z" 方向に設定する方がいいでしょう。（訳注：これはその他の "ターゲット" や "スプライントラッキング" などのアニメーション用のタグと共に使用する場合の事でしょう。）</li>
+
+          <li>
+            <i><b>ライトタイプ:</b></i> Cheetah3D には設定可能な各種のライトタイプがあります。
+
+            <ul>
+              <li><i><b>環境光:</b></i> このタイプを使って、環境光をシーンに追加します。ライトが環境光の場合、オブジェクトの各部分がライトに当たっていなくても明るくなります。</li>
+
+              <li><b><i>面ライト:</i></b> 面ライトは、四角形のライトをシミュレートします。シーン上のいくつかのピクセルが面ライトによって部分的にしか照らされないという事実に従って、面ライトはこれらのピクセルで、点ライトのようなはっきりした影ではなく、柔らかい影を作ります。（訳注：バージョン 4.2 から、Cheetha3D のライトシステムは改善され、点ライトの場合でもソフトシャドウを作成する事が可能になりました。）</li>
+
+              <li><b><i>平行ライト:</i></b> 平行ライトは、平行に進む光りを放ちます。太陽が地球から遠く離れているという事実によって、太陽から放たれる光りが、地球上では平行であるように考えられます。平行ライトオブジェクトは、太陽によって照らされている自然の屋外シーンのためのライトとして使う事ができるでしょう。（訳注：現バージョンでは太陽光や空をシミュレートするスカイライトが追加されているので、屋外シーンで使う場合はあまりなくなりました。）</li>
+
+              <li><i><b>点ライト:</b></i> 点ライトは、おそらく最も広く使われるライトです。これは電球のようにすべての方向に光りを放ちます。</li>
+
+              <li><b><i>スポットライト:</i></b> スポットライトは、点ライトに非常によく似ていますが、小さい範囲（スポット）に照明を限定できるという点で違います。</li>
+            </ul>
+          </li>
+
+          <li><i><b>カラー:</b></i> ライトのカラー</li>
+
+          <li><i><b>強さ:</b></i> ライトの強さ</li>
+
+          <li><b><i>減衰:</i></b> 減衰パラメータは、ライトの強さがどのくらいの速度（距離）で減少するかを定義します。自然界では、ライトの強さはライトソースとオブジェクトの間の距離を r とすると 1/r^2 の割合で減少します。しかしながら、コンピューターグラフィックスの世界では、他の割合も広く使われています。</li>
+
+          <li><b><i>減衰をクランプ:</i></b> 減衰が、"1/r" か "1/r^2" に設定されている場合に、ライトの強さは r が 0 に近づくほど（ライトとオブジェクトの距離が小さいほど）無限に増大します。この現象を防ぎ、ライトの強さが爆発的に増加するのを避けるために、このプロパティでライトの強さを丸める事ができます。しかし、このプロパティを使用するとライトが物理的には正確ではなくなる事に注意してください。</li>
+
+          <li>
+            <b><i>形状:</i></b> ライトがレンダリングされるように、ジオメトリーを生成します。反射面でライトの反映を得るために有効です。特にスタジオの照明シーンでは重要でしょう。
+
+            <div align="center">
+              <table width="122" border="0" cellspacing="0" cellpadding="4">
+                <tr>
+                  <td>
+                    <div align="center">
+                      <img src="Light8.jpg" alt="" height="200" width="250" border="0">
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      <img src="Light9.jpg" alt="" height="200" width="250" border="0">
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div align="center">
+                      形状 = off<br>
+                      面ライトのジオメトリーはレンダリングされません
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      形状 = on<br>
+                      面ライトのジオメトリーとその反映がレンダリングされます
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div><!-- ul -->
+          </li>
+
+          <li><i><b>幅:</b></i> 面ライト / 平行ライト の場合の幅</li>
+
+          <li><i><b>高さ:</b></i> 面ライト / 平行ライト の場合の高さ</li>
+
+          <li><i><b>半径:</b></i> 点ライト の場合の半径</li>
+
+          <li>
+            <i><b>タイプ:</b></i> このプロパティは影の計算タイプを選択するために使用します。様々なタイプを理解するために下のイメージを見てください。<a href="../Camera/Camera.html">カメラ</a>オブジェクトの "影" プロパティを On にする事を忘れないでください。もし Off の場合には、影は計算されません。
+
+            <div align="center">
+              <table width="180" border="0" cellspacing="0" cellpadding="4">
+                <tr>
+                  <td valign="top"><img src="Light1.jpg" alt="" border="0"></td>
+
+                  <td valign="top"><img src="Light2.jpg" alt="" height="200" width="250" border="0"></td>
+
+                  <td valign="top"><img src="Light3.jpg" alt="" height="200" width="250" border="0"></td>
+                </tr>
+
+                <tr>
+                  <td valign="top">
+                    <div align="center">
+                      <b><i>なし:</i></b><br>
+                      影はレンダリングされません
+                    </div>
+                  </td>
+
+                  <td valign="top">
+                    <div align="center">
+                      <b><i>raytrace:</i></b><br>
+                      緑の球は正しく影を落としていますが、スライドは正しくありません。
+                    </div>
+                  </td>
+
+                  <td valign="top">
+                    <div align="center">
+                      <b><i>raytrace+trans:</i></b><br>
+                      スライドも正しく影を落としています。このタイプはもっとも CPU を使うので、必要に応じて使用してください。
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </li>
+
+          <li><b><i>カラー:</i></b> 影のカラー</li>
+
+          <li>
+            <i><b>サンプル数:</b></i> 面ライト（と点ライト）が使用するサンプルの数。より多いサンプル数の使用で、影はより滑らかになります。下の作例を参照してください。多くのシーンでは、16 から 32 のサンプル数が最適でしょう。少なすぎる、または多すぎるサンプル数は、レンダリング時間に悪い影響を及ぼします。
+
+            <div align="center">
+              <ul>
+                <li style="list-style: none">
+                  <table width="122" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td>
+                        <div align="center">
+                          <img src="Light6.jpg" alt="" height="250" width="300" border="0">
+                        </div>
+                      </td>
+
+                      <td>
+                        <div align="center">
+                          <img src="Light7.jpg" alt="" height="250" width="300" border="0">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div align="center">
+                          サンプル数 = 4<br>
+                          影にまだ少しノイズがあります。
+                        </div>
+                      </td>
+
+                      <td>
+                        <div align="center">
+                          サンプル数 = 16<br>
+                          影には、もうほとんどノイズがありません。
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><i><b>スポットタイプ:</b></i> 円形か正方形かのスポットライトを選択します。</li>
+
+          <li><i><b>カットオフ角度:</b></i> "カットオフ角度" プロパティは、スポットライトが照らす事のできる角度を制限します。</li>
+
+          <li>
+            <i><b>減衰カットオフ角度:</b></i> 減衰カットオフ角度プロパティを上げると、スポットライトのエッジをより滑らかにします。この動作の例として、下のイメージを見てください。
+
+            <div align="center">
+              <ul>
+                <li style="list-style: none">
+                  <table width="122" border="0" cellspacing="0" cellpadding="4">
+                    <tr>
+                      <td>
+                        <div align="center">
+                          <img src="Light4.jpg" alt="" height="200" width="250" border="0">
+                        </div>
+                      </td>
+
+                      <td>
+                        <div align="center">
+                          <img src="Light5.jpg" alt="" height="200" width="250" border="0">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div align="center">
+                          減衰カットオフ角度 = 0.0
+                        </div>
+                      </td>
+
+                      <td>
+                        <div align="center">
+                          減衰カットオフ角度 = 5.0
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li><i><b>コースティクスフォトン:</b></i> コースティクスをレンダリングするためにシーンに飛ばされるコースティクスフォトンの数。よりたくさんのフォトンを飛ばすと、はっきりしたコースティクスがレンダリングできます。（訳注：コースティクスをレンダリングするには、コースティクスタグが必要です。）</li>
+
+          <li><i><b>ピュア フォトンライト:</b></i> ライトは、シーンを直接照らさず、シーンにフォトンのみを飛ばします。これは、精度の高いコースティクスをレンダリングするためにより多くのフォトンが必要な場合に有効です。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

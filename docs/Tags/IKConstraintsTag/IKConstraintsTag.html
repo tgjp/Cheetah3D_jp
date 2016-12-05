@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>IK コンストレインタグ</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>IK コンストレインタグ</h2>
+        </div>
+
+        <p>IK コンストレインタグは、IK ソルバーの振る舞いをより予想できるように補助します。特に 3D ソルバーの場合、角度は制限されるので、 IK ソルバーの可能な解のセットは制約されます。それは、肘のジョイントが曲がりすぎるといったIK チェインの不自然な動きの発生を防ぎます。</p>
+
+        <p>IK ハンドルタグで 3D ソルバーを使用している IK チェインのためにIK コンストレインをセットアップする事は、常に勧められます。IK チェインをセットアップする事は若干面倒ですが、キャラクターのアニメーションやポージングを始める時に役立つでしょう。</p>
+
+        <div align="center">
+          <p><img src="IKAngleConstraint1.jpg" alt="" border="0"></p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>コンストレイン:</b></i> タグの付けられたオブジェクトが制約される回転軸を選択します。（これは 3D ソルバーでのみ有効です。）</li>
+
+          <li><b><i>回転 (Heading):</i></b> オブジェクトが取れる最小／最大の回転 H （ heading ）角度を設定します。（これは 3D ソルバーでのみ有効です。）</li>
+
+          <li><b><i>回転 (Pitch):</i></b> オブジェクトが取れる最小／最大の回転 P （ pitch ）角度を設定します。（これは 3D ソルバーでのみ有効です。）</li>
+
+          <li><i><b>回転 (Bank):</b></i> オブジェクトが取れる最小／最大の回転 B （ Bank ）角度を設定します。（これは 3D ソルバーでのみ有効です。）</li>
+
+          <li><b><i>曲がりにくさ:</i></b> ジョイントがどの程度曲がるかを設定します。"曲がりにくさ" が 1 では、ジョイントは全く曲がりません。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

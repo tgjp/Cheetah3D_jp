@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>Vertex Weight Tool</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>バーテックスウェイトツール</h2>
+        </div>
+
+        <p><a href="../../../Tags/SkeletonTag/SkeletonTag.html">スケルトンタグ</a>とメッシュを関連づけすると、Cheetah3Dは自動でバーテックスウェイトの設定を各ジョイントに対して行います。しかし、バーテックスウェイトは常に完璧に設定されるわけでありません。その際はマニュアルで微調整する必要があります。</p>
+
+        <p>たとえば、Cheetah3Dは下図のように左足のつま先のジョイントへバーテックスウェイトの設定をしているのですが右足のつま先の一部についてもバーテックスウェイトを付与してしまいます。この状態で左足を動かすと右足も動き意図しない動作をしてしまいます。 バーテックスウェイトの間違った設定を修正する事が次の作業です。</p>
+
+        <div align="center">
+          <p><img src="VertexWeight1.jpg" alt="" height="228" width="239" border="0"></p>
+        </div>
+
+        <p><b><i>モード<br></i></b> このツールは全てのモードで動作します。</p>
+
+        <ul>
+          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
+          メニューから"ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">キャラクターツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">バーテックスウェイト"を選択しバーテックスウェイトツールを使用します。バーテックスウェイトツールはツール プロパティに表示されます。バーテックスウェイトの調整は、調整するジョイントを<a href="../../../Tags/SkeletonTag/SkeletonTag.html">スケルトンタグ</a>のジョイント一覧から選択します。一度ジョイントが選択されるとウエイトが1の場合は赤色で表示され、ウエイトの値が小さくなるほど黄色になります。ウエイトの値が0になると灰色の表示になります。ウエイトの調整は3D ビュー画面内でマウスでペイントするようにして行います。</li>
+        </ul>
+
+        <div align="center"></div>
+
+        <div align="left">
+          <p><b>キー</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>無し</i></b></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>サイズ:</b></i> 画面上のブラシのサイズ。</li>
+
+          <li><i><b>強さ:</b></i> ブラシの強度。</li>
+
+          <li>
+            <i><b>モード:</b></i>
+
+            <ul>
+              <li><i>効果減:</i> バーテックスウェイトの値を小さくします。</li>
+
+              <li><i>効果追加:</i> バーテックスウェイトの値を大きくします。</li>
+            </ul>
+          </li>
+
+          <li><i><b>ブラシ:</b></i> ブラシの形状。 ベル とスムースを選択できます。</li>
+
+          <li><i><b>表示部分のみ:</b></i> これをチェックすると調整中のポイントのみ表示されます。裏面にあるポイントの調整を行う場合にはこれをチェックすると良いでしょう。</li>
+
+          <li><i><b>自動正規化:</b></i> ブラシのストロークごとにポイントのバーテックスウェイトの値は自動調整されます。それぞれのポイントのウエイトの合計を確実に1になるようにします。</li>
+        </ul>
+
+        <div align="center"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

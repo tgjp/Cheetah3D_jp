@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>Glossary of Terms</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>Glossary of Terms</h2>
+        </div>
+
+        <div align="left">
+          <div align="left">
+            <p><b>Alpha channel<br></b> Images in a computer are usually represented using multiple channels, typically one to represent the image's Red component, one for it's Green and one it's Blue. If the image needs to contain information about how transparent parts of the image are, this will be stored in a fourth channel, the Alpha channel.</p>
+
+            <p><b>Ambient<br></b> A scene's lighting will affect the way the materials used look. Usually the light from a lightsource hits objects and makes them brighter at certain parts, whilst others parts will be in complete darkness. However, you may want some materials to have a certain base level of light, meaning that those parts of an object that aren't facing a light source will still be lit somewhat. The ambient part of a material determines how much light to allow onto the unlit parts. Think of ambient light a bit like ambient sound - in the background.</p>
+
+            <p><b>Backface Culling<br></b> When a camera's wireframe property is on, all objects will be shown as wireframes. However, by default you can see both the front-facing as well as back-facing surfaces this way, which can be visually confusing. Turning on backface culling will hide all the surfaces that would be hidden from you if the objects weren't hollow, making the scene easier to understand.</p>
+
+            <p><b>Bank<br></b> Used in rotational parameters to describe how much an object tilts around it's Z axis. If a plane is facing forward with the Z axis running from front to back, the bank parameter controls how much left or right the plane will tilt, causing the wing tips to turn up or down.</p>
+
+            <p><b>Beziercurve<br></b> A set of control points that determine the way in which a line travels from the first point to the last. Each point isn't actually touched by the line, but rather they act as a guide to "steer" the curve in the right direction.</p>
+
+            <p><b>Bezierspline<br></b> A set of control points, with additional tangential control points, that defines how a curve travels from one point to the next. The curve will touch each point, but the tangential control points will determine at what angle and how steeply the curve arrives and departs from each point.</p>
+
+            <p><b>Bounding box<br></b> Every object can be shown (as default) as a 3D object, but it is possible to view objects as just their bounding boxes, which means that they will appear hollow and only a cube that completely encloses the object will be shown. This can be useful for when you need to align object edges, or to check if objects collide.</p>
+
+            <p><b>Bump map<br></b> A material defines how an object will look when rendered. The material defines its colour and how it reflects light, but you can also simulate subtle bumps and textures in the surface of an object by specifying a bump map, which is a monochrome image where the darker the parts of the image, the higher the supposed bump on the object. Bump maps affect reflections, light refractions and other parts of the renderer, and when used properly can help produce very realistic images.</p>
+
+            <p><b>Crease<br></b> When using subdivision modelling, the surfaces between existing edges are smoothly transitioned, resulting in smooth, curved surfaces. If you want to make creases or sharp edges in a subdivision surface, you set one or more edges to be creased.</p>
+
+            <p><b>Creator object<br></b> A type of object that accepts some form of input from it's children (ie, objects that are "within" it in the hierarchical Object Browser) and produces some new object as a result. A Creator object is able to do this in realtime, without destroying the original object, meaning that any changes you make to the origin child object will be reflected in the Creator Object's results.</p>
+
+            <p><b>Diffuse<br></b> The diffuse term of a material determines how much the light from a lightsource spreads across the surface of the object. Diffuse light spreads evenly without a clear edge (unlike specular light), and differs from ambient light in that is does not appear on polygons that face completely away from a light source.</p>
+
+            <p><b>Emissive/Emission<br></b> The emissive term of a material determines the power of all light that comes off an object, irrespective of the orientation of the polygons or their relationship to any light source. By default this is black, meaning that there is no light coming from unlit parts of an object (as you'd expect for normal objects). Objects such as light bulbs would have a white emissive term.</p>
+
+            <p><b>Environment map<br></b> Materials can be reflective, but there are two ways this can be simulated. The simpler (read: cheating) way of doing this is to define six bitmap images that represent the background above, below, to the left and right, infront and behind the object. When an environment map is specified, these six bitmaps are used to simulate a reflection on the surface of an object. A stereotypical environment map is provided for you in the Examples folder: it shows some clouds in a blue sky over a rocky mountain range with a lake in the valley.</p>
+
+            <p><b>Fresnel</b> (pronounced <i>freh-nell</i>)<b><br></b> Scientifically, a fresnel reflection term describes how a portion of light that is reflected off a surface interacts with another medium (usually air) at the point where the two media touch, and occurs due to the different refractive indices of the two media. In real-world terms, use of the the fresnel term for reflective and transparent materials will add an extra level of realism to your renders.</p>
+
+            <p><b>Group<br></b> Any point, edge or polygon may be part of a group of similar items that together form an entire visual object. However, each actual object can contain many such groups, and so often you need to select groups of such items. The Select Group function expands a selection from one point/edge/polygon to include all the items in that group, allowing you to quickly select an entire visual object.</p>
+
+            <p><b>Heading<br></b> Used in rotational parameters to describe how much an object turns around it's Y axis. If a plane is facing forward with the Z axis running from front to back, the heading parameter controls in what direction the plane is flying (ie, 0°=North, 90°=West, 180°=South, 290°=East).</p>
+
+            <p><b>nGon<br></b> A polygon with any number of edges which makes up a surface, as opposed to triangles or quads, which always have three or four edges respectively.</p>
+
+            <p><b>Normal<br></b> Used to describe the direction in which a polygon is facing. Usually, polygons are single-sided, meaning you'll only see one side of them shaded. The other side is shown as dark grey and is unlit. Each polygon has a normal associated with it that determines the angle in which the surface is facing. If you flip a normal, the surface will face the opposite way. Think of a normal as pointing outwards perpendicularly from a polygon's center.</p>
+
+            <p><b>NURBS</b> (stands for <i>Non-Uniform Rational B-Spline</i>)<b><br></b> A type of spline that, like the Beziercurve, defines a line that smoothly travels along a path "steered" by control points. In NURBS, however, the weights between the control points are not equally spaced, allowing you to more accurately define a spline's path.</p>
+
+            <p><b>OpenGL<br></b> The name of a technology, built-in to Mac OS X and other operating systems, which provides realtime 3D views. Cheetah3D uses OpenGL to provide the 3D View so you can see your scene. OpenGL is not a renderer, which is why it cannot display the advanced material properties you can define in Cheetah3D - for that purpose you need to make use of Cheetah3D's very own built-in renderer.</p>
+
+            <p><b>Origin<br></b> Every coordinate system has an origin, which is usually 0,0,0 relative to the object. An object is scaled, moved and rotated around this origin point. Every new object in Cheetah3D is, by default, located at the world's origin of 0,0,0 (which is shown were the X, Y and Z axis cross).</p>
+
+            <p><b>Parametric Polygon Object<br></b> Used to describe a object that is predetermined in Cheetah3D (such as a sphere) that has parameters that can be changed to determine the shape. Parametric Polygon Objects are very powerful since they give you the flexibility to try out different shapes very quickly, but they cannot be edited in Polygon, Edge or Point mode without first being made editable (which turns them into raw polygonobjects).</p>
+
+            <p><b>Pitch<br></b> Used in rotational paramteres to describe how much an object turns around it's X axis. If a plane is facing forward with the Z axis running from front to back, the pitch parameter controls whether the plane is climbing upwards, or descending downwards, causing the nose and tail to tip up or down.</p>
+
+            <p><b>Point<br></b> The simplest part of any geometry, it is a single point in 3D space with an X, Y and Z coordinate. Two points can make an edge, and three or more edges can make a polygon. Points can be shared between polygons, meaning that polygons can intrinsically be attached to each other.</p>
+
+            <p><b>Polygon<br></b> A single surface that is made of up at least 3 points in a 3D space. A three edged polygon is a triangle, a four edged polygon is a quad, and any polygon that has five or more edges is known as an nGon.</p>
+
+            <p><b>Polygonobject<br></b> An object that is made up of at least 1 polygon, usually many. Raw polygonobjects differ from Parametric Polygon Objects in that there are no editable parameters that define a shape. Raw polygon objects can be edited in Polygon, Edge or Point mode to change the shape of an object using the Make Editable menu item (or, quicker, double clicking on an object tag in the Object Browser).</p>
+
+            <p><b>Position<br></b> Everything in a 3D space has a position, which is defined by three coordinates known technically as a vector: X (left to right), Y (bottom to top) and Z (front to back). Note that these descriptions are only vague, the precise location and orientation of the camera may result in different interpretations of a vector (think "your" left versus someone who is facing you's "left")</p>
+
+            <p><b>Quad<br></b> A four edged polygon. Many of the parametric polygon objects are made up of quads. Some tools and creator objects, such as the subdivision and boolean operators, can only effectively work on quads. The subdivision tool produces crumples and creases if used with triangles.</p>
+
+            <p><b>Quantize<br></b> Describes the mathematical process of "snapping" a number to a grid. The floor grid you see in Cheetah3D is, in it's initial state, made of a grid where each division is 0.1. Therefore quantizing an object's points to 0.1 will make them align to the grid you see. You're more likely to choose your own quantization values however.</p>
+
+            <p><b>Raytracing<br></b> A rendering technique that involves simulating the path of light photons coming from a light source and bouncing (or otherwise) off materials before entering the camera.</p>
+
+            <p><b>Reflection<br></b> When light hits a surface, some (or all) of it may be bounced back, just like a mirror does. Few objects are 100% reflective since there will always be some light absorbed by the object.</p>
+
+            <p><b>Refraction<br></b> When light passes through one medium into another (ie, from glass into air), it's direction may be altered - this is due to the different densities of the two media. The result of this bent light is that you see a distorted representation of what appears on the other side of the object. Think of how a glass distorts what you see as you look through it. Lenses are designed to intentionally refract light in order to magnify the image you see. Even a window refracts light, but the effect is minimised due to the relative thinness of the glass and the evenness of the glass' surface - remember how old windows that have bulged a bit cause distortions?</p>
+
+            <p><b>Renderer<br></b> A part of Cheetah3D that produces a photo-realistic image of your scene using raytracing techniques.</p>
+
+            <p><b>Rotation<br></b> Every object has a position and a rotation value, determining where the object will be, and also in what direction the object points. The rotation value is represented as three values, H, P and B, which stand for Heading, Pitch and Bank (see each of those terms for precise descriptions). Technically, these three values are known as Euler angles.</p>
+
+            <p><b>Scale<br></b> Every object can be resized. This resizing can happen unevenly (ie, an object can be stretched or squashed). This is done by providing three values, X, Y and Z which determine how much the object should be scaled in each axis. These three values are known technically as a scaling vector.</p>
+
+            <p><b>Shaded<br></b> In the OpenGL 3D View, a shaded polygon is one that smoothly simulates the light hitting a polygon. It is not entirely accurate since the variations in the light hitting the surface are determined by the normals of the points that make up the polygon. This means that if you have a very large single polygon, the corners of that polygon will be lit correctly, but everything inbetween will only be shaded smoothly (like a "gradiant" in Photoshop). A spotlight on a very large single polygon will not look right in the 3D View because of this. In order to improve realism, you need to break the polygon into many smaller polygons so that there will be more variation inbetween the corners - this can be done by increasing the Sections properties if you're using a Parametric object, or the subdivision tool for more complex objects. Note that this behaviour is absolutely normal for OpenGL. The renderer does not have this limitation.</p>
+
+            <p><b>Specular<br></b> This describes the highly directional light that bounces off a material, and only occurs where the light reflection is at it's most. Visually, the specular light appears as bright, highly defined (yet soft-edged) ring around the reflection of the light source. There are two types of specular reflection, Plastic and Metal, and the size can be changed accordingly. Also, the Specular Color can be used to tint the light coming off the material. A specular color of black will remove the light reflection entirely, which is useful for making matt objects (such as paper, walls, most floors etc).</p>
+
+            <p><b>Spline<br></b> A line made up of two or more points. There are several types of spline: A linear spline merely travels from one point to the next. For information of the other types, look up the individual definitions of Bezierspline, Beziercurve and NURBS. Once a spline has been produced, it can be used to make a polygon, or to control how some of the Creator Objects behave.</p>
+
+            <p><b>Subdivision<br></b> The process of smoothing the variations in a range of polygons so that the resulting surface, made up of many more individual polygons, curves smoothly. In Cheetah3D, edges can be defined as creases so that when the object is subdivded, those edges will be sharp whilst the rest will be smoothed.</p>
+
+            <p><b>Tag<br></b> A collection of parameters that apply to objects that help define the objects behaviour or appearance. In Cheetah3D, one object can have many tags that relate to its smoothness, materials, appearance, shape, textures etc.</p>
+
+            <p><b>Texture<br></b> When a texture map is specified as part of a material, a bitmap is "wrapped onto" the object's surface, so that the object's colour isn't entirely determined by the various lighting parameters of the material. Texture maps are useful for improving the realism of an object, since you can draw fine details or imperfections onto a texture map and this will show up on your objects. When you use texture maps in Cheetah3D, it is likely you will also need to add a UV tag to the object in question, since this defines how the texture map should be wrapped onto the object.</p>
+
+            <p><b>Transform<br></b> The name given to any operation which alters the position, orientation or scaling of an object. In Cheetah3D, the transform tool allows you to do all three of these operations by selecting the appropriate widget on the transform guide, as well as allowing you to limit your transform to one particular axis by clicking and dragging on the desired axis widget.</p>
+
+            <p><b>Transparency<br></b> A material can be set to allow some (or all) light to travel through it, much like glass or an opaque object would. The reflection colour can be changed from white to let the material "tint" the light, like coloured glass would.</p>
+
+            <p><b>Triangle<br></b> A three sided polygon. Some of the operations you do in Cheetah3D may produce objects that contain triangles. Watch out for this, since other tools do not work well with triangles, only quads (such as the subdivide tool).</p>
+
+            <p><b>UV Tags<br></b> When a material that contains a texture map is applied to an object, the object's polygon arrangement will very much affect how the texture looks. The UV tag allows special adaptation of the coordinates used to map the texture onto the object. The U and V offset numbers are used to slide the texture so that it aligns properly, and the U and V scale numbers can be used to make sure the scale of the texture map is correct. Additionally, changes to the map type allow different ways in which the texture is wrapped onto the shape.</p>
+
+            <p><b>Vector<br></b> Three numbers that, when taken together, describe a position in a 3D space: X, Y and Z. See <i>position</i> for more details.</p>
+
+            <p><b>Wireframe<br></b> An object which is set to show as wireframe will show up in the 3D View as hollow, and only its edges will be displayed. If you set the Camera's wireframe property to true, all objects will be shown in wireframe.</p>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

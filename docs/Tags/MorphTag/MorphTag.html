@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>モーフタグ</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>モーフタグ</h2>
+        </div>
+
+        <p>モーフタグで、違う位置のメッシュを記録する事が出来ます。例えば、微笑んでる、悲しんでいる、笑っている、起こっている顔を記録しておく事が出来ます。モーフターゲットを記録した後で、これらの異なる表情（モーフ）の中間にモーフさせる事も出来ます。<br>
+        またモーフターゲットで、顔を喋らせたり、筋肉を収縮をアニメーションさせる事もできます。</p>
+
+        <div align="center">
+          <p><img src="Morph1.jpg" alt="" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p>モーフターゲットを記録するためには、まず<a href="../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>にモーフタグを追加しなければなりません。そして、すべての表情（モーフ）を記録するまで、次のこのような手順に従って下さい。</p>
+
+          <ol>
+            <li>モーフプロパティの左下の "+" ボタンをクリックして、"Base" モーフターゲットを追加します。</li>
+
+            <li>新しい表情（モーフ）になるようにポリゴンメッシュを修正します。修正を、メッシュの頂点（ポイント）の移動のみにする事は重要です。ポリゴンの追加・分離・削除でメッシュトポロジーを変更しないでください。</li>
+
+            <li>"+" ボタンで新しい表情（モーフ）を記録し、他のモーフと重ならない名称をつけます。</li>
+
+            <li>すべてのモーフターゲットを記録するまで、手順 2 を続けます。</li>
+
+            <li>最後に "Base" モーフを選択し、プロパティの一覧表のコンテキストメニュー（右クリックメニュー/Alt+クリックメニュー）から "Restore" メニューコマンドを選択します。</li>
+          </ol>
+
+          <p>これで、中間のモーフさせるためにスライダーを使用する事が可能になります。</p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>モーフターゲット</b></i> 記録されたモーフターゲットの一覧表。それぞれのモーフターゲットのウェイトを調整するには右のスライダーを使用します。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

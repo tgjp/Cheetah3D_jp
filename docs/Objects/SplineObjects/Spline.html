@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>スプライン</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>スプライン</h2>
+
+          <h2><img src="Splineicon.jpg" alt="" height="40" width="40" border="0"></h2>
+        </div>
+
+        <p>スプラインオブジェクトは、 Cheetah3D の、円や四角形、テキストなどの、すべてのパラメトリックなスプラインオブジェクトの元になるものです。スプラインオブジェクトファミリーは、押し出しや旋盤のようなクリエータオブジェクトを使ってジオメトリー（メッシュ）を作成するために使われるでしょう。</p>
+
+        <p><i>注意! スプラインオブジェクトは、スプラインツールを使って曲線を編集しますが、パラメトリックなスプラインオブジェクトの曲線を編集したい場合には、最初に編集可能にしなければなりません。</i></p>
+
+        <div align="center">
+          <p><img src="SplineProps.jpg" alt="" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p>スプラインオブジェクトには２つの作成方法があります。１つ目は、メニューの"ツール <img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">スプライン<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">スプラインの作成" から "スプラインの作成" ツールを使う方法です。スプラインオブジェクトを作成する２つ目の方法は、パラメトリックなスプラインオブジェクトを編集可能にする方法です。この方法を実行するためには、まずオブジェクトブラウザでパラメトリックなスプラインオブジェクトを選択し、メニューの "オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">編集可能にする" コマンドを使用します。パラメトリックなスプラインオブジェクトは、そのパラメータが固定され、スプラインツールで編集可能なロー・スプラインオブジェクト ( a raw Spline Object ) に変換されます。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="SplineMenu.jpg" alt="" height="187" width="187" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p>オブジェクトブラウザ上のオブジェクトアイコンをダブルクリックする事でも、パラメトリックなスプラインオブジェクトを編集可能にする事ができます。</p>
+
+          <p>すべてのスプラインはシーケンスを持ち、サブパスはそれぞれ始点で黄色から終点では赤色に変化するように描画されます。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="SplineDirection.jpg" alt="" border="0"></p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>近似分割角度:</b></i> スプライン曲線の分割精度の基準を指定します。より小さい角度で、より細かく分割された滑らかなスプラインを作ります。</li>
+
+          <li>
+            <i><b>タイプ:</b></i> それぞれ特性を持った、スプライン曲線の４つの異なるタイプを指定する事が可能です。
+
+            <ul>
+              <li><b><i>Bezierspline:</i></b> ３次ベジェスプライン。このタイプのみ、接線ハンドルが使えるようになります。TrueType フォントはこの形式で保存されています。（訳注：このタイプのベジェスプラインが使われているのは、OpenType フォントと PostScript フォントです。TrueType フォントは B-スプラインです。英語版ヘルプの間違い？）</li>
+
+              <li><i><b>Beziercurve:</b></i> サブパスのパスエレメントの数が n である、順序 n のベジェ曲線。（訳注：いわゆる B-スプラインです）</li>
+
+              <li><i><b>Linear:</b></i> 各コントロールポイントを直線で結びます。（訳注：ポリラインです）</li>
+
+              <li><i><b>NURBS:</b></i> 非一様有理Bスプライン（<u>N</u>on <u>U</u>niform <u>R</u>ational <u>B</u>-<u>S</u>pline） （訳注：各コントロールポイントのウェイトは調整できないようです）</li>
+            </ul>
+          </li>
+
+          <li><b><i>subpaths:</i></b> サブパスの数。スプラインオブジェクトは、任意の数のサブパスを持つことができます。</li>
+
+          <li><b><i>path elements:</i></b> すべてのサブパス中のパスエレメントの数。サブパスの終点の始点への移動は（訳注：サブパスが閉じている場合でも）、１つのパスエレメントとしてカウントされます。</li>
+
+          <li><b><i>lines:</i></b> スプライン曲線の分割後のライン数</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

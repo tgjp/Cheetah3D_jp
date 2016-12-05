@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>選択ツール</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>選択ツール</h2>
+        </div>
+
+        <p>選択ツールは、おそらくすべてのツールの中で最もよく使われるツールでしょう。これは、ポイントやエッジ、ポリゴンやオブジェクト全体を選択するために必要になります。すべての選択操作は、 "選択" メニューから選択する事が可能です。</p>
+
+        <p><b><i>編集モード<br></i></b> 選択ツールは、Cheetah3D のその時点での編集モードによって異なる操作を実行します。</p>
+
+        <ul>
+          <li><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
+          <b>オブジェクトモード</b> で作業している場合、3D ビュー上でポリゴンオブジェクトやスプラインオブジェクト（、カメラオブジェクト）全体を選択する事ができます。3D ビュー上では一度に１つのオブジェクトしか選択する事ができません。複数選択はまだサポートされていません。</li>
+
+          <li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
+          <b>ポリゴンモード</b> で作業している場合、ローポリゴンオブジェクトのポリゴンを選択する事ができます。パラメトリックオブジェクトやクリエータオブジェクトのポリゴンは選択する事ができません。もしこれらのオブジェクトでポリゴンを選択したい場合には、まず編集可能にしてローポリゴンオブジェクトに変換しなければなりません。（<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>についての解説を見てください。）</li>
+
+          <li><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><br>
+          <b>エッジモード</b> で作業している場合、ローポリゴンオブジェクトのエッジを選択する事ができます。</li>
+
+          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>
+          <b>ポイントモード</b> で作業している場合、ローポリゴンオブジェクトのポイントやスプラインオブジェクトのコントロールポイントを選択する事ができます。</li>
+        </ul>
+
+        <div align="left">
+          <p><b>補助キー</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>shift（シフト）:</i></b> 現在の選択に追加する場合、 shift （シフト）キーを使用します。</li>
+
+                <li><b><i>command（コマンド）:</i></b> 現在の選択範囲のポリゴン、エッジ、ポイントの選択を解除する場合、command（コマンド）キーを使用します。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>表示部分のみ:</b></i> このプロパティがチェックされている場合、可視状態の部分のみが選択されます。隠れた部分も選択したい場合、このプロパティのチェックを外します。</li>
+
+          <li><i><b>半径:</b></i> その範囲内にある部分が選択されるマウスカーソルの周囲のスクリーンピクセルの選択半径。</li>
+
+          <li><i><b>選択範囲を他の編集モードにする:</b></i> 現在の選択範囲を、ポイント、エッジ、ポリゴン選択に変換します。オブジェクトモードでは使用できません。（訳注：変換対象先のモードで、すでに選択されている範囲に、変換された選択範囲が追加される事に注意してください。）</li>
+
+          <li><b><i>すべてを選択</i>:</b> 現在選択されているオブジェクトのすべてのポリゴン、エッジ、ポイントを選択します。オブジェクトモードでは使用できません。</li>
+
+          <li><b><i>グループ選択</i>:</b> それぞれ接続しているすべてのポリゴン、エッジ、ポイントに、現在の選択範囲を拡張します。例えばエッジを共有している場合、その２つのポリゴンは接続されているという事になります。</li>
+
+          <li><i><b>選択範囲を反転:</b></i> 現在の選択／未選択範囲を反転させます。オブジェクトモードでは使用できません。</li>
+
+          <li><i><b>選択範囲を拡張</b></i>: 選択範囲の隣の未選択範囲によって現在の選択範囲を拡張します。</li>
+
+          <li><b><i>選択範囲を縮小</i></b>: 未選択範囲を隣に持つ領域によって現在の選択範囲を縮小します。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

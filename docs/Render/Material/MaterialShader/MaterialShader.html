@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>Material シェーダー</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>"Material" シェーダー</h2>
+        </div>
+
+        <p>"Material" シェーダーは、多くのマテリアルタイプの出発点です。テクスチャを貼付けたりするほか、ガラスや金属の作成にも使用します。</p>
+
+        <p><b>プロパティ:</b></p>
+
+        <p><b>カラー:</b> これらのパラメータで、マテリアルの色を設定します。</p>
+
+        <ul>
+          <li><b><i>color:</i></b> マテリアルの色</li>
+
+          <li><b><i>texture:</i></b> カラーテクスチャ</li>
+
+          <li><b><i>mix:</i></b> カラーとテクスチャを混ぜ合わせるために使用します。</li>
+        </ul>
+
+        <p><b>Ambient - Diffuse:</b> これらのパラメータは環境光と拡散光の影響を調整するパラメータです。通常、反射や透過のないオブジェクトの場合、これらの値は 1.0 であるべきでしょう。しかし、ガラスや金属の場合（訳注：100 % 反射・透過する場合）には、これらの値は 0 であるべきです。</p>
+
+        <ul>
+          <li><b><i>ambient:</i></b> 環境光の影響を調整します。</li>
+
+          <li><b><i>diffuse:</i></b> 拡散光の影響を調整します。</li>
+        </ul>
+
+        <p><b>スペキュラー:</b> これらのパラメータは鏡面反射の色とサイズを定義します。鏡面反射の強さは、"スペキュラー" か "texture" パラメータでコントロールする事ができます。白色は３つすべての各 RGB 要素について強さ 1 を意味し、黒は強さ 0 を意味します。<br></p>
+
+        <ul>
+          <li><i><b>スペキュラー:</b></i> 鏡面反射の色</li>
+
+          <li><i><b>texture:</b></i> 鏡面反射のテクスチャ</li>
+
+          <li><b><i>mix:</i></b> カラーとテクスチャを混ぜ合わせるために使用します</li>
+
+          <li><i><b>スペキュラーサイズ:</b></i> 鏡面反射のサイズ。より大きいサイズは、鋭く小さい鏡面反射を作ります。</li>
+        </ul>
+
+        <div align="center">
+          <table width="196" border="1" cellspacing="2" cellpadding="0">
+            <tr>
+              <td><img src="spec4.jpg" alt="" height="100" width="100" border="0"></td>
+
+              <td><img src="spec3.jpg" alt="" height="100" width="100" border="0"></td>
+
+              <td><img src="spec2.jpg" alt="" height="100" width="100" border="0"></td>
+
+              <td><img src="spec1.jpg" alt="" height="100" width="100" border="0"></td>
+
+              <td><img src="spec0.jpg" alt="" height="100" width="100" border="0"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <div align="center">
+                  スペキュラーサイズ=8
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  スペキュラーサイズ=16
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  スペキュラーサイズ=32
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  スペキュラーサイズ=64
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  スペキュラーサイズ=128
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div align="left">
+          <p><b>エミッシブ:</b> 最終的なマテリアルのカラーに、発光要素を付け加えます。これはシーンの中で、ライトと相互には作用しません。</p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>emission:</i></b> 最終的なマテリアルのカラーに加えられる色。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div align="left">
+          <p><b>バンプマップ:</b> <a href="../../Renderer.html">バンプマップ</a>は、表面の法線を置き換えます。これは、表面そのものを変更するものではありませんが、表面がライトの設定とどのように相互作用するかを変更します。したがって、実は平らな表面でも、ライトソースの下で凹凸があるように見えます。</p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>bump map:</i></b> 凹凸のテクスチャ（バンプマップ）を設定します。バンプマップは、白色が最も隆起した部分、黒色が隆起なしとして作成されたグレースケールのテクスチャです。そのためこれらのテクスチャは、高さテクスチャ（ハイトマップ）や浮き彫りテクスチャ（レリーフマップ）とも呼ばれます。</li>
+
+                <li><b><i>intensity:</i></b> バンプ（隆起）の強さ（高さ）を設定します。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div align="center">
+          <table width="196" border="1" cellspacing="2" cellpadding="0">
+            <tr>
+              <td>
+                <div align="center">
+                  <img src="bump0.jpg" alt="" height="100" width="100" border="0">
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <img src="bump1.jpg" alt="" height="100" width="100" border="0">
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <img src="bump2.jpg" alt="" height="100" width="100" border="0">
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <img src="bump3.jpg" alt="" height="100" width="100" border="0">
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <img src="bump4.jpg" alt="" height="100" width="100" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div align="center">
+                  intensity=0.2
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  intensity=0.4
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  intensity=0.6
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  intensity=0.8
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  intensity=1.0
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div align="left">
+          <p><b>リフレクション:</b> これらのパラメータで、どのくらい強くマテリアルが環境を反射（リフレクト）するかを設定する事ができます。例えば、鏡は 100 % 環境を反射するでしょう。環境から反射した色はマテリアルに加えられます。環境からの反射をフィルタリングするために "反射" や "texture" パラメータを使います。</p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>反射:</i></b> 反射（リフレクション）のフィルターカラー</li>
+
+                <li><b><i>texture:</i></b> 反射（リフレクション）のフィルターテクスチャ</li>
+
+                <li><b><i>mix:</i></b> カラーとテクスチャを混ぜ合わせるために使用します</li>
+
+                <li><b><i>intensity:</i></b> 反射の強さ。反射がマテリアルのカラーに加えられるので、色の飽和を避けるためにはカラーの "color" か "diffuse" プロパティを下げなければいけません。</li>
+              </ul>
+            </div>
+
+            <div align="center">
+              <table width="200" border="1" cellspacing="2" cellpadding="0">
+                <tr>
+                  <td>
+                    <div align="center">
+                      <img src="diff1.jpg" alt="" height="100" width="100" border="0">
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      <img src="diff2.jpg" alt="" height="100" width="100" border="0">
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      <img src="diff3.jpg" alt="" height="100" width="100" border="0">
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      <img src="diff4.jpg" alt="" height="100" width="100" border="0">
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      <img src="diff5.jpg" alt="" height="100" width="100" border="0">
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div align="left">
+                      リフレクション intensity=0.2<br>
+                      diffuse=0.8
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="left">
+                      リフレクション intensity=0.4<br>
+                      diffuse=0.6
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="left">
+                      リフレクション intensity=0.6<br>
+                      diffuse=0.4
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="left">
+                      リフレクション intensity=0.8<br>
+                      diffuse=0.2
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="left">
+                      リフレクション intensity=1.0<br>
+                      diffuse=0.0
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div align="left">
+              <ul>
+                <li><b><i>angle:</i></b> ぼやけた反射（リフレクションブラー）を作成するためにこのプロパティーを使用します。高い値ほどよりぼやけた反射になります。"反射のサンプル数" を上げる事は、ぼやけた反射のノイズを減らします。</li>
+              </ul>
+            </div>
+
+            <div align="center">
+              <table width="196" border="1" cellspacing="2" cellpadding="0">
+                <tr>
+                  <td><img src="blur0.jpg" alt="" height="100" width="100" border="0"></td>
+
+                  <td><img src="blur1.jpg" alt="" height="100" width="100" border="0"></td>
+
+                  <td><img src="blur2.jpg" alt="" height="100" width="100" border="0"></td>
+
+                  <td><img src="blur3.jpg" alt="" height="100" width="100" border="0"></td>
+
+                  <td><img src="blur4.jpg" alt="" height="100" width="100" border="0"></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div align="center">
+                      angle=0
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      angle=5
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      angle=10
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      angle=15
+                    </div>
+                  </td>
+
+                  <td>
+                    <div align="center">
+                      angle=20
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div align="left">
+              <ul>
+                <li><b><i>反射のサンプル数:</i></b> ぼやけた反射の計算用のサンプル数。レンダリング時間は、このサンプル数とともに線形に増加します。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div align="left">
+          <p><b>トランスパレンシー:</b> トランスパレンシーパラメータは、ガラスのような透明なマテリアルを作成するために必要になるでしょう。"intensity" を上げると、色の飽和を避けるために自動的に "ambient" と "diffuse" の強さは下げられますが、それでも色ガラス（例えば赤いガラス）を作成する場合は、"ambient" と "diffuse" プロパティを 0 に設定する事が勧められます。</p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>透明度:</i></b> 透過のフィルターカラー</li>
+
+                <li><b><i>texture:</i></b> 透過のフィルターテクスチャ</li>
+
+                <li><b><i>mix:</i></b> カラーとテクスチャを混ぜ合わせるために使用します</li>
+
+                <li><b><i>intensity:</i></b> 透過の強さ</li>
+
+                <li><b><i>IOR:</i></b> 屈折率が高いほど、光はマテリアルを通過する間により曲げられます。</li>
+
+                <li><b><i>アルファチャンネルを使用:</i></b> カラーテクスチャのアルファチャンネル（や、カラーの透明度）を透過の計算に使用する場合にチェックします。</li>
+
+                <li><b><i>フレネル:</i></b> 透過オブジェクトにフレネル反射を加える場合にチェックします。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div align="center"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

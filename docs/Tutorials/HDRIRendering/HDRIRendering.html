@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>HDRI レンダリング</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <p><b><u>HDRI レンダリング</u></b></p>
+        </div>
+
+        <div align="left">
+          <p>このチュートリアルは、写真のようにリアルなシーンをレンダリングする事に重点を置いています。そのために、<a href="../../Tags/RadiosityTag/RadiosityTag.html">ラジオシティタグ</a>と<a href="../../Tags/HDRITag/HDRITag.html">HDRI 環境マップタグ</a>を使用します。これら２つのタグの利用で、<b>I</b>mage <b>B</b>ased <b>L</b>ighting （イメージベースドライティング）と呼ばれるテクニックを使用する事が可能です。IBL でシーンをレンダリングする時、シーンは点ライトのような通常のライトソースによってだけではなく、特別な背景テクスチャによって照らされます。この <b>H</b>igh <b>D</b>ynamic <b>R</b>ange <b>I</b>mages （ハイダイナミックレンジイメージ）は通常のテクスチャ（ 8 ビットテクスチャ）より高いレベルの光を保持する事が出来ます。ですので、空に輝くとても明るい太陽といった、リアルな環境をシミュレーションするために適しています。これらのテクスチャは ".hdr" で終わる拡張子を持っています。".jpg" のような通常のテクスチャは、適当な照明情報を含まないので（期待するようには）働きません。（訳注：".hdr" 以外に ".exr" の拡張子の OpenEXR 形式の HDRI テクスチャにも対応しています。）</p>
+
+          <p>HDRI レンダリングの品質は、HDRI テクスチャの品質にとても依存しています。手頃なハイエンドの HDRI テクスチャは、<a href="http://www.realtexture.com"><b>www.realtexture.com</b></a> で入手する事が出来ます。また、Cheetah3D には<a href="http://www.realtexture.com"><b>www.realtextures.com</b></a>の２つの小さい HDRI テクスチャサンプルが付属しています。それは、examples フォルダで見つける事ができます。</p>
+        </div>
+
+        <div align="center">
+          <p><a href="http://www.realtexture.com"><img src="../../Images/banner_hdri.jpg" alt="" border="0"></a></p>
+        </div>
+
+        <div align="left">
+          <p>下に見られるように、２つの異なる HDRI テクスチャは２つの全く違う環境照明を作り出します。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="HDRI1.jpg" alt="" height="240" width="320" border="0"> <img src="HDRI2.jpg" alt="" height="240" width="320" border="0"></p>
+
+          <table width="80%" border="1" cellspacing="0" cellpadding="4">
+            <tr>
+              <td valign="top" width="300">
+                <p><b>1. シーンの読み込み<br></b> このチュートリアルではレンダリングに重点を置いているので、まずはじめに、既存のシーンを読み込みましょう。こんサンプルは、木の台座に置かれた豚の貯金箱のシーンです。このシーンをレンダリングした場合、期待通りきちんとしたピンクの豚がレンダリングされます。しかし、まだあまりリアルには見えませんね。</p>
+              </td>
+
+              <td valign="top">
+                <div align="center">
+                  <img src="HDRI4.jpg" alt="" height="144" width="232" border="0"><br>
+                  <img src="HDRI3.jpg" alt="" height="240" width="320" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>2.</b> <b>HDRI 背景の追加</b><br>
+                次に、シーンに HDRI 背景を追加します。おれは、<a href="../../Tags/HDRITag/HDRITag.html">HDRI 環境マップタグ</a>をアクティブなカメラに適用する事で実行できます。<a href="../../Objects/SceneObjects/Camera/Camera.html">カメラオブジェクト</a>にタグを追加すると、自動的に<a href="../../Tags/HDRITag/HDRITag.html">HDRI 環境マップタグ</a>のプロパティがプロパティビューに表示されるでしょう。</p>
+
+                <p>次に Cheetah3D に同梱されている "oldtown_pano_small.hdr" をHDRI テクスチャに読み込みましょう。テクスチャの名前から分るように、これはパノラマフォーマットで保存されているので、"<b>タイプ</b>" プロパティを "パノラマ" に設定します。他のプロパティは、しばらくこのままにしておきましょう。</p>
+
+                <p>ここでシーンをレンダリングすると、HDRI テクスチャがシーンの背景としてレンダリングされます。</p>
+              </td>
+
+              <td valign="top">
+                <div align="center">
+                  <img src="HDRI7.jpg" alt="" border="0"> <img src="HDRI5.jpg" alt="" height="168" width="234" border="0"><br>
+                  <img src="HDRI6.jpg" alt="" height="240" width="320" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>3. HDRI テクスチャをシーン照明として使用</b><br>
+                次に、Cheetah3D が HDRI 背景をシーンを照らすために使用するように設定しましょう。最初に、<a href="../../Objects/SceneObjects/Camera/Camera.html">カメラ</a>オブジェクトの "カメラライト" プロパティを無効にします。その後で、<a href="../../Tags/RadiosityTag/RadiosityTag.html">ラジオシティタグ</a>をカメラオブジェクトに追加します。</p>
+
+                <p><a href="../../Tags/RadiosityTag/RadiosityTag.html">ラジオシティタグ</a>のプロパティが、表示されるはずです。今回は、アンビエントオクルージョンを使用します（ "タイプ" を "Ambient occlusion" に設定してください）。今回の目的には充分ですし、"Radiosity" タイプのアルゴリズムよりとても早くレンダリングできます。</p>
+
+                <p>ここでレンダーボタンを押すと、HDRI テクスチャで照らされた最初のイメージがレンダリングされるでしょう。ご覧のように、この HDRI テクスチャによって豚がとても柔らかく照らされています。また、簡単に地面のソフトシャドウ効果を得る事もできます。</p>
+
+                <p>豚の表面に少しムラが見えますが、これは <b>"サンプル数"</b> プロパティを 800 に、 <b>"エラー"</b> プロパティを 0.10 に設定する事で改善されます。次のステップでも確認できるので、ここでラジオシティーの精度を上げる事はありません。（次に進みましょう）</p>
+              </td>
+
+              <td valign="top">
+                <div align="center">
+                  <img src="HDRI8.jpg" alt="" border="0"> <img src="HDRI9.jpg" alt="" border="0"><img src="HDRI10.jpg" alt="" height="240" width="320" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>4. 反射の追加</b><br>
+                次の手順で、ピンクのマテリアルのリフレクションのintensityプロパティを 0.1 に設定します。これをレンダリングすると、HDRI テクスチャからの素敵な明るい反射を確認できます。この HDRI テクスチャでの HDRI レンダリングで、大変リアルな外観が与えられました。</p>
+
+                <p>手順 3 で見られたムラは、反射を追加したおかげてほぼ消えました。</p>
+              </td>
+
+              <td valign="top">
+                <div align="center">
+                  <img src="HDRI11.jpg" alt="" height="61" width="232" border="0"><br>
+                  <img src="HDRI1.jpg" alt="" height="240" width="320" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p>5. <b>最後の仕上げ</b><br>
+                最後の手順では、ただシーンに "強さ" が 0.1 くらいの弱い<a href="../../Objects/SceneObjects/Light/Light.html">環境光</a>を追加するだけです。このおかげで、シーンを少し明るくし、子豚を生き生きと見せる事ができます。</p>
+              </td>
+
+              <td valign="top">
+                <div align="center">
+                  <img src="HDRI12.jpg" alt="" height="240" width="320" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" valign="top">
+                <div align="center">
+                  <p><b>さぁ、次はあなたの番です。それらがどのように働くかをより理解するためにいろいろなプロパティで遊んでみてください。例えば、シーンはより明るくするためにHDRI 環境マップタグの "パワー" プロパティを上げたり、他の HDRI テクスチャを試したり。暗い部分を照らすために、通常のライトを追加する事もできます。</b></p>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>Orient Joint Tool</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>ジョイント向き調整</h2>
+        </div>
+
+        <p>ジョイント向き調整ツールはジョイントのローカル座標軸の向きを正しい方向に修正する機能です。イメージ２のようにローカル座標軸がボーンと同方向に向いていて、第２軸はボーン側面方向に向いている状態が望ましい状態です。このような状態にローカル座標軸が配置されていればキネマティクスの動作も簡単にできます。コンストレインの設定も簡単にできます。しかし、ジョイントの向きは１つの構成物の回転方向がFカーブエディタでアニメーションされることにより、まれに改変されます。このような場合は残念ながらジョイントの向きは正しい方向を向いていません。そこで、このジョイント向き調整ツールで修正するのです。</p>
+
+        <p>ジョイント向き調整ツールは以下のモードで適用されます。</p>
+
+        <ul>
+          <li><b>第２軸の設定無し</b>:<i>第２軸</i>のプロパティに何も設定されていない場合は、新しい方向は単純に方向のプロパティと２本のボーンにより決定されます。<i>方向</i> はローカル座標軸の向きを示します。よって、第１軸はジョイントを起点にボーンに沿った方向となります。第３軸は第１軸と第２軸に対して垂直方向となります。<br>
+          <br>
+          例えば、YXZ方向を選択した場合、第１軸はY (<b>Y</b>XZ)となります。それはボーンに沿う方向となります。第３軸はZ (YX<b>Z</b>)となり、 ボーンの側面方向となります。最後に第２軸は X (Y<b>X</b>Z) となり、第１軸(Y)と第３軸(Z)に対して垂直に配置されます。<br>
+          <br></li>
+
+          <li><b>第２軸の設定あり</b>: もし<i>第２軸</i> のプロパティに設定がある場合はローカル座標軸は少し異なった方向を向きます. この場合、第一軸はボーンに沿った方向となります。しかし、第２軸は<i>第２軸</i> プロパティで設定された方向を向き、第３軸は第１軸と第２軸に対して垂直に配置されます。</li>
+        </ul>
+
+        <div align="center">
+          <p><img src="JointOrient1.jpg" alt="" height="441" width="310" border="0"> <img src="JointOrient2.jpg" alt="" height="441" width="310" border="0"></p>
+
+          <p>左の図はジョイント向きを設定していない２つのボーンを示します。第２軸の設定無しでXYZ方向を適用した後、<br>
+          X軸はボーンに沿って配置され、Z軸はボーンの側面方向に配置されています。</p>
+        </div>
+
+        <p><b><i>Modes<br></i></b> このツールは全てのモードで操作できます。</p>
+
+        <ul>
+          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
+          ジョイント向き調整ツールを使用するときは"ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">キャラクターツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">ジョイント向き調整" をメニューから選択します。 ジョイント向き調整ツールのプロパティがツールプロパティ欄に表示されます。この欄の項目を設定することが出来ます。設定が完了したらOKボタンをクリックします。すると選択しているジョイントに適用されます。</li>
+        </ul>
+
+        <div align="center"></div>
+
+        <div align="left">
+          <p><b>キー</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>無し</i></b></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>方向:</b></i> ローカル回転軸の向きを指定します。</li>
+
+          <li><i><b>第２軸:</b></i> 第２軸の向きを指定したい場合に設定。第２軸は常にグローバル座標系の方向に従います。</li>
+
+          <li><i><b>階層:</b></i> 全ての階層のジョイントの向きを設定する場合にチェックします。</li>
+
+          <li><i><b>適用:</b></i> OKボタンをクリックすると選択しているジョイントに適用されます。</li>
+        </ul>
+
+        <div align="center"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>クォンタイズツール</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>クォンタイズツール</h2>
+        </div>
+
+        <p>クォンタイズツールはユーザーが設定可能なグリッドにポリゴンのポイントをスナップするために使用されます。これは、ポリゴンオブジェクトやスプラインオブジェクトがフリーハンドで作成、移動変形され、それを完璧に整列させたい場合に便利です。</p>
+
+        <div align="center">
+          <p><img src="Quantize1.jpg" alt="" width="600" height="239" border="0"></p>
+
+          <p><i>ポリゴンオブジェクトの２つのポイントを見てください。左の例では、ポイントがグリッドにのっていません。<br>
+          右の例では、ポイントが完全にグリッドにのるようにクォンタイズツールが使用されています。</i></p>
+        </div>
+
+        <p><b><i>編集モード<br></i></b></p>
+
+        <p><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
+        クォンタイズツールは、ポイントモード、エッジモード、ポリゴンモードの各モードで使用可能です。しかし、編集対象のオブジェクトを構成しているポイントの座標について操作を実行します。</p>
+
+        <div align="left">
+          <p><b>使い方</b></p>
+
+          <p>オブジェクトをクォンタイズ（整頓）するために、（訳注：このツールはローポリゴンオブジェクトにのみ使用できるので、オブジェクトがパラメトリックポリゴンオブジェクトやクリエータオブジェクトである場合、）まずそれを編集可能にしなければなりません（<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>を確認してください。）。次に "ツール" メニューから "クォンタイズ" を選択します。クォンタイズ（整頓）を実行したい軸を選択し、ポイントをスナップさせたいそれぞれのグリッドの間隔を入力します。クォンタイズ（整頓）を適用するために "OK" ボタンをクリックします。クォンタイズ（整頓）グリッドの初期値は、すべての軸で 0.05 です。それぞれの軸に同じ数値を使用する必要はない事に注意してください。（つまり、正方形グリッドではなく長方形のグリッドにスナップさせる事もできます。）</p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>X 軸にクォンタイズ:</b></i> チェックされている場合、選択されたポイントは X 軸でクォンタイズ（整頓）されます。</li>
+
+          <li><i><b>X 値:</b></i> X 軸上のポイントがスナップされるグリッド単位。初期値は 0.05 。</li>
+
+          <li><i><b>Y 軸にクォンタイズ:</b></i> チェックされている場合、選択されたポイントは Y 軸でクォンタイズ（整頓）されます。</li>
+
+          <li><i><b>Y 値:</b></i> Y 軸上のポイントがスナップされるグリッド単位。初期値は 0.05 。</li>
+
+          <li><i><b>Z 軸にクォンタイズ:</b></i> チェックされている場合、選択されたポイントは Z 軸でクォンタイズ（整頓）されます。</li>
+
+          <li><i><b>Z 値:</b></i> Z 軸上のポイントがスナップされるグリッド単位。初期値は 0.05 。</li>
+
+          <li><i><b>適用</b></i>: 選択されたポイントにクォンタイズ（整頓）を実行するためにクリックします。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>スカイライト</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+   
+    <tr>
+      <td>
+        <div align="center">
+          <h2>スカイライト</h2>
+        </div>
+
+        <div align="left">
+          <p>屋外のシーンをライティングするために、ちょうど空を背景に太陽光を使いたい場合がよくあるでしょう。その時、太陽と空の違いについて考えるかもしれません。すべての光りが太陽から放射されるのでしょうか？全くそうなのですが、スカイライトの体系では、太陽光は２つのパーツに分けて考えられます。</p>
+        </div>
+
+        <ol>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li>拡散する事なく太陽からまっすぐに来ている光。ライトのこのパーツは平行ライトと似ています。</li>
+
+                <li>太陽光が大気によって拡散された空からの光。これは巨大な半球状の面ライトだと考える事ができます。</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div align="left">
+          <p>スカイライトでシーンを照らしている場合に、ライトは常に太陽の直接光 (1) を計算するために最初のサンプルを使います。他のすべてのサンプルは、空の光 (2) に近づけるために使われます。</p>
+
+          <p>天空光を使用したシーンをレンダリングするために、"サンプル数" プロパティを 32 くらいにセットしたスカイライトのみを使う事ができます。これは、すばらしく滑らかなレンダリング結果を作成するでしょう。</p>
+
+          <p>しかし、特にラジオシティーを使ってシーンをレンダリングしたい場合には、IBL (Image Based Lighting) のテクニックを空の光 (2) を得るために使う事もできます。したがって、太陽の直接光 (1) のみを得るために "サンプル数" プロパティを 1 に設定します。そして、"形状" プロパティを On に設定します。<a href="../../../Tags/RadiosityTag/RadiosityTag.html">ラジオシティ</a>タグを使ってシーンをレンダリングします。天空光は、ラジオシティーアルゴリズムによって（スカイライトのジオメトリーから）集められます。これは一般的に、スカイライトのみを使う場合よりもかなり速いでしょう。</p>
+        </div>
+
+        <div align="center">
+          <table width="180" border="1" cellspacing="2" cellpadding="0">
+            <tr>
+              <td>
+                <div align="center">
+                  <img src="SkyLight1.jpg" alt="" height="300" width="300" border="0">
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <img src="SkyLight3.jpg" alt="" height="300" width="300" border="0">
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <img src="SkyLight2.jpg" alt="" height="300" width="300" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div align="center">
+                  シーンを太陽光のみでレンダリング<br>
+                  サンプル数 = 1<br>
+                  レンダリング時間 = 2 秒
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  シーンを太陽光と空からの拡散光（スカイライトのみ）でレンダリング<br>
+                  サンプル数 = 32<br>
+                  レンダリング時間 = 42 秒
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  シーンをAmbient occlusionでレンダリング<br>
+                  サンプル数 = 1<br>
+                  レンダリング時間 = 5 秒
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div align="left">
+          <p>上のイメージを見て解るように、３番目の方法が短時間でいい結果になります。</p>
+
+          <p>注意: ラジオシティとサンプル数を 1 以上に設定したスカイライト（もちろん、形状 On で）の併用は、空の拡散光を２度収集するので、シーンがより明るくなる場合があります。</p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>強さ:</b></i> スカイライトの強さ。通常は、この強さを変更する必要はないでしょう。</li>
+
+          <li><b><i>濁り:</i></b> 大気の濁り具合を調整します。この値は 2 から 10 までの範囲でなければなりません。</li>
+
+          <li><b><i>半径:</i></b> このプロパティはフォグタグを併用してシーンをレンダリングする場合にのみ調整が必要です。空までの距離を設定します。（訳注：また3D ビューでの表示位置にも対応しています。）</li>
+
+          <li><i><b>形状:</b></i> スカイライトを背景として使用したい場合にこのプロパティを On にします。 　　　　　　　　　　　　　　　</li>
+
+          <li><i><b>緯度:</b></i> 太陽の見える位置は、それを見る地球上の場所によるので、Cheetah3D にそのシーンが地球上のどの場所に位置するかを設定しなければいけません。シーンの緯度を設定します。[-90°, 90°]</li>
+
+          <li><i><b>経度:</b></i> シーンの経度を設定します。 [-180°, 180°]</li>
+
+          <li><b><i>日時:</i></b> 日付と時刻を設定します。これは太陽の見える位置を決定します。日付・時刻は、フォーマット "時:分 日/月" （"hh:mm MM/YY"）に従って設定してください。</li>
+
+          <li>
+            <i><b>タイプ:</b></i> このプロパティで影の計算タイプを選択します。<a href="../Light/Light.html">ライト</a>オブジェクトのいろいろなタイプの説明を参照してください。
+
+            <div align="center"></div>
+          </li>
+
+          <li><b><i>カラー:</i></b> 影のカラー</li>
+
+          <li><i><b>サンプル数:</b></i> スカイライトが使用するサンプルの数。より多いサンプル数を使うと、より滑らかな影になります。多くのサンプル数を使うと、レンダリング時間は大幅に増加します。スカイライトのみを使う場合でも、16 - 32 のサンプル数で充分でしょう。<br>
+          （訳注：この記述は古く間違っています。上の説明にもあるように、スカイライトのサンプル数は、ライトオブジェクトでソフトシャドウを作るためのサンプル数とは意味が違い、値を上げたからといってソフトシャドウを作るわけではない事に注意してください。また低すぎるスカイライトのサンプル数は、アンチエイリアス処理の時間を増加させるため、逆にレンダリング時間がかかる傾向がある事にも注意が必要です。）</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

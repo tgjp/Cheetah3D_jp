@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>斧</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>斧</h2>
+        </div>
+
+        <div align="left">
+          <p>このチュートリアルでは、簡単な斧モデルの作成方法を学びます。また、ポリゴン・サブディビジョンモデリングでの最初の理解を得る事もできます。</p>
+
+          <p>もしまだならばオブジェクトとタグによく慣れるように、<a href="../HelloWorld/HelloWorld.html">最初のチュートリアル</a>を行ってください。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="../Axe/Axe1.jpg" alt="" height="200" width="200" border="0"></p>
+
+          <table width="80%" border="1" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top" width="300">
+                <p><b>1. 最初に立方体の作成</b><br>
+                まずシンプルな立方体オブジェクトを作成します。各プロパティーをそれぞれ、 "幅 (X)" を 3.0 、"奥行き (Z)" を 0.5 、"幅 (X)" を 5.0 に設定します。"オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">編集可能にする" メニューコマンドの実行後、立方体はポリゴンツールで編集できる<a href="../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>に変わります。<a href="../../UserInterface/Modes/Modes.html">編集モード</a>も自動的にポリゴンモードに変わります。立方体は右のようなオブジェクトになっているでしょう。</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe2.jpg" alt="" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>2. 斧の外形の作成<br></b> <a href="../../Tools/Common/TransformTool/TransformTool.html">移動変形ツール</a>を使用して、メッシュを右のような形にします。</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe3.jpg" alt="" height="262" width="243" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>3. 持ち手の作成<br></b> 斧の持ち手を作るために、持ち手の貫通部分のポリゴンを選択し、その選択ポリゴンに<a href="../../Tools/Polygon/InnerExtrudeTool/InnerExtrudeTool.html">内側に押し出し</a>を実行します。</p>
+
+                <p>持ち手の出っ張り部分を作るために、すでに選択されているポリゴンに<a href="../../Tools/Polygon/ExtrudeTool/ExtrudeTool.html">押し出し</a>を少しだけ実行します。次に、持ち手の下部分についても同じように作業します。</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe4.jpg" alt="" height="226" width="234" border="0">
+
+                  <p><img src="Axe5.jpg" alt="" border="0"></p>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>4. 斧を鋭く<br></b> 斧の刃先がまだ鋭くないので、ポリゴンの終端を接合して鋭くしなければいけませんね。ポイントモードに切り替えて、<a href="../../Tools/Polygon/WeldTool/WeldTool.html">ポイントを接合</a>を使用して、この作業をしてください。（訳注：ポイントモードの方が、ポイントが見えるので作業しやすいですが、特にポイントモードに切り替える必要はありません。ポリゴンモードのままで、作業できます。）</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe6.jpg" alt="" height="296" width="215" border="0"><br>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <div align="left">
+                  <p><b>5. マテリアルの適用<br></b> 斧が、それらしい形になってきました！次に色を付けてみましょう。<br>
+                  まず、斧のマテリアルを作成します。とりあえず、シンプルな灰色と茶色のマテリアルで充分でしょう。次に、持ち手部分のポリゴンをすべて選択し、3D ビュー上の持ち手の部分に茶色のマテリアルをドラッグ＆ドロップします。持ち手が茶色に変わりました。最後に、灰色（鉄）のマテリアルで同じように作業します。斧の刃の部分のポリゴンをすべて選択し、3D ビュー上の刃の部分に、灰色のマテリアルをドラッグ＆ドロップします。<br>
+                  これで、斧が色付けされました。</p>
+                </div>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe7.jpg" alt="" height="266" width="207" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>6. メッシュをスムースに：最初の挑戦<br></b> 試しに "ツール<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴンツール<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">細分化 キャトマルクラーク" コマンドをを斧オブジェクトに適用して見ると、期待したような結果にはなりません。</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe8.jpg" alt="" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>7. ハードエッジの追加<br></b> まずハードエッジを設定しなければなりません。ハードエッジは、サブディビジョンサーフェス（細分化された表面）上で、鋭い部分になります。エッジをハードエッジとして設定するには、エッジモードでエッジを選択し、"選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ハードエッジの設定/解除" コマンドを適用します。ハードエッジとして設定されたエッジは、エッジモードの時青色で表示されます。現在選択中のエッジは、選択範囲のハイライトでこれらを赤色で表示するので、青色では表示されない事に注意してください。</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe9.jpg" alt="" height="281" width="214" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top" width="300">
+                <p><b>8. メッシュをスムースに：２度目の挑戦<br></b> 再度 "ツール<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴンツール<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">細分化 キャトマルクラーク" コマンドを適用してみると、今度は期待通りの結果になるでしょう。後からメッシュを調整したい場合には、サブディビジョンオブジェクトを使用する事も可能です。（訳注：4.3 ではサブディビジョンオブジェクトは削除されているので、同じ機能のサブディビジョンモディファイアを使用します。）</p>
+              </td>
+
+              <td>
+                <div align="center">
+                  <br>
+                  <img src="Axe10.jpg" alt="" border="0">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" valign="top">
+                <p><b>9. 完成<br></b> このチュートリアルのサンプルファイルは、Cheetah3D に同梱されている example フォルダにあります。</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>F-カーブエディタ</title>
+  <link href="../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>F-カーブエディタ</h2>
+
+          <h2><img src="F-Curve.jpg" alt="" border="0"></h2>
+        </div>
+
+        <div align="left">
+          <p><i>まだ、<a href="TimeLine.html">タイムライン</a>と<a href="KeyEditor.html">キーエディタ</a>についてお読みでない場合は、これらの項目を先にお読みください。</i></p>
+
+          <p>F-カーブエディタは、アニメーションを微調整する際の大変強力なツールです。あなたが既にアニメーションを記録している場合、選択されたオブジェクト、タグ、またはマテリアルのF-カーブエディタが表示されます。もしまだ記録していない場合、このビューは空白でしょう。</p>
+        </div>
+
+        <p><b>F-カーブエディタのコントロール:<br></b> 上のスクリーンショットに示されている、F-カーブエディタの重要な４つの部分から説明しましょう。</p>
+
+        <ol>
+          <li>記録されているキーのパラメータ。選択されたパラメータのF-カーブのみをF-カーブビューに表示します。パラメータを選択するには、これをクリックします。</li>
+
+          <li>選択されたキー（訳注：実際に選択されているキーは緑のライン上の赤丸）</li>
+
+          <li>左側の接線ハンドル。スプライン補間を使用している場合のみ接線ハンドルが表示されます。</li>
+
+          <li>右側の接線ハンドル。スプライン補間を使用している場合のみ接線ハンドルが表示されます。</li>
+        </ol>
+
+        <p><b>補間タイプ:<br></b> Cheetah3D は、今のところ４つの補間タイプを提供しています。補間タイプは、どのようにキーの間のプロパティーの値を計算するかを定義します。</p>
+
+        <div align="center">
+          <table width="80%" border="1" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="220">
+                <div align="center">
+                  <img src="F-CurveLinear.jpg" alt="" height="128" width="216" border="0">
+                </div>
+              </td>
+
+              <td valign="top"><b>リニア補間:</b> これは最も基本的な補間のタイプです。パラメータは直線的に（同じスピードで）変化します。これは Cheetah3D のデフォルトの補間タイプです。（訳注：4.3 では、デフォルトはソフト補間です。）</td>
+            </tr>
+
+            <tr>
+              <td width="220">
+                <div align="center">
+                  <img src="F-CurveSmooth.jpg" alt="" height="128" width="216" border="0">
+                </div>
+              </td>
+
+              <td valign="top"><b>ソフト補間:</b> ソフト補間タイプは、それぞれのキーを通る滑らかな曲線を作ります。</td>
+            </tr>
+
+            <tr>
+              <td width="220">
+                <div align="center">
+                  <img src="F-CurveSpline.jpg" alt="" height="128" width="216" border="0">
+                </div>
+              </td>
+
+              <td valign="top"><b>スプライン補間:</b> スプライン補間は、最も強力な補間タイプです。２つのキーを通る任意のベジェ曲線を定義する事ができます。もしスプライン補間を選んだ場合、F-カーブエディタにベジェ曲線の接線ハンドルが表示されます。この接線ハンドルを操作するには、マウスでドラッグします。</td>
+            </tr>
+
+            <tr>
+              <td width="220">
+                <div align="center">
+                  <img src="F-CurveFlat.jpg" alt="" height="128" width="216" border="0">
+                </div>
+              </td>
+
+              <td valign="top"><b>フラット補間:</b> フラット補間タイプは、パラメータのスピードが曲線の始まりか終わりで 0 になるので、ゆるかやに加速、またはゆるやかに減速させたい場合に便利です。</td>
+            </tr>
+          </table>
+        </div>
+
+        <div align="left">
+          <p><b>補間タイプの設定:<br></b> キーに補間タイプを設定するには、まずマウスで設定したいキーを選択します。選択されたキーは、赤でハイライトされます。メニュー（または右クリックメニュー）から、両側の接線タイプを設定する場合は、"アニメーション -&gt; 接線 -&gt; <i>タイプ</i>"、左側の接線タイプを設定する場合は、"アニメーション -&gt; 接線 (入) -&gt; <i>タイプ</i>", 右側の接線タイプを設定する場合は、"アニメーション -&gt; 接線 (出) -&gt; <i>タイプ</i>" を呼び出します。任意の異なる補間タイプを組み合わせる事も可能です。</p>
+        </div>
+
+        <div align="center"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

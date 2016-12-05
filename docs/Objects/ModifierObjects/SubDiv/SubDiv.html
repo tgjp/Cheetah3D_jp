@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>サブディビジョンモディファイア</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+   
+    <tr>
+      <td>
+        <div align="center">
+          <h2>サブディビジョンモディファイア</h2>
+        </div>
+
+        <div align="left">
+          <div align="left">
+            <p>サブディビジョンモディファイアは、シンプルなポリゴンオブジェクトから、その形を作るポリゴン数を指数的に増加する事でその表面を滑らかにする事を可能にします。これは機能的には<a href="../../../Tools/Polygon/SubdivideTool/SubdivideTool.html">細分化 キャトマルクラークツール</a>と同じものですが、元のメッシュを破壊する事のないサブディビジョンオブジェクトはモディファイアオブジェクトです。これは、<a href="../../../Tools/Polygon/SubdivideTool/SubdivideTool.html">細分化 キャトマルクラーク</a>された結果を見ながら、元のポリゴンオブジェクトを編集できる事を可能にします。パラメトリックなポリゴンオブジェクトとの組み合わせで、これは自由でパワフルなモデリングを提供します。</p>
+          </div>
+
+          <div align="center">
+            <p><img src="../../CreatorObjects/SubdivisionObject/Subdivision2.jpg" alt="" width="376" height="157" align="middle" border="0"></p>
+          </div>
+
+          <div align="left">
+            <p>上の例では、左から１番目の立方体がシンブルなパラメトリックポリゴンオブジェクトである事がわかると思います。２番目と３番目のものはサブディビジョンモディファイアが適用されています。それぞれ１番目と同じ立方体を（親オブジェクトの）コントロールメッシュとして持っています。- ポリゴン数が増加する事によって、どのように立方体の形が滑らかになるかに注意して下さい。３番目のサブディビジョンモディファイアでは、"反復数" プロパティは 3 に上げられています。</p>
+
+            <p>Cheetah3D は、共にハードエッジをサポートする2種類のサブディビジョンスキームを提供します。最初にものは、古くからあるCatmull-Clarkサブディビジョンスキームです。これは他の多くの 3D モデラーで実装されているものですが、Catmull-Clarkサブディビジョンスキームには、欠点があります。これは四角ポリゴンへの適用時には大変いい結果になりますが、メッシュに三角ポリゴンがある場合に不自然な結果になるという事です。 一方、Stam-Loopサブディビジョンスキームは、より進んだサブディビジョンスキームです。これはCatmull-Clarkサブディビジョンスキームとループサブディビジョンスキームから良い方の特性を使用するので、三角と四角ポリゴンが混在したメッシュ上でより良い結果になります。より理解するために、下の画像を見てください。<br>
+            （訳注：この他に、Linearスキームが追加されました。）</p>
+          </div>
+
+          <div align="center">
+            <p><img src="../../CreatorObjects/SubdivisionObject/Subdivision4.jpg" alt="" height="226" width="208" border="0"><br>
+            三角ポリゴンと四角ポリゴンで構成された元のメッシュ</p>
+
+            <p><img src="../../CreatorObjects/SubdivisionObject/Subdivision6.jpg" alt="" border="0"> <img src="../../CreatorObjects/SubdivisionObject/Subdivision5.jpg" alt="" height="226" width="201" border="0"><br>
+            左のイメージは、古典的なCatmull-Clarkサブディビジョンスキームを使用し、右のイメージはStam-Loopサブディビジョンスキームを使用しています。Catmull-Clarkサブディビジョンスキームの方が、三角ポリゴンで構成された角の部分に不格好で不自然な結果を生成する一方で、Stam-Loopサブディビジョンスキームの方は、期待された結果になります。</p>
+          </div>
+
+          <div align="left">
+            <p><i>注意: サブディビジョンモディファイア、特に "反復数" プロパティを上げた時に大変多くのポリゴンを持つオブジェクトを作成します。"反復数" を高く設定する事で、コンピューターに過負荷を書けないよう注意して下さい。クオリティの高いレンダー画像を作成する場合でも、2 か 3 で十分でしょう。（訳注：Cheetah3D が扱える総ポリゴン数は、お使いの Mac が使用できるメモリ量に依存しています。サブディビジョンの "反復数" プロパティを上げるなどで、メモリを超えるポリゴン数を生成した場合、強制終了する場合があります。）</i></p>
+
+            <p>Tips:</p>
+          </div>
+
+          <ul>
+            <li style="list-style: none">
+              <div align="left">
+                <ul>
+                  <li>サブディビジョンモディファイアでモデリングしている時に、分割されたメッシュによってコントロールするためのポイントやポリゴンが隠れてしまう場合があります。そのためにこれらのポイントが選択できなくなります。これらのポイントを選択する簡単な方法は、一時的にサブディビジョンモディファイアを無効にする事です。これは元のメッシュの<a href="../../../Tags/ModeTag/ModeTag.html">モードタグ</a>の "モディファイア" プロパティのチェックを外す事で可能です。<br>
+                  キー一発でモディファイアの無効化を実行する事も可能な、ホットキー("モディファイアの On/Off")もあります。</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div align="center">
+            <p><img src="../../CreatorObjects/SubdivisionObject/Subdivision7.jpg" alt="" height="228" width="215" border="0"> <img src="../../CreatorObjects/SubdivisionObject/Subdivision8.jpg" alt="" height="228" width="216" border="0"><br>
+            右上のコントロール用のポイントが、分割されたメッシュで隠されています。モディファイアの<a href="../../../Tags/ModeTag/ModeTag.html">モードタグ</a>の"モディファイア"プロパティのチェックを外すとポイントを選択できるようになります。</p>
+          </div>
+
+          <ul>
+            <li>サブディビジョンのコントロールメッシュを調整するために、移動するポリゴンかエッジは１つずつで大抵十分でしょう。こうした作業をするために、<a href="../../../Tools/Common/TransformTool/TransformTool.html">移動変形ツール</a>のtweak modeが非常に便利です。ポリゴンやエッジの上にマウスがくると、それらが隠れていてもハイライトされ動かす事ができるので隠れたポリゴンやエッジ、ポイントを選択できない問題を避けることができます。
+
+              <div align="left">
+                <ul>
+                  <li>"シェーディング" プロパティのISO パラメータは、サブディビジョンモディファイアで有効です。このモードは元のコントロールメッシュをハイライト表示します。</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div align="center">
+            <p><img src="../../CreatorObjects/SubdivisionObject/Subdivision9.jpg" alt="" height="269" width="276" border="0"></p>
+          </div>
+
+          <p><b>プロパティ</b></p>
+
+          <ul>
+            <li><i><b>反復数:</b></i>親オブジェクトのポリゴンオブジェクトのポリゴン面を何回分割するかを決定します。デフォルトは 2 です。</li>
+
+            <li><i><b>スキーム:</b></i> どのサブディビジョンスキームが使われるかを設定します。"Catmull-Clark"がデフォルトですが、"Stam-Loop" か " Linear" を使う事もできます。</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

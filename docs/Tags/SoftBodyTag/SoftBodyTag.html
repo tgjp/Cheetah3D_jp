@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>ソフトボディ タグ</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div class="c1">
+          <h2>ソフトボディ タグ</h2>
+        </div>
+
+        <p>ソフトボディ タグは、やわらかな物体や布などの物質の振る舞いをシミュレート出来ます。使い方は編集可能なポリゴンオブジェクトにソフトボディ タグを設定し、<a href="../../Animation/Dynamics/Dynamics.html">ダイナミクス</a>をオンにするだけです。剛体の頂点をピンで固定する時は、<a href="../AnchorTag/AnchorTag.html">アンカー</a> タグをご使用下さい。</p>
+
+        <p>ソフトボディシミュレーションはグローバル座標系で行われます。従ってオブジェクトの移動変形プロパティはソフトボディシミュレーションの影響を受けません。</p>
+
+        <div class="c1">
+          <p><img src="SoftBody1.gif" alt="" height="435" width="300" border="0"><br>
+          旗竿にソフトボディが設定された旗のシミュレーション</p>
+
+          <p><img src="SoftBody2.jpg" alt="" border="0"></p>
+        </div>
+
+        <div class="c2">
+          <p><strong>Tips:</strong></p>
+        </div>
+
+        <ul>
+          <li class="c3">
+            <div class="c2">
+              <div class="c2">
+                <ul>
+                  <li>ソフトボディのシミュレーションは、頂点数が 10000 個に制限されています!!!</li>
+
+                  <li>ソフトボディが他のオブジェクトを突き抜けてしまう様な場合には、ソフトボディタグの<em>ソルバー解析回数</em>プロパティか、ダイナミクス環境設定の<em>精度</em>プロパティを増やしてやると改善するかもしれません。</li>
+                </ul>
+              </div>
+
+              <ul>
+                <li>シミュレーションが不安定な結果になるので、マージンはメッシュの一番近い頂点同士の距離よりも大きくならないように注意して下さい。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><em>注意：ソフトボディタグは、編集可能なポリゴンオブジェクトにのみ適用できます。</em></p>
+
+        <p><strong>プロパティ</strong></p>
+
+        <ul>
+          <li><em><strong>質量:</strong></em> ソフトボディの総重量を指定します。</li>
+
+          <li><strong><em>剛性:</em></strong> ソフトボディがどのくらい固いかを指定します。低い値は、より弾力性のあるオブジェクトになり、高い値では、より固いオブジェクトになります。</li>
+
+          <li><strong><em>減衰:</em></strong> ソフトボディの頂点の移動がどれくらいの強さで減衰するかを指定します。高い減衰値の場合、すぐにソフトボディの動きは遅くなります。</li>
+
+          <li><strong><em>抗力:</em></strong> ソフトボディがどれくらい強く抗力（ Lift Force ）の影響を受けるかを指定します。</li>
+
+          <li><strong><em>揚力:</em></strong> ソフトボディがどれくらい強く揚力（ Drag Force ）の影響を受けるかを指定します。</li>
+
+          <li><strong><em>動摩擦:</em></strong> ソフトボディが２つのオブジェクト間の摩擦による影響をどれくらい強く受けるかを指定します。</li>
+
+          <li><strong><em>容積保護:</em></strong> ソフトボディが押しつぶされた時に、その容積がどれくらい維持されるかを指定します。</li>
+
+          <li><strong><em>圧力:</em></strong> ソフトボディ内の圧力を指定します。オブジェクト内の圧力が外側の圧力より高い場合、オブジェクトは膨らみます。</li>
+
+          <li><strong><em>形状維持:</em></strong> このプロパティが使用されると、ソフトボディは最初の形状を記憶し、その形状に戻ろうとします。</li>
+
+          <li><strong><em>マージン:</em></strong> 当たり判定の許容値のマージン。このマージンは 0 に設定しないで下さい。</li>
+
+          <li><strong><em>曲げ抵抗:</em></strong> 曲げ抵抗は相互に影響する頂点同士が隣接する最大範囲を指定します。体積のあるソフトボディの場合、この値は最低でも２であるべきです。一般にこの値は変更しないでよいでしょう。</li>
+
+          <li><strong><em>両面を計算:</em></strong> このプロパティは、クロスシミュレーションのみに必要になります。抗力と揚力を、ポリゴンの両面で適用したい場合に使用します。</li>
+
+          <li><strong><em>自己干渉:</em></strong> オブジェクト内でメッシュの衝突判定をするかどうかを指定します。</li>
+
+          <li><strong><em>クラスターを使用:</em></strong> このプロパティが On になっている場合、メッシュ（の頂点）それ自体は衝突判定テストに使用せず、メッシュの近似値が計算されます。そのため、メッシュの形状はクラスターと呼ばれる近似のものになります。</li>
+
+          <li><strong><em>クラスター:</em></strong> ソフトボディ形状に近づけるために使用されるクラスターの最大数を指定します。</li>
+
+          <li><strong><em>ソルバー解析回数:</em></strong> 高い値にすると、物理ソルバーがフレーム毎のシミュレーション計算回数が多くなります。より高い値にすると、計算時間は増えますが、より精度の高いシミュレーション結果を生成します。特にソフトボディが他のオブジェクトを突き抜ける様な場合には、高いソルバー解析回数の値でこの問題が解決するかもしれません。</li>
+        </ul>
+
+        <div class="c1"></div>
+
+        <ul>
+          <li class="c3">
+            <div class="c2"></div>
+          </li>
+        </ul>
+
+        <div class="c1"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

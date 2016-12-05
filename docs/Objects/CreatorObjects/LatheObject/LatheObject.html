@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>旋盤</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>旋盤オブジェクト</h2>
+        </div>
+
+        <div align="left">
+          <p>自然界の多くの物体は、回転対称性 (Rotational Symmetry) を持っています。（花瓶や、リンゴ、ホイールなど）このような物体を説明する時、私たちは普通この物体の輪郭のみを必要とします。物体全体を、回転軸を中心にこの輪郭を回転させる事によって再構築する事ができます。</p>
+
+          <p>旋盤オブジェクトは、ちょうどこのようなオブジェクトです。スプラインオブジェクトを利用して、回転対象性をもつメッシュを作成します。</p>
+        </div>
+
+        <div align="center">
+          <p><img src="LatheObject3.jpg" alt="" height="299" width="300" border="0"></p>
+        </div>
+
+        <p><b><i>使い方</i></b><br>
+        旋盤オブジェクトを使用するには、スプラインオブジェクトを旋盤オブジェクトにドラッグ＆ドロップするだけです。オブジェクトブラウザ上で、スプラインオブジェクトは旋盤オブジェクトの小オブジェクトとして表示されるでしょう。スプラインオブジェクトはこのオブジェクトに合うように、完全に編集可能です。</p>
+
+        <p>上のリンゴは、この２つのオブジェクト（旋盤とスプライン）で作成されています。</p>
+
+        <div align="center">
+          <p><img src="LatheObject2.jpg" alt="" border="0"></p>
+        </div>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>分割数:</b></i> <i><b>開始角度</b></i>から<b><i>終了角度</i></b>までの回転が分けられる分割数を定義します。より多くの分割数は、最終的により滑らかなメッシュを生成します。</li>
+
+          <li><i><b>開始角度:</b></i> スプラインが回転を始める角度</li>
+
+          <li><i><b>終了角度:</b></i> スプラインが回転を終える角度</li>
+
+          <li><i><b>回転軸:</b></i> スプラインが周りを回転するべき軸</li>
+
+          <li><i><b>法線を反転:</b></i> Cheetah3D は スプラインの向きに強く依存しています。もし、旋盤オブジェクトが黒く表示される場合、スプラインはおそらく反時計回りの方向でしょう。これは <i>"法線を反転"</i> プロパティを変更する事で簡単に直す事ができます。オブジェクトは期待通りの表示を得るように、Cheetah3D はスプラインの方向を内部的に反転します。</li>
+
+          <li><i><b>カバー:</b></i> もし閉じたスプラインを旋盤オブジェクトで使用する場合、部分的なスプラインの回転の両端が閉じられるかどうかを決める事ができます。<br>
+          下の画像では、円が 0 度から 270 度まで回転し、正面が閉じられています。</li>
+        </ul>
+
+        <div align="center">
+          <p><img src="LatheObject4.jpg" alt="" height="203" width="268" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p><b>Tip</b><br>
+          スプラインカーブに沿った分割数（訳注：スプラインの滑らかさ）を調整するには、スプラインオブジェクトの "近似分割角度" プロパティを調整します。<br></p>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

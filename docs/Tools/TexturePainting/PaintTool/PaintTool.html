@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>Paint</title>
+  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>ペイントツール</h2>
+        </div>
+
+        <p>ペイントツールはラバー、円形状、矩形などの異なるブラシを使い基本的なテクスチャ作成が出来ます。そして、カラーテクスチャやディスプレイスメントテクスチャをひと筆描くごとに3D ビュー画面とUV エディタ画面にリアルタイムに反映されます。この機能のおかげであなたは他のペインティングアプリケーションを用いらずに3Dモデルで直接結果を確認できます。しかし、ペインティングアプリケーションに搭載されている特別な機能ををペイントツールは持っていないので、そのような場合はペインティングアプリケーションを使うと良いでしょう。</p>
+
+        <p>テクスチャに何か描く場合は、まず最初に編集したいテクスチャを選択してください。プロパティエディター内のマテリアルプロパティーを開いて編集したいテクスチャを選択してください。</p>
+
+        <div align="center">
+          <p><img src="PaintTool2.jpg" alt="" border="0"></p>
+        </div>
+
+        <p>今、4個のボタンが見えているはずです。もし、すでにテクスチャをロードしているなら"編集"ボタンを押す事が出来ます。まだ、テクスチャをロードしていない場合は、最初にテクスチャをロードするか"新規テクスチャ"ボタンを押してテクスチャを作成してください。その後、 "編集"ボタン を押して<a href="../../../UserInterface/UVEditor/UVEditor.html">UV エディタ</a>にテクスチャを表示するとテクスチャのペイント準備完了です。</p>
+
+        <div align="center">
+          <p><img src="PaintTool1.jpg" alt="" border="0"><br></p>
+        </div>
+
+        <div align="left">
+          <p>ペインティング作業を終了する場合は"編集終了" ボタンを押して保存してください。</p>
+
+          <p><i>注意:</i></p>
+        </div>
+
+        <ol>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><i>24ビットのテクスチャのペイントのみ可能です。Cheetah3DはHDRIやEXRなどの浮動小数点色深度のテクスチャ はサポートしていません。</i></li>
+
+                <li><i>JPEGやTIFFおよびPNG、BMP形式のテクスチャのみペイントができ、書き出すことが出来ます。</i></li>
+
+                <li><i>画質の劣化がないTIFFやPNG形式を使用することをお奨めします。そうすれば、保存のたびにテクスチャの画質が劣化することがありません。</i></li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <p><b><i>Modes<br></i></b> ペイント ツールは<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>にのみ使用できます。</p>
+
+        <ul>
+          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
+          ペイント ツールを使うためにはまず最初に描きたいテクスチャを決める必要があります。その後、CTRL+マウスクリック、または右クリックでコンテキストメニュを表示し"ツール-&gt;UV ツール-&gt;ペイント"と選択します。そして、あなたが使用したいブラシ形状（ブラシ、ラバー、その他）をツールプロパティで選択します。これで、UV エディタ内でマウスを使いペイントをすることが出来ます。.</li>
+        </ul>
+
+        <div align="left">
+          <p><b>キー</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b><i>無し</i></b></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><b><i>タイプ:</i></b>クリックして使いたいツールを選択します。</li>
+
+          <li><i><b>ブラシ形状:</b></i> ブラシの形状を指定します。</li>
+
+          <li><i><b>サイズ:</b></i> ブラシのサイズを指定します。</li>
+
+          <li><b><i>間隔:</i></b> 描く間隔を指定します。</li>
+
+          <li><b><i>カラー:</i></b> ブラシの色を指定します。この設定はブラシテクスチャには反映できません。</li>
+
+          <li><b><i>バックグラウンド:</i></b> 背景の色を指定します。もし、ラバーを使うならばこの設定は重要です。</li>
+
+          <li><b><i>ブラシテクスチャ:</i></b> ブラシのテクスチャを指定します。</li>
+
+          <li><b><i>テクスチャサイズ:</i></b> ブラシのテクスチャのスケールを指定します。</li>
+
+          <li><b><i>回転:</i></b> ブラシのテクスチャの回転角度を指定します。</li>
+
+          <li><b><i>Pressure sensitive:</i></b> ペンタブレットを使っている場合は筆圧検知によってブラシのサイズを変化させます。</li>
+
+          <li><b><i>アルファを筆圧で可変:</i></b> ペンタブレットを使っている場合は筆圧検知によってブラシの不透明度を変化させます。</li>
+
+          <li><b><i>ライブアップデート:</i></b> この設定が有効な場合は地形やディスプレイスメントテクスチャをリアルタイムに3D ビュー画面に反映させます。 この高度な機能を無効に設定した方が操作が軽く便利な場合があります。</li>
+
+          <li><b><i>アルファを保持:</i></b> このブラシはテクスチャに合成されませんが、アルファ値はテクスチャに合成されます。このブラシは髪の毛の質感を作る場合にはとても便利です。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

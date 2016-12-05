@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>ロープ タグ</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>ロープ タグ</h2>
+        </div>
+
+        <p>このロープタグは、ロープの物理的な振る舞いをシミュレートために使用する事ができます。使用するには編集可能なスプラインオブジェクトにこのロープタグを適用し、<a href="../../Animation/Dynamics/Dynamics.html">ダイナミクス</a>を On にするだけです。スプラインのコントロールポイントを他の剛体に固定するには、<a href="../AnchorTag/AnchorTag.html">アンカー</a>タグを使用して下さい。</p>
+
+        <p>ロープを使用したシミュレーションは、グローバルな座標系で実行されます。スプラインの移動変形プロパティ（移動・回転・拡大縮小）は、シミュレーションに影響しません。</p>
+
+        <div align="center">
+          <p><img src="Rope1.gif" alt="" height="339" width="200" border="0"><br>
+          Simple rope simulation.</p>
+        </div>
+
+        <div align="left">
+          <p><b>ヒント:</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li>ロープを使用したシミュレーションは、スプラインのコントロールポイントのみをアニメーションし、その接線のベクトルは変化させません。そのため、スプラインのプロパティを<i>タイプ：リニア</i>にしておく事をお勧めします。</li>
+
+                <li>ロープを使用したシミュレーションは、コントロールポイントを最大10000個に制限しています!!!</li>
+
+                <li>ロープが他のオブジェクトを突き抜けてしまう場合、ロープタグの<i>ソルバー解析回数</i>プロパティや、ダイナミクス環境設定の<i>精度</i>を増やす事で改善するかもしれません。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><i>注意：ロープタグは編集可能な<a href="../../Objects/SplineObjects/Spline.html">スプラインオブジェクト</a>にのみ適用する事ができます。</i></p>
+
+        <p><b>プロパティ</b></p>
+
+        <ul>
+          <li><i><b>質量:</b></i> ロープの重さを設定します。</li>
+
+          <li><b><i>剛性:</i></b> ロープの固さを設定します。低い値はゴムひものような結果になり、高い値はより固いひもを生成します。</li>
+
+          <li><b><i>減衰:</i></b> コントロールポイントの線形の動きが減衰する強さを設定します。高い減衰値にすると、ロープの動きは早く止まります。</li>
+
+          <li><b><i>動摩擦:</i></b> ２つのオブジェクト間の摩擦による影響をどれだけ強く受けるかを設定します。</li>
+
+          <li><b><i>形状維持:</i></b> このプロパティが使用すると、スプラインは最初の形状を記憶し、その形状に戻ろうとします。</li>
+
+          <li><b><i>マージン:</i></b> 当たり判定の許容距離。ロープの場合、このマージンはロープ断面の半径と見なす事ができるでしょう。マージンは、絶対に 0 にするべきではありません。</li>
+
+          <li><b><i>曲げ抵抗:</i></b> この値は、各コントロールポイントが互いに影響を及ぼしあう隣接する最大範囲を設定します。高い値で、より固いロープを生成します。</li>
+
+          <li><b><i>ソルバー解析回数:</i></b> 高い値にすると、物理ソルバーがフレーム毎のシミュレーション計算回数が多くなります。より高い値にすると、計算時間は増えますが、より精度の高いシミュレーション結果を生成します。特にロープが他のオブジェクトを突き抜ける様な場合には、高いソルバー解析回数の値でこの問題が解決するかもしれません。</li>
+        </ul>
+
+        <div align="center"></div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left"></div>
+          </li>
+        </ul>
+
+        <div align="center"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

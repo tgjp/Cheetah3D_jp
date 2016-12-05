@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>スプライン IK タグ</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table border="0" cellpadding="8" cellspacing="8" width="100%">
+    <tbody>
+
+      <tr>
+        <td>
+          <div align="center">
+            <h2>スプライン IK タグ</h2>
+          </div>
+
+          <p>スプライン IK タグは、ジョイントチェインをスプラインオブジェクトに形に沿わせたい場合に使用します。例えば、動物のしっぽを動かしたい場合、１つ１つ全てのジョイントではなく、スプラインのコントロールポイントを動かすだけでよくなります。<br></p>
+
+          <p><b>例:</b></p>
+
+          <p>例として、キャラクターの右手の IK チェインのセットアップ方法を見てみましょう。</p>
+
+          <ol>
+            <li>すでに骨組み（ジョイントチェイン）とスプラインを設定している事を確認して下さい。</li>
+
+            <li>ジョイントチェインの先端を選択し、スプライン IK タグをツールバーから適用します。<br></li>
+
+            <li>スプライン IK タグの<em>ターゲット</em> プロパティにスプラインオブジェクトをセットします。<br></li>
+
+            <li>これで完了です。スプラインの形状を変更すると、ジョイントチェインもそれに沿って動きます。</li>
+          </ol>
+
+          <div align="center">
+            <p><em><img src="SplineIK1.jpg" border="0"></em></p>
+
+            <p>最初のイメージでは、スプラインとジョイントチェインが確認できます。</p>
+
+            <p><em><img src="SplineIK2.jpg" border="0"></em></p>
+
+            <p>次のイメージでは、ジョイントチェインはスプライン IK タグによってスプラインに結びついています。<br>
+            これでジョイントチェインは、曲線にスムースに沿っています。<br></p>
+          </div>
+
+          <div align="left">
+            <p><br></p>
+          </div>
+
+          <p><b>プロパティ:</b></p>
+
+          <ul>
+            <li><i><b>長さ:</b></i> IK チェインの長さ</li>
+
+            <li><i><b>オフセット:</b></i> IK チェインのオフセット</li>
+
+            <li><i><b>ロール:</b></i> IK チェインの回転角度。ジョイントをスプラインに沿ってひねらせたい場合にこの値を変更します。<br></li>
+
+            <li><b><i>ターゲット:</i></b> ボーン（ジョイントチェイン）が沿うスプラインオブジェクト。<br></li>
+
+            <li><b><i>カラー:</i></b> IK チェインのルートから IK ハンドルに接続するラインとスプライン IK ハンドルの色。</li>
+          </ul>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>Rigid Body Tag</title>
+  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>剛体タグ</h2>
+        </div>
+
+        <p>剛体タグは<a href="../../Animation/Dynamics/Dynamics.html">ダイナミクス</a> の物理解析に、ポリゴンオブジェクトを剛体とする目印として使用されます。</p>
+
+        <div align="center">
+          <p><img src="RigidBody1.gif" alt="" height="300" width="400" border="0"><br>
+          剛体 解析。</p>
+        </div>
+
+        <div align="left">
+          <p><b>Tips:</b></p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li>もし多くのオブジェクトに同一の剛体プロパティを設定したい場合、それら全てのオブジェクトを同じフォルダーに納め、そのフォルダーに剛体タグを割り当てることができます。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <p><i>注意：剛体タグはポリゴンオブジェクト、パーティクルオブジェクト、フォルダーにのみ割り当てることが出来ます。 </i></p>
+
+        <p><b>プロパティー</b></p>
+
+        <ul>
+          <li>
+            <i><b>タイプ:</b></i> 剛体タイプの条件。剛体はこれらのタイプを対象にします。:
+
+            <ul>
+              <li><b><i>スタティック:</i></b> 静止して移動しないオブジェクト。しかし、力学にしたがって動くオブジェクトはこれらと衝突します。例えばスタティックは地面や床などに使用されます。</li>
+
+              <li><b><i>ダイナミック:</i></b> ダイナミクスオブジェクトは他の剛体と影響し合い力や衝突の影響を受けます。</li>
+
+              <li><b><i>キネマティック:</i></b> キネマティック オブジェクトはF-カーブにより移動します。しかし衝突などにより移動するダイナミクスオブジェクトにも影響します。この剛体タイプはラケットでボールを打つ時などに使用されます。</li>
+            </ul>
+          </li>
+
+          <li>
+            <b><i>形状:</i></b> 剛体の衝突判定形状。
+
+            <ul>
+              <li><b><i>バウンディングボックス:</i></b> 衝突判定時の形状としてバウンディングボックスを使用します。</li>
+
+              <li><b><i>凸面体:</i></b> この衝突判定形状はすべての凸面体オブジェクトに使用されます。Cheetah3D は、球体や立方体、カプセルや円柱のために、計算が早く必要なメモリの少ない特別に衝突判定に最適化された形状を使用します。もし、凸面体オブジェクトが最適化された衝突判定形状に置き換えられない場合、Cheetah3D は（自動的に） 凸面形状 を使用します。</li>
+
+              <li><b><i>凸面形状:</i></b> 衝突判定条件として凸面形状を使用します。</li>
+
+              <li><b><i>凹面体:</i></b> 剛体の実際のメッシュを衝突判定形状として使用します。これは、トーラスのような穴の空いたオブジェクトにも対応できる一般的などの形状にも適応しますが、一番計算に時間がかかります。どうしても必要な場合のみ使用したほうが良いでしょう。</li>
+            </ul>
+          </li>
+
+          <li><b><i>質量:</i></b> 剛体の質量です。重心はオブジェクトのピボットポイント位置となります。</li>
+
+          <li><b><i>摩擦:</i></b> ２つのオブジェクト間に作用する摩擦力を示します。</li>
+
+          <li><b><i>弾性</i></b>: 剛体の柔軟性を示します。</li>
+
+          <li><b><i>減衰:</i></b> オブジェクトの直線運動時の減衰を示します。値が大きいほど早く減速します。</li>
+
+          <li><b><i>回転減衰:</i></b> オブジェクトの回転運動時の減衰を示します。</li>
+
+          <li><b><i>マージン:</i></b> マージンは衝突判定時の隙間を示します。これは解析をより安定させるために使用します。この値は"０"ではいけません。</li>
+
+          <li><b><i>初期ベクトル:</i></b> オブジェクトの移動速度を示します。</li>
+
+          <li><b><i>初期回転ベクトル:</i></b> オブジェクトの回転速度を示します。</li>
+
+          <li>
+            <b><i>アクティブ化条件:</i></b>
+
+            <ul>
+              <li><b><i>即時:</i></b> ダイナミクスオブジェクトの動作がt=0秒から開始させたい場合に使用します。</li>
+
+              <li><b><i>衝突:</i></b> ダイナミクスオブジェクトと他のオブジェクトと衝突した瞬間から動作させたい場合に使用します。</li>
+
+              <li><b><i>時間:</i></b> 指示した時間からダイナミクスオブジェクトを動作させたい場合に使用します。（t=T)</li>
+            </ul>
+          </li>
+
+          <li><b><i>時間:</i></b>ダイナミクス 剛体がアクティブになるタイミングを示します。</li>
+
+          <li><b><i>衝突最低速度:</i></b> 衝突最低速度の速度以上で移動するオブジェクト衝突した場合に剛体がアクティブになります。</li>
+
+          <li><b><i>フォース On/Off:</i></b> 剛体オブジェクトが <a href="../../Objects/EffectorObjects/Forces/Forces.html">フォース</a> による影響を受けるか受けないかを選べます。</li>
+
+          <li><b><i>線形係数:</i></b> 剛体に作用する力に様々な影響を与える係数です。</li>
+
+          <li><b><i>回転係数:</i></b> 剛体に作用する回転力に様々な影響を与える係数です。</li>
+        </ul>
+
+        <div align="center"></div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left"></div>
+          </li>
+        </ul>
+
+        <div align="center"></div>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>

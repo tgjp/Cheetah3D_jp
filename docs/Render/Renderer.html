@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Adobe GoLive 6">
+
+  <title>レンダラー</title>
+  <link href="../style.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+
+    <tr>
+      <td>
+        <div align="center">
+          <h2>レンダラー</h2>
+        </div>
+
+        <p>Cheetah3D は現在、ラジオシティーと HDRI レンダリングをサポートするレイトレーサーを提供しています。レンダラーは、完全に Cheetah3D に統合され、もしデュアルプロセッサーの Mac を使用している場合、両方の CPU を使うようにマルチスレッド化されています。</p>
+
+        <div align="center">
+          <p><img src="Renderer2.jpg" alt="" border="0"></p>
+        </div>
+
+        <div align="left">
+          <p>レンダラーのためのほとんどのパラメータは、<a href="../Objects/SceneObjects/Camera/Camera.html">カメラ</a>や<a href="../Objects/SceneObjects/Light_old/PointLight/PointLight.html">ライト</a>、そしてマテリアルに設定されています。新しいマテリアルは、<a href="../UserInterface/NodeEditor/NodeEditor.html">ノードベースのマテリアルシステム</a>で作成する事ができます。</p>
+
+          <p>最終的なシーンを３つの異なる方法でレンダリングすることができます：</p>
+        </div>
+
+        <ol>
+          <li>メニューから "レンダー<img src="../Images/arrow.gif" alt="" width="10" height="10" border="0">レンダー" コマンドを使用します。</li>
+
+          <li>Preferencesウィンドウで、"レンダー"コマンドにホットキーを割り当て、それを使用します。</li>
+
+          <li>ツールバーの "レンダー" アイコンを使用します。</li>
+        </ol>
+
+        <div align="center">
+          <h3>特徴</h3>
+        </div>
+
+        <div align="left">
+          <p>Cheetah3D に内蔵されたレンダラーは、現在以下のような特徴を提供しています。:<br>
+          （訳注：このリストには、現在サポートされなくなった項目や古い情報が含まれています。環境マップは、現在のマテリアルではサポートされていません。）</p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left">
+              <ul>
+                <li><b>マルチスレッド対応:</b> レンダラーはマルチスレッド化されており、デュアルプロセッサー Mac の両方の CPU に対応しています。</li>
+
+                <li><b>プラグイン形式のシェーダー:</b> 内蔵のすべてのシェーダーはプラグイン形式で提供され、Cheetah3D は新しいシェーダーを簡単に追加できます。</li>
+
+                <li><b>プロシージャルシェーダー:</b> 以下のようなシェーダーがあります： Directional, Marble, Membrane, Velvet, Wood.</li>
+
+                <li><b>解像度:</b> 4096 x 4096 までの解像度サイズでシーンをレンダリングする事ができます。解像度は、<a href="../Objects/SceneObjects/Camera/Camera.html">カメラ</a>オブジェクトで設定できます。</li>
+
+                <li><b>ファイル書き出し:</b> レンダリング画像を、 .tiff /.jpg / .png などの多くの一般的な 2D イメージファイルに保存する事が可能です。</li>
+
+                <li><b>スーパーサンプリング:</b> Cheetah3D は、レンダリングのアーティファクト ( artifacts ) を減少させるために 64x まで対応するスーパーサンプリングを使用します。したがって、計算されるピクセルごとの色は 64x サンプルまで上がります。</li>
+
+                <li><b>異方性テクスチャフィルタリング:</b> Cheeth3D は、カラーとバンプマップをフィルターするために異方性テクスチャフィルタリング ( Anisotropic Texture Filtering ) を使用します。これは、オリジナルのテクスチャサイズよりも小さくテクスチャの貼られたオブジェクトをレンダリングする場合に、よりアーティファクトが少ない結果になります。</li>
+
+                <li><b>レイトレースされた透過:</b> 透過やガラスのオブジェクトを計算するために、透過や屈折プロパティを使用します。また、透過オブジェクトのフレネル反射の計算もサポートしています。</li>
+
+                <li><b>レイトレースされた反射:</b> Cheetah3D では、反射を計算するために２つの方法があります。１つ目は、正確にシーン上でのオブジェクトの反映を複写するためにレイトレースを使用します - 例として、青い箱と木の床のある上のイメージを見てください。しかし、偽の反映を生成したい場合には、環境マップを使用する事も可能です - 詳しくは、下の環境マップの情報を確認してください。</li>
+
+                <li><b>アルファチャンネルのサポート:</b> <a href="../Objects/SceneObjects/Camera/Camera.html">カメラ</a>オブジェクトの背景色プロパティに透明なカラーを設定する事で、透明な背景のアイコンを簡単に作成する事が出来ます。</li>
+
+                <li><b>1024 個までのライトソース:</b> Cheetah3D は、現在 1024 個のライトを設置をサポートしています。多くのシーンで充分であるでしょう。</li>
+
+                <li><b>影:</b> Cheetah3D は、現在レイトレースされた影をサポートします。影の計算をさせるためには、<a href="../Objects/SceneObjects/Camera/Camera.html">カメラ</a>オブジェクトと、<a href="../Objects/SceneObjects/Light_old/PointLight/PointLight.html">ライト</a>オブジェクトの "影" プロパティを設定する必要があります。</li>
+
+                <li><b>バンプマッピング:</b> 自然界において、多くの表面が完全に滑らかであるというわけではありません、微妙な隆起や、波紋、へこみは、モデルをよりリアルに見せるために不可欠なものです。こうしたでこぼこした表面をシミュレートするために、バンプマップを使用する事ができます。これは、黒が隆起の最も低いレベル、白が隆起の最も高いレベルを表すグレースケールイメージになります。下の２つのイメージを見てください。これらは、バンプマップとそれを使用したレンダリング画像です。</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div align="left"></div>
+
+        <div align="center">
+          <p><img src="Renderer6.jpg" alt="" height="64" width="256" border="0"></p>
+
+          <p><img src="Renderer1.jpg" alt="" height="250" width="250" border="0"><br>
+          バンプマップと組み合わせた環境マップ<br>
+          （訳注：マテリアルの環境マップは、現在サポートされていません）</p>
+        </div>
+
+        <ul>
+          <li style="list-style: none">
+            <div align="left"></div>
+          </li>
+        </ul>
+
+        <div align="center"></div>
+
+        <ul>
+          <li><b>HDRI バックグラウンド:</b> HDRI バックグラウンドは、イメージ・ベースド・ライティング ( Image Based Lighting ) や、非常にリアルな反射やクッセルを作成するために使用されます。より理解するために、<a href="../Tags/HDRITag/HDRITag.html">HDRI 環境マップ</a>タグと、<a href="../Tags/RadiosityTag/RadiosityTag.html">ラジオシティ</a>タグの項目を参照してください。このサイトの最初にある大きいサンプルイメージは、HDRI を使用したレンダリングのクオリティを示しています。（訳注：これは、このヘルプファイルが WEB 上で公開されていた頃の記述だと思われます。）</li>
+
+          <li><b>Radiosity と Ambient occlusion:</b> Cheetah3D は、これら両方のアルゴリズムをサポートしています。これらはシーンの間接光を計算するために使用されるでしょう。より理解するために、<a href="../Tags/RadiosityTag/RadiosityTag.html">ラジオシティ</a>の記述を参照してください。</li>
+        </ul>
+      </td>
+    </tr>
+
+  </table>
+
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+</html>
