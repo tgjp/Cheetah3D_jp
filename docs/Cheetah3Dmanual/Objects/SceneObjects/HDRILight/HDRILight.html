@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>HDRI Light</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+	</head>
+
+	
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>HDRI Light</h2>
+					</div>
+					<p>HDRI (<b>H</b>igh <b>D</b>ynamic <b>R</b>ange <b>I</b>mage) is the magic word when it comes to creating ultra realistic images. While normal textures save their color values between (0.0, 0.0, 0.0) for black and (1.0, 1.0, 1.0) for white, an HDRI can have much brighter values than (1.0, 1.0, 1.0). These values can go up to 100.000. For example, the sun is much brighter than a white sheet of paper. Because an HDRI map catches this higher-range lighting information from the environment it can be used to illuminate the scene. The HDRI background works like a spherical area light source.</p>
+					
+					<p>Advantages of the HDRI light:</p>
+					<ul>
+						<li><b>Illumination of the scene:</b> The ambient occlusion or global illumination algorithms will sample the HDRI background to estimate how much light arrives from the environment. Even without a real light source a scene can be illuminated using an HDRI background alone.
+						<li><b>Realistic reflections/refractions:</b> The HDRI background can be used to create very realistic reflections or refractions. Lets assume your material has a reflection intensity of 0.1. If you used a normal <a href="../../Render/Renderer.html">environment texture</a> (like a .jpg) you will get a value of (1.0, 1.0, 1.0) when the sun is sampled. Multiplied by 0.1 the reflected sun ends up with a dark grey (0.1, 0.1, 0.1) in the reflection. But now lets use an HDRI as background. The sun might be sampled as (100000.0, 100000.0, 100000.0) for example. Multiplied by 0.1 you get (10000.0, 10000.0, 10000.0). After clamping this ends up as a nice realistic white reflection.						
+						<li><b>Soft shadows:</b> Because the HDRI can be considered as a big spherical area light the shadows created by it are usually soft. 
+						<li><b>Background:</b> You get the background of your scene for free!					</ul>
+					<p></p>
+					<div align="center">
+						<p><img src="HDRILight4.jpg" alt="" border="0"><br>This scene was rendered with an HDRI light source. <br>Check out the realistic reflections and the soft shadows under the pig.</p>
+						<p></p>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>HDR image:</b></i> The filename of the HDR image. You can load HDRIs which come in the .hdr or the .exr file format.
+						<li><b><i>Type: </i></b>Defines the mapping of the HDRI file. If your HDRI file was saved in the probe format for example you have to select probe to get the right mapping. There are three widely used mappings available in Cheetah3D.
+					</ul>
+					<div align="center">
+						<table width="180" border="0" cellspacing="0" cellpadding="4">
+							<tr>
+								<td>
+									<div align="center">
+										<img src="HDRILight1.jpg" alt="" height="200" width="200" border="0"></div>
+								</td>
+								<td>
+									<div align="center">
+										<img src="HDRILight3.jpg" alt="" height="200" width="150" border="0"></div>
+								</td>
+								<td>
+									<div align="center">
+										<img src="HDRILight2.jpg" alt="" height="198" width="300" border="0"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div align="center">
+										Probe</div>
+								</td>
+								<td>
+									<div align="center">
+										Cross</div>
+								</td>
+								<td>
+									<div align="center">
+										Panorama</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<ul>
+						<li><b><i>Intensity:</i></b> A scale factor for the HDRI texture. Every color sampled from the HDRI will be multiplied by this factor.
+						<li><i><b>Clamp: </b></i>Pixels in the HDRI with a very high intensity (for example in the sun) can cause serious noise in combination with ambient occlusion or radiosity renderings. The artifacts can be easily reduced by clamping the high intensities. Don't set the clamp value to low however, or you will lose all the benefits of using an HDRI.	
+						<li><b><i>Samples: </i></b>Number of samples at which the HDRI light will be evaluated. The more samples you use the smoother the shadows will become. The rendering time will increase substantially with more samples. 
+						<li><b><i>MIS: </i></b>Turns on MIS (Multiple Importance Sampling). MIS considerably improves the convergence speed of the renderer. So less samples are need to get the same quality. MIS only works with the Falcon renderer.
+						<li><b><i>Background: </i></b>The HDRI will also be used for the scene background. Take care when using this since it will interacts with the <a href="../../SceneObjects/Fog/Fog.html">fog</a> object, if you use one.					
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+
+</html>

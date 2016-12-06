@@ -1,80 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>Disconnect Tool</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Disconnect Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ポリゴンを分離ツール</h2>
-        </div>
-
-        <p>Cheetah3Dにおいて、全ての作成されるパラメトリックオブジェクト・クリエータオブジェクトは接続されています。これはポリゴンが、隣接しているポリゴンとポイントを共有していることを意味します。これには、あなたがただ一つのポリゴンかいくつかのポリゴンについて作業するだけなら、ジオメトリーが壊れないというメリットがあります。しかし、メッシュといくつかのポリゴンを切り離すことが、しばしば必要となります。 この作業は分離ツールでするか、<a href="../SplitTool/SplitTool.html">別オブジェクトに分離</a>ツールのどちらかを使用できます。 ポリゴンを分離ツールと別オブジェクトに分離ツールの違いは、別オブジェクトに分離ツールがポリゴン選択から完全に新しいポリゴンオブジェクトを作成するということです。その代わりにポリゴンを分離ツールを使用すると、選択されたポリゴンは隣接したポリゴンから外されるでしょう。</p>
-
-        <div align="center">
-          <p><img src="DisconnectTool1.jpg" alt="" height="200" width="194" border="0"> <img src="DisconnectTool2.jpg" alt="" height="200" width="193" border="0"><br>
-          ポリゴンを分離ツールを実行した後、選択したポリゴンを上に移動させます。</p>
-        </div>
-
-        <div align="left">
-          <p><i>Tip: グループを保存せずにすべてのポリゴンを選択して、分離ツールを実行するなら、あなたはおもしろい効果を生む<a href="../SubdivideTool/SubdivideTool.html">サブディビジョン</a>ツールを利用できるかもしれません。</i></p>
-        </div>
-
-        <div align="center">
-          <p><img src="DisconnectTool3.jpg" alt="" height="199" width="203" border="0"></p>
-        </div>
-
-        <p><b><i>編集モード<br></i></b> ポリゴンを分離ツールは<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>に適用できます。. それはポリゴンモードだけで利用できます。</p>
-
-        <ul>
-          <li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
-          ポリゴンを分離ツールを使用するには、<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>のいくつかのポリゴンを選択して下さい。そしてポリゴンツールメニューからポリゴンを分離ツールを呼び出して下さい。次に、ポリゴンを分離ツールのプロパティパネルからポリゴンを分離ツールの特性を設定して下さい。OKボタンを押した後に、ポリゴンを分離ツールは最終的に実行されます。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>グループを維持:</b></i> オフの場合、全ての選択されたポリゴンが、隣接したポリゴンから分離されます。オンの場合、選択されたポリゴンは、選択されていない隣接したポリゴンから分離されるだけです。</li>
-
-          <li><b><i>適用:</i></b> ポリゴンを分離ツールを実行します。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Disconnect Tool</h2></p>					</div>					<p>In Cheetah3D all polygon meshes which are created through parametric or creator objects are connected. This means that the polygons share points with its neighboring polygons. This has the advantage that the geometry won't break up if you just move around single polygons or polygon selections, but it is often necessary to separate some polygons from a mesh. This task can be either done with the disconnect or with the <a href="../SplitTool/SplitTool.html">split tool</a>. The difference between the disconnect tool and the split tool is that the split tool creates a completely new polygon object from the polygon selection. If you use the disconnect tool instead, just the selected polygons will be disconnected from their neighbors.</p>					<div align="center">						<p><img src="DisconnectTool1.jpg" alt="" height="200" width="194" border="0">  <img src="DisconnectTool2.jpg" alt="" height="200" width="193" border="0"><br>							Moving up the polygon selection after performing the disconnect tool.</p>					</div>					<div align="left">						<p><i>Tip: If you select all polygons and perform the disconnect tool without preserving the groups, you could then use the <a href="../SubdivideTool/SubdivideTool.html">subdivision</a>  tool to produce some interesting effects.</i></p>					</div>					<div align="center">						<p><img src="DisconnectTool3.jpg" alt="" height="199" width="203" border="0"></p>					</div>					<p><b><i>Modes<br>							</i></b>The disconnect tool can only be applied to <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon objects</a>. It's only available in polygon mode.</p>					<ul>						<li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>To use the disconnect tool, select some polygons of a <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon object.</a> Then call the menu command &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Polygon<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Disconnect&quot;. Now set the properties of the disconnect tool in the tool properties view. After pressing the apply button the  disconnect tool will be finally performed. 					</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>Preserve group: </b></i>If turned off, every selected polygon will be disconnected from its neighbors. If turned on, the polygon selection will be only disconnected from it's unselected neighbors.												<li><b><i>Apply: </i></b>performs the disconnect operation.					</ul>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

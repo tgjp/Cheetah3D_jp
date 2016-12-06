@@ -1,132 +1,100 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>ポリゴンオブジェクト</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Polygonobject</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ポリゴンオブジェクト</h2>
-
-          <h2><img src="Polygonobjecticon.jpg" alt="" height="40" width="40" border="0"></h2>
-        </div>
-
-        <p>ポリゴンオブジェクトは、Cheetah3D のシーンで表面を持つすべてのオブジェクトの元になるものです。パラメトリックポリゴンオブジェクトと、クリエータオブジェクトは、このオブジェクトに属します。このヘルプファイルでは、ポリゴンオブジェクトから派生した他のオブジェクトと混同しないように、このポリゴンオブジェクトは、しばしばロウ・ポリゴンオブジェクト (a raw Polygonobject) と呼ばれます。ポリゴンオブジェクトは、三角形（３点）、四角形（４点）と、多角形（ N 点、自然数 N）で構成されます。</p>
-
-        <p><i>注意！ ポリゴンオブジェクトは、ポリゴンツールでメッシュを編集できる唯一のオブジェクトです。その他のオブジェクトのメッシュを編集したい場合は、最初に編集可能に（ "編集可能にする" を実行）しなければなりません。</i><br>
-        （訳注：下の画像の 'Info' 欄は、現バージョンでは削除されています。ポリゴン数やポイント数を確認するには、"オブジェクト情報を見る" を使用します。）</p>
-
-        <div align="center">
-          <p><img src="PolygonobjectProps.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>メニューコマンドから "オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴンオブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴンオブジェクト" を選択することによって、直接ポリゴンオブジェクトを作成する事ができます。このオブジェクトは空で、 ポイントやポリゴンを含んでいません。<b><i>ポイントを挿入</i></b>ツールを使用して、オブジェクトにポイントを挿入する事ができます。その後で、<b><i>ポリゴンの作成</i></b>ツールや<i><b>帯状ポリゴンの作成</b></i> ツールを使用して、これらのポイントを繋いでポリゴンメッシュを作成できます。<br>
-          （訳注：現バージョンでは、<b><i>ポリゴンの作成</i></b>ツールで、直接ポリゴンを作成していけるので、あらかじめポイントを作成しておく必要はありません。また、<i><b>帯状ポリゴンの作成</b></i>ツールは、<b><i>ポリゴンの作成</i></b>ツールに統合されています。）</p>
-
-          <p>またパラメトリックポリゴンオブジェクト（立方体、球体、など）や、クリエータオブジェクト（ブーリアン、旋盤、など）を元に作成する事も可能です。ただ、これらのオブジェクトのメッシュは、そのままでは編集できる状態ではありません。ポリゴンツールで直接このメッシュを編集したい場合、オブジェクトを編集可能にしなければなりません。このオブジェクトを選択し、メニューコマンドから "オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">編集可能にする" を選択する事で、これができるようになります。パラメトリックポリゴンオブジェクトや、クリエータオブジェクトは、設定可能なパラメータを失い、編集可能なロウ・ポリゴンオブジェクトに変化します。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="PolygonobjectMenu.jpg" alt="" height="187" width="187" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>オブジェクトブラウザでオブジェクトアイコンをダブルクリックする事で、パラメトリックオブジェクトを編集可能にする事も可能です。</p>
-
-          <p><b>Normals（法線）<br></b> すべてのオブジェクトには、"スムース" というグループのプロパティがあります。これらのプロパティで、法線計算のアルゴリズムをコントロールする事ができます。</p>
-
-          <ul>
-            <li>
-              <b><i>タイプ:</i></b>
-
-              <ul>
-                <li><b><i>フラット:</i></b> ポリゴン面の各頂点の法線は、ちょうどポリゴン面の法線になります。</li>
-
-                <li><i><b>フォン:</b></i> すべてのポリゴンの角の法線は、そのポイントを共有するすべてのポリゴンの法線の平均によって計算されます。このアルゴリズムが望ましくない不自然な結果を生み出すかもしれないので、注意してください。（下の図を参照してください。）</li>
-
-                <li><b><i>コンストレイン:</i></b> 各ポリゴンが作る２つの平面の角度が設定より小さい場合に、そのポリゴンの法線を平均します。この操作は、フォンの設定より計算にコストがかかります。必要な場合のみ使用するように注意してください。</li>
-              </ul>
-            </li>
-
-            <li><b><i>スムースアングル:</i></b> コンストレインの場合の計算に使われる角度を決定します。この値を変えて遊んでみてください、ポリゴンオブジェクトへの効果がすぐに解るでしょう。</li>
-          </ul>
-
-          <div align="center">
-            <p><img src="SmoothTagUnConstrained.jpg" alt="" height="150" width="150" border="0"><img src="SmoothTagConstrained.jpg" alt="" height="150" width="150" border="0"></p>
-
-            <p>フォンに設定した円柱（左）コンストレインに設定した円柱（右）</p>
-          </div>
-
-          <p><b>Creases（ハードエッジ）<br></b> ハードエッジは、サブディビジョンで表面が滑らかに分割される場合に鋭い部分を作ります。Cheetah3D では、エッジモードでエッジを選択し、メニューコマンドから "選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ハードエッジの設定/解除" を選択する事で、メッシュのエッジにハードエッジとして印を付ける事ができます。 ハードエッジをとして印を付けられたエッジは、エッジモードで（もしそれが選択中でなければ）青く表示されるでしょう。ハードエッジの印を外すためには、この "選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">ハードエッジの設定/解除" コマンドを再度使用します。<a href="../../Tools/Polygon/SubdivideTool/SubdivideTool.html">細分化 キャトマルクラーク</a>やサブディビジョンモディファイアを使うと、印を付けられたエッジモードはハードエッジとして操作されます。どのようにハードエッジが細分化 キャトマルクラークに影響するかの例として、下のイメージを見てください。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Polygonobject1.jpg" alt="" height="310" width="187" border="0"> <img src="Polygonobject2.jpg" alt="" height="310" width="188" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p><b>Seams（切れ目）</b><br>
-          切れ目は、<a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">UV 展開</a>ツールでポリゴンオブジェクトの UV を展開するために使われるエッジです。例えば、球体を UV 展開したい場合にはUV 展開ツールがどこで閉じたポリゴンメッシュの UV マップを分割するのかわかるように、切れ目を割り当てなければなりません。そうでなければ球体の UV マップは、展開されずにただ押しつぶされたようになるでしょう。<br>
-          切れ目は、<a href="../../UserInterface/3dView/3dView.html">3D ビュー</a>と <a href="../../UserInterface/UVEditor/UVEditor.html">UV エディタ</a>で緑色でハイライトされます。選択されたエッジの切れ目の印を付ける／外すには、"選択<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">切れ目の設定/解除"コマンドを使います。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Polygonobject3.jpg" alt="" height="300" width="305" border="0"> <img src="Polygonobject4.jpg" alt="" height="300" width="305" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p><b>Pinned UV（UV ピン）<br></b> UV ピンは、<a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">UV 展開</a>ツールで変更されない UV 座標です。またこれらは、<a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">UV 展開</a>ツールの結果に影響します。特に切れ目や UV ピンとして設定されたポイントは、展開された UV メッシュを、望むような形に伸ばすヒントになるでしょう。選択されたポイントを UV ピンとして設定するには、UV エディタでコンテキストメニュー（右クリックメニュー）の "UV ピンの設定/解除" コマンドを使います。UV ピンのポイント座標は黄色でハイライトされます。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Polygonobject5.jpg" alt="" height="300" width="305" border="0"> <img src="Polygonobject6.jpg" alt="" height="300" width="305" border="0"><br>
-          左は UV ピンを使わずに展開された球体の UV マップ<br>
-          右は 4 つの UV ピンを使って展開した結果</p>
-        </div>
-
-        <div align="left">
-          <p><b>複数のポリゴン選択セット<br></b> すべてのポリゴンオブジェクトは、全部で 16 の独立したポリゴン選択セットを持っています。プロパティの<i><b>ポリゴン選択セット</b></i>で、これらの選択を切り替える事ができます。</p>
-
-          <p>これらの複数のポリゴン選択セットは、通常１つのメッシュ（ポリゴンオブジェクト）に複数のマテリアルを割り当てるために使用します。（上の<b>Creases（ハードエッジ）</b> のイメージのように）茶色のマテリアルを "ポリゴン選択セット - 1" へ、灰色のマテリアルを "ポリゴン選択セット - 2" へ適用する事ができます。メッシュ（ポリゴンオブジェクト）ごとに複数のマテリアルを使用する方法については、<a href="../../Tags/MaterialTag/MaterialTag.html">マテリアル</a>の項目も参照してください。</p>
-
-          <p>ポリゴンツールは、常に現在のポリゴン選択セットを使用します。通常は、ポリゴンツールによってポリゴン選択セットの選択範囲が変更される事はありません。（訳注：ポリゴンの数を変更するようなツールについては、それぞれのオプションを確認してください。）</p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>ポリゴン選択セット:</b></i> アクティブなポリゴン選択範囲の番号</li>
-
-          <li><i><b>polygons:</b></i> メッシュの三角ポリゴンと四角ポリゴンの数</li>
-
-          <li><i><b>points:</b></i> メッシュのポイント数</li>
-        </ul>
-
-        <p>（訳注：現バージョンでは、プロパティ欄にポリゴン数、ポイント数の情報は表示されません。これらの情報を確認するには、"オブジェクト情報を見る" を使用してください。）</p>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p> <h2>Polygonobject</h2></p>
+					</div>
+					<p>The Polygonobject is the father of every object in Cheetah3D which has a surface. To these objects belong all the parametric polygon objects and all the creator objects. In the manual, the Polygonobject will be often be called a raw Polygonobject, so that there is no confusion over which objects are derived from the Polygonobject. A Polygonobject can be made out of triangles (three points), quads (four points) and ngons (n points, where n is any natural number).</p>
+					<p><i>Caution! The Polygonobject is the only object where the mesh can be modified with the polygon tools. If you want to modify the mesh of another object you first have to make it editable. </i> </p>
+					<div align="left">
+						<p>You can create a polygon object directly using the menu command &quot;Objects<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Polygonobject<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Polygonobject&quot;. This object is empty and doesn't contain any points or polygons. You can add points to this object with in <b><i>insert point</i></b> tool and thereafter you can then mesh these points together with the <b><i>create polygon</i></b> or the <i><b>create polygon strip</b></i> tool.</p>
+						<p>You could also create a parametric polygon object (Box, Ball, etc.) or a creator object (Boolean, Lathe, etc.) as a starting point, but you won't be able to modify the mesh of these objects. If you want to modify the mesh manually with the polygon tools you have to make the object editable. You can do this by selecting the object and using the menu command &quot;Objects<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Make editable&quot;. Now the parametric or creator object will lose it's parametric properties and will be transformed into a raw Polygonobject which is editable.</p>
+					</div>
+					<div align="center">
+						<p><img src="PolygonobjectMenu.jpg" alt=""  border="0"></p>
+					</div>
+					<div align="left">
+						<p>It is also possible to make the parametric polygon object editable by double clicking onto the object icon in the object browser.</p>
+						<p></p>
+						<p><b>Normals<br>
+							</b>Every polygon object has a property group called &quot;Smooth&quot;. With these parameters you can control which normal calculation algorithm is used the calculate the shading normals of the polygon object. </p>
+						<div align="center">
+							<p><img src="SmoothTagUnConstrained.jpg" alt="" height="150" width="150" border="0"><img src="SmoothTagConstrained.jpg" alt="" height="150" width="150" border="0"></p>
+							<p>Cylinder with phong normals (left). Cylinder with constrained normals (right).</p>
+							<p></p>
+						</div>
+						<p><b>Creases<br>
+							</b>Creases are sharp features in the context of subdivision surfaces. You can tag an edge of a mesh as a crease in Cheetah3D by selecting that edge in the edge mode and then using the menu command &quot;Selection<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Toggle crease&quot;. An edge which was tagged as a crease will be displayed blue in edge mode (if it is not currently selected). Use the command &quot;Selection<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Toggle crease&quot; again to untag a creased edge. If you now use the <a href="../../Tools/Polygon/SubdivideTool/SubdivideTool.html">subdivision command</a> or the Subdivision object the tagged edge will be handled as a crease. See the images below for an example of how creases affect the way a subdivision operates.</p>
+					</div>
+					<div align="center">
+						<p><img src="Polygonobject1.jpg" alt="" height="310" width="187" border="0"> <img src="Polygonobject2.jpg" alt="" height="310" width="188" border="0"></p>
+					</div>
+					<div align="left">
+						<p><b>Seams</b><br>
+							Seams are polygon edges which are needed for unwrapping a polygon object with the <a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">Unwrap UV</a> tool. For example if you want to unwrap a ball you have to assign some creases so that the Unwrap UV tool knows where to tear up the mesh of the closed ball polygon mesh. Otherwise the ball will just be pressed flat but it won't be unwrapped.<br>
+							Seams are always highlighted green in the <a href="../../UserInterface/3dView/3dView.html">3D view</a> and in the <a href="../../UserInterface/UVEditor/UVEditor.html">UV Editor</a>. Use the &quot;Selection<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Toggle seam&quot; command to set and unset edge selections to seams.</p>
+					</div>
+					<div align="center">
+						<p><img src="Polygonobject3.jpg" alt="" height="300" width="305" border="0"> <img src="Polygonobject4.jpg" alt="" height="300" width="305" border="0"></p>
+					</div>
+					<div align="left">
+						<p><b>Pinned UV<br>
+							</b>Pinned UV coords are UV coords which won't be modified by the <a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">Unwrap UV</a> tool. They can be used to influence the result of the <a href="../../Tools/UV/UnwrapUVTool/UnwrapUVTool.html">Unwrap UV</a> tool. Especially setting points which are on a seam as pinned UV coords can help to stretch the unwrapped mesh into the shape which is desired. Use the &quot;Toggle Pinned UV&quot; command of the <a href="../../UserInterface/UVEditor/UVEditor.html">UV editor</a> context menu to set and unset point selections to pinned UV's. Pinned UV coords are highlighted in yellow.</p>
+					</div>
+					<div align="center">
+						<p><img src="Polygonobject5.jpg" alt="" height="300" width="305" border="0"> <img src="Polygonobject6.jpg" alt="" height="300" width="305" border="0"><br>
+							Left a unwrapped ball without pinned UV coords. Right the result of the <br>
+							unwrap when using 4 pinned UV coords.</p>
+					</div>
+					<div align="left">
+						<p><b>Multiple polygon selections<br>
+							</b>Every Polygonobject has 16 totally independent polygon selections. You can switch between these selections with the <i><b>polygon selection </b></i>property in the properties browser.</p>
+						<p>These multiple polygon selections are normally used to assign more than one material to a mesh. You can assign a brown material to polygon selection 1 and a grey material to polygon selection 2 (as in the example above). See also the <a href="../../Tags/MaterialTag/MaterialTag.html">material tag</a> for using multiple materials per mesh.</p>
+						<p>The polygon tools always use the current polygon selection. The polygon selections won't be destroyed by using polygon tools normally.</p>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Polygon selection:</b></i> The current polygon selection. 
+						<li><i><b>UV set:</b></i> The currently editable/used UV set.
+						<li><b><i>Smooth:</i></b>
+							<ul>
+								<li><b><i>Flat: </i></b>The vertices normals of a polygon are just the normal of the polygon plain.
+								<li><i><b>Phong:</b></i> The normal of every polygon corner is calculated by averaging the normals of all polygons which share that point. Take care, since this algorithm can produce undesirable artifacts (see below for a visual example).
+								<li><b><i>Constrained:</i></b> Only the normals of those polygons which have a smaller angle between the two plains created by the polygons will be averaged. This operation is much more expensive to calculate than the unconstrained case, so take care to only use it when it is necessary.
+								<li><b><i>Normal break:</i></b> Works like the <i>Constrained</i> normal calculation algorithm just the normals always break at creases (see below).
+							</ul>
+						<li><b><i>Smooth angle:</i></b> Determines the angle for the constrained calculations. Try playing around with this value and you will immediately understand the effect is has on your polygon objects.
+						<li><i><b>Display type:</b></i> Determines how the polygon object is displayed in the 3D view.
+						<li><i><b>Ghosted:</b></i> Displays the mesh ghosted within the 3D view.
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

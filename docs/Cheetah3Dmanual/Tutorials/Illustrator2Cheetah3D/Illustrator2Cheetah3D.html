@@ -1,160 +1,148 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>Adobe Illustrator から Cheetah3D</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Adobe Illustrator to Cheetah3D</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>Adobe Illustrator から Cheetah3D</h2>
-        </div>
-
-        <div align="left">
-          <p>このチュートリアルでは、Adobe Illustrator で作成した 2D ベクターのアートワークをどのように Cheetah3D でしようするかについて学びます。しかし、 PDF や SVG フォーマットへの書き出しに対応している他の 2D ベクタードローソフトを使用する事も可能です。</p>
-
-          <p><i>注意: このチュートリアルは、あなたが Illustrator の経験豊かなユーザーであると仮定しているので、Illustrator の操作については Cheetah3D で作業が可能な 2D データの書き出しに必要な手順のみを説明しています。</i></p>
-        </div>
-
-        <div align="center">
-          <table width="80%" border="1" cellspacing="0" cellpadding="0">
-            <tr>
-              <td valign="top" width="320">
-                <p><b>1. Adobe Illustrator でのアートワークの作成<br></b> まず Illustrator での簡単なロゴの作成から始めましょう。足形と、若干のテキストを追加し、星も加えておきましょう。</p>
-
-                <p>もちろんあなたのポートフォリオから、他のアートワークを使ってもかまいません。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Bild1.jpg" alt="" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="320">
-                <p><b>2. パスの合成<br></b> 次に、パスを星、足形、テキストの、それぞれ３つのグループにしておきます。</p>
-
-                <p>まず足形のグループから始めましょう。足形を構成する５つすべてのパスを選択し（イメージ参照）ます。そして、"複合パスを作成 ( Make Compound Path )" をコンテキストメニューから呼び出します。</p>
-
-                <p>残りの２つのグループについても、同様に作業します。</p>
-
-                <p><i>この "複合パスを作成 ( Make Compound Path )" コマンドは円や四角のようなプリミティブをパスに変換するので、もしグループが１つのオブジェクトしか含んでいなくても、このコマンドは使用してください。Cheetah3D の SVG と PDF ファイルローダーはパス情報のみを読み込むので、これが必要になります。</i></p>
-
-                <div align="left"></div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Bild2.jpg" alt="" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="320">
-                <p><b>3. PDF / SVG の書き出し<br></b> Illustrator での作業はほぼ完了しました。後は、2D ベクタードローイングの SVG や PDF ファイルとして書き出すだけです。</p>
-
-                <p>ファイルメニューから "別名で保存..." コマンドを使います。保存パネルで、"SVG (svg)" か "Adobe PDF (pdf)" フォーマットを選択します。SVG で書き出す場合には、右のスクリーンショットを参考にオプションを設定してください。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Bild3.jpg" alt="" border="0">
-
-                  <p><img src="Bild4.jpg" alt="" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="320">
-                <p><b>4. Cheetah3D に SVG / PDF ファイルを読み込み<br></b> 次に Cheetah3D を起動し、 "ファイル -&gt; 開く..." メニューコマンドで SVG / PDF ファイルを開きます。</p>
-
-                <p>Illustrator で作成したパスが、3D ビューとオブジェクトブラウザに表示されます。</p>
-
-                <p>もし作成したパスが非常に大きい場合、それらが見えるようにカメラを<a href="../../UserInterface/3dView/3dView.html">カメラをズーム</a>アウトする必要があるかもしれません。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Bild6.jpg" alt="" border="0">
-
-                  <p><img src="Bild5.jpg" alt="" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="320">
-                <p><b>5. 2D から 3D へ<br></b> さぁ、3D ロゴを作成していきましょう。そのためには、押し出しオブジェクトをしようします。メニューコマンド "オブジェクト -&gt; クリエータ -&gt; 押し出し" かツールバーアイコンを使用して、<a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">押し出し</a>オブジェクトを作成します。</p>
-
-                <p>ロゴは３つのパスで構成されているので、３つの<a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">押し出し</a>オブジェクトが必要です。シーンに追加し、<a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">押し出し</a>オブジェクトにパスをそれぞれドラッグ＆ドロップしてください。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Bild7.jpg" alt="" border="0">
-
-                  <p><img src="Bild10.jpg" alt="" height="268" width="262" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="320">
-                <p><b>6. 微調整<br></b> SVG / PDF ファイルの読み込みはすでに完了していますが、例えば、ロゴのエッジにベベルを付ける事で、ロゴの外観を良くしていく事ができます。<a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">押し出し</a>オブジェクトのベベルのプロパティを右のような値に設定してみてください。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Bild11.jpg" alt="" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">
-                <div align="left"></div>
-
-                <div align="center">
-                  <p><img src="Bild12.jpg" alt="" height="320" width="480" border="0"></p>
-
-                  <p>すでに完了した前のチュートリアルで説明したマテリアルを適用しています。</p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p></p>
+						<h2>Adobe Illustrator to Cheetah3D</h2>
+						</p></div>
+					<div align="left">
+						<p>In this tutorial, you will learn how to use your 2D vector artwork done with Adobe Illustrator in Cheetah3D. But you can also use any other 2D vector drawing application which supports the PDF or SVG file format.</p>
+						<p><i>Attention: This tutorial assumes that you are a experienced Illustrator user. So it only explains the necessary step which have to be done to export 2D drawings which can be imported and further processed by Cheetah3D.</i></p>
+					</div>
+					<div align="center">
+						<table width="95%" border="1" cellspacing="0" cellpadding="5">
+							<tr>
+								<td valign="center" width="320">
+									<p><b>1. Create your artwork in Adobe Illustrator<br>
+										</b>Let's start with a easy Logo in Illustrator. We make a paw and add some text to it. We also add some stars.</p>
+									<p>But you can also use some other artwork from your portfolio of course.</p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Bild1.jpg" alt="" border="0">
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320">
+									<p><b>2. Make compound paths<br>
+										</b>Next we create three groups of paths. One group contains the starts, one the paw and one the text.</p>
+									<p>Lets start with the paw group. Select all five paths which build up the paw (see image). Than call the &quot;Make Compound Path&quot; command from the context menu. </p>
+									<p>Process the same steps with the other two groups.</p>
+									<p><i>Please also use the &quot;Make Compound Path&quot; command if the group just consist of one object since that command guarantees that primitives like circles, rects or text are actually transformed into paths. This is necessary because the SVG  or PDF file loader in Cheetah3D only imports path information.</i></p>
+									<div align="left"></div>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Bild2.jpg" alt="" border="0">
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320">
+									<p><b>3. Export as PDF or SVG<br>
+										</b>Now we are almost done with Illustrator. We only have to export the 2D vector drawings to a SVG or PDF file.</p>
+									<p>To do that use the &quot;Save As&quot; command from the File menu. In the opening save panel choose the &quot;SVG (svg)&quot;  or &quot;Adobe PDF&quot; export. In case of the SVG export please use the options seen on the screenshot.</p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Bild3.jpg" alt="" border="0">
+										<p><img src="Bild4.jpg" alt="" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320">
+									<p><b>4. Load the SVG/PDF file into Cheetah3D<br>
+										</b>Now launch Cheetah3D and open the SVG/PDF file with the &quot;File-&gt;Open...&quot; menu command.</p>
+									<p>The paths you've created with Illustrator should now appear in the 3D view and in the object browser.</p>
+									<p>If the paths you've created are very big it is possible that you have to <a href="../../UserInterface/3dView/3dView.html">zoom</a> back the camera to see them.</p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Bild6.jpg" alt="" border="0">
+										<p><img src="Bild5.jpg" alt="" border="0"></p>
+										<p></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320">
+									<p><b>5. Going from 2D to 3D<br>
+										</b>Finally it is time to create our 3D logo. We therefore use the Extrude object. You can create a <a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">Extrude</a> object either with the menu command &quot;Objects-&gt;Creator-&gt;Extrude&quot; or with the toolbar.</p>
+									<p>Since our logo contains 3 paths we need 3 <a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">Extrude</a> objects. So please create them and drag and drop into each <a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">Extrude</a> object one path.</p>
+									<p></p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Bild7.jpg" alt="" border="0">
+										<p><img src="Bild10.jpg" alt="" height="268" width="262" border="0"></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320">
+									<p><b>6. Doing some fine tuning<br>
+										</b>We are already finished. Now you can improve the visual appearance of the logo by beveling the edges of the logo for example. To do that set the beveling properties of the <a href="../../Objects/CreatorObjects/ExtrudeObject/Extrude.html">Extrude</a> objects to the values seen on the right of.</p>
+									<p></p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Bild11.jpg" alt="" border="0">
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div align="left">
+										<p></p>
+									</div>
+									<div align="center">
+										<p><img src="Bild12.jpg" alt="" height="320" width="480" border="0"></p>
+										<p>After applying some materials which was explained in an earlier tutorial you are done.</p>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

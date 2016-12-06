@@ -1,147 +1,137 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>Texture Painting</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Texture Painting</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>Texture Painting</h2>
+					</div>
+					<div align="left">
+						<p>In the last tutorial we learned how to assign UV coordinates to a complex surface. Now it's time to paint the texture. </p>
+					</div>
+					<div align="center">
+						<p></p>
+						<table width="95%" border="1" cellspacing="0" cellpadding="5">
+							<tr>
+								<td valign="center" width="320"><b>1. Loading a mesh</b><br>
+									
+									The first thing we have to do is to load a mesh. You can find the mesh of the Pig in the &quot;Examples&quot; folder which comes with Cheetah3D.
 
-    <tr>
-      <td>
-        <div align="center">
-          <h2>テクスチャペインティング</h2>
-        </div>
-
-        <div align="left">
-          <p>最後のチュートリアルでは複雑な面にUV座標値を設定する方法を学びました。さあ、次はテクスチャーを描きますよ。</p>
-        </div>
-
-        <div align="center">
-          <table width="80%" border="1" cellspacing="0" cellpadding="0">
-            <tr>
-              <td valign="top" width="300">
-                <b>1. モデルの呼び出し</b><br>
-                まず最初にモデルを呼び出します。Cheetah3Dフォルダーの中の "Examples" フォルダーにあるPig というモデルのファイルを見つけて開いてください。
-
-                <p>さぁ、ウインドウレイアウトを "UV 編集"に変更しましょう。これで、 3D ビュー画面とUV 編集が表示されます。</p>
-
-                <p>オブジェクトブラウザでPigを選択すると、UV 編集にpigのUV座標系が表示されます。さあ、これからが最後のチュートリアルです。</p>
-              </td>
-
-              <td valign="top">
-                <div align="center">
-                  <br>
-                  <img src="TexturePaint_1.jpg" alt="" border="0">
-
-                  <p><img src="TexturePaint_2.jpg" alt="" border="0"></p>
-
-                  <p><img src="TexturePaint_3.jpg" alt="" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>2.</b> <b>テクスチャの作成</b><br>
-                マテリアルブラウザからマテリアルを選択しテクスチャプロパティの色を指定してください。まだ、テクスチャは出来ていないので"新規テクスチャ" ボタンを押して新しいテクスチャを作成してください。保存指示画面が表示されます。
-
-                <p>保存指示画面で "pig_tex" という名称でを入力し背景色をピンクにして新しいテクスチャを保存してください。</p>
-
-                <p>画像形式は画質の劣化が無いTIFF形式などの画像形式が良いでしょう。そうすれば、画質を落とすことなくテクスチャを保存することが出来ます。</p>
-
-                <p>"保存"ボタンを押します。</p>
-
-                <p>これで、あなたは新しいテクスチャを作成し、自動的にそのテクスチャが現在作業中のテクスチャに置き換わります。</p>
-              </td>
-
-              <td valign="top">
-                <div align="center">
-                  <br>
-                  <img src="TexturePaint_4.jpg" alt="" height="226" width="257" border="0">
-
-                  <p><img src="TexturePaint_5.jpg" alt="" height="283" width="363" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>3. ペイントツールの選択</b><br>
-                UV エディタで新しいピンク色のテクスチャを編集します。UV エディタでCTRLキーを押しながらマウスをクリックしペイントツールを選択します。
-
-                <p>ペイントツールのプロパティはツールプロパティエディターに表示されます。ブラシの形状を三託してください。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="TexturePaint_6.jpg" alt="" border="0">
-
-                  <p><img src="TexturePaint_7.jpg" alt="" height="298" width="262" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300"><b>4. ペインティング</b><br>
-              さあ、これでペインティングを開始できます。テクスチャの上にマウスで描くことができます。</td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="TexturePaint_8.jpg" alt="" height="172" width="412" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>5. 完成</b><br>
-                ペインティングを終了したい時はテクスチャプロパティ内の"編集終了" ボタンを押してください。すると、変更内容を保存するか尋ねられます。保存を選択しましょう。
-
-                <p>あとでペインティングを再度行う場合はテクスチャプロパティ内の編集ボタンを押すと再度ペインティングを行えます。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="TexturePaint_9.jpg" alt="" height="298" width="271" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">
-                <div align="center">
-                  <br>
-                  <b>さぁ、ここからはあなたの仕事です。きっと、ナイスなテクスチャを作成できると信じています。 ;-)</b>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+									<p>Now change the window layout to &quot;UV Editing&quot;. You should now have a 3D view and a UV Editor. </p>
+									<p>After selecting the mesh of the pig in the object browser the UV coords of the pig will be displayed in the UV editor. Now we are where we left the last tutorial.</p>
+									<p></p>
+								</td>
+								<td valign="top">
+									<div align="center">
+										<br>
+										<img src="TexturePaint_1.jpg" alt="" border="0">
+										<p><img src="TexturePaint_2.jpg" alt="" border="0"></p>
+										<p><img src="TexturePaint_3.jpg" alt="" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>2.</b> <b>Create a texture</b><br>
+									Now select the pick material from the material browser and add a diffuse texture to it. You can do that by clicking on the small square on the right hand side of the "Diffuse" color property. A context menu will open from which you can add a "Image" texture. 
+									
+									<p>The properties of the newly added image texture node show up. Since there is no texture yet we create a new one with the &quot;New texture&quot; button. A save panel should open. In the save panel we set the texture name to &quot;pig_tex&quot; and choose a pink background color for the new texture.</p>
+									<p>The usage of file formats like .tiff is recommended since they are loss less. So you can save the texture various times without loosing image quality.</p>
+									<p>Now click on the &quot;Save button&quot;. </p>
+									<p>When you create a new texture the new texture will  automatically become the current drawing target. </p>
+									<p></p>
+									<p></p>
+								</td>
+								<td valign="top">
+									<div align="center">
+										<br>
+										<img src="TexturePaint_4.jpg" alt="" border="0">
+										<p><img src="TexturePaint_5.jpg" alt="" border="0"></p>
+										<p><img src="TexturePaint_6.jpg" width="550" alt="" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>3. Select the paint tool</b><br>
+									You should already see the new pink texture in the UV Editor. Now it's time to start painting. Open the context menu of the UV Editor and select the paint tool.
+									<p>The properties of the paint tool are now visible in the tools properties editor. Select the &quot;fence&quot; brush shape.</p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="TexturePaint_7.jpg" alt="" border="0">
+										<p><img src="TexturePaint_8.jpg" alt="" border="0"></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>4. Painting</b><br>
+									Now we can start painting. Just use the mouse to draw onto the texture. 
+									<p></p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="TexturePaint_9.jpg" alt="" border="0">
+										<p><img src="TexturePaint_10.jpg" alt="" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>5. Finished</b><br>
+									When you are done with painting click the &quot;Leave Edit&quot; button in the texture properts. Now you will be asked if you want to save your changes. Save the changes and you are done.
+									<p>Later if you want to paint onto the texture again just click the &quot;Edit&quot; button of the texture properties before starting to paint.</p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="TexturePaint_11.jpg" alt="" border="0">
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div align="center">
+										<br>
+										<b>Now it is your turn. And I'm sure you can draw a nicer texture ;-)</b>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div align="left">
+						<p></p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

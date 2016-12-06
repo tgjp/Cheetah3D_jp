@@ -1,128 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>Crumple Tool</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Crumple Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>シワ加工 ツール</h2>
-        </div>
-
-        <p>自然界において、多くの物質の表面は完全に平らではありません。それらにはいくつかの不規則な隆起、またはへこみがあります。シワ加工 ツールの目的は、ポリゴンメッシュにノイズを加えることです。それはリアルなオブジェクトを作ることを簡単にします。</p>
-
-        <div align="center">
-          <p><img src="CrumpleTool1.jpg" alt="" height="226" width="200" border="0"> <img src="CrumpleTool2.jpg" alt="" border="0"> <img src="CrumpleTool3.jpg" alt="" height="226" width="199" border="0"><br>
-          立方体オブジェクトにシワ加工を施した後、<a href="../SubdivideTool/SubdivideTool.html">サブディビジョン</a> （反復数2）を適用することで角氷が作れます。</p>
-        </div>
-
-        <p><b><i>編集モード<br></i></b> シワ加工ツールは<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>に適用できます。それはすべてのモードで利用可能です。</p>
-
-        <ul>
-          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
-          シワ加工ツールを使用するには、オブジェクトブラウザで<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a> を選択してください。 そしてポリゴンツールメニューからシワ加工ツールを呼び出して下さい。 今度は、ツールのプロパティエディタでシワ加工ツールの全ての必要なパラメータを設定してください。 OKボタンをクリックした後に、メッシュは皺になります。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li>
-            <i><b>タイプ:</b></i> ポイントが動かされる方向を指定します。
-
-            <ul>
-              <li><b><i>法線モード</i></b>: ポイントは頂点法線に沿って動かされます。</li>
-
-              <li><b><i>軸モード:</i></b> ポイントは物の座標系軸に沿って動かされます。</li>
-
-              <li><b><i>放射状モードl:</i></b> ポイントはオブジェクトの中心とポイントの接続線に沿って動かされます。</li>
-            </ul>
-          </li>
-
-          <li>
-            <b><i>しわの方向（内/外）</i></b>
-
-            <ul>
-              <li><b><i>オン</i></b>: ポイントは外側に動かされます。</li>
-
-              <li><b><i>オフ:</i></b> ポイントを内と外の両方向に動かすことができます。</li>
-            </ul>
-          </li>
-
-          <li>
-            <b><i>半径 X:</i></b>
-
-            <ul>
-              <li><b><i>法線モード:</i></b> 大きな値を指定するほど、ポイントを遠ざけます。法線に沿って置き換えることができます。</li>
-
-              <li><b><i>軸モード:</i></b> 大きな値を指定するほど、ポイントを遠ざけます。X軸に沿って置き換えることができます。</li>
-
-              <li><b><i>放射状モード:</i></b> 大きな値を指定するほど、ポイントを遠ざけます。</li>
-            </ul>
-          </li>
-
-          <li>
-            <b><i>半径 Y:</i></b>
-
-            <ul>
-              <li><b><i>法線モード:</i></b> 効果がありません。</li>
-
-              <li><b><i>軸モード:</i></b> 大きな値を指定するほど、ポイントを遠ざけます。Y軸に沿って置き換えることができます。</li>
-
-              <li><b><i>放射状モード:</i></b> 効果がありません。</li>
-            </ul>
-          </li>
-
-          <li>
-            <b><i>半径 Z:</i></b>
-
-            <ul>
-              <li><b><i>法線モード:</i></b> 効果がありません。</li>
-
-              <li><b><i>軸モード:</i></b> 大きな値を指定するほど、ポイントを遠ざけます。Z軸に沿って置き換えることができます。</li>
-
-              <li><b><i>放射状モード:</i></b> 効果がありません。</li>
-            </ul>
-          </li>
-
-          <li><b><i>適用:</i></b> OKボタンを押して、シワ加工ツールを実行してください。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Crumple Tool</h2></p>					</div>					<p>In nature, many surfaces just aren't perfectly plain. They often have some irregularities, bumps or dents. The purpose of the crumple tool is to add some noise to a polygonal mesh, making it easy to model realistic objects.</p>					<div align="center">						<p><img src="CrumpleTool1.jpg" alt="" height="226" width="200" border="0"> <img src="CrumpleTool2.jpg" alt="" border="0"> <img src="CrumpleTool3.jpg" alt="" height="226" width="199" border="0"><br>							Applying two <a href="../SubdivideTool/SubdivideTool.html">subdivison</a> steps after crumpling a box creates a nice ice cube!</p>					</div>					<p><b><i>Modes<br>							</i></b>The crumple tool can only be applied to <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon objects</a>. It's available in all modes.</p>					<ul>						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>							To use the crumple tool, select a <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon object</a> in the object browser. Then call the menu command &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Polygon<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Crumple&quot;. Now set all the necessary parameters of the crumple tool in the tool properties editor. After clicking on the apply button the mesh will be crumpled.					</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>Type: </b></i>Specifies the direction in which the points will be moved:						<ul>							<li><b><i>normal</i></b>: The point will be moved along the vertex normal. 							<li><b><i>axial: </i></b>The point will be moved along the object coordinate system axis.							<li><b><i>radial: </i></b>The point will be moved along the connection line of the center of the object and the point.						</ul>						<li><b><i>In and out:</i></b> 						<ul>							<li><b><i>On</i></b>: The point will be only moved in the positive direction.							<li><b><i>Off: </i></b>The point can be moved in both directions.						</ul>						<li><b><i>Offset: </i></b>						<ul>							<li><b><i>normal mode: </i></b>Specifies the maximum distance the point can be displaced along the normal (only X-value is used).							<li><b><i>axial mode: </i></b>Specifies the maximum distance the point can be displaced in the X/Y/Z direction.														<li><b><i>radial mode: </i></b>Specifies the maximum distance the point can be displaced (only X-value is used).						</ul>						<li><b><i>Apply: </i></b>Press the apply button to perform the crumple tool.					</ul>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

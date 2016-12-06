@@ -1,89 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>スプラインコピー オブジェクト</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Chain Object</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>スプラインコピーオブジェクト</h2>
-        </div>
-
-        <div align="left">
-          <p>スプラインコピーオブジェクトは、スプラインに沿って同じオブジェクトの複数のコピーを配置する事ができます。これは、鎖や、フェンス、道路、3D フォントなどのモデルを作成する場合に、とても使えるでしょう。スプラインコピーオブジェクトは、すべてのコピー（アイテムのインスタンス）を、いろいろに設定可能な角度で鎖状に回転させる事もできます。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Chain2.jpg" alt="" align="middle" border="0"> <img src="Chain1.jpg" alt="" width="320" height="324" align="middle" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>上の例では、丸いスプラインに沿って鎖を作成する方法を見る事ができます。鎖の輪は、通常のポリゴンツールを使って作成されました。</p>
-        </div>
-
-        <p><b><i>使い方</i></b><br>
-        スプラインコピーオブジェクトを使うには、スプラインコピーオブジェクトの中にポリゴンとスプラインをドラッグ＆ドロップします。大事な事は、（コピーされる）ポリゴンオブジェクトはスプラインコピーオブジェクトの１番目の小オブジェクトで、（パスの）スプラインオブジェクトはスプラインコピーオブジェクトの２番目の小オブジェクトだという事です。違ったオブジェクトの順番だと、動きません。</p>
-
-        <p><b>パスに沿って回転</b> プロパティをミックスかコンスタントに設定した場合に、Z 軸に沿ってインスタンスが回転します、これはコピーポリゴンオブジェクトの Z 軸の正の方向がパスに沿うという点に注意して下さい。</p>
-
-        <div align="center">
-          <p><img src="Chain3.jpg" alt="" height="261" width="224" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>コピー数:</b></i> パス上のコピー数を設定します。</li>
-
-          <li><i><b>開始距離 (パーセント):</b></i>コピー開始位置を設定します。開始位置の計算に（すべてのサブパスをふくむ）スプライン全体の長さが使われます。</li>
-
-          <li><b><i>終了距離 (パーセント):</i></b> コピー終了位置を設定します。終了位置の計算に（すべてのサブパスをふくむ）スプライン全体の長さが使われます。</li>
-
-          <li><b><i>除外率:</i></b> スプラインコピーのコピーのしない割合を定義します。この割合に従って、インスタンスはランダムに配置されます。</li>
-
-          <li><b><i>回転 dH:</i></b> 次のコピーまでの回転(H)の角度</li>
-
-          <li><b><i>回転 dP:</i></b> 次のコピーまでの回転(P)の角度</li>
-
-          <li><b><i>回転 dB:</i></b> 次のコピーまでの回転(B)の角度</li>
-
-          <li>
-            <b><i>パスに沿って回転:</i></b> コピーがどのようにパスに沿うかを定義します
-
-            <ul>
-              <li><b>なし</b>: コピーはパスに沿わず、パス上に移動してコピーされます。</li>
-
-              <li><b>コンスタント</b>: コピー位置のパスセグメントに沿って回転、移動してコピーされます。</li>
-
-              <li><b>ミックス</b>: パスセグメント間がスムースに変化するような位置に沿って回転、移動してコピーされます。</li>
-            </ul>
-          </li>
-        </ul>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Chain Object</h2>						</p></div>					<div align="left">						<p>The chain object allows you to position multiple copies of the same object along a spline. This can be very useful if you want to model chains, fences, roads, 3D fonts etc. The chain object also allows you to rotate every instance of the item in the chain by a definable angle which opens up even more possibilities.</p>					</div>					<div align="center">						<p><img src="Chain2.jpg" alt="" align="middle" border="0"> <img src="Chain1.jpg" alt="" width="320" height="324" align="middle" border="0"></p>					</div>					<div align="left">						<p>In the example above, you can see how you can create a chain along a circular spline. The link was modeled previously using ordinary polygon tools.</p>					</div>					<p><b><i>Usage</i></b><br>						To use the chain object, just drag and drop a polygon object and a spline object into the chain object (see image above). It is important that the polygon object (the link) is the first child of the chain object and the spline object (the path) is the second child of the chain object. A different order won't work.</p>					<p>Take care to ensure that the link is orientated along the Z-axis, since the positive Z-axis of the link object will follow the path when you set the <b>alignment </b>property to mix or constant.</p>					<div align="center">						<p> <img src="Chain3.jpg" alt="" height="261" width="224" border="0"></p>					</div>					<p><b>Properties</b></p>					<ul>						<li><i><b>Links:</b></i> Determines the number of links in the chain.						<li><i><b>From:</b></i> Controls where the chain starts. The entire length (including all subpaths) of the spline is used to calculate the starting position.						<li><b><i>To: </i></b>Controls where the chain ends. The entire length (including all subpaths) of the spline is used to calculate the ending position.						<li><b><i>Holes: </i></b>Determines the ratio of holes the chain will have. The holes are positioned by random.						<li><b><i>dH: </i></b>Determines the change of the heading angle from link to link.						<li><b><i>dP: </i></b>Determines the change of the pitch angle from link to link.						<li><b><i>dB: </i></b>Determines the change of the bank angle from link to link.						<li><b><i>Alignment: </i></b>Determines how the links are aligned along the path						<ul>							<li><b>none</b>: The links won't be aligned. They will be just moved to the path.							<li><b>const</b>: The links will be aligned along  the local path segment. 							<li><b>mix</b>: The links will be aligned in such a way that the transition between path segments is smooth.						</ul>					</ul>					<p></p>					<div align="left">						<p><b></b></p>					</div>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

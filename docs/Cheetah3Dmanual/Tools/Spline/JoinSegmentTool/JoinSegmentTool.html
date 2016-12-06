@@ -1,73 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>セグメントを繋ぐ</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Join Segment</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>セグメントを繋ぐ ツール</h2>
-        </div>
-
-        <p>１つのスプラインオブジェクトのパスを接続したい場合がしばしばあります。そのためにセグメントを繋ぐツールを使います。２つのベジエ曲線のセグメントを接続した例を下のイメージで見てください。</p>
-
-        <div align="center">
-          <p><img src="JoinSegmentTool1.jpg" alt="" height="265" width="266" border="0"> <img src="JoinSegmentTool2.jpg" alt="" height="265" width="266" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p><i>注意: 同じスプラインオブジェクト内のスプラインを接続する事ができます。２つの異なるオブジェクトのスプラインを接続したい場合、<a href="../../Common/ImportChilds/ImportChilds.html">子オブジェクトの取り込み</a>ツールで片方のスプラインオブジェクトをもう一方のスプラインオブジェクトに読み込む必要があります。</i></p>
-        </div>
-
-        <p><b><i>編集モード<br></i></b> セグメントを繋ぐ は全ての編集モードで使用できます。ポイントモードでしかコントロールポイントや選択範囲が見えないので、ポイントモードで使用するのが良いでしょう。このスプラインツールは、<a href="../../../Objects/SplineObjects/Spline.html">ロースプライン</a>オブジェクトでのみ使用できます。</p>
-
-        <ul>
-          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
-          セグメントを繋ぐと使用するには、まず接続する２つのパスを選択する必要があります。最初のパスの任意のコントロールポイントを選択し、接続するもう１つのスプラインも同様に選択します。これで２つのパスは、それぞれコントロールポイントが選択された状態になりました。次に、メニューコマンド "ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">スプラインツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">セグメントを繋ぐ" を呼び出して、適用します。これで、２つのパスは、１つのパスの終了点ともう１つのパスの開始点がつながるように接続されます。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>なし</b></i></li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Join Segment Tool</h2></p>					</div>					<p>Often you have more than one spline path within a spline object which you want to connect. To do this you have to use the join segment tool. See the images below for an example of where two segments of a Beziere curve are joined.</p>					<p></p>					<div align="center">						<p><img src="JoinSegmentTool1.jpg" alt="" height="265" width="266" border="0"> <img src="JoinSegmentTool2.jpg" alt="" height="265" width="266" border="0"></p>						<p></p>					</div>					<div align="left">						<p><i>Attention: You can only connect splines which are within the same spline object. If you want to connect splines from two different objects you have to import the splines from the second spline object into the first one with the <a href="../../Common/ImportChilds/ImportChilds.html">import child tool</a>.</i></p>					</div>					<p><b><i>Modes<br>							</i></b>The join segment tool is available in all modes. Note that it makes most sense to use it in point mode since you can only see the control points and its selections in point mode. This spline tool only works on <a href="../../../Objects/SplineObjects/Spline.html">raw spline</a> objects.</p>					<ul>						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>To use the join segment tool, you first have to choose the paths which should be joined. To do this select from the first path any control point you want. Do the same with the second spline. You now have two segments which have a selected control point. Now apply the menu command &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Spline<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Join Segment&quot;. The two segments will now be joined the following way. The end of the first path will be connected with the beginning of the second path.				</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>none</b></i>					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
-</body>
-
-</html>
+</body></html>

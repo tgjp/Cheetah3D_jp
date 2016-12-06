@@ -1,93 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>Orient Joint Tool</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Orient Joint Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ジョイント向き調整</h2>
-        </div>
-
-        <p>ジョイント向き調整ツールはジョイントのローカル座標軸の向きを正しい方向に修正する機能です。イメージ２のようにローカル座標軸がボーンと同方向に向いていて、第２軸はボーン側面方向に向いている状態が望ましい状態です。このような状態にローカル座標軸が配置されていればキネマティクスの動作も簡単にできます。コンストレインの設定も簡単にできます。しかし、ジョイントの向きは１つの構成物の回転方向がFカーブエディタでアニメーションされることにより、まれに改変されます。このような場合は残念ながらジョイントの向きは正しい方向を向いていません。そこで、このジョイント向き調整ツールで修正するのです。</p>
-
-        <p>ジョイント向き調整ツールは以下のモードで適用されます。</p>
-
-        <ul>
-          <li><b>第２軸の設定無し</b>:<i>第２軸</i>のプロパティに何も設定されていない場合は、新しい方向は単純に方向のプロパティと２本のボーンにより決定されます。<i>方向</i> はローカル座標軸の向きを示します。よって、第１軸はジョイントを起点にボーンに沿った方向となります。第３軸は第１軸と第２軸に対して垂直方向となります。<br>
-          <br>
-          例えば、YXZ方向を選択した場合、第１軸はY (<b>Y</b>XZ)となります。それはボーンに沿う方向となります。第３軸はZ (YX<b>Z</b>)となり、 ボーンの側面方向となります。最後に第２軸は X (Y<b>X</b>Z) となり、第１軸(Y)と第３軸(Z)に対して垂直に配置されます。<br>
-          <br></li>
-
-          <li><b>第２軸の設定あり</b>: もし<i>第２軸</i> のプロパティに設定がある場合はローカル座標軸は少し異なった方向を向きます. この場合、第一軸はボーンに沿った方向となります。しかし、第２軸は<i>第２軸</i> プロパティで設定された方向を向き、第３軸は第１軸と第２軸に対して垂直に配置されます。</li>
-        </ul>
-
-        <div align="center">
-          <p><img src="JointOrient1.jpg" alt="" height="441" width="310" border="0"> <img src="JointOrient2.jpg" alt="" height="441" width="310" border="0"></p>
-
-          <p>左の図はジョイント向きを設定していない２つのボーンを示します。第２軸の設定無しでXYZ方向を適用した後、<br>
-          X軸はボーンに沿って配置され、Z軸はボーンの側面方向に配置されています。</p>
-        </div>
-
-        <p><b><i>Modes<br></i></b> このツールは全てのモードで操作できます。</p>
-
-        <ul>
-          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
-          ジョイント向き調整ツールを使用するときは"ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">キャラクターツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">ジョイント向き調整" をメニューから選択します。 ジョイント向き調整ツールのプロパティがツールプロパティ欄に表示されます。この欄の項目を設定することが出来ます。設定が完了したらOKボタンをクリックします。すると選択しているジョイントに適用されます。</li>
-        </ul>
-
-        <div align="center"></div>
-
-        <div align="left">
-          <p><b>キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>無し</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>方向:</b></i> ローカル回転軸の向きを指定します。</li>
-
-          <li><i><b>第２軸:</b></i> 第２軸の向きを指定したい場合に設定。第２軸は常にグローバル座標系の方向に従います。</li>
-
-          <li><i><b>階層:</b></i> 全ての階層のジョイントの向きを設定する場合にチェックします。</li>
-
-          <li><i><b>適用:</b></i> OKボタンをクリックすると選択しているジョイントに適用されます。</li>
-        </ul>
-
-        <div align="center"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Orient Joint Tool</h2></p>					</div>					<p>The orient joint tool helps to orient the local rotation axes of a joint. It is often desirable that one axis of the local rotation axes is pointing along a bone and that a second axis is pointing sideways to the bones (see second image). If the local axis are oriented that way it is easier to perform forward kinematics. But it is also easier to set joint constraints. Last but not least do oriented joints interpolate better in the F-Curve editor since it is often sufficient that such one component of the rotation vector is animated. Unluckily the local axes of the joints are usually not oriented but for this case Cheetah3D offers the orient joints tool.</p>					<p></p>					<p>The orient joint tool can be applied in to modes:</p>					<p></p>					<ul>						<li><b>Without Second Axis</b>: If the <i>Second axis</i> property of the orient joint tool is set to None the new orientation is solely determined by the <i>Orientation</i> property and the two bones between which the joint is. The <i>Orientation</i>  specifies in which directions the local rotation axes point. Hereby  the first axis always point along the bone leaving the joint. The third axis is pointing sideways to the two bones and the second axis is perpendicular to the first and the second axis. <br>							<br>							For example if you chose a YXZ orientation. Then the first axis is the Y (<b><font color="#cc3333">Y</font></b>XZ). It will point along the bone. The third axis is the Z (YX<b><font color="#cc3333">Z</font></b>) which points sideways to the bones. Finally the second axis the  X (Y<b><font color="#cc3333">X</font></b>Z) which is perpendicular to the first (Y) and the third (Z) axis.<br>							<br>						<li><b>With Second Axis</b>: If the <i>Second axis</i> property is anything else then <i>None</i> then local rotation axes are orientated slightly different. In this case the first axis still points along the bone. But the second axis points along the axis chosen  with the <i>Second axis</i> property and the third axis is perpendicular to the first and the second axis.					</ul>					<p></p>					<div align="center">						<p><img src="JointOrient1.jpg" alt="" height="441" width="310" border="0"> <img src="JointOrient2.jpg" alt="" height="441" width="310" border="0"></p>						<p>On the left image you can see two bones with unoriented joint. After applying a XYZ orient with no second axis<br>							the X-Axis is pointing along the bone and the Z axis is pointing sideways two the two bones.</p>					</div>					<p></p>					<p><b><i>Modes<br>							</i></b>This tool works in all modes equally.</p>					<ul>						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>To use the  orient joint tool just select &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Character<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Orient Joint&quot; from the menu. The orient joint tool will now show up in the tool properties and you can  set the desired properties. Once finished click on the OK button and the tool is applied to the currently selected joint.																	</ul>					<div align="center">						<p> </p>					</div>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>Orientation:</b></i> Determines the order in which the  local axes are oriented.						<li><i><b>Second axis: </b></i>Determines if a second axis is used for orientation. The second axis is always given as a global coordinate system axis.						<li><i><b>Hierarchy: </b></i>Check this on if you want to orient the joints of a whole hierarchy. 						<li><i><b>Apply: </b></i>Clicking onto the OK button apply the tool to the currently selected joint.					</ul>					<ul>											</ul>					<div align="center">						<p></p>					</div>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

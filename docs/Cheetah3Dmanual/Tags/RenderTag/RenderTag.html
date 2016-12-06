@@ -1,62 +1,54 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>レンダータグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Render Tag</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-  
-    <tr>
-      <td>
-        <div align="center">
-          <h2>レンダータグ</h2>
-        </div>
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p></p>
+						<h2>Render Tag</h2>
+					</div>
+					<p>The render tag offers object level access to some settings of the renderer. It allows for example to turn off shadow casting for certain object. Since sometimes the shadow of some objects isn't even visible on the rendered image. So the main purpose of this tag is to decrease rendering time. </p>
+					<p><i>Attention: You can only add a render tag to polygon objects. Since these are the only objects which are actually visible in the renderer.<b> </b></i></p>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Cast shadows:</b></i> Defines if an objects casts a shadow or not. 
+						<li><b><i>Receive shadow: </i></b>Defines if an object receives shadows.
+						<li><b><i>Visible in Radiosity: </i></b>Use this property to remove an object from the radiosity solver. For example windows (transparent materials). So light can pass through the window in the radiosity solution.
+						<li><i><b>Receive Radiosity: </b></i>If you are rendering a object with a glassy material it doesn't makes sense to calculate the radiosity solution on that surface because glass doesn't have a diffuse material component. So radiosity doesn't have any effect on the appearance of glass. To reduce rendering time you can turn off the calculation of the radiosity solution on certain objects.
 
-        <p>レンダータグは、レンダラーのいくつかの設定へのオブジェクトレベルのアクセスを提供します。例えば、時々いくつかのオブジェクトの影がレンダリングされたイメージには見えないという理由で、特定のオブジェクトが影を落とさないようにする事が可能です。このタグの主な目的は、レンダリング時間の短縮です。</p>
-
-        <p><i>注意: レンダラーで実際みえている唯一のオブジェクトなので、ポリゴンオブジェクトにのみレンダータグを追加する事ができます。 </i></p>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>影を落とす:</b></i> オブジェクトが影を落とすか落とさないかを設定します。</li>
-
-          <li><b><i>影を受ける:</i></b> オブジェクトに影が映るかどうかを設定します。</li>
-
-          <li><b><i>ラジオシティ計算対象:</i></b> ラジオシティーのソルバーからオブジェクトを削除するためにこのプロパティを使用します。例えば、窓（透過マテリアル）オブジェクトに使用した場合、ラジオシティー計算で外からの光は窓を通り抜ける事ができます。</li>
-
-          <li><b><i>コースティクス計算対象:</i></b> コースティクスのソルバーからオブジェクトを削除するためにこのプロパティを使用します。</li>
-
-          <li><b><i>一次レイを計算する:</i></b> このプロパティを Off にすると、オブジェクトがレンダリングイメージで不可視になります。しかし、このオブジェクトは影を落とします。（訳注：またラジオシティー等の他の計算には使われます。）</li>
-
-          <li><i><b>ラジオシティを受ける:</b></i> もしガラスのマテリアルのオブジェクトをレンダリングしている場合、ガラスは拡散（ディフューズ）構成要素を持っていないので表面のラジオシティー計算は意味がありません。それで、ラジオシティーはガラスの外観に全く影響を及ぼしません。レンダリング時間を短縮するために、特定のオブジェクトのラジオシティー計算を Off にする事ができます。</li>
-
-          <li><b><i>コースティクスを受ける:</i></b> オブジェクトに映るコースティクスが見たくない場合、このプロパティを Off にします。</li>
-
-          <li><b><i>テクスチャフィルタ:</i></b> このオブジェクトのテクスチャフィルタリングを無効にしたい場合、このプロパティを Off にします。</li>
-        </ul>
-
-        <div align="center"></div>
-      </td>
-    </tr>
-
-  </table>
-
+						<li><b><i>Receive Caustics: </i></b>Disable this property if you don't want to see caustics on that object.
+						<li><b><i>Visible for primary rays:</i></b> If you turn off that property the object will become invisible in the rendered image. But it will still cast shadows.						
+						<li><b><i>Filter texture:</i></b> Disable that property if you want to disable texture filtering on that object. 
+					</ul>
+					<ul>
+						
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

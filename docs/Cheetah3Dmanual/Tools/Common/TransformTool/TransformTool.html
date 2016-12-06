@@ -1,164 +1,119 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>移動変形ツール</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Transform Tool</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>移動変形ツール</h2>
-        </div>
-
-        <p>移動変形ツール は、すべての 3D モデラーの仕事馬であり、おそらくもっともよく使われるツールでしょう。このツールは３つのツールを１つに含んでいます。これを使って、ポイントやエッジ、ポリゴン、オブジェクトや、タグを中心に、移動、拡大縮小、回転する事が出来ます。</p>
-
-        <p><b>変形</b>:<br>
-        移動変形ツール は選択したものに対してのみ動作するので、それらを動かす前に、まずオブジェクトやポイントなどを選択する必要があります。それぞれ異なる移動変形タイプを切り替えるには、対応したガジェットをクリックする必要があります。移動ツールを使うには、円錐をクリックします。回転ツールを使うには、輪をクリックし、拡大縮小ツールを使うには、立方体をクリックします。それぞれ対応したシンボル（円錐、リング、立方体）がハイライトされるので、現在アクティブな変形タイプを確認する事ができます。実際のビジュアルは、下の画像で確認してください。</p>
-
-        <div align="center">
-          <table width="642" border="0" cellspacing="5" cellpadding="0">
-            <tr>
-              <td><img src="TransformToolMove.jpg" alt="" border="0"></td>
-
-              <td></td>
-
-              <td><img src="TransformToolRotate.jpg" alt="" border="0"></td>
-
-              <td></td>
-
-              <td><img src="TransformToolScale.jpg" alt="" border="0"></td>
-
-              <td></td>
-
-              <td><img src="TransformToolGadget.jpg" alt="" height="259" width="257" border="0"></td>
-            </tr>
-
-            <tr>
-              <td>
-                <div align="center">
-                  Moveモード
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  Rotateモード
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  Scaleモード
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  ガジェットモード
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <p>移動ガジェットと拡大縮小ガジェットは、選択した軸方向で制限して移動／拡大縮小に使われる事も出来ます。例えば、Y 軸の円錐をドラッグする場合、X 軸と Z 軸はロックされ、オブジェクトは Y 軸上でしか動きません。しかし、シフトキーを押しながら Y 軸の円錐をドラッグした場合、今度は Y 軸がロックされ、オブジェクトを X-Z 平面上で動かす事ができます。</p>
-
-        <p>制限無く自由に移動するには、変形ガジェットの中心をクリック＆ドラッグするか、SHIFT + ALT キーを押しながらドラッグします。</p>
-
-        <p><b><i>選択</i></b>:<br>
-        移動変形ツールツールは、オブジェクトとその構成要素を変形するだけでなく、それらを選択する事も可能です。マウスで移動変形ガジェット以外をクリックすると、移動変形ツールツールは、ペイント選択の様に動作し、ポリゴンやエッジなど、動作中の選択モードで選択する事ができます。</p>
-
-        <div align="left">
-          <b><i>tweak modeモード</i></b>:<br>
-          ただ１つのポイントやポリゴンを調整したい場合には、tweak modeモードが便利でしょう。tweak modeモードは、オブジェクト全体以外のポリゴンやエッジのような構成要素のみを変形する事ができます。tweak modeモードを使用するには、まずすべてのポリゴン、エッジ、あるいはポイントの選択を解除します。次に、SHIFT + ALT キーを押したまま、マウスをメッシュ、又はスプラインの上に動かします。微調整可能な構成要素が、ハイライト表示されます。ハイライト表示された構成要素をクリック＆ドラッグすれば、最初のそれらの構成要素選択しておく必要なく、直接それらを操作する事ができます。メッシュのちょっとした微調整を、すばやく実行する事ができます。
-
-          <p><b><i>ガジェットモード</i></b>:<br>
-          移動変形がジェットは、通常選択範囲の中央に配置されます。しかし、時々ガジェットが別の場所に配置された方が便利な場合があります。例えば、オブジェクトの底や、ポリゴンの端など。ガジェットを好みの位置に配置するために、ガジェットモードを使用する事ができます。ガジェットモードに入るには、移動変形ガジェットの中央の球をダブルクリックします。ガジェットモードに入ると中央の球の色はシアンに変化します。移動変形ガジェットを、選択範囲を変形させる事無く、任意に移動／回転する事ができます。自動ハイライト機能を使って、エッジやポイントに移動変形ガジェットをきっちりとスナップする事も出来ます。移動変形ガジェットを配置したら、再度中央の球をダブルクリックしてガジェットモードから抜けます。<br>
-          ガジェットを通常の配置に戻すには、（移動変形ガジェットではなく）何も無い空間をクリックするか、ESC キーを押します。</p>
-
-          <p><b><i>スナッピングモード</i></b>:<br>
-          スナッピングが On の時、移動変形ガジェットの中央は、ガジェットをそれらに重なるように移動させる時、選択したスナッピング構成要素（ポイント、エッジ、等）にスナップされます。（Y 軸の円錐をドラッグした時のように）制限移動をした場合、オブジェクトはその制限した軸にのみスナップされます。この場合、ガジェットの中心ではなく、マウスポインターが、スナップポイントとして使用されます。</p>
-        </div>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>Shift（シフト） + クリック:</i></b> 選択範囲を解除せず、現在の選択範囲にポイント、エッジ、またはポリゴンを追加します。</li>
-
-                <li><b><i>Command（コマンド）+ クリック:</i></b> 選択したポイント、エッジ、またはポリゴンを選択解除します。</li>
-
-                <li><b><i>Shift（シフト） + Alt（オルト） + ドラッグ:</i></b> 自由移動、または均一拡大縮小</li>
-
-                <li><b><i>Command（コマンド） + ドラッグ:</i></b> スプラインオブジェクトでのみ動作します。閉じたスプラインを<b>開く</b>時や、接線を分けるために使用します。</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>座標系:</b></i> このプロパティで、移動／拡大縮小／回転を実行する座標軸を、シーン全体のグローバル座標系か、オブジェクトのローカル座標系、（訳注：または、選択した要素の法線座標系）から選択する事が出来ます。</li>
-
-          <li><b><i>オートモード</i></b>: ポリゴンオブジェクトを編集している場合、任意の編集モードをあらかじめ選択することなしに、ポイント、エッジ、ポリゴンを直接編集する事が出来ます。</li>
-
-          <li>
-            <i><b>スナッピング:</b></i> スナッピングモードの切換え
-
-            <ul>
-              <li><b><i>なし:</i></b> スナッピング Off</li>
-
-              <li><b><i>コンポーネント:</i></b> それぞれ構成要素（ポイント、エッジ、ポリゴン）へのスナッピングを On にします。</li>
-
-              <li><b><i>ポリゴン表面:</i></b> 表面へのスナッピングを On にします。この場合、移動変形ガジェットはポリゴンオブジェクトの表面にスナップします。</li>
-
-              <li><b><i>グリッド:</i></b> グローバルなグリッドへのスナッピングを On にします。</li>
-            </ul>
-          </li>
-
-          <li><b><i>ポイント</i>:</b> このプロパティが選択されている場合、ポリゴンオブジェクトやスプラインのポイントへのスナップが可能になります。</li>
-
-          <li><b><i>エッジ</i></b>: このプロパティが選択されている場合、エッジの中央へのスナップが可能になります。</li>
-
-          <li><b><i>ポリゴン</i></b>: このプロパティが選択されている場合、ポリゴンの中央へのスナップが可能になります。</li>
-
-          <li><b><i>オブジェクト位置</i>:</b> このプロパティが選択されている場合、オブジェクト位置へのスナップが可能になります。</li>
-
-          <li><i><b>グリッド幅:</b></i> グリッドスナッピングが選択されている場合の、ラスタライズ単位を設定する事ができます。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p></p>
+						<h2>Transform Tool</h2>
+						</p></div>
+					<p>The Transform Tool is the work horse of any 3D modeler and is probably the most often used tool of all. It contains three tools in one. You can use it to move, scale and rotate around points, edges, polygons, objects and even tags.</p>
+					<p><b>Transformations</b>:<br>
+						The transform tool only acts on selections so you first have to select the objects, points etc. before you can move them around. To change between the different transformation types you have to click on the appropriate gadgets. To use the move transformation, click on the cone. For rotational transformations, click on the rings, and for scale transformation, click on the box. You can see which transformation type is currently active, since the appropriate symbol (cone, ring or box) will be highlighted. See the pictures below for a visual demonstration.</p>
+					<div align="center">
+						<table width="642" border="0" cellspacing="5" cellpadding="0">
+							<tr>
+								<td><img src="TransformToolMove.jpg" alt="" border="0"></td>
+								<td></td>
+								<td><img src="TransformToolRotate.jpg" alt="" border="0"></td>
+								<td></td>
+								<td><img src="TransformToolScale.jpg" alt="" border="0"></td>
+								<td></td>
+								<td><img src="TransformToolGadget.jpg" alt="" height="259" width="257" border="0"></td>
+							</tr>
+							<tr>
+								<td>
+									<div align="center">
+										Move mode</div>
+								</td>
+								<td></td>
+								<td>
+									<div align="center">
+										Rotate mode</div>
+								</td>
+								<td></td>
+								<td>
+									<div align="center">
+										Scale mode</div>
+								</td>
+								<td></td>
+								<td>
+									<div align="center">
+										Gadget mode</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<p>The move and scale gadgets can be also use to perform a move/scale which is constrained in the direction of the chosen axis. For example if you drag the Y-cone. Now the X and Z coords are locked and the object just moves into the Y direction. But if you drag the Y-cone while holding the SHIFT key the Y-axis will be locked and and you can move the object in the X-Z plane.</p>
+					<p>To perform a free unconstraint move you can either use click and drag the center of the transform gadget or you can hold down the SHIFT+ALT keys during dragging.</p>
+					<p><b><i>Selection</i></b>:<br>
+						The Transform tool not just allows to transform objects or its components. It also allows you to select them. When you don't hit the transform gadget with your mouse click the transform tool works like paint selection and you can select polygons, edges or in whatever selection mode you are.</p>
+					<div align="left">
+						<b><i>Tweak mode</i></b>:<br>
+						When you want to tweak just single points or polygons it is more efficient to use the tweak mode. The tweak mode can only transform components like polygons or edges but no complete objects. To access the tweak mode unselect all polygons, edges or points. Now hold the SHIFT+ALT key pressed while moving the mouse over the mesh or spline. The tweak able components will no highlight. If you now click and drag the highlighted component it is not necessary to first select the components. You directly can manipulate them. You can therefore perform small manipulations on the mesh very fast.
+						<p><b><i>Gadget mode</i></b>:<br>
+							The transform gadget it usually positioned in the center of the current selection. But sometimes it is more convenient when the gadget is position somewhere else. For example at the button of an object or at an edge of a polygon. To position the gadget wherever you want you can use the gadget mode. The gadget mode is accessed by double clicking on the center sphere of the transform gadget. When in gadget mode the center turn into cyan. Now you can move and rotate the transform gadget arbitrarily without transforming the selection. You can even use the auto-highlighting feature for snapping the transform gadget to a certain edge or point. Once you have positioned the transform gadget double click on the center again to leave the gadget mode.<br>
+							To return to the normal automatic positioning of the gadget you either have to click into the empty space (not hit the transform gadget) or press the ESC key. </p>
+						<p><b><i>Snapping mode</i></b>:<br>
+							When snapping is turned on the center of the transform gadget will snap to the chosen snapping components (points, edges, etc.) while you move the gadget over them. When you perform a constraint move (like using the Y handle) the object will only snap into the constraint component. In that case the mouse pointer and not the gadget center is used to determine the snapping component.</p>
+						<p></p>
+					</div>
+					<div align="left">
+						<p><b>Keys</b></p>
+					</div>
+					<ul>
+						<div align="left">
+							<li><b><i>Shift + click: </i></b>Extend the current point, edge or polygon selection without clearing the current selection.
+							<li><b><i>Command + click:</i></b> Unselect a selected point, edge or polygon.
+							<li><b><i>Shift + Alt + drag:  </i></b>Free move or uniform scale.
+							<li><b><i>Command + drag:</i></b> Works only with spline objects. Use this to <b>open</b> <b>up a closed spline or to break tangents.</b>
+						</div>
+					</ul>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Orientation:</b></i> With this property you can choose if you want to perform the move/scale/rotate in the local coordinate system of the object or in the global coordinate system of the whole scene.
+						<li><b><i>Auto mode</i></b>: When editing polygon objects you can directly edit points, edges and polygons without choosing the appropriate edit mode before.
+						<li><b><i>Position</i></b>: The position of the transform gadgets center. You can edit these values to numerically position a selection.
+						<li><i><b>Snapping:</b></i> Turn on and off snapping. 
+						<ul>
+							<li><b><i>None:</i></b> Snapping is turned off.
+							<li><b><i>Component:</i></b> Component snapping to points, edges or polygons is turned on.
+							<li><b><i>Surface:</i></b> Surface snapping is turned on. When surface snapping is on the transform gadget snap to the surface of polygon objects.
+							<li><b><i>Raster:</i></b> When raster snapping is turned on the gadget snaps to a global raster.
+						</ul>
+						<li><b><i>Points</i>:</b> If this property is checked, snapping to points of polygon objects or splines is enabled.
+						<li><b><i>Edges</i></b>: If this property is checked, snapping to the center of edges is enabled.
+						<li><b><i>Polygons</i></b>: If this property is checked, snapping to the center of polygons is enabled.
+						<li><b><i>Object center</i>: </b>If this property is checked, snapping to object centers is enabled.
+						<li><i><b>Raster width: </b></i>When raster snapping is turned on you can set the raster width with that property.
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+		<map name="TransformToolMovebbc5e90d"></map>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

@@ -1,148 +1,126 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>サッカーボール</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Volleyball</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>Soccer Ball</h2>
+					</div>
+					<div align="left">
+						<p>In this tutorial we're going to make a classic soccer ball. This is actually quite simple and will only take a few minutes, despite it's apparent complexity.</p>
+					</div>
+					<div align="center">
+						<table width="95%" border="1" cellspacing="0" cellpadding="5">
+							<tr>
+								<td valign="center" width="320"><b>1. Create a Polyhedra</b><br>
+									We kick off by making a <a href="../../Objects/PolygonObjects/Polyhedra/Polyhedra.html">polyhedra</a> object. We can use the standard settings of a truncated Icosahedron. Now make the <a href="../../Objects/PolygonObjects/Polyhedra/Polyhedra.html">polyhedra</a> object <a href="../../Objects/PolygonObjects/Polygonobject.html">editable</a> so that we can modify with our ball on the polygon level. Your scene should look like this.</td>
+								<td valign="top">
+									<div align="center">
+										<br>
+										<img src="Soccer2.jpg" alt="" height="246" width="250" border="0">
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>2.</b> <b>Making the color selections</b><br>
+									Now we have to colorize the different fields of our ball. Polygons with 5 corners (pentagons) will become black. Polygons with 6 corners (hexagons) will become white.
 
-    <tr>
-      <td>
-        <div align="center">
-          <h2>サッカーボール</h2>
-        </div>
-
-        <div align="left">
-          <p>このチュートリアルでは、昔からあるサッカーボールを作成していきます。とても複雑な形状ですが、このチュートリアルは実際は大変簡単なので、ほんの数分かかるだけでしょう。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Soccer1.jpg" alt="" height="200" width="200" border="0"></p>
-
-          <table width="80%" border="1" cellspacing="0" cellpadding="0">
-            <tr>
-              <td valign="top" width="300">
-                <p><b>1. 多面体の作成</b><br>
-                <a href="../../Objects/PolygonObjects/Polyhedra/Polyhedra.html">多面体</a>オブジェクトの作成で、さぁキックオフです。 "切頂二十面体" の標準の設定を使用します。次に、ポリゴンレベルで編集していけるように、<a href="../../Objects/PolygonObjects/Polyhedra/Polyhedra.html">多面体</a>を<a href="../../Objects/PolygonObjects/Polygonobject.html">編集可能なポリゴンオブジェクト</a>に変換します。シーンは右のようになるはずです。</p>
-              </td>
-
-              <td valign="top">
-                <div align="center">
-                  <br>
-                  <img src="Soccer2.jpg" alt="" height="246" width="250" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <p><b>2. カラーセレクションの作成</b><br>
-                次に、ボールのそれぞれの面を色分けしなければなりません。５つの角のあるポリゴン（五角形）は、黒に。６つの角のあるポリゴン（六角形）は、白に設定します。</p>
-
-                <p>まず、黒と白の２つのマテリアルを作成します。すべての五角形ポリゴンを選択し、黒マテリアルをポリ選択範囲にドラッグ＆ドロップします。選択されたすべてのポリゴンは黒になります。（２番目のイメージ）</p>
-
-                <p>六角形ポリゴンと白マテリアルで、同じ手順を繰り返します。</p>
-              </td>
-
-              <td valign="top">
-                <div align="center">
-                  <br>
-                  <img src="Soccer3.jpg" alt="" height="265" width="249" border="0">
-
-                  <p><img src="Soccer4.jpg" alt="" height="252" width="233" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <p><b>3. 完全な球体に変形</b><br>
-                完全な球体を作成するために、まずこの角のあるボールの分割数を上げなければいけません。これは、<a href="../../Objects/ModifierObjects/SubDiv/SubDiv.html">サブディビジョン</a>を適用して実行します。このモディファイアオブジェクトは、オブジェクトブラウザ上で多面体オブジェクトの "内側" にある（小オブジェクトである）事に注意してください。これは、<a href="../../Objects/CreatorObjects/CreatorObjects.html">クリエータオブジェクト</a>が、動作する方法とは違います。（訳注：クリエータオブジェクトの場合、対象を小オブジェクトにするので、変形対象を親オブジェクトとするモディファイアオブジェクトとは逆になりますね。）ボールの角が取れて、より滑らかに見えるようになりましたが、完全な球状ではありませんね。次に、リアルな球体を作る<a href="../../Objects/ModifierObjects/Spherify/Spherify.html">球形化</a>モディファイアを適用します。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Soccer6.jpg" alt="" border="0">
-
-                  <p><img src="Soccer5.jpg" alt="" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <p><b>4. 縫い目を作る</b><br>
-                次に縫い目を作って行きましょう。これは、このチュートリアルで最も難しい部分ですが、心配しないで下さい。<a href="../../Tools/Polygon/ExtrudeTool/ExtrudeTool.html">押し出し</a> と <a href="../../Tools/Common/SelectTool/SelectTool.html">選択ツール</a> に、ホットキーを割り当てていれば、この作業は数分で完了するでしょう。</p>
-
-                <p>まず、もう一度ボールを<a href="../../Objects/PolygonObjects/Polygonobject.html">編集可能</a>にします。そして、サッカーボールのそれぞれの面（マテリアルで分けられた部分）を選択し、ほんの少しだけ押し出しツールを使用します。押し出しツールはクリックした時点で、自動的に選択されたポリゴンを小さい距離だけ移動されるので、3D ビューを単にクリックするだけで充分でしょう。このサッカーボールの場合、この小さい距離で充分です。より正確な距離で押し出しをしたい場合、押し出しツールの "クォンタイズ" プロパティを使って作業したいかもしれません。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Soccer8.jpg" alt="" height="239" width="249" border="0"><br>
-
-                  <p><img src="Soccer9.jpg" alt="" height="248" width="198" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <p><b>5. サッカーボールの仕上げ</b><br>
-                サッカーボールのすべての面を押し出した後で、このような何かで仕上げなければなりません。これはまだちょっと本物のサッカーボールには見えませんね。</p>
-
-                <p>最後の仕上げを予想しているかもしませんね。仕上げるために、ポリゴンオブジェクトにサブディビジョンモディファイアを適用するだけです。さぁ、これですべてのエッジが滑らかになりました。これが、初めて自分で作ったサッカーボールです</p>
-
-                <p>ゲーム終了!</p>
-
-                <p><b><i>examples フォルダに、作成されたサッカーボールのファイルがあります。</i></b></p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Soccer10.jpg" alt="" height="276" width="250" border="0">
-
-                  <p><img src="Soccer11.jpg" alt="" border="0"></p>
-
-                  <p><img src="Soccer12.jpg" alt="" height="224" width="250" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">
-                <div align="center">
-                  <b>さぁ、次はあなたの番です。同じテクニックを使って、いろんなボールを作成できるでしょう。例えばバレーボールを作る場合には、切頂二十面体ではなくて立方体で始めていけばいいでしょう。</b>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+									<p>First create two materials, a black one and a white one. Then select all the pentagons (first image). Now drag and drop the black material onto the polygon selection. All selected polygons are black now (second image).</p>
+									<p>Repeat the same steps with the hexagons and the white material.</p>
+								</td>
+								<td valign="top">
+									<div align="center">
+										<br>
+										<img src="Soccer3.jpg" alt="" height="265" width="249" border="0">
+										<p><img src="Soccer4.jpg" alt="" height="252" width="233" border="0"></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>3. Making it a perfect sphere</b><br>
+									
+									To make a perfect sphere we first have to increase the tessellation of our angular ball. This can be done by attaching a <a href="../../Objects/ModifierObjects/SubDiv/SubDiv.html">Subdivision</a> modifier. Note that the modifier object goes &quot;inside&quot; the Polyhedra object in the object view - this differs to how <a href="../../Objects/CreatorObjects/CreatorObjects.html">Creator objects</a> work. Now the ball looks much better but it is not quite a perfect sphere. Attaching a <a href="../../Objects/ModifierObjects/Spherify/Spherify.html">Spherify</a> modifier finally makes a real ball.</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Soccer6.jpg" alt="" border="0">
+										<p><img src="Soccer5.jpg" alt="" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>4. Adding seams</b><br>
+									
+									Now it is time to make the seams. This is the most awkward part of the tutorial, but don't worry! If you've defined the <a href="../../Tools/Polygon/ExtrudeTool/ExtrudeTool.html">extrude</a> and the <a href="../../Tools/Common/SelectTool/SelectTool.html">select</a> tool to a hot key this job can be done in minutes.
+									<p>First make your ball <a href="../../Objects/PolygonObjects/Polygonobject.html">editable</a> again. Then select each field (segment of material) of the soccer ball and extrude it a little bit. It is enough to simply click in the 3D view because the extrude tool moves the polygon selection automatically a small distance when you click. This small distance is enough for our soccer ball. You might also want to work with the &quot;quantize&quot; property of the extrude tool for a more accurate extrude.</p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Soccer8.jpg" alt="" height="239" width="249" border="0"><br>
+										<p><img src="Soccer9.jpg" alt="" height="248" width="198" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td valign="center" width="320"><b>5. Finishing the soccer ball</b><br>
+									
+									After extruding every field of the soccer ball you should end up with something like this. It still doesn't look quite like a real soccer ball though.
+									<p>You might already expect the finishing touch. To finish your ball you just have to attach a subdivision modifier to the polygon object. Now all edges will be smoothed out. And here it is, your first self made soccer ball.</p>
+									<p>Game over!</p>
+									<p><b><i>You can find the finished soccer ball in the examples folder.</i></b></p>
+								</td>
+								<td>
+									<div align="center">
+										<br>
+										<img src="Soccer10.jpg" alt="" height="276" width="250" border="0">
+										<p><img src="Soccer11.jpg" alt="" border="0"></p>
+										<p><img src="Soccer12.jpg" alt="" height="224" width="250" border="0"></p>
+										<p></p>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<div align="center">
+										<p><img src="Soccer1.jpg" alt="" height="200" width="200" border="0"></p>
+										<b>Now it is your turn. Using the same technique, you can produce many types of balls. To create a volleyball for example you would start with a box instead of the truncated icosahedron.</b></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div align="left">
+						<p></p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

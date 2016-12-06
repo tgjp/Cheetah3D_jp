@@ -1,77 +1,111 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>Split Joint Tool</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="generator" content="Adobe GoLive 6">
+    <title>Split Joint Tool</title>
+    <link href="../../../style.css" rel="stylesheet" media="screen">
+  </head>
+  
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table border="0" cellpadding="8" cellspacing="8" width="100%">
-    <tbody>
-
-      <tr>
-        <td>
-          <div align="center">
-            <h2>ジョイント分割</h2>
-          </div>
-
-          <p>ジョイント分割は、ジョイントを分割するために使用できます。<a href="../../../Tags/SplineIKTag/SplineIKTag.html">スプライン IK</a>を使って、動物のしっぽを動かしたいような、等間隔に並んだジョイントの長い階層を作りたい場合に特に役立つでしょう。</p><br>
-
-          <div align="center">
-            <p><img src="JointSplit1.jpg" alt="" border="0"> <img src="JointSplit2.jpg" alt="" border="0"></p>
-
-            <p>左のイメージでは、２つのジョイントで１つのボーンが作成されています。<br>
-            次のイメージでは、ルートジョイントに続くボーンは５個に分割されています。</p>
-          </div>
-
-          <p><b><i>編集モード<br></i></b> このツールは、全てのモードで同じように動作します。</p>
-
-          <ul>
-            <li><img src="../../../Images/Pointmode.jpg" alt="" border="0" height="32" width="32"><img src="../../../Images/Edgemode.jpg" alt="" border="0" height="32" width="32"><img src="../../../Images/Polygonmode.jpg" alt="" border="0" height="32" width="32"><img src="../../../Images/Objectmode.jpg" alt="" border="0" height="32" width="32"><br>
-            ジョイント分割ツールを使用するには、まず分割したいボーンのルートジョイントを選択します。そして、"ツール<img src="../../../Images/arrow.gif" alt="" border="0" height="10" width="10">キャラクターツール<img src="../../../Images/arrow.gif" alt="" border="0" height="10" width="10">ジョイント分割" をメニューから選択します。ツールビューにのプロパティが表示されるので、任意のプロパティをセットします。OK ボタンをクリックすると、選択されているジョイントに分割が適用されます。</li>
-          </ul>
-
-          <div align="center"></div>
-
-          <div align="left">
-            <p><b>補助キー</b></p>
-          </div>
-
-          <ul>
-            <li style="list-style: none">
+    <table border="0" cellpadding="8" cellspacing="8" width="100%">
+      <tbody>
+        <tr>
+          <td>
+            <div align="center">
+              <p></p>
+              <p> </p>
+              <h2>Split Joint Tool</h2>
+              <p></p>
+            </div>
+            <p>The split joint tool helps you to split a joint. This is
+              especially helpfull if you want to create a long hirarchy of
+              equally spaced joints. For example if you want to animate the tail
+              of an animal with <a href="../../../Tags/SplineIKTag/SplineIKTag.html">spline
+                IK</a>.<br>
+            </p>
+            <p></p>
+            <br>
+            <p></p>
+            <div align="center">
+              <p><img src="JointSplit1.jpg" alt="" border="0"> <img src="JointSplit2.jpg"
+                  alt=""
+                  border="0"></p>
+              <p>On the left image you can see a single bone created of two
+                joints. The second image show <br>
+                the bone after the root joint was splitted 5 times.<br>
+              </p>
+            </div>
+            <p></p>
+            <p><b><i>Modes<br>
+                </i></b>This tool works in all modes equally.</p>
+            <ul>
+              <li><img src="../../../Images/Pointmode.jpg" alt="" border="0" height="32"
+                  width="32"><img
+                  src="../../../Images/Edgemode.jpg"
+                  alt=""
+                  border="0"
+                  height="32"
+                  width="32"><img
+                  src="../../../Images/Polygonmode.jpg"
+                  alt=""
+                  border="0"
+                  height="32"
+                  width="32"><img
+                  src="../../../Images/Objectmode.jpg"
+                  alt=""
+                  border="0"
+                  height="32"
+                  width="32"><br>
+                To use the split joint tool first select the root joint of the
+                bone you want to split and then select "Tools<img src="../../../Images/arrow.gif"
+                  alt=""
+                  border="0"
+                  height="10"
+                  width="10">Character<img
+                  src="../../../Images/arrow.gif"
+                  alt=""
+                  border="0"
+                  height="10"
+                  width="10">Split
+                Joint" from the menu. The split joint tool will now show up in
+                the tool properties and you can set the desired properties. Once
+                finished click on the OK button and the tool is applied to the
+                currently selected joint. </li>
+            </ul>
+            <div align="center">
+              <p> </p>
+            </div>
+            <div align="left">
+              <p><b>Keys</b></p>
+            </div>
+            <ul>
               <div align="left">
-                <ul>
-                  <li><b><i>なし</i></b></li>
-                </ul>
+                <li><b><i>none</i></b> </li>
               </div>
-            </li>
-          </ul>
-
-          <p><b>プロパティ</b></p>
-
-          <ul>
-            <li><i><b>分割数:</b></i> 選択しているジョイントが分割される数を決定します。</li>
-
-            <li><i><b>適用:</b></i> OK ボタンをクリックしてジョイント分割を実行します。</li>
-          </ul>
-
-          <div align="center"></div>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
-
+            </ul>
+            <p><b>Properties</b></p>
+            <ul>
+              <li><i><b>Number:</b></i> Determines into how many joints the
+                selected joint will be split. </li>
+              <li><i><b>Apply: </b></i>Clicking onto the OK button apply to
+                perform the joint split. </li>
+            </ul>
+            <ul>
+            </ul>
+            <div align="center">
+              <p></p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->

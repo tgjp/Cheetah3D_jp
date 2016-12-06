@@ -1,121 +1,93 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>UV Mapper</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>UV Mapper</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>UV マッパーツール</h2>
-        </div>
-
-        <div align="left">
-          <p>UV マッパーツールは基本投影形式の球体マッピングや立方体マッピングを適用したポリゴンオブジェクトにUV値を付与することができます。例えば、人の顔のような複雑なオブジェクトなどのUV 展開を行う場合は<a href="../UnwrapUVTool/UnwrapUVTool.html">UV 展開ツール</a>を使う事ができます.</p>
-        </div>
-
-        <div align="center">
-          <p><img src="UVMapper1.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p><b><i>Modes<br></i></b> UV マッピングツールは、<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>にのみ使うことができます。また、UV マッピングツールはポリゴンモード選択時のみ使用ができます。</p>
-
-          <ul>
-            <li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
-            UV マッピングツールを使用するために、いくつかのポリゴンまたは<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>を選択してください。それからメニューコマンド "ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">UVツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">UV マッパー"を選んでください。その後、UV マッピングツールで必要な全てのパラメータをツールプロパティーエディタで設定してください。 そして、あなたが希望するUV座標値になるようにトランスフォームギズモを使いUV マッピングの格子を配置してください。編集の状態は <a href="../../../UserInterface/UVEditor/UVEditor.html">UV エディタ</a> または<a href="../../../UserInterface/3dView/3dView.html">3D ビュー画面</a>で確認することが出来ます。しかし、<a href="../../../UserInterface/3dView/3dView.html">3D ビュー画面</a> でUV マッピング状態を確認するためには、あらかじめポリゴンオブジェクトにテクスチャーマップを割り当てておく必要があります。"UV 座標の書き込み" ボタンをクリックするとポリゴンオブジェクトに計算されたUV 座標値が割り当てられます。</li>
-          </ul>
-
-          <div align="left">
-            <p><b>キー</b></p>
-          </div>
-
-          <ul>
-            <li style="list-style: none">
-              <div align="left">
-                <ul>
-                  <li><b><i>ESC:</i></b> ツールの初期化。</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
-          <p><b>プロパティー</b></p>
-
-          <ul>
-            <li>
-              <b><i>マッピングタイプ:</i></b>
-
-              <ul>
-                <li><b><i>立方体マッピング:</i></b> 立方体に投影するマッピング.</li>
-
-                <li><b><i>球体マッピング:</i></b> 球体に投影するマッピング.</li>
-
-                <li><b><i>平面マッピング:</i></b> 平面に投影するマッピング.</li>
-
-                <li><b><i>円筒マッピング:</i></b> 円筒に投影するマッピング.</li>
-
-                <li><b><i>正面マッピング:</i></b> 画面上のシーンに対して正面にある平面に投影するマッピング</li>
-              </ul>
-            </li>
-
-            <li><i><b>選択範囲のみ:</b></i>: UV 座標値が全てのポリゴン、または選択した範囲のポリゴンにのみに割り当てるか指定します。</li>
-
-            <li><i><b>オフセット:</b></i> 新しいUV 座標値をオフセットします。</li>
-
-            <li><b><i>拡大縮小:</i></b> 新たに計算したUV座標値を追加します。</li>
-
-            <li><i><b>中心に移動:</b></i> UV マッピング座標を選択しているポリゴンの中心に設定します。</li>
-
-            <li><b><i>UV マップの書き込み:</i></b> このボタンを押すとマッピング形式に従ったUV座標値をポリゴンに設定します。</li>
-          </ul>
-
-          <p><b>例<br></b> 選択したポリゴンにUV 座標値を設定します。</p>
-
-          <ol>
-            <li>編集したいポリゴンオブジェクトを選択します。</li>
-
-            <li>ポリゴンモードに変更します。</li>
-
-            <li>UV 座標値を設定したいポリゴンを選択します。</li>
-
-            <li>UV マッパーツールを選択します。</li>
-
-            <li>UV マッパーツールのプロパティで<i><b>選択範囲のみ</b></i> をチェックします。</li>
-
-            <li><b><i>マッピングタイプ</i></b>を選択します。</li>
-
-            <li>トランスフォームギズモでUVマッピングの格子を移動します。</li>
-
-            <li>完了したら<b><i>UV マップの書き込み</i></b> ボタンを押します。これでUV座標値がポリゴンオブジェクトに設定されました。</li>
-
-            <li>全てのポリゴンの設定が終わるまで3項から繰り返します。</li>
-          </ol>
-
-          <div align="center"></div>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>UV Mapper Tool</h2>
+						</p></div>
+					<div align="left">
+						<p>The UV Mapper Tool can be used to assign UV coords to polygon objects using basic texture projections like spherical or cubic projection. For unwrapping complex objects like a human face the <a href="../UnwrapUVTool/UnwrapUVTool.html">Unwrap UV</a> Tool is recommended.</p>
+					</div>
+					<div align="center">
+						<p><img src="UVMapper1.jpg" alt="" border="0"></p>
+						<p></p>
+					</div>
+					<div align="left">
+						<p><b><i>Modes<br>
+								</i></b>The uv mapper tool can only be applied to <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon objects</a>. It's only available in polygon mode.</p>
+						<ul>
+							<li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
+								To use the uv mapper tool, select some polygons or a complete <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon object</a>. Then call the menu command &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">UV<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">UV Mapper&quot;. Now set all the necessary parameters of the UV mapper tool in the tool properties editor.    Finally position the mapping geometry with the transform gizmo until the UV coords satisfy your needs. You can see the UV coords either in the <a href="../../../UserInterface/UVEditor/UVEditor.html">UV Editor</a> or in the <a href="../../../UserInterface/3dView/3dView.html">3D view</a>. But for seeing the result of the current mapping in the <a href="../../../UserInterface/3dView/3dView.html">3D view</a> the polygon object must have a material with a texture assigned. After clicking the &quot;write UV coords&quot; button, the newly calculated UV coords will be written to the polygon object.
+						</ul>
+						<div align="left">
+							<p><b>Keys</b></p>
+						</div>
+						<ul>
+							<div align="left">
+								<li><b><i>ESC: </i></b>Resets the tool.
+							</div>
+						</ul>
+						<p><b>Properties</b></p>
+						<ul>
+							<li><b><i>mapping type:</i></b>
+							<ul>
+								<li><b><i>cubic:</i></b> Cubic texture mapping geometry.
+								<li><b><i>spherical:</i></b> Spherical texture mapping geometry.
+								<li><b><i>flat:</i></b> Flat texture mapping geometry.
+								<li><b><i>cylindrical:</i></b> Cylindrical texture mapping geometry.
+								<li><b><i>frontal: </i></b>UV mapping via the screen space
+							</ul>
+							<li><i><b>only selection</b></i>: Determines if UV coordinates should be assigned to all polygons or only to the selected polygons.
+							<li><i><b>offset:</b></i> Add an offset to the newly calculated UV coordinate.
+							<li><b><i>scale:</i></b> Multiply the newly calculated UV coordinate.
+							<li><i><b>center projection:</b></i> Move the mapping geometry to the center of the current polygon selection.
+							<li><b><i>write UV coords:</i></b> Press that button to assign the UV coords generated by the current mapping type to the polygon object. 
+						</ul>
+						<p></p>
+						<p><b>Example<br>
+							</b>Assign UV coordinates to a polygon selection</p>
+						<ol>
+							<li>Select a raw polygon object.
+							<li>Switch into polygon mode.
+							<li>Select the polygons to which you want to assign UV coordinates.
+							<li>Choose the UV Mapper Tool.
+							<li>Set the UV Mapper Tool property <i><b>only selection</b></i> to yes.
+							<li>Select the <b><i>mapping type.</i></b>
+							<li>Position the mapping geometry with the transform gizmo.
+							<li>When you are finished press the <b><i>write UV coords</i></b> button. Now the new UV coords will be written to the polygon object.
+							<li>Continue with step 3 until you have assigned UV coords to all polygons.
+						</ol>
+						<div align="center">
+							<p></p>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

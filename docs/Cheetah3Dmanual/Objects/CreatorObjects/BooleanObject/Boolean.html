@@ -1,118 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ブーリアン オブジェクト</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Boolean Object</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ブーリアン オブジェクト</h2>
-        </div>
-
-        <div align="left">
-          <p>ブーリアンオブジェクトは、幾何学的な形状を作成したい場合に大変強力なツールです。例えば、あるオブジェクトの形状から、他のオブジェクトの形状を削る事ができます。現在、使用可能な５つの操作があります。それぞれの操作が、どのように働くかをはっきりさせるために、下の例を確認してください。</p>
-        </div>
-
-        <div align="center">
-          <table border="0" cellspacing="0" cellpadding="4">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="Boolean2.jpg" alt="" height="150" width="150" border="0">
-
-                  <p>除外 - A から B を削る</p>
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Boolean3.jpg" alt="" height="150" width="150" border="0">
-
-                  <p>合成 - A と B を合成</p>
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Boolean4.jpg" alt="" height="150" width="150" border="0">
-
-                  <p>重複 - A と B の重複範囲</p>
-                </div>
-              </td>
-            </tr>
-          </table><br>
-
-          <table border="0" cellspacing="0" cellpadding="4">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="Boolean5.jpg" alt="" height="150" width="150" border="0">
-
-                  <p>範囲外 - A の B 範囲外</p>
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Boolean6.jpg" alt="" height="150" width="150" border="0">
-
-                  <p>範囲内 - A の B 範囲内</p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left"></div>
-
-        <div align="center"></div>
-
-        <div align="left">
-          <p><i>注意：ブーリアンオブジェクトは、三角ポリゴンのみを生成します。後でサブディビジョンモデリングのためにオブジェクトを使用したい場合には、このクリエータの使用を避けて下さい。最終的なポリゴン数が増加する場合もあります。ブーリアン操作を実行した後で、他のツールでの作業が出来なくなる可能性をもあるので気をつけて下さい。</i></p>
-        </div>
-
-        <p><b><i>使い方</i></b><br>
-        ブーリアン操作を使うには、（下の画像にあるように）１つのブーリアンオブジェクトの中に、２つのポリゴンオブジェクトをドラッグ＆ドロップします。１番目の小オブジェクトはオブジェクト A になり、２番目のオブジェクトはオブジェクト B になります。プロパティから、適用したい操作を選択します。<a href="../../../Tools/Common/TransformTool/TransformTool.html">移動変形ツール</a>で、それぞれ小オブジェクトの位置を決めて、完了です。</p>
-
-        <div align="center">
-          <p><img src="Boolean7.jpg" alt="" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>操作:</b></i>５つの使用可能な操作中から１つを選択します。それぞれ異なる操作の説明については、上の画像を参照してください。</li>
-
-          <li><i><b>メッシュをつなげる:</b></i>もしメッシュをつなげるがチェックされていた場合、Cheetah3D はすべてのポリゴンが互いに互いに接続したメッシュを生成しようとします。これはポリゴン数を増加させますが、メッシュの品質は良くなるでしょう。</li>
-
-          <li><i><b>法線を継承:</b></i>ブーリアンオブジェクトが法線を継承するために、すべてのオブジェクトは（ブーリアンとその小オブジェクト）は、 スムースタグを適用されていなければいけません。ブーリアンオブジェクトは、自身の法線計算にかかわらず、小オブジェクトの法線を使用します。これは、スムースタグでは、適当な法線を設定するのが難しい場合に、より良い外観のメッシュを作成する場合に有効でしょう。しかしながら、オブジェクトが<i>編集可能にする</i>を適用されると、これらの法線情報は失われる事に注意して下さい。<br>
-          （訳注：現バージョンではスムースタグの設定は、オブジェクトタグのプロパティに統合されスムースタグは削除されています。小オブジェクトのスムースの設定が、それぞれの面について親のブーリアンオブジェクトに引き継がれるかどうかのオプションになります。）</li>
-        </ul>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p>						<h2>Boolean Object</h2>					</div>					<div align="left">						<p>The boolean object is a very powerful tool if you want to make some solid geometry. For example, you can subtract one object's area from another. There are currently three different boolean operations available. See the examples below for a clearer idea of how each boolean operation works.</p>					</div>					<div align="center">						<table border="0" cellspacing="0" cellpadding="4">							<tr>								<td>									<div align="center">										<img src="Boolean3.jpg" alt=""  border="0">										<p>Addition</p>									</div>								</td>								<td>									<div align="center">										<img src="Boolean2.jpg" alt=""  border="0">										<p>Subtract</p>									</div>								</td>								<td>									<div align="center">										<img src="Boolean4.jpg" alt=""  border="0">										<p>Intersect</p>									</div>								</td>							</tr>						</table>						<br>					</div>					<div align="left">						<p></p>					</div>					<div align="center">						<p></p>						<p></p>					</div>					<p><b><i>Usage</i></b><br>To use the boolean operations, just drag and drop two polygon objects into a single boolean object (as in the image below). The first child object will be object A and the second one will be object B. Now choose the boolean operation you want to perform from the properties editor. After positioning the child objects with the <a href="../../../Tools/Common/TransformTool/TransformTool.html">transform tool</a> you are done.</p>					<div align="center">						<p><img src="Boolean7.jpg" alt="" border="0"></p>					</div>					<p></p>					<p><b>Properties</b></p>					<ul>						<li><i><b>Operation:</b></i> Choose one of the three available operations. See the images above for an explanation of the different operations.												<li><i><b>Multi-Knife:</b></i> By default the boolean operation is just performed on the first two child objects of the Boolean creator object. But if you check this property on the Boolean object also works on more than two objects.   											</ul>					<p></p>					<div align="left">						<p><b></b></p>					</div>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

@@ -1,81 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>レリーフオブジェクト</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Relief</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>レリーフオブジェクト</h2>
-        </div>
-
-        <div align="left">
-          <p>レリーフオブジェクトは、望むような影響を好きなように調整できるという点では、大変まっさらなオブジェクトであるでしょう。これはパラメトリックオブジェクトであるので、レリーフオブジェクトのパラメータを変更し、どのようにそれらが表面に影響するのかを確認する事が可能です。</p>
-
-          <p>レリーフオブジェクトは、コンピューターゲームの開発や屋外のシーン作成用に、即席のランドスケープを作成する大変便利なオブジェクトです。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Relief1.jpg" alt="" width="454" height="331" border="0"></p>
-        </div>
-
-        <p>レリーフは内蔵されたランダムなテクスチャ生成と等高線描画ルーチンを提供しているので、レリーフオブジェクトのプロパティを使って、大変複雑で詳細な結果を作成する事が可能です。下のイメージは、ランドスケープ用の１つのレリーフと、水面用の１つの平面を使用して作成されています。太陽のために１つのライトと、空は大変大きな球体で作成しています。Photoshop で最終的に、レンズフレアや空のもやなどを後で入れています。</p>
-
-        <div align="center">
-          <p><img src="Relief2.jpg" alt="" width="638" height="422" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><b><i>幅の分割数:</i></b> レリーフの幅を構成する分割数を設定します。デフォルトは 100 。高い分割数は、オブジェクトをより詳細にします。</li>
-
-          <li><b><i>奥行きの分割数:</i></b> レリーフの奥行きを構成する分割数を設定します。デフォルトは 100 。高い分割数は、オブジェクトをより詳細にします。<br>
-          <i>上の２つのプロパティのそれぞれを掛けた数のメッシュが、レリーフ全体を構成するために使われる事に注意してください。デフォルトでは、 100 x 100 = 10,000 ポリゴンが生成されます。この数値を上げる事は、3D シーンの編集やレンダリングのための CPU 時間を指数的に引き上げる事を覚えておきましょう。</i></li>
-
-          <li><b><i>幅 (X):</i></b> 平面の幅</li>
-
-          <li><b><i>高さ (Y):</i></b> 平面の高さの最大</li>
-
-          <li><b><i>奥行き (Z):</i></b> 平面の奥行き</li>
-
-          <li><i><b>ノイズ:</b></i> レリーフの表面が、ランダムソースのローパス（滑らかにされた部分）とどの程度混ぜ合わされるかよって、どのくらい "ざらざら (noisy) " しているかを定義します。</li>
-
-          <li><b><i>乱れ:</i></b> レリーフの表面が、ランダムソースの滑らかでない部分でどの程度混ぜ合わせるかによって、どのくらい "荒い (turbulent) " かを定義します。</li>
-
-          <li><b><i>テクスチャの強さ:</i></b> レリーフの表面に、テクスチャをどの程度合成するかを定義します。（オリジナルのノイズソースを使用する事が可能です。下の <i>"テクスチャ"</i> を見てください）</li>
-
-          <li><b><i>海面レベル:</i></b> 海面の高さを定義します。（レリーフの下の部分で、変形が止まり、平坦になります。）</li>
-
-          <li><b><i>台地レベル:</i></b> 台地の高さを定義します。（レリーフの上の部分で、変形が止まり、水平になります。）</li>
-
-          <li><b><i>エッジを海面レベルに:</i></b> チェックされている場合、レリーフの端は、海面レベルで終わりません。もし海岸線が必要ない場合は、このチェックを外します。</li>
-
-          <li><b><i>テクスチャ:</i></b> 使用するテクスチャビットマップを指定します。（上の <i>"テクスチャの強さ"</i> を見てください）</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Relief Object</h2></p>						<p></p>					</div>					<div align="left">						<p>The relief object is very much like a plain, in that it gives you a textured surface which you can manipulate to achieve the affect you want. Since it is a parametric polygonobject, it is possible to change the properties of the relief object and see how those changes affect the surface.</p>						<p>The relief object is very good at producing instant landscapes, which you may find useful if you're developing a computer game, or need to render an outdoor scene.</p>					</div>					<div align="center">						<p><img src="Relief1.jpg" alt="" width="454" height="331" border="0"></p>					</div>					<p>Using the properties of the relief object, it is possible to achieve some very complex and detailed results, since the relief provides built-in random texturing and contouring routines. The image below was generated using a single relief for the landscape, and a single plain for the water. A light was added for the sun, and the sky was a very large sphere. Final touches such as the lens flare and sky haze were added using Photoshop after.</p>					<div align="center">						<p><img src="Relief2.jpg" alt="" width="638" height="422" border="0"></p>					</div>					<p></p>					<p><b>Properties</b></p>					<ul>						<li><b><i>Sections Width: </i></b>Specifies the number of sections the width of the relief will be made up of. Defaults to 100. The higher this figure, the more detailed the relief will be.				<li><b><i>Sections Depth: </i></b>Specifies the number of sections the depth of the relief will be made up of. Defaults to 100. The higher this figure, the more detailed the relief will be.<br>							<i>Note that the above two properties determine how many individual 'squares' make up the entire relief. By default, 100x100 = 10000 polygons. Bear in mind that increasing these figures exponentially increases the amount of  CPU time any 3D scene will take to render or edit.</i>																							<li><b><i>Width X: </i></b>The width of the plain.					<li><b><i>Height Y: </i></b>The maximum height of the plain's highest peak.						<li><b><i>Depth Z: </i></b>The depth of the plain.						<li><i><b>Noise: </b></i>Determines how 'noisy' the surface of the relief will be by mixing in an low-pass (smoothed) source of randomness.						<li><b><i>Turbulence: </i></b>Determines how 'turbulent' the surface of the relief will be my mixing in an unsmoothed source of randomness.						<li><b><i>Texture intensity: </i></b>Determines how much of the texture map will be mixed into the surface of the relief (allowing you to provide your own source of noise - see <i>texture</i> below)						<li><b><i>Sea level: </i></b>Determines how high the sea will be (ie, the level at which the bottom of the relief stops and goes flat)						<li><b><i>Plateau level: </i></b>Determines how high the plateaus will be (ie, the level at which the top of the relief levels out)						<li><b><i>Edge at sea level: </i></b>If ticked, the relief will not descend to sea-level at the edges. If you do not need a coast-line, you would probably turn this off.						<li><b><i>Texture: </i></b>Use this to specify a texture bitmap to use (see <i>texture intensity</i> above)					</ul>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

@@ -1,172 +1,133 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>モディファイア</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Modifier</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>モディファイアオブジェクト</h2>
-        </div>
-
-        <div align="left">
-          <p><i>モディファイアオブジェクト</i>は、それ自体ではどんなジオメトリーも持たないオブジェクトのファミリーです。<a href="../CreatorObjects/CreatorObjects.html">クリエータオブジェクト</a>と若干似ていて、これらの目的は存在するオブジェクトのジオメトリーを変化させる事です。しかしながら、これらを働かせるために（クリエータオブジェクトのような、他の方法と違って）<a href="../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>の中に、これらをドロップするという事が異なります。そうして<i>モディファイアオブジェクト</i>は、その親オブジェクトによって提供される情報から新しいオブジェクトを計算します。もし、１つ以上の<i>モディファイアオブジェクト</i>をドロップした場合、モディファイアオブジェクトは、組み立てラインのように順番に計算を実行します。 実際の効果的なモディファイアオブジェクトの使い方について、<a href="#Anchor-Example-49575">下の例を</a>見てください。</p>
-
-          <p>モディファイアオブジェクトの重要な点は、これらが非破壊的である事です。適用したモディファイアオブジェクトを削除しても、元のジオメトリー（メッシュ）は保持されます。</p>
-        </div>
-
-        <div align="left">
-          <p><b>UV 座標データ</b><br>
-          モディファイアオブジェクトは、常に親オブジェクトの UV 座標を保持しようとします。</p>
-
-          <p><b>テッセレーション</b><br>
-          多くのモディファイアオブジェクトが親オブジェクトの頂点を動かす事で作用するので、いくつかのエッジが長く伸ばされてしまったりして、結果が望む通りではないかもしれません。この問題は、（例えばサブディビジョンの適用回数等で）オブジェクトのポリゴンの細かさを上げる事で簡単に解決する事ができます。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Modifier9.jpg" alt="" height="238" width="234" border="0"> <img src="Modifier10.jpg" alt="" height="238" width="236" border="0"><br>
-          左のイメージでは "Y 分割数" が 5 のねじれた立方体があり、この結果は、かなりカクカクして不自然です。<br>
-          右のイメージの立方体は、"Y 分割数" が 50 あり、より自然な結果に見えます。</p>
-        </div>
-
-        <div align="left">
-          <p><b>モディファイアの無効化<br></b> 一時的にモディファイアを無効化する事は、たいていの場合便利でしょう。これは<a href="../../Tags/ModeTag/ModeTag.html">モードタグ</a>の "モディファイア" プロパティのチェックを外す事で簡単にできます。もしポリゴンオブジェクトのこのプロパティを無効化した場合、そのすべてのモディファイアが無効になります。もしモディファイアオブジェクトのこのプロパティを無効にした場合、このモディファイアのみが無効になります。</p>
-
-          <p><i>注意: たくさんのモディファイアをポリゴンオブジェクトに適用した場合、その計算により時間がかかるでしょう。オブジェクトの分割を選択する時に、望む結果を得るための必要最小限のポリゴン数になるように気をつけてください。</i></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li>
-            <i><b>タイプ:</b></i> その頂点が影響を受けるかを設定します<br>
-
-            <div align="center">
-              <table width="180" border="0" cellspacing="0" cellpadding="4">
-                <tr>
-                  <td><img src="Modifier11.jpg" alt="" height="273" width="211" border="0"></td>
-
-                  <td><img src="Modifier12.jpg" alt="" height="273" width="211" border="0"></td>
-
-                  <td><img src="Modifier13.jpg" alt="" height="273" width="210" border="0"></td>
-                </tr>
-
-                <tr>
-                  <td valign="top">コンストレインあり: すべての頂点が変更されますが、ケージの外側の頂点では変形が一定になります。</td>
-
-                  <td valign="top">コンストレインなし: すべての頂点が変更されます。</td>
-
-                  <td valign="top">ケージ範囲のみ: ケージの内側にある頂点のみが変更されます。これはケージの境界で破綻を引き起こすかもしれません。</td>
-                </tr>
-              </table>
-            </div>
-          </li>
-
-          <li><b><i>ケージ:</i></b> ケージのサイズを設定します。</li>
-        </ul>
-
-        <div align="left">
-          <p><a name="Anchor-Example-49575"></a><b>例</b></p>
-        </div>
-
-        <div align="center">
-          <ul>
-            <li style="list-style: none">
-              <table width="122" border="0" cellspacing="0" cellpadding="4">
-                <tr>
-                  <td>
-                    <div align="center">
-                      <img src="Modifier1.jpg" alt="" border="0">
-                    </div>
-
-                    <div align="left">
-                      <p>単純なポリゴンオブジェクトで始めます。</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div align="center">
-                      <img src="Modifier5.jpg" alt="" height="240" width="359" border="0">
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <div align="center">
-                      <img src="Modifier2.jpg" alt="" border="0">
-                    </div>
-
-                    <div align="left">
-                      <p>次に、<a href="Symmetry/Symmetry.html">シンメトリーモディファイア</a>を作成し、ポリゴンオブジェクトの中にドロップします。メッシュは、対称複製されます。</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div align="center">
-                      <img src="Modifier6.jpg" alt="" height="240" width="359" border="0">
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <div align="center">
-                      <a href="Modifier3.jpg"><img src="Modifier3.jpg" alt="" border="0"></a>
-                    </div>
-
-                    <div align="left">
-                      <p><a href="SubDiv/SubDiv.html">サブディビジョンモディファイア</a>を使って同じように操作します。メッシュが滑らかになりました。</p>
-                    </div>
-                  </td>
-
-                  <td><i><img src="Modifier7.jpg" alt="" height="240" width="359" border="0"></i></td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <div align="center">
-                      <img src="Modifier4.jpg" alt="" border="0">
-                    </div>
-
-                    <div align="left">
-                      <p>最後に、<a href="Displacement/Displacement.html">ディスプレイスメントモディファイア</a>を適用します。これは凹凸を付けます。シンメトリーとサブディビジョンの後で、ディスプレイスメントがどのように働くかに注意してください。望むならば、"Box" という名前のオブジェクトを選択して、元のポリゴンメッシュを編集する事も可能です。</p>
-                    </div>
-                  </td>
-
-                  <td>
-                    <div align="center">
-                      <img src="Modifier8.jpg" alt="" height="240" width="359" border="0">
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>Modifier Objects</h2>
+					</div>
+					<div align="left">
+						<p>The <i>Modifier Objects</i> are a family of objects that don't have any geometry themselves. A little like the <a href="../CreatorObjects/CreatorObjects.html">Creator objects</a>, their purpose is to modify the geometry of an existing object. However, they differ from them in that you drop them inside a <a href="../../Objects/PolygonObjects/Polygonobject.html">polygon object</a> to make them work (instead of the other way around, like a creator object). The <i>Modifier Object</i> then calculates a new object out of the information offered by its parent object. If you drop more than one <i>Modifier Object </i>into object the modifiers will be processed one after another like on an assembly line. See <a href="#Anchor-Example-49575">the example below</a> for a demonstration of how to use modifier objects effectively.</p>
+						<p>A key factor of modifier objects are that they are none destructive, meaning that you can delete them and the original geometry will be preserved.</p>
+					</div>
+					<div align="left">
+						<p><b>UV Coords<br>
+							</b>Modifier<b> </b>objects<b> </b>always try to retain the UV coords of the parent object.</p>
+						<p><b>Tessellation<br>
+							</b>Because many modifier objects operate by moving the vertices of the parent polygon object, the results you get may not be as exactly desired, usually because some edges might have been stretched too far. This problem can be easily solved by increasing the tessellation of the object (with a subdivision step for example).</p>
+					</div>
+					<div align="center">
+						<p><img src="Modifier9.jpg" alt="" height="238" width="234" border="0">   <img src="Modifier10.jpg" alt="" height="238" width="236" border="0"><br>On the left image you can see a twisted box with 5 sections into the Y- direction. The result is quite blocky an unnatural.<br>The box on the second image has 50 sections in the Y- direction. Now the result looks more natural.</p>
+					</div>
+					<div align="left">
+						<p><b>Disabling Modifiers<br>
+							</b>Often, it can be convenient to disable a modifier temporarily. This can be easily done by unchecking the &quot;modifier&quot; property of the <a href="../../Tags/ModeTag/ModeTag.html">mode tag</a>. If you disable this property on the polygon object all of its modifiers will be disabled. If you disable this property on a modifier object just this modifier will be disabled.</p>
+						<p><i>Attention: The more modifiers you add to a polygon object, the slower it's calculation will become. Take care when choosing your object tessellation and always use the minimum amount of polygons that are necessary to get the desired result.</i></p>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Type: </b></i>Specifies which vertices will be effected.<br>
+						<div align="center">
+							<table width="180" border="0" cellspacing="0" cellpadding="4">
+								<tr>
+									<td><img src="Modifier11.jpg" alt="" height="273" width="211" border="0"></td>
+									<td><img src="Modifier12.jpg" alt="" height="273" width="211" border="0"></td>
+									<td><img src="Modifier13.jpg" alt="" height="273" width="210" border="0"></td>
+								</tr>
+								<tr>
+									<td valign="top">Constrained: All vertices are modified. But the modification will be constant outside of the cage.</td>
+									<td valign="top">Unconstrained: All vertices are modified.</td>
+									<td valign="top">Cage: Only the vertices within the cage will be modified. This can cause cracks at the borders of the cage.</td>
+								</tr>
+							</table>
+						</div>
+						<li><b><i>Cage: </i></b>Specifies the size of the cage.
+					</ul>
+					<div align="left">
+						<p></p>
+						<p><a name="Anchor-Example-49575"></a><b>Example</b></p>
+					</div>
+					<div align="center">
+						<ul>
+							<table width="122" border="0" cellspacing="0" cellpadding="4">
+								<tr>
+									<td>
+										<div align="center">
+											<img src="Modifier1.jpg" alt="" border="0"></div>
+										<div align="left">
+											<p>We start with a simple polygonal object.</p>
+										</div>
+									</td>
+									<td>
+										<div align="center">
+											<img src="Modifier5.jpg" alt="" height="240" width="359" border="0"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="center">
+											<img src="Modifier2.jpg" alt="" border="0"></div>
+										<div align="left">
+											<p>Now we create a <a href="Symmetry/Symmetry.html">symmetry modifier</a> and drop it in the polygon object. The mesh will now be mirrored.</p>
+										</div>
+									</td>
+									<td>
+										<div align="center">
+											<img src="Modifier6.jpg" alt="" height="240" width="359" border="0"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div align="center">
+											<a href="Modifier3.jpg"><img src="Modifier3.jpg" alt="" border="0"></a></div>
+										<div align="left">
+											<p>We do the same with a <a href="SubDiv/SubDiv.html">subdivision modifier</a>. The mesh will now be smoothed.</p>
+										</div>
+									</td>
+									<td><i><img src="Modifier7.jpg" alt="" height="240" width="359" border="0"></i></td>
+								</tr>
+								<tr>
+									<td>
+										<div align="center">
+											<img src="Modifier4.jpg" alt="" border="0"></div>
+										<div align="left">
+											<p>Finally we attach a <a href="Displacement/Displacement.html">displacement modifier</a> which causes these bumps. Note how the displacement occurred after the subdivision and symmetry modifications. If you wanted, the  original polygon mesh is still editable if you select the object called &quot;Box&quot;</p>
+										</div>
+									</td>
+									<td>
+										<div align="center">
+											<img src="Modifier8.jpg" alt="" height="240" width="359" border="0"></div>
+									</td>
+								</tr>
+							</table>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Coord System Tool</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen">
+	</head>
+
+	
+<body>
+<!-- header -->
+<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
+<script language="javascript" type="text/javascript">header();</script>
+<!-- header end -->
+
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p> <h2>Coord System Tool</h2></p>
+					</div>
+					<p>The purpose of the <b>coord system</b> tool is to reset a previously transformed objects central point of origin, whilst keeping the transformations made in place. This is useful for when you need to group objects together and have them all moving around one single origin.</p>
+					<div align="center">
+						
+					</div>
+					<div align="left">
+						<p><b><i>The &quot;shear problem&quot;:<br>
+								</i></b>Cheetah3D works with a transformation hierarchy. That means that every object has it's own coordinate system. The objects coordinate system is given through it's position, scale and rotation values relative to the parents objects coordinate system. You can now do the following.</p>
+					</div>
+					<ol>
+						<div align="left">
+							<li>Create a Folder object and a box object.
+							<li>Drag and drop the box object into the folder object.
+							<li>Set the Y-scale value of the folder object to 0.5.
+							<li>If you now rotate the box object it will be sheared. 
+							<li>If you now drag and drop the box out of the folder, while holding the SHIFT key pressed. The boxes global position and shape won't change. And therefore it will be still sheared. To make the box faces perpendicular again you can either use the &quot;burn shear/scale&quot; or the &quot;reset shear&quot; command of the coord system tool.
+						</div>
+					</ol>
+					<p><b><i>Modes<br>
+							</i></b>This tool works on polygon objects in object mode.</p>
+					<ul>
+						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"> <br>To use the coord system tool just select &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Coord System&quot; from the menu. The coord system tool will now show up in the tool properties. To perform one of the different actions just click on one of the buttons (see below for description). The coord system tool is always just performed on the current object.			</ul>
+					<div align="center">
+						<p> </p>
+					</div>
+					<div align="left">
+						<p><b>Keys</b></p>
+					</div>
+					<ul>
+						<div align="left">
+							<li><b><i>none</i></b>
+						</div>
+					</ul>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>burn transform: </b></i>Burn is the hole object transformation into the polygon or spline data. This command only works on editable spline and polygon objects. Afterward the transformation properties of the object are reset.
+					</ul>
+					<div align="center">
+						<p><img src="BurnTransform2.jpg" alt="" width="252" height="200" border="0">     <img src="BurnTransform3.jpg" alt="" width="252" height="200" border="0"><br>
+							By using the burn transform tool, the moved cube stays in it's transformed position,<br>
+							but it's origin point is now set back to 0,0,0 (right)</p>
+					</div>
+					<ul>
+						<li><i><b>burn shear/scale: </b></i>Burns the shear and the scale components of the objects transformation into the polygon or spline data. Afterward the shear is set to (0,0,0) and the scale is set to (1,1,1). This command only works on edit able spline and polygon objects.					</ul>
+					<div align="center">
+						<p><img src="CoordSystem3.jpg" alt="" height="215" width="281" border="0">     <img src="CoordSystem4.jpg" alt="" height="215" width="281" border="0"><br>
+							The left object suffered under the &quot;shear problem&quot;. If you now burn in the shear and scale it's internal<br>
+							shear component the shape of the object won't change. Just it's coordinate system.</p>
+					</div>
+					<ul>
+						<li><i><b>reset shear: </b></i>Resets the internal shear transformation component of the object.
+					</ul>
+					<div align="center">
+						<p><img src="CoordSystem3.jpg" alt="" height="215" width="281" border="0">     <img src="CoordSystem5.jpg" alt="" height="215" width="281" border="0"><br>
+							The left object suffered under the &quot;shear problem&quot;. If you now reset it's internal<br>
+							shear component the shape of the object will change. But is coordinate system is<br>
+							
+							perpendicular therefore.</p>
+					</div>
+					<div align="left">
+						<ul>
+							<li><i><b>center pivot point: </b></i>Moves the pivot point (center of rotation) of an object is the geometrical center of an object.
+						</ul>
+						<div align="center">
+							<p><img src="CoordSystem6.jpg" alt="" height="306" width="308" border="0"> <img src="CoordSystem7.jpg" alt="" height="306" width="308" border="0"><br>
+								In the left object the pivot point is outside of the geometry. But especially for animation it is<br>
+								often better if the pivot point is in the center of the object. Using the &quot;center pivot point&quot;<br>
+								command moves the pivot point into the center of the geometry.</p>
+						</div>
+						<div align="left">
+							<ul>
+								<li><i><b>reset pivot point: </b></i>Sets the pivot point to (0,0,0) while maintaining the global position of the object.
+							</ul>
+						</div>
+						<ul>
+							<li><i><b>burn pivot point: </b></i>Burns the pivot point into the geometry. This tool therefore only works on spline and polygon objects. After burning in the pivot point the pivot point is set back to (0,0,0).
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
+<!-- footer -->
+<script language="javascript" type="text/javascript">footer();</script>
+<!-- footer end-->
+</body>
+
+
+</html>

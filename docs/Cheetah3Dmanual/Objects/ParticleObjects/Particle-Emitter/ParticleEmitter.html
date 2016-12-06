@@ -1,93 +1,70 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>パーティクルエミッター</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Particle-Emitter</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>パーティクルエミッター</h2>
-        </div>
-
-        <p>パーティクルエミッターオブジェクトは、動的なパーティクルシステムです。これは、雨、爆発、滝、泉といった、全てのパーティクル効果に使用できます。その結果、パーティクルエミッターは、重力や引力といったパーティクルに様々な力を適用する<a href="../../EffectorObjects/Forces/Forces.html">フォースエフェクター</a>と共に緊密に動作します。エフェクターと一緒に使う事で、パーティクルエミッターはほぼ無限の可能性を提供します。</p>
-
-        <div align="center">
-          <p><img src="ParticleEmitter1.jpg" alt="" height="275" width="418" border="0"><br>
-          メッシュエミッターの放出はポリゴン選択セットに限定されている</p>
-        </div>
-
-        <div align="left"></div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>生成率:</b></i> １秒に放出されるパーティクルの数</li>
-
-          <li><i><b>開始時間:</b></i> パーティクルの放出が開始する時間</li>
-
-          <li><b><i>終了時間:</i></b> パーティクルの放出が終了する時間</li>
-
-          <li>
-            <i><b>エミッター空間:</b></i> 以下のパーティクル放出タイプが使用可能です:
-
-            <ul>
-              <li><b><i>四角形:</i></b> パーティクルは -Z 方向に四角形から放出されます</li>
-
-              <li><b><i>円形:</i></b> パーティクルは -Z 方向に円形から放出されます</li>
-
-              <li><b><i>全方位:</i></b> パーティクルは 全ての方向に均一に放出されます</li>
-
-              <li><b><i>スプライン:</i></b> パーティクルはスプラインオブジェクトに沿って放出されます。このエミッターの為に、<i>オブジェクト</i>プロパティにスプラインオブジェクトを適用する必要があります</li>
-
-              <li><b><i>メッシュ:</i></b> パーティクルは、メッシュから（ポリゴンの法線方向に）均一に放出されます。このエミッターの為に、<i>オブジェクト</i>プロパティにポリゴンオブジェクトを適用する必要があります。メッシュエミッターは<i>ポリゴン選択セット</i>プロパティで放出ポリゴンを制限する事もできます。</li>
-            </ul>
-          </li>
-
-          <li><i><b>幅:</b></i> 四角形/円形 エミッターの幅</li>
-
-          <li><i><b>高さ:</b></i> 四角形/円形 エミッターの高さ</li>
-
-          <li><b><i>発散:</i></b> パーティクルはエミッターからまっすぐ飛ばずに、ランダムに発散します</li>
-
-          <li><b><i>オブジェクト:</i></b> エミッターのソースオブジェクト。メッシュエミッターのためには、ポリゴンオブジェクトを適用し、スプラインエミッターにはスプラインオブジェクトを適用します。また、四角形エミッター（または、その他のエミッター）を再配置したい場合には、フォルダオブジェクトを使う事もできます。このときフォルダの中心が、四角形エミッター（または、その他のエミッター）の中心として使用されます。</li>
-
-          <li><b><i>ポリゴン選択セット:</i></b> 任意のポリゴン選択範囲で放出範囲を制限します</li>
-
-          <li><b><i>速度:</i></b> パーティクルシステムのローカル座標系での放出されたパーティクルの速度</li>
-
-          <li><b><i>速度 変化量:</i></b> パーティクルシステムのローカル座標系での放出されたパーティクルのランダムな速度変化量</li>
-
-          <li><b><i>成長サイズ:</i></b> パーティクルのボリューム成長率</li>
-
-          <li><b><i>成長サイズ 変化量:</i></b> <i>成長サイズ</i>への追加ランダム効果</li>
-
-          <li><b><i>生存時間:</i></b> パーティクルの残存時間。もし、パーティクルが<i>生存時間</i>より古ければ、パーティクルシステムによって消去され、消滅します。</li>
-
-          <li><b><i>生存時間 変化量:</i></b> 追加のランダムな残存時間</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>Particle Emitter</h2>
+						</p></div>
+					<p>The Particle Emitter object is a dynamic particle system. It can be used to create all kind of particle effects like rain, explosions, waterfalls, springs, etc. Hereby the Particle-Emitter works closely with the <a href="../../EffectorObjects/Forces/Forces.html">Force Effectors</a> which apply various types of forces to the particles like gravity or drag. Together with the effectors the particle emitter offers almost unlimited possibilities.</p>
+					<div align="center">
+						<p><img src="ParticleEmitter1.jpg" alt="" height="275" width="418" border="0"><br>
+							A Mesh Emitter whose emission is limited to a p<span lang="en-gb">olygon</span> selection.</p>
+					</div>
+					<div align="left">
+						<p></p>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Birth rate:</b></i> Number of particles emitted per second.						<li><i><b>Start time: </b></i>The time when particle emission starts.
+						<li><b><i>End time:</i></b> Particle emission stops at this time.
+						<li><i><b>Emitter shape:</b></i>  There are the following particle emitter-types available:
+						<ul>
+							<li><b><i>Rect:</i></b> The particles are emitted from a rect-shape into the -Z direction.
+							<li><b><i>Disc:</i></b> The particles are emitted from a disc-shape into the -Z direction.
+							<li><b><i>Omni:</i></b> The particles are emitted uniformly into all directions. 
+							<li><b><i>Spline: </i></b>The particles are emitted along a spline object. For this emitter you have to attach a spline object to the <i>Object </i>property<i>.</i>
+							<li><b><i>Mesh:</i></b> The particles are emitted uniformly from a mesh. For this emitter you have to attach a polygon object to the <i>Object </i>property. The mesh emitter can be constraint to a polygon selection with the <i>Polygon selection</i> property.
+						</ul>
+						<li><i><b>Width:</b></i> Width of the rect and disc  emitters.
+						<li><i><b>Height:</b></i> Height of the rect and disc emitters.
+						<li><b><i>Divergence: </i></b>The particles don't fly straight away from the emitter but have a random divergence.
+						<li><b><i>Object: </i></b>The emitter source object. For a mesh emitter attach a polygon object and for a spline emitter attach a spline object. But you can also use a folder when you want to reposition a rect emitter. Then the center of the folder will be used as the center of the rect emitter
+						<li><b><i>Polygon selection: </i></b>Constrain a mesh emitter to a certain polygon selection.
+						<li><b><i>Speed:</i></b> The speed of the emitted particles in the particle systems local coordinate system.
+						<li><b><i>Speed Variation:</i></b> The random speed variation of the emitted particles in the particle systems local coordinate system.
+						<li><b><i>Size growth: </i></b>The rate at which a particle volume growth.
+						<li><b><i>Size growth variation: </i></b>Adds a random effect to the size growth.
+						<li><b><i>Life time: </i></b>The life time of a particle. If a particle is older than <i>life time</i> the particle gets killed by the particle system and disappears.
+						<li><b><i>Life time variation: </i></b>Randomizes the life time.
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

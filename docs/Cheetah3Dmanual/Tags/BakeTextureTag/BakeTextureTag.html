@@ -1,114 +1,88 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>Bake Texture Tag</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Bake Texture Tag</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-   
-    <tr>
-      <td>
-        <div align="center">
-          <h2>テクスチャの焼き付け タグ</h2>
-        </div>
-
-        <p>リアルタイム 3D エンジンで再利用可能な陰影やプロシージャルテクスチャをテクスチャマップに焼き込みたいなら、このタグを使用して下さい。使い方は、まずポリゴンオブジェクトを選択し、メニューバーの "レンダー ＞ テクスチャの焼き付け" コマンドを選んで下さい。先ほど選択したポリゴンオブジェクトに "テクスチャの焼き付け" タグが追加されているでしょう。 この状態で "テクスチャの焼き付け" タグに設定することが出来るようになりました。もう一度メニューバーの "レンダー ＞ テクスチャの焼き付け" コマンドを選んで下さい。今度は Cheetah3D がレンダーマネージャで焼き付け用のテクスチャをレンダリングし始めるでしょう。レンダリングが完了すると、その画像の保存が出来ます。</p>
-
-        <p>焼き込まれたテクスチャやライトマップは、主にゲーム開発者などによりゲームなどで使用するためのラジオシティマップやプロシージャルマテリアルをテクスチャに焼き込む時に利用されます。</p>
-
-        <div align="center">
-          <table width="180" border="1" cellspacing="1" cellpadding="0">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="BakeTexture1.jpg" alt="" height="342" width="332" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="BakeTexture2.jpg" alt="" height="342" width="332" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="BakeTexture3.jpg" alt="" height="342" width="332" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div align="center">
-                  1. Pig がRadiosityの設定されたレイトレーシングでレンダリングされました。
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  2. 明るさの情報が書き込まれた木目マテリアルがテクスチャに焼き込まれました。
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  3. 焼き込まれたテクスチャが Pig に適応されました。OpenGL プレビューで木目マテリアルとRadiosityによる陰影付けが確認できます。
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <p><i>注意：レンダータグが追加された<a href="../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>にのみ使用出来ます。また、これらは編集可能な UV 座標値を持つ唯一のものです。 </i></p>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>UV セット:</b></i> どのUV セットを焼き付けに使うかを設定します。一般的に UV セット 2 がライトマップの焼き込みに使用されます。</li>
-
-          <li><b><i>テクスチャサイズ:</i></b> 焼き込むテクスチャのサイズを設定します。</li>
-
-          <li><b><i>UV 境界のピクセル幅:</i></b> 焼き付けられたメッシュの形状の境界線を拡張します。これは OpenGL アプリケーションでベイクドテクスチャを使用する場合に、不自然さを軽減する効果があります。</li>
-
-          <li><i><b>背景:</b></i> ベイクドテクスチャの背景色</li>
-
-          <li><b><i>baking UV coords:</i></b> 選択された UV セット（<i>UV セット</i> プロパティ）で重なり合わない UV 座標を計算します。この展開は完全ではありませんが、始めるのに良い点であるでしょう。</li>
-
-          <li><b><i>カラー:</i></b> テクスチャにカラーライトチャンネルを焼き込みます。</li>
-
-          <li><b><i>アンビエント:</i></b> テクスチャに環境ライトチャンネルを焼き込みます。</li>
-
-          <li><i><b>ディフューズ:</b></i> テクスチャにディフューズライトチャンネルを焼き込みます。</li>
-
-          <li><i><b>エミッション:</b></i> テクスチャにemissionライトチャンネルを焼き込みます。</li>
-
-          <li><i><b>バンプ:</b></i> テクスチャにバンプライトチャンネルを焼き込みます。</li>
-
-          <li><i><b>ラジオシティ:</b></i> テクスチャにRadiosityライトチャンネルを焼き込みます。</li>
-
-          <li><i><b>コースティクス:</b></i> テクスチャにCausticsライトチャンネルを焼き込みます。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p></p>
+						<h2>Bake Texture Tag</h2>
+					</div>
+					<p>Use this tage if you want to bake lightning or procedural texture into a texture map which can be used later on real time 3D engines. To use it just select a polygon object and call the &quot;Render-&gt;Bake Texture&quot; menu command. That will add a &quot;Bake Texture&quot; tag to your selected polygon object. Now you can make your setting in the &quot;Bake Texture&quot; tag. Once done call again the &quot;Render-&gt;Bake Texture&quot; menu command. This time  Cheetah3D will start the texture baking rendering job in the Render Manager. Once the rendering job is completed you can save the image.</p>
+					<p>Texture or Lightmap baking is mainly used by game developers to bake radiosity lightning or procedural materials into textures which then can be used  in games.</p>
+					<div align="center">
+						<table width="180" border="0" cellspacing="5" cellpadding="0">
+							<tr>
+								<td>
+									<div align="center">
+										<img src="BakeTexture1.jpg" alt="" height="342" width="332" border="0"></div>
+								</td>
+								<td>
+									<div align="center">
+										<img src="BakeTexture2.jpg" alt="" height="342" width="332" border="0"></div>
+								</td>
+								<td>
+									<div align="center">
+										<img src="BakeTexture3.jpg" alt="" height="342" width="332" border="0"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div align="center">
+										1. Pig rendered with radiosity in the raytracer.</div>
+								</td>
+								<td>
+									<div align="center">
+										2. Light information an wood material baked into a texture</div>
+								</td>
+								<td>
+									<div align="center">
+										3.The baked texture applied to the pig. Now also the wood material and the radiosity shading is can be seen in the OpenGL preview.</div>
+								</td>
+							</tr>
+						</table>
+						<p></p>
+					</div>
+					<p><i>Attention: You can only add a render tag to <a href="../../Objects/PolygonObjects/Polygonobject.html">polygon objects</a>. Since these are the only objects which have editable UV coords.<b> </b></i></p>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>bake to:</b></i> Defines if UV set which will be used for the baking job. Normally UV set 2 will be used to bake lightmaps. 
+						<li><b><i>texture size: </i></b>Defines the size the of texture into which will be baked.						<li><b><i>pixel boarder: </i></b>Extends the geometry boarders of the baked mesh. That can help to reduce artifacts when using the baked texture in OpenGL application.						<li><i><b>background: </b></i>The color of the background in the baked texture.
+						<li><b><i>baking UV coords: </i></b>Calculates non-overlapping UV coords in the selected UV set (<i>bake to</i> property). This unwrapping isn't perfect but it is a good point to start of. 						<li><b><i>color:</i></b> Bakes the color light channel into the texture.					<li><b><i>ambient:</i></b> Bakes the ambient light channel into the texture.
+						<li><i><b>diffuse: </b></i>Bakes the diffuse light channel into the texture.
+						<li><i><b>emission: </b></i>Bakes the emission light channel into the texture.
+						<li><i><b>bumps: </b></i>Bakes the bumps map channel into the texture.
+						<li><i><b>radiosity: </b></i>Bakes the radiosity light channel into the texture.
+						<li><i><b>caustics: </b></i>Bakes the caustics light channel into the texture.
+					</ul>
+					<ul>
+						
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

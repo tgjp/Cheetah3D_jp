@@ -1,68 +1,55 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>クリエータ オブジェクト</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Creator Objects</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>クリエータ オブジェクト</h2>
-        </div>
-
-        <p><i>クリエータ オブジェクト</i>は、特別なポリゴンオブジェクトのファミリーです。これらのオブジェクトは、それ自身では空です。これらを働かせるためには、最初に適切な小オブジェクト（スプライン、またはポリゴンオブジェクト）をドロップする必要があります。次に<i>クリエータ オブジェクト</i>は、その小オブジェクトによって提供される情報を元に新しいオブジェクトを計算します。（例を見て下さい）</p>
-
-        <p><i>クリエータ オブジェクト</i>の小オブジェクトが編集されると、その変更はすぐに反映されます。</p>
-
-        <p>また、多くの<i>クリエータ オブジェクト</i> は、その小オブジェクトのタグから情報を継承します。例えば、UV マッピングタグの付いたポリゴンオブジェクトをサブディビジョンクリエータオブジェクトにドラッグする場合、その UV 情報はサブディビジョンオブジェクトによって継承されます。（訳注：4.3 以降では、UV マッピングタグやサブディビジョンクリエータオブジェクトは、他のツールやモディファイアに統合されています。4.3 では、他にクリエータオブジェクトが継承するような情報を持つタグは存在しないので、この情報は無視してかまわないでしょう。）</p>
-
-        <p>もし<i>クリエータ オブジェクト</i>を、ポイントやポリゴンレベルで編集したい場合いは、他のパラメトリックポリゴンオブジェクトと同じように、"オブジェクト<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">編集可能にする" メニューコマンドで編集可能な状態にする事ができます。これは<i>クリエータ オブジェクト</i>の階層構造を崩して、すべてを１つの編集可能なオブジェクトにするので、小オブジェクトへの変更がこれ以上必要ない場合にのみ行って下さい。</p>
-
-        <p><b>例<br></b> この例では押し出し<i>クリエータ オブジェクト</i>を使って、テキストスプラインから 3D フォントをどのように作成するかを示しています。</p>
-
-        <ol>
-          <li>ツールバーからテキストスプラインを作成します。</li>
-
-          <li>テキストスプラインのフォントやテキストのプロパティを編集します。</li>
-
-          <li>ツールバーから押し出しオブジェクトを作成します。</li>
-
-          <li>押し出しにテキストスプラインオブジェクトをドラッグ＆ドロップします。（図を参照）</li>
-
-          <li>押し出しのプロパティ"カバー"を"両面"に設定します。</li>
-
-          <li>完成です！さらにテキストスプラインのすべてのプロパティを 3D フォントに合うように編集する事が出来ます。</li>
-        </ol>
-
-        <div align="center">
-          <p><img src="CreatorObjectsExample11.jpg" alt="" border="0"><br>
-          オブジェクトブラウザ上のシーン情報</p>
-
-          <p><img src="CreatorObjectsExample12.jpg" alt="" height="211" width="400" border="0"><br>
-          3D ビューでの 3D フォント</p>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p> <h2>Creator Objects</h2>
+						</p></div>
+					<p>The <i>Creator Objects</i> are a family of special polygon objects. These objects are by themselves empty. You first have to drop in the appropriate child objects (spline or polygon objects) to make them work. The <i>Creator Object</i> then calculates a new object out of the information offered by its child objects (see the example).</p>
+					<p>If you edit the children of a <i>Creator Object</i> the object will update themselves immediately.</p>
+					<p>Many <i>Creator Objects</i> also inherit information from the tags of it's children. For example, when you drag a Polygon object with a UV Tag into a Subdivision object, the uv coordinates will be inherited by the Subdivision object .</p>
+					<p>If you still want to edit a <i>Creator Object</i> on the polygon or point level you can make it editable like every other parametric polygon object with the menu command &quot;Objects<img src="../../Images/arrow.gif" alt="" width="10" height="10" border="0">Make editable&quot;. This will collapse the <i>Creator Object</i> and all its children into a single editable object, so only do this if you do not need to make changes to any of its child objects.</p>
+					<p><b>Example<br>
+						</b>This example illustrates how you can create a 3D font out of a Text spline with the help of the Extrude <i>Creator Object</i>.</p>
+					<ol>
+						<li>Create a Text spline from the tool bar.						<li>Edit the Text spline properties like the Font or the text.
+						<li>Create a Extrude object from the tool bar.
+						<li>Drag and Drop the Text object into the Extrude object (see figure).
+						<li>Select in the Extrude properties &quot;front &amp; back&quot; for the parameter &quot;cover&quot;.
+						<li>You're finished! You can still edit all the properties of the Text spline to fine adjust the 3D font.					</ol>
+					<div align="center">
+						<p><img src="CreatorObjectsExample11.jpg" alt="" border="0"><br>
+							Scene in the object browser.</p>
+						<p><img src="CreatorObjectsExample12.jpg" alt="" height="211" width="400" border="0"><br>
+							3D Font in the 3D view.</p>
+						<p></p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

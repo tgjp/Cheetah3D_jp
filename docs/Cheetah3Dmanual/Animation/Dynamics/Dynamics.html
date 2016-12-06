@@ -1,133 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ダイナミクス</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <meta name="generator" content="Adobe GoLive 6">    <title>Dynamics</title>    <link href="../../style.css" rel="stylesheet" media="screen">  </head>  
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ダイナミクス</h2>
-        </div>
-
-        <div align="left">
-          <p>Chhetah3Dのダイナミクスフィーチャーは剛体とソフトボディの動的物理演算に使用されます。 Cheetah3Dはハリウッドの超大作などで使用された <a href="http://bulletphysics.org/">Bullet Physics</a> engine を採用しています</p>
-
-          <p>物理演算を行うには、まずシーン内のどのオブジェクトがダイナミクスシミュレーションを行うものなのかを、Cheetah3Dに指示する必要があります。そのため、目的に沿ったダイナミクスタグをこれらのオブジェクトに適用して下さい。 剛体を作りたい場合は<a href="../../Tags/RigidBodyTag/RigidBodyTag.html">剛体</a>タグを、ソフトボディを作成する場合は<a href="../../Tags/SoftBodyTag/SoftBodyTag.html">ソフトボディ</a>タグを割り当てます。また、ロープを作成する場合は<a href="../../Tags/RopeTag/RopeTag.html">ロープ</a> タグを割り当てます。もし、剛体をソフトボディに固定したい場合は <a href="../../Tags/AnchorTag/AnchorTag.html">アンカー</a>タグを使うことができます。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Dynamics2.jpg" alt="" height="120" width="251" border="0"><br>
-          いくつかのダイナミクスオブジェクトで構成する簡単なシーンです。</p>
-        </div>
-
-        <div align="left">
-          <p>そのオブジェクトにその目的のタグを割り当てると、そのダイナミクスタグで物理特性を入力できます。（質量、抵抗、剛性など）</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Dynamics3.jpg" alt="" height="71" width="315" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>これで準備完了です。タイムラインの再生ボタンを押すとリアルタイムに解析結果の確認ができます。</p>
-
-          <p><b>初期状態</b></p>
-
-          <p>物理シミュレーションには、初期状態が必要になります。時間が 0 の時点の、すべてのオブジェクトの状態（位置、回転、スピートなど）、パーティクルやソフトボディ のコントロールポイントが、初期状態として使用されます。最初にシミュレーションを実行すると、Cheetah3D は自動的に、その時の全てのオブジェクトの初期状態を保存します。一旦時間 0 の時点にアニメーションを戻すと、初期状態が復元されます。オブジェクトの初期状態は時間が 0 の時点にのみ編集する事が可能です。ですから、一度オブジェクトにダイナミクスタグを適用したら、時間が 0 の時点でのみ移動編集する事が出来ます。そうしないと、時間が 0 に変わるとオブジェクトの初期状態が復元されてしまします。</p>
-
-          <p><b>シミュレーションの複雑さ</b></p>
-
-          <p>もしシミュレーションがそれほど複雑でなければ、アニメーションを再生してダイナミクスのシミュレーション結果をリアルタイムに見ることができます。しかし、シミュレーションが 30 FPS でリアルタイムには再生できないほど複雑になってしまう時には、再生モードの"フレーム再生を優先"をオンにする事が推奨されます。これは全てのフレームをシミュレートする事を保証し、Cheetah3D はリアルタイムを維持するためにフレームを飛ばしません。"フレーム再生を優先"は、"アニメーション -&gt; フレーム単位（フレーム/秒）"メニューから選択できます。このモードによってシミュレーションの精度も改善するので、ダイナミクスを使用する際には（リアルタイム再生に関わらず）オンにしておいてもよいでしょう。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Dynamics4.jpg" alt="" height="170" width="310" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>シミュレーションで、巨大なパーティクルシステムやソフトボディを使用すると、"フレーム再生を優先"ではさらに、再生が遅くなるかもしれません。その時はシミュレーション結果を焼き付けてください。焼き付けの間、シミュレーション結果はキャッシュに保存され、そのキャッシュはシミュレーションの再生に使用されます。この焼き付け機能で、1000個の剛体を持つパーティクルシステムでも、扱えるようになるでしょう。このダイナミクスキャッシュは .jas ファイルに保存される事に注意して下さい。複雑で巨大なダイナミクスのキャッシュは、ファイルサイズを増大させるでしょう。</p>
-
-          <div align="left">
-            <p><b>ヒント</b></p>
-
-            <ul>
-              <li>ダイナミクスタグを適用したオブジェクトだけが、シミュレーションに影響します。シミュレーションで適用したオブジェクトが少ない程、解析は速くなります。</li>
-
-              <li>オブジェクトが他のオブジェクトを突き抜ける、または通り抜けてしまう場合、環境設定でシミュレーションの精度をあげると改善するでしょう。</li>
-
-              <li>シミュレーションが爆発の結果になる場合があるので、初期状態でダイナミクスオブジェクトは重なり合ってはいけません。</li>
-            </ul>
-          </div>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left"></div>
-          </li>
-        </ul>
-
-        <div align="left">
-          <p><b>ダイナミクス環境設定</b></p>
-
-          <p>ダイナミクス環境設定には、ダイナミクスツールバーアイコンか、"アニメーション -&gt; ダイナミクス" メニューアイテムを使用してアクセスする事ができます。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Dynamics1.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>ダイナミクス環境設定では、様々な物理環境パラメータを設定の他、初期状態のクリアやシミュレーションの焼き付けのようないくつかの操作も実行する事ができます。</p>
-
-          <p><b>プロパティ</b></p>
-
-          <ul>
-            <li><i><b>ダイナミクス On/Off:</b></i> ダイナミクスシミュレーション On/Off の切換え</li>
-
-            <li><i><b>精度:</b></i> シミュレーションステップの設定。2x の場合、２回のシミュレーションステップがフレーム毎に計算され、4x の場合、４回のシミュレーションステップがフレーム毎に計算されます。</li>
-
-            <li><i><b>大気密度:</b></i> 空気密度の設定。このプロパティは、ソフトボディにのみ影響します。</li>
-
-            <li><i><b>水分密度:</b></i> 水の密度の設定。このプロパティは、ソフトボディにのみ影響します。</li>
-
-            <li><i><b>水面オフセット:</b></i> 水面のオフセットの設定。このプロパティは、ソフトボディにのみ影響します。</li>
-
-            <li><i><b>水面ノーマル:</b></i> 水面の法線の設定。このプロパティは、ソフトボディにのみ影響します。</li>
-
-            <li><i><b>重力:</b></i> 重力加速度の設定。</li>
-
-            <li><i><b>初期状態をクリア:</b></i> このボタンで、全てのオブジェクトの初期状態をクリアします。</li>
-
-            <li><i><b>キャッシュを使う:</b></i> シミュレーションキャッシュの On/Off の切換え。</li>
-
-            <li><i><b>キャッシュをクリア:</b></i> シミュレーションキャッシュのクリア。キャッシュを使うプロパティを Off にすると自動的にキャッシュを削除します。</li>
-
-            <li><i><b>ダイナミクスの焼き付け:</b></i> 現在のフレームレートでダイナミクスシミュレーションを焼き付けます。シミュレーションの焼き付け成功すると、キャッシュを使うプロパティは自動的に On に切り替わります。</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+    <table border="0" cellpadding="8" cellspacing="8" width="100%">      <tbody>        <tr>          <td>            <div align="center">              <p></p>              <p> </p>              <h2>Dynamics</h2>              <p></p>            </div>            <div align="left">              <p>The Dynamics feature in Cheetah3D is used to simulate rigid                body and soft body dynamics (physics). Hereby Cheetah3D relies                on the industry proven <a href="http://bulletphysics.org/">Bullet                  Physics</a> engine which was already used for many Hollywood                block busters.</p>              <p>To create a physical simulation you first have to tell                Cheetah3D which objects of your scene should be part of the                dynamics simulation. Therefore you have to assign the                appropriate dynamics tags to these objects. For creating a rigid                body assign a <a href="../../Tags/RigidBodyTag/RigidBodyTag.html">Rigid                  body</a> tag, for creating a soft body assign a <a href="../../Tags/SoftBodyTag/SoftBodyTag.html">Soft                  Body </a>Tag and for creating a rope assign a <a href="../../Tags/RopeTag/RopeTag.html">Rope</a>                Tag. If you want to attach a rigid body to a soft body you can                use the <a href="../../Tags/AnchorTag/AnchorTag.html">Anchor</a>                tag.</p>            </div>            <div align="center">              <p><img src="Dynamics2.jpg" alt="" border="0"><br>                Simple scene with some dynamic objects</p>            </div>            <div align="left">              <p>Once you've assigned the proper tags to the objects you can set                the physical properties of the objects (like the mass, friction,                stiffness, etc.) in their dynamics tags.</p>            </div>            <div align="center">              <p><img src="Dynamics3.jpg" alt="" border="0"></p>            </div>            <div align="left">              <p>Now you are already done. Click on the Play animation button in                the Timeline to view the simulation results in real-time. </p>              <p></p>              <p><b>Initial Sate</b></p>              <p>Every physical simulation needs an initial state. This is the                state (position, rotation, speed, etc.) of all objects, soft                body control points or particles at time T=0. In Cheetah3D every                physical simulation starts at time T=0. When you run the                simulation for the first time Cheetah3D automatically saves the                initial state of all objects at that time. Once the animation                return back to T=0 the initial state is recovered. The initial                state of a object can be only manipulated at time T=0. So once                you've attached dynamics tags to objects only transform them at                time T=0 otherwise the initial position of the object gets                recovered once the time changes to T=0 later. </p>              <p></p>              <p><b>Simulation complexity</b></p>              <p>If the simulation isn't too complex you can view the dynamics                simulation in real-time by simply playing the animation. But                should the simulation become too complex to play it in real-time                anymore (30 frames per second) then it is recommended to turn on                the "Frame by Frame" playback mode. It guarantees that every                frame is simulated and that Cheetah3D doesn't drop frames to                stay realtime. You can turn on the "Frame by Frame" mode with                the "Animation -&gt; Frames per Second" menu command. This mode                also improves the simulation accuracy so it is never a bad idea                to turn it on when dealing with dynamics.</p>              <ul>              </ul>            </div>            <div align="center">              <p><img src="Dynamics4.jpg" alt="" border="0"></p>            </div>            <div align="left">              <p>Once you use big particle systems or soft bodies in your                simulation even the "Frame by Frame" mode might become to slow.                Then it is time to start baking your simulation. During baking                the simulation results are kept in a cache which is then used to                play back the simulation. With the baking feature even particle                systems with thousand of rigid bodies can be handled. But be                aware that the dynamics cache is saved to your .jas file. So                .jas file size can increase considerably.</p>              <p></p>              <div align="left">                <p><b>Tips</b></p>                <ul>                  <li>Only assign Dynamics tags to those objects which really                    have an influence on your simulation. The fewer objects you                    have in the simulation the faster the simulation gets. </li>                  <li>Should objects penetrate or even pass other objects                    increasing the simulation accuracy should help. </li>                  <li>At the beginning of a simulation dynamic objects shouldn't                    overlap since that can result in an explosion of the                    simulation. </li>                </ul>                <p></p>              </div>            </div>            <ul>              <div align="left"> </div>            </ul>            <div align="left">              <p><b>Dynamics preferences</b></p>              <p>You can access the Dynamics preferences either by using the                Dynamics toolbar icon or the "Animation -&gt; Dynamics" menu                item. </p>            </div>            <div align="center">              <p><img src="Dynamics1.jpg" alt="" border="0"></p>            </div>            <div align="left">              <p>Within the Dynamics preferences you can set various physical                environment parameters. But you can perform also certain                operations like clearing the initial state or baking a                simulation. </p>              <p><b>Properties</b></p>              <ul>                <li><i><b>Dynamics On/Off:</b></i> Turns the dynamics simulation                  On or Off. </li>                <li><i><b>Accuracy: </b></i>Specifies the simulation step with.                  At 2x two simulation steps are calculated per frame. At 4x                  four simulation steps per frame, etc. </li>                <li><i><b>Air density: </b></i>Specifies the air density. This                  property only has a effect on soft bodies. </li>                <li><i><b>Water density: </b></i>Specifies the water density.                  This property has only an effect on soft bodies. </li>                <li><i><b>Water offset: </b></i>Specifies the water offset.                  This property has only an effect on soft bodies. </li>                <li><i><b>Water normal: </b></i>Specifies the water normal.                  This property has only an effect on soft bodies. </li>                <li><i><b>Gravitation: </b></i>Specifies the gravitational                  acceleration. </li>                <li><i><b>Clear initial state: </b></i>Pressing this button                  clears the initial state of all objects. </li>                <li><i><b>Use cache: </b></i>Turn the simulation cache On /                  Off. </li>                <li><i><b>Clear cache: </b></i>Clears the simulation cache.                  Cleaning the cache automatically turns off the "Use cache"                  property. </li>                <li><i><b>Bake simulation: </b></i>Bakes the dynamics                  simulation at the current frame rate. After successfully                  baking a simulation the "Use cache" property is automatically                  turned on. </li>              </ul>            </div>          </td>        </tr>      </tbody>    </table>  
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

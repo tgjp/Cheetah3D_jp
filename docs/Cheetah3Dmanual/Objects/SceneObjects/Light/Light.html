@@ -1,247 +1,192 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>ライト</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Light</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>Light</h2>
+					</div>
+					<div align="left">
+						<p>Every new Cheetah3D document already has one default light source: The camera light. The camera light is a point light with constant attenuation at the position of the camera. This camera light will not appear in the object browser. The camera light should be sufficient for most modelling jobs.</p>
+						<p>However, if you want to create your own lighting environment you have to use light objects. You can add as many light sources to your scene as you want but only the first 8 lights in the scene will be used in the 3D preview. The renderer works with all light sources.</p>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Axis:</b></i> The direction in which the light source casts. If you plan to animate your light source the &quot;-Z&quot; direction is probably the best.
+						<li><i><b>Light type:</b></i> There are various light type available in Cheetah3D. 
+						<ul>
+							<li><i><b>Ambient:</b></i> Add an ambient term to the scene using this property. If a light has an ambient term, the parts of an object facing away from the light source will also be illuminated. 
+							<li><b><i>Area:</i></b> The area light simulates a rectangular light source. Due to the fact that some pixels in the scene are just partially illuminated by the area light the area light creates soft shadows at these pixels and not hard shadows like the point light. 
+							<li><b><i>Distant:</i></b> The distant light emits parallel light rays. Due to the fact that the sun is far away from the earth, the light emitted by the sun can be assumed as being parallel on the earth. The distant light object can be used nicely to light outdoor scenes which are in nature illuminated by the sun.
+							<li><i><b>Point:</b></i> The point light is probably the most widely used light source. It emits light into all directions like a light bulb for example.
+							<li><b><i>Spot:</i></b> The spot light is quite similar to the point light with the small difference that you can limit the illuminated area to a small region, the spot.
+						</ul>
+						<li><i><b>Color:</b></i> The color of the light source.
+						<li><i><b>Intensity:</b></i> The intensity of the light source.
+						<li><i><b>Samples:</b></i> Number of samples at which the area light will be evaluated. The more samples you use the smoother the shadows will become. See the images below for a visual example. For most scenes 16-32 samples should be optimal. Using considerable less or more samples will have a negative influence on the rendering time.
+						<div align="center">
+							<ul>
+								<table width="122" border="0" cellspacing="0" cellpadding="4">
+									<tr>
+										<td>
+											<div align="center">
+												<img src="Light6.jpg" alt="" height="250" width="300" border="0"></div>
+										</td>
+										<td>
+											<div align="center">
+												<img src="Light7.jpg" alt="" height="250" width="300" border="0"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div align="center">
+												samples = 4<br>
+												
+												The shadow is still quite noisy.</div>
+										</td>
+										<td>
+											<div align="center">
+												samples = 16<br>
+												
+												There is almost no noise in the shadow anymore.</div>
+										</td>
+									</tr>
+								</table>
+							</ul>
+						</div>
+						<li><b><i>Attenuation: </i></b>The attenuation describes how fast the light intensity decreases. In nature, light intensity decreases proportionally to 1/r^2 with r as the distance between the object and the light source. In computer graphics there are other attenuation functions that are also widely used, however.
+						<li><b><i>Clamp attenuation:</i></b> If the attenuation is set to 1/r or 1/r^2 the light intensity increases infinitely the closer you get to r=0. To avoid that effect you can clamp the light with that property and avoid the explosion in light intensity. But be aware that the light won't be physically correct anymore if you use that property.
+						<li><b><i>MIS:</i></b> Turns on MIS (Multiple Importance Sampling). MIS only works in the Falcon renderer. 
+						
+						
+						<li><i><b>Shape:</b></i> Shape of the area light.
+						<li><i><b>Width:</b></i> The width of the area source.
+						<li><i><b>Height:</b></i> The height of the area light source.
+						<li><i><b>Radius:</b></i> The radius of the area light source.
+						<li><i><b>Normalize:</b></i> Turn this property on if you want the area light intensity to be independent from the size of the light.
+						<li><b><i>Visible in camera:</i></b> Makes the shape of the light source visible when you want&nbsp;reflections to&nbsp;show&nbsp;in the surfaces of objects. This is especially desirable&nbsp;for&nbsp;most studio lighting scenes.					<div align="center">
+						<table width="122" border="0" cellspacing="0" cellpadding="4">
+							<tr>
+								<td>
+									<div align="center">
+										<img src="Light8.jpg" alt="" height="200" width="250" border="0"></div>
+								</td>
+								<td>
+									<div align="center">
+										<img src="Light9.jpg" alt="" height="200" width="250" border="0"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div align="center">
+										Visible in camera = off<br>The area light geometry is invisible.</div>
+								</td>
+								<td>
+									<div align="center">
+										Visible in camera = on<br>The area light is visible.</div>
+								</td>
+							</tr>
+						</table>
+						
+						<li><i><b>Spot type:</b></i> Create either a round or a square spot light. 
+						<li><i><b>Cut of angle:</b></i> The cut off property constrains the directions in which a spot light source can illuminate. 
+						<li><i><b>Smooth cut off:</b></i>  Increasing the smooth cut off property makes the edges of a spot light smoother. See images below for an example of this in action.
+						<div align="center">
+							<ul>
+								<table width="122" border="0" cellspacing="0" cellpadding="4">
+									<tr>
+										<td>
+											<div align="center">
+												<img src="Light4.jpg" alt="" height="200" width="250" border="0"></div>
+										</td>
+										<td>
+											<div align="center">
+												<img src="Light5.jpg" alt="" height="200" width="250" border="0"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div align="center">
+												
+												Smooth cut off = 0.0</div>
+										</td>
+										<td>
+											<div align="center">
+												
+												Smooth cut off = 5.0</div>
+										</td>
+									</tr>
+								</table>
+							</ul>
+						</div>
+						<li><i><b>Aspect ration:</b></i> Sets the aspect ratio of the spot.
+						<li><i><b>Texture:</b></i> When using a texture on a spot light it works like a film projector. 
+						
+						<li><i><b>Shadow type: </b></i>Use this property to choose the shadow calculation type. See the images below to understand the various types. Don't forget to also turn on the shadow property of the <a href="../Camera/Camera.html">camera</a> object, otherwise no shadows will be calculated.
+						<p></p>
+						<div align="center">
+							<table width="180" border="0" cellspacing="0" cellpadding="4">
+								<tr>
+									<td valign="top"><img src="Light1.jpg" alt="" border="0"></td>
+									<td valign="top"><img src="Light2.jpg" alt="" height="200" width="250" border="0"></td>
+									<td valign="top"><img src="Light3.jpg" alt="" height="200" width="250" border="0"></td>
+								</tr>
+								<tr>
+									<td valign="top">
+										<div align="center">
+											<b><i>none:</i></b><br>
+											
+											no shadows</div>
+									</td>
+									<td valign="top">
+										<div align="center">
+											<b><i>raytrace:</i></b><br>
+											
+											The ball casts a shadow correctly, but not the slide</div>
+									</td>
+									<td valign="top">
+										<div align="center">
+											<b><i>raytrace+trans:</i></b><br>
+											
+											The slide now casts it's shadows correctly.This is the most CPU intensive shadow type, so only use it when necessary.</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<li><b><i>Shadow color: </i></b>The color of the shadow.
 
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ライト</h2>
-        </div>
 
-        <div align="left">
-          <p>Cheetah3D のすべての新規ドキュメントは、すでに１つのデフォルトのライトを持っています、カメラライトです。このカメラライトは、カメラ位置の減衰が一定の点ライトです。このカメラライトは、オブジェクトブラウザには表示されません。カメラライトは大抵のモデリング作業には充分でしょう。</p>
+						<li><i><b>Caustic photons:</b></i> The number of caustic photons which will be shot into the scene to render caustics. The more photons you shot the sharper the caustic will become.
 
-          <p>しかしながら、独自のライティング環境を作成したい場合には、ライトオブジェクトを使う必要があります。シーンには好きなだけライトを追加する事が出来ますが、3D ビュー上でライティングに使用されるのは、シーンの最初の 8 個のライトのみになります。レンダラーはすべてのライトを使用してレンダリングします。（訳注：これは追加した順番ではなく、オブジェクトブラウザの上から 8 個のライト（カメラライトが On の場合、カメラライトも含む）が、3D ビュー上でのプレビューに使用されるという事になります。）</p>
-        </div>
+						<li><i><b>Pure photon light:</b></i> The light source only shots photons into the scene but it doesn't illuminate the scene directly.  This can be helpful if you need more photons for rendering a high quality caustic.
 
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>軸:</b></i> 光りが向けられる方向軸を設定します。もしライトをアニメーションさせる予定なら、おそらく"-Z" 方向に設定する方がいいでしょう。（訳注：これはその他の "ターゲット" や "スプライントラッキング" などのアニメーション用のタグと共に使用する場合の事でしょう。）</li>
-
-          <li>
-            <i><b>ライトタイプ:</b></i> Cheetah3D には設定可能な各種のライトタイプがあります。
-
-            <ul>
-              <li><i><b>環境光:</b></i> このタイプを使って、環境光をシーンに追加します。ライトが環境光の場合、オブジェクトの各部分がライトに当たっていなくても明るくなります。</li>
-
-              <li><b><i>面ライト:</i></b> 面ライトは、四角形のライトをシミュレートします。シーン上のいくつかのピクセルが面ライトによって部分的にしか照らされないという事実に従って、面ライトはこれらのピクセルで、点ライトのようなはっきりした影ではなく、柔らかい影を作ります。（訳注：バージョン 4.2 から、Cheetha3D のライトシステムは改善され、点ライトの場合でもソフトシャドウを作成する事が可能になりました。）</li>
-
-              <li><b><i>平行ライト:</i></b> 平行ライトは、平行に進む光りを放ちます。太陽が地球から遠く離れているという事実によって、太陽から放たれる光りが、地球上では平行であるように考えられます。平行ライトオブジェクトは、太陽によって照らされている自然の屋外シーンのためのライトとして使う事ができるでしょう。（訳注：現バージョンでは太陽光や空をシミュレートするスカイライトが追加されているので、屋外シーンで使う場合はあまりなくなりました。）</li>
-
-              <li><i><b>点ライト:</b></i> 点ライトは、おそらく最も広く使われるライトです。これは電球のようにすべての方向に光りを放ちます。</li>
-
-              <li><b><i>スポットライト:</i></b> スポットライトは、点ライトに非常によく似ていますが、小さい範囲（スポット）に照明を限定できるという点で違います。</li>
-            </ul>
-          </li>
-
-          <li><i><b>カラー:</b></i> ライトのカラー</li>
-
-          <li><i><b>強さ:</b></i> ライトの強さ</li>
-
-          <li><b><i>減衰:</i></b> 減衰パラメータは、ライトの強さがどのくらいの速度（距離）で減少するかを定義します。自然界では、ライトの強さはライトソースとオブジェクトの間の距離を r とすると 1/r^2 の割合で減少します。しかしながら、コンピューターグラフィックスの世界では、他の割合も広く使われています。</li>
-
-          <li><b><i>減衰をクランプ:</i></b> 減衰が、"1/r" か "1/r^2" に設定されている場合に、ライトの強さは r が 0 に近づくほど（ライトとオブジェクトの距離が小さいほど）無限に増大します。この現象を防ぎ、ライトの強さが爆発的に増加するのを避けるために、このプロパティでライトの強さを丸める事ができます。しかし、このプロパティを使用するとライトが物理的には正確ではなくなる事に注意してください。</li>
-
-          <li>
-            <b><i>形状:</i></b> ライトがレンダリングされるように、ジオメトリーを生成します。反射面でライトの反映を得るために有効です。特にスタジオの照明シーンでは重要でしょう。
-
-            <div align="center">
-              <table width="122" border="0" cellspacing="0" cellpadding="4">
-                <tr>
-                  <td>
-                    <div align="center">
-                      <img src="Light8.jpg" alt="" height="200" width="250" border="0">
-                    </div>
-                  </td>
-
-                  <td>
-                    <div align="center">
-                      <img src="Light9.jpg" alt="" height="200" width="250" border="0">
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>
-                    <div align="center">
-                      形状 = off<br>
-                      面ライトのジオメトリーはレンダリングされません
-                    </div>
-                  </td>
-
-                  <td>
-                    <div align="center">
-                      形状 = on<br>
-                      面ライトのジオメトリーとその反映がレンダリングされます
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div><!-- ul -->
-          </li>
-
-          <li><i><b>幅:</b></i> 面ライト / 平行ライト の場合の幅</li>
-
-          <li><i><b>高さ:</b></i> 面ライト / 平行ライト の場合の高さ</li>
-
-          <li><i><b>半径:</b></i> 点ライト の場合の半径</li>
-
-          <li>
-            <i><b>タイプ:</b></i> このプロパティは影の計算タイプを選択するために使用します。様々なタイプを理解するために下のイメージを見てください。<a href="../Camera/Camera.html">カメラ</a>オブジェクトの "影" プロパティを On にする事を忘れないでください。もし Off の場合には、影は計算されません。
-
-            <div align="center">
-              <table width="180" border="0" cellspacing="0" cellpadding="4">
-                <tr>
-                  <td valign="top"><img src="Light1.jpg" alt="" border="0"></td>
-
-                  <td valign="top"><img src="Light2.jpg" alt="" height="200" width="250" border="0"></td>
-
-                  <td valign="top"><img src="Light3.jpg" alt="" height="200" width="250" border="0"></td>
-                </tr>
-
-                <tr>
-                  <td valign="top">
-                    <div align="center">
-                      <b><i>なし:</i></b><br>
-                      影はレンダリングされません
-                    </div>
-                  </td>
-
-                  <td valign="top">
-                    <div align="center">
-                      <b><i>raytrace:</i></b><br>
-                      緑の球は正しく影を落としていますが、スライドは正しくありません。
-                    </div>
-                  </td>
-
-                  <td valign="top">
-                    <div align="center">
-                      <b><i>raytrace+trans:</i></b><br>
-                      スライドも正しく影を落としています。このタイプはもっとも CPU を使うので、必要に応じて使用してください。
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </li>
-
-          <li><b><i>カラー:</i></b> 影のカラー</li>
-
-          <li>
-            <i><b>サンプル数:</b></i> 面ライト（と点ライト）が使用するサンプルの数。より多いサンプル数の使用で、影はより滑らかになります。下の作例を参照してください。多くのシーンでは、16 から 32 のサンプル数が最適でしょう。少なすぎる、または多すぎるサンプル数は、レンダリング時間に悪い影響を及ぼします。
-
-            <div align="center">
-              <ul>
-                <li style="list-style: none">
-                  <table width="122" border="0" cellspacing="0" cellpadding="4">
-                    <tr>
-                      <td>
-                        <div align="center">
-                          <img src="Light6.jpg" alt="" height="250" width="300" border="0">
-                        </div>
-                      </td>
-
-                      <td>
-                        <div align="center">
-                          <img src="Light7.jpg" alt="" height="250" width="300" border="0">
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div align="center">
-                          サンプル数 = 4<br>
-                          影にまだ少しノイズがあります。
-                        </div>
-                      </td>
-
-                      <td>
-                        <div align="center">
-                          サンプル数 = 16<br>
-                          影には、もうほとんどノイズがありません。
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li><i><b>スポットタイプ:</b></i> 円形か正方形かのスポットライトを選択します。</li>
-
-          <li><i><b>カットオフ角度:</b></i> "カットオフ角度" プロパティは、スポットライトが照らす事のできる角度を制限します。</li>
-
-          <li>
-            <i><b>減衰カットオフ角度:</b></i> 減衰カットオフ角度プロパティを上げると、スポットライトのエッジをより滑らかにします。この動作の例として、下のイメージを見てください。
-
-            <div align="center">
-              <ul>
-                <li style="list-style: none">
-                  <table width="122" border="0" cellspacing="0" cellpadding="4">
-                    <tr>
-                      <td>
-                        <div align="center">
-                          <img src="Light4.jpg" alt="" height="200" width="250" border="0">
-                        </div>
-                      </td>
-
-                      <td>
-                        <div align="center">
-                          <img src="Light5.jpg" alt="" height="200" width="250" border="0">
-                        </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div align="center">
-                          減衰カットオフ角度 = 0.0
-                        </div>
-                      </td>
-
-                      <td>
-                        <div align="center">
-                          減衰カットオフ角度 = 5.0
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li><i><b>コースティクスフォトン:</b></i> コースティクスをレンダリングするためにシーンに飛ばされるコースティクスフォトンの数。よりたくさんのフォトンを飛ばすと、はっきりしたコースティクスがレンダリングできます。（訳注：コースティクスをレンダリングするには、コースティクスタグが必要です。）</li>
-
-          <li><i><b>ピュア フォトンライト:</b></i> ライトは、シーンを直接照らさず、シーンにフォトンのみを飛ばします。これは、精度の高いコースティクスをレンダリングするためにより多くのフォトンが必要な場合に有効です。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+						  <p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

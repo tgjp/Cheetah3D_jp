@@ -1,76 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>Save UV\'s to PDF</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Save UV's to PDF</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>UVマップをPDFで保存 ツール</h2>
-        </div>
-
-        <div align="left">
-          <p>Cheetah3Dの <a href="../../TexturePainting/PaintTool/PaintTool.html">ペイント</a>ツールはCheetah3Dの中でほとんどのペインティング作業ができるのですが、全ての２次元ペインティング作業の置き換えができるわけではありません。そのため、時々他のアプリケーションを使ってペインティング作業を行ったり微調整作業を行う事があるかもしれません。<br>
-          UVメッシュの下絵が無い状態でペインティング作業を行うのは難しいので、このツールを使いUV座標系をUVメッシュの下絵としてPDF形式で書き出すことが出来ます。その後に他のペインティングアプリケーションに書き出したPDFファイルを取り込み下絵として使用できます。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="UV2PDF1.jpg" alt="" height="382" width="400" border="0"><br>
-          Cheetah3DでのUVメッシュ</p>
-
-          <p><img src="UV2PDF2.jpg" alt="" height="353" width="400" border="0"><br>
-          Photoshopに取り込んだUVメッシュ</p>
-        </div>
-
-        <p><b><i>モード<br></i></b> このツールは <a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a> にのみ使用できます。</p>
-
-        <ul>
-          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
-          "UVマップをPDFで保存 " ツールを使うために <a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a> を選択してください。そして<a href="../../../UserInterface/UVEditor/UVEditor.html">UV エディタ</a>を使って選択した全ての物がUV座標系の [0,1]内にあることを確認してください。 間違った範囲にあるとUV座標系のスケールを間違った状態で変換作業を行ってしまいます。最後に"UVマップをPDFで保存" ツールを選択してPDFファイル名を入力してください。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>無し</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>無し</b></i></li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Save UV's to PDF Tool</h2>						</p></div>					<div align="left">						<p>The <a href="../../TexturePainting/PaintTool/PaintTool.html">Paint</a> tool of Cheetah3D should allow you to do the most of your texture painting work directly in Cheetah3D. But Cheetah3D could never be a total replacement of specialized 2D painting and image processing tools. So sometimes you might which to paint or polish up some textures with an another app. <br>							Since texture painting without the UV mesh is quite tricky you can export the UV coords to a PDF file with this tool. Later you can import this PDF to any other painting app and use it as a stencil.</p>					</div>					<div align="center">						<p><img src="UV2PDF1.jpg" alt="" height="382" width="400" border="0"><br>							UV mesh in Cheetah3D</p>						<p> <img src="UV2PDF2.jpg" alt="" height="353" width="400" border="0"><br>							UV Mesh loaded into Photoshop</p>					</div>					<p><b><i>Modes<br>							</i></b>This tool can be only applied to <a href="../../../Objects/PolygonObjects/Polygonobject.html">polygon objects</a>.</p>					<ul>						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>To use the &quot;Save UV's to PDF&quot; tool, select a <a href="../../../Objects/PolygonObjects/Polygonobject.html">polygon object</a>. Please make sure with the <a href="../../../UserInterface/UVEditor/UVEditor.html">UV editor</a>, that all UV coords of the selected object are within the range [0,1]. Otherwise the UV coords will be scaled wrongly when you import the PDF later into a image processor. Now perform the &quot;Save UV's to PDF&quot; tool and enter the filename of the PDF. 			</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>none</b></i>					</ul>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

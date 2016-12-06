@@ -1,64 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ディスプレイスメントモディファイア</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Displacement</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ディスプレイスメントモディファイア</h2>
-        </div>
-
-        <div align="left">
-          <p>ディスプレイスメント<a href="../Modifier.html">モディファイア</a>は、ハイトマップテクスチャの情報にしたがって頂点をその法線方向に移動します。より良い結果を得るためには、たくさんのポリゴンが必要とされ、この事はディスプレイスメントモディファイアのおそらく一番の不便な点でしょう。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Displacement1.jpg" alt="" width="215" height="233" border="0"> <img src="Displacement2.jpg" alt="" height="233" width="213" border="0"></p>
-        </div>
-
-        <p>下のイメージでは、サブディビジョンとディスプレイスメントを適用されたシンプルなポリゴン平面を見る事ができます。このテクニックを使って、サブディビジョンサーフェスで頭をモデリングし、ディスプレイスメントマップで頭にしわのようなディテールを追加する事ができるでしょう。（訳注：サブディビジョン、ディスプレイスメントの順でモディファイアを適用する事によって、編集するポリゴン数を増やさずに、ディスプレイスメントでモデルの細部を表現する事ができます。この時、モディファイアを適用する順番（オブジェクトブラウザでの順序）に注意してください。）</p>
-
-        <div align="center">
-          <table width="122" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td><img src="Displacement4.jpg" alt="" border="0"></td>
-
-              <td><img src="Displacement3.jpg" alt="" width="365" height="341" border="0"></td>
-            </tr>
-          </table>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>オフセット量:</b></i> 移動量の最大値を設定します。</li>
-
-          <li><b><i>テクスチャ:</i></b> ハイトマップイメージのファイルパスを設定します。ハイトマップは、単純なグレイスケールイメージです。画像の白い部分は移動量の最大値分移動し、黒い部分は移動しません。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p>						<h2>Displacement Modifier</h2>					</div>					<div align="left">						<p>The displacement <a href="../Modifier.html">modifier</a> moves vertices along their normal according to a height map. To get nice results a lot of polygons are needed which is probably the biggest disadvantage of the displacement modifier.</p>					</div>					<div align="center">						<p><img src="Displacement1.jpg" alt="" width="215" height="233" border="0">  <img src="Displacement2.jpg" alt="" height="233" width="213" border="0"></p>						<p></p>					</div>					<p>On the images below you can see a simple example of displaced subdivision surfaces. This technique allows you to model a head with the subdivision surface tools and add details like wrinkles to the head with a displacement map. </p>					<div align="center">						<table width="122" border="0" cellspacing="0" cellpadding="0">							<tr>								<td><img src="Displacement4.jpg" alt="" border="0"></td>								<td><img src="Displacement3.jpg" alt="" width="365" height="341" border="0"></td>							</tr>						</table>					</div>					<p></p>					<p><b>Properties</b></p>					<ul>						<li><i><b>Offset: </b></i>Specifies the maximum offset.						<li><b><i>Texture: </i></b>The path to the height map. A height map is a simple grey scale image where white is equivalent to maximum offset and black is equivalent to no offset.					</ul>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

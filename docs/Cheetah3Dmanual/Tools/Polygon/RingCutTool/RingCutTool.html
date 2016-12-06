@@ -1,73 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>Ring Cut Tool</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Ring Cut Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>リングカットツール</h2>
-        </div>
-
-        <p>リングカットツールは下図のようにメッシュの密度を高めるためなどに使うツールです。カット範囲はポリゴンからポリゴンの間です。隣り合うポリゴンの端が同じ数の辺で構成されている場合は続けてカットします。しかし、隣り合うポリゴンの辺の数が同じでない場合はそこでカットを終了します。</p>
-
-        <div align="center">
-          <p><img src="RingCutTool1.jpg" alt="" height="266" width="300" border="0"> <img src="RingCutTool2.jpg" alt="" height="266" width="300" border="0"></p>
-        </div>
-
-        <p><b><i>モード<br></i></b> リングカットツールは <a href="../../../Objects/PolygonObjects/Polygonobject.html">編集中のポリゴンオブジェクト</a> にのみ使用することが出来ます。ポイントモード, エッジモード , ポリゴンモード いずれのモードでも同じように動作します。</p>
-
-        <ul>
-          <li>
-            <img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
-            リングカットをする場合はカットしたいポリゴンの端を選択してください。ポリゴンからポリゴンの間でカットされます。<br>
-
-            <p>その際、ポリゴン端の選択のためにクリックしたマウスボタンを押したままにしておいて左右にマウスを動かすことによりカット位置の調整が出来ます。また、シフトキーを押しながらマウスを左右に動かすとリングカットで追加したエッジを法線方向に拡大縮小して外形を変形させることが出来ます。</p>
-          </li>
-        </ul>
-
-        <div align="left">
-          <p><b>キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>shift :</i></b> shiftキーを押しながらマウスボタンを押しマウスを左右に動かすとリングカットで追加したエッジを法線方向に拡大縮小できます。<br></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>カット後に選択する:</b></i> この項目をチェックすると、リングカットで追加したエッジを選択状態にします。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Ring Cut Tool</h2></p>					</div>					<p>The ring cut tool is an excellent way to increase the detail of a mesh as you can see in the pictures below. The cut follows from polygon to polygon. If there are polygons with even number of edges the cut goes to the other side of the polygon. If the cut hits a polygon with an uneven number of edges the cut stops.</p>					<div align="center">						<p> <img src="RingCutTool1.jpg" alt="" height="266" width="300" border="0"> <img src="RingCutTool2.jpg" alt="" height="266" width="300" border="0"></p>					</div>					<p><b><i>Modes<br>							</i></b>The ring cut tool can only be applied to <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon objects</a>. It's behavior in point, edge and polygon mode is almost the same.</p>					<ul>						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"> <br>To perform a ring cut, just click on an edge of a polygon. The cut will then follow from polygon to polygon<br>							<p>If you don't release the mouse button after you've clicked on the edge, you can fine adjust the cut by dragging the mouse to the left or right. It is also possible to move the cut in and out by pressing the shift key whilst dragging.</p>																								</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>Shift : </i></b>If you press the shift key while drag the mouse, the cut will be moved in or out along the normals of the surface.<br>													</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>Select cut:</b></i> When this property is checked, the newly created cut will be selected.					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

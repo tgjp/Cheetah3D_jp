@@ -1,92 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>スケルトンタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Skeleton Tag</title>		<link href="../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>スケルトンタグ</h2>
-        </div>
-
-        <p>スケルトンタグは<a href="../../Objects/PolygonObjects/Polygonobject.html">メッシュ（ポリゴンオブジェクト）</a>に <a href="../../Objects/SceneObjects/Joint/Joint.html">骨格（ジョイント）</a>をバインド（結びつけ）するために使われます。一旦メッシュが骨格に正しく結びつくと、メッシュは骨格に従うようになります。骨格にメッシュをバインドするプロセスは、しばしば "スキニング ( skinning ) " とも呼ばれます。</p>
-
-        <p><i>注意: ポリゴンオブジェクトにのみスケルトンタグを適用する事ができます。</i></p>
-
-        <p>骨格にメッシュをバインドするために、<a href="../../Tools/Character/JointTool/JointTool.html">ジョイントツール</a>を使用してまず骨格を作成しなければなりません。キャラクターをモデリングし、骨格を作成した後で、キャラクターのメッシュ（ポリゴンオブジェクト）にスケルトンタグを適用します。</p>
-
-        <div align="center">
-          <p><img src="SkeletonTag1.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>次にスケルトンタグを選択します。タグは赤枠でハイライトされ、スケルトンタグのプロパティがプロパティブラウザに表示されます。骨組みのルートジョイント（人型の場合、骨盤 ( Pelvis ) のジョイント）を スケルトンタグの"ジョイント" テーブルにドラッグ＆ドロップします。</p>
-        </div>
-
-        <div align="center">
-          <table width="363" border="0" cellspacing="5" cellpadding="0">
-            <tr>
-              <td><img src="SkeletonTag2.jpg" alt="" border="0"></td>
-
-              <td></td>
-
-              <td width="32"></td>
-
-              <td><img src="SkeletonTag3.jpg" alt="" border="0"></td>
-            </tr>
-
-            <tr>
-              <td></td>
-
-              <td></td>
-
-              <td width="32"></td>
-
-              <td></td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left">
-          <p>骨格のすべてのジョイントが、"ジョイント" テーブルに表示されます。最後に、"メッシュにバインド" の "OK" ボタンをクリックして、メッシュを骨格に結びつけます。もし、"ジョイント" テーブルでジョイントを選択した場合、そのジョイントがメッシュにどれくらい結びついているかを示す頂点ウェイトが3D ビューに表示されます。これらのウェイトを調整するには、<a href="../../Tools/Character/VertexWeightTool/VertexWeightTool.html">バーテックスウェイトツール</a>を使用します。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="SkeletonTag4.jpg" alt="" height="338" width="217" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>最大影響範囲:</b></i> メッシュの頂点（ポイント）に影響を与える事のできるジョイントの数。通常は 2 から 4 で充分です。</li>
-
-          <li><b><i>ドロップオフ率:</i></b> ジョイントの影響の減少率。この値が高いほど、ジョイントは頂点（ポイント）での影響をより速く失います。</li>
-
-          <li><b><i>メッシュにバインド:</i></b> メッシュを骨格にバインドするために "OK" をクリックします。このコマンドの実行は、それぞれのジョイントの頂点ウェイトを計算します。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p>						<h2>Skeleton Tag</h2>					</div>					<p>The skeleton tag will be used to bind a <a href="../../Objects/PolygonObjects/Polygonobject.html">mesh</a> to a <a href="../../Objects/SceneObjects/Joint/Joint.html">skeleton</a>. Once the mesh is correctly bound to the skeleton the mesh will follow the skeleton. The process of bind a mesh to a skeleton is also often called &quot;skinning&quot;. </p>					<p><i>Attention: You can only add a skeleton tag to polygon objects.<b> </b></i></p>					<p>To bind a mesh to a skeleton you first have to create a skeleton with help of the <a href="../../Tools/Character/JointTool/JointTool.html">joint tool</a>. Once you have modeled your character and created the skeleton attach a skeleton tag to the character mesh. </p>					<div align="center">						<p><img src="SkeletonTag1.jpg" alt="" border="0"></p>					</div>					<div align="left">						<p>Now select the skeleton tag. The tag will be highlighted with a red frame and the skeleton tag properties will appear in the properties browser. Then drag and drop the root joint of your skeleton (in case of a human skeleton that is the &quot;Pelvis&quot; joint) to the &quot;Joint&quot; table of the skeleton tag.</p>					</div>					<div align="center">						<p></p>						<table width="363" border="0" cellspacing="5" cellpadding="0">							<tr>								<td><img src="SkeletonTag2.jpg" alt="" border="0"></td>								<td>  </td>								<td width="32"></td>								<td><img src="SkeletonTag3.jpg" alt="" border="0"></td>							</tr>							<tr>								<td></td>								<td></td>								<td width="32"></td>								<td></td>							</tr>						</table>					</div>					<div align="left">						<p>All the joints of the skeleton will now appear in the &quot;Joint&quot; table. Finally click on the &quot;bind mesh&quot; button and the mesh will be bound to the skeleton. If you now select a joint from within the Joint table the vertex weights of that joint will be displayed in the 3D view. To adjust these weights you can use then <a href="../../Tools/Character/VertexWeightTool/VertexWeightTool.html">vertex weight tool</a>.</p>					</div>					<div align="center">						<p><img src="SkeletonTag4.jpg" alt="" height="338" width="217" border="0"></p>					</div>					<p><b>Properties</b></p>					<ul>						<li><i><b>max. influence:</b></i> The max. number of joints which can influence a mesh vertex. Values of 2-4 are normally enough.						<li><b><i>dropoff rate: </i></b>The dropoff rate of the influence of an joint. The higher this value the faster a joint will lose its influence on vertices.						<li><b><i>bind mesh:</i></b> Click on the &quot;OK&quot; button to bind the mesh to the skeleton. Performing this command calculates the vertex weights for each joint.					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

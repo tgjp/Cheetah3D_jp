@@ -1,62 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>アイソサーフェス</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <meta name="generator" content="Adobe GoLive 6">    <title>Isosurface</title>    <link href="../../../style.css" rel="stylesheet" media="screen">  </head>  
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-    <tr>
-      <td>
-        <div align="center">
-          <h2>アイソサーフェス</h2>
-        </div>
-
-        <div align="left">
-          <p><a href="http://en.wikipedia.org/wiki/Isosurface">アイソサーフェス</a>は球体やスプライン、メッシュの頂点やパーティクル同士を、それらが液体であるかのように接合するために使う事のできるオブジェクトです。これはメタボールとしてもよく知られています。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="IsosurfaceObject1.jpg" alt="" height="282" width="281" border="0"></p>
-        </div>
-
-        <p><b><i>使い方</i></b><br>
-        アイソサーフェスを使うには、いくつかの球体やポリゴンオブジェクト、スプラインやパーティクルオブジェクトを、子オブジェクトになるようにアイソサーフェスにドラッグ・ドロップする必要があるだけです。アイソサーフェスオブジェクトは、子オブジェクトの情報を集めて、それらの等値面を計算します。メタボールのサイズを調整するには、<a href="../../../Tags/MetaballTag/MetaballTag.html">メタボール タグ</a>をその全て小オブジェクトに適用してサイズを調整する事ができます。</p>
-
-        <p>上のオブジェクトは、このちょっとした設定で作成されました。</p>
-
-        <div align="center">
-          <p><img src="IsosurfaceObject2.jpg" alt="" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>等平面値:</b></i> 等値面の計算に使用されるスカラー値</li>
-
-          <li><i><b>解像度:</b></i> バウンディングボックスの１辺の最大分割数。この解像度プロパティを増加させると、急激に等値面のポリゴン数は増加しますので、この値を上げる事には注意して下さい。経験的には、２倍の解像度で、ポリゴン数は8倍になります。</li>
-        </ul>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+    <table border="0" cellpadding="8" cellspacing="8" width="100%">      <tbody>        <tr>          <td>            <div align="center">              <p></p>              <p> </p>              <h2>Isosurface Object</h2>              <p></p>            </div>            <div align="left">              <p>The <a href="http://en.wikipedia.org/wiki/Isosurface">Isosurface</a>                object can be used to weld spheres, splines, mesh vertices or                particles together like if they were a liquid. This is also                often known as Metaballs.</p>              <p></p>            </div>            <div align="center">              <p><img src="IsosurfaceObject1.jpg" alt="" border="0" height="282"                  width="281"></p>            </div>            <p><b><i>Usage</i></b><br>              To use the Isosurface object you just have to drag and drop some              spheres, polygon objects, splines or particle objects into the              Isosurface object so that they become child objects. The              Isosurface objects will then collect the information of its child              object and calculate a Isosurface of them. To get more control on              the size of the Metaballs and its weight you can attach a <a href="../../../Tags/MetaballTag/MetaballTag.html">Metaball                tag</a> to all the child objects.</p>            <p>The above object was created with this small scene.</p>            <div align="center">              <p><img src="IsosurfaceObject2.jpg" alt="" border="0"></p>            </div>            <p></p>            <p><b>Properties</b></p>            <ul>              <li><i><b>Iso-Value:</b></i> The scalar value at which the                Isosurface is calculated. </li>              <li><i><b>Resolution:</b></i> The max. resolution along one side                of the bounding box. Be careful with increasing that value since                the polygon count of the Isosurface is increasing rapidly with                an increased resolution property. As a rule of thumb twice the                resolution results in 8 times the polygon count. </li>            </ul>            <div align="left">              <p></p>              <p><b> </b></p>            </div>          </td>        </tr>      </tbody>    </table>  
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

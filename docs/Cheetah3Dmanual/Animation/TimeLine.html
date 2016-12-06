@@ -1,186 +1,157 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>タイムライン</title>
-  <link href="../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Timeline</title>
+		<link href="../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p></p>
+						<h2>Timeline</h2>
+						</p>
+						<p></p>
+						<h2><img src="Timeline.jpg" alt="" border="0"></h2>
+						</p></div>
+					<p>The timeline is the main control for creating animations in Cheetah3D. If you can handle your DVD Player you should be also able to handle the Cheetah3D animation controls. Especially since many icons are the same as on your DVD player.</p>
+					<p>With Cheetah3D you can animate almost all object, tag and material properties. Only some parameters can't be animated, like the output resolution of an animation. But animating the resolution of a movie wouldn't make to much sense too.</p>
+					<p>Cheetah3D uses a technique called key framing to create animations. This means that you only record the object properties at positions where things actually change. Once you've recorded the object, tag or material properties a key will be created. With help of the keys you can see where you've recorded the properties. Between the keys Cheetah3D will interpolate the object properties.<br>
+						This technique allows to create a hole animation by just recording the starting end the end points of an object.</p>
+					<div align="center">
+						<p><br>
+							 </p>
+					</div>
+					<p><b>Timeline Controls:<br>
+						</b>Now lets start with the 7 main parts of the timeline as shown on the screenshot above.</p>
+					<div align="left">
+						<ol>
+							<li>The small icon block at the left of the timeline contains the most often used commands for creating a animation. You can also find all these commands in the &quot;Animation&quot; menu.<br>
+							<table width="600" border="0" cellspacing="0" cellpadding="2">
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineFirstKeyOff.png" alt="" height="18" width="18" border="0"></td>
+									<td align="left">
+										<div align="left">
+											Goto first frame of animation (beginning of the animation interval bar).</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineFormerKeyOff.png" alt="" height="18" width="18" border="0"></td>
+									<td align="left">Goto former frame.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLinePlayOff.png" alt="" height="18" width="18" border="0"></td>
+									<td align="left">Play OpenGL animation preview.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineRecordOff.png" alt="" height="18" width="18" border="0"></td>
+									<td align="left">Record current object settings.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineNextKeyOff.png" alt="" height="18" width="18" border="0"></td>
+									<td align="left">Goto next frame.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineLastKeyOff.png" alt="" height="18" width="18" border="0"></td>
+									<td align="left">Goto last frame of animation (end of the animation interval bar).</td>
+								</tr>
+							</table>
+							<li>The blue rect shows a recorded key.
+							<li>This small orange handle shows the current animation time. Drag it to the left or to the right to change the current animation time.
 
-    <tr>
-      <td>
-        <div align="center">
-          <h2>タイムライン</h2>
+							<li>With the recording mask you can determine which parameters of a object should be recorded. By default only the position, scale and rotation of an object are recorded.<br>
+							<table width="600" border="0" cellspacing="0" cellpadding="2">
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineParaPOn.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">
+										<div align="left">
+											Record position parameter.</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineParaSOn.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">Record scale parameter.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineParaROn.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">Record rotation parameter.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineParaOff.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">Record all parameters.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineAutokeyOff.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">Enable Autokeying. If turned on Cheetah3D keys all parameters which change automatically.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineHirarchyOff.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">Record also all child objects of this object.</td>
+								</tr>
+								<tr>
+									<td align="center" width="50"><img src="MWMTimeLineRecordChangedOff.png" alt="" height="16" width="16" border="0"></td>
+									<td align="left">Record only those parameters whose value did change</td>
+								</tr>
+							</table>
+							<br>
+							If you want to record just a single object parameter just make a right mouse click on the record button and chose the parameter from the context menu which you want to record.<br>
+							<img src="Timeline2.jpg" alt="" border="0">
+							<li>The current animation frame. 
+							<li>The animation (preview) interval shows you the beginning and the end of the animation. If you want to change the interval in which the animation will be rendered/previewed just drag the beginning or the end of the scroller to the left or to the right. 
+							<ol>
+								
+							</ol>
+							<div align="left">
+								<ol>
+									
+								</ol>
+							</div>
+						</ol>
+					</div>
+					<ol>
+						
+					</ol>
+					<div align="center">
+						<ol>
+							
+						</ol>
+					</div>
+					<div align="left">
+						<p><b>Usage<br>
+							</b>To create an animation please follow these steps:</p>
+						<ol>
+							<li>First select the object, tag or material you want to animate. 
+							<li>Set the current animation time to the time at which you want to record a key. 
+							<li>Set the values of the object, tag or material properties. 
+							<li>Click on the record icon to save the new key.
 
-          <h2><img src="Timeline.jpg" alt="" border="0"></h2>
-        </div>
+							<li>Continue with 2. until you've recorded the hole animation.
 
-        <p>タイムラインは、Cheetah3D でアニメーションを作るためのメインコントロールです。DVD プレーヤーを操作できるなら、Cheetah3D のアニメーションコントロールも操作できるはずです。特に主なアイコンは、お使いの DVD プレーヤーと同じでしょう。</p>
-
-        <p>Cheetah3D では、ほぼすべてのオブジェクト、タグ、そしてマテリアルをアニメーションさせる事ができます。ただ、出力解像度サイズのような、いくつかのパラメータをアニメーションさせる事はできません。しかし、ムービーの解像度サイズをアニメーションさせる事に、それほど意味はないでしょう。</p>
-
-        <p>Cheetah3D はアニメーションを作成するのにキーフレーミングと呼ばれるテクニックを使用しています。これは、実際に変化した位置でのみオブジェクトのプロパティを記録するという事です。いったんオブジェクト、タグ、そしてマテリアルのプロパティを記録すれば、キーが作成されます。このキーによって、どこでプロパティを記録したかを確認する事ができます。２つのキーの間で、Cheetah3D はオブジェクトのプロパティを補間します。<br>
-        このテクニックは、オブジェクトの最初と最後のポイントを記録するだけでアニメーション全体の作成を可能にします。</p>
-
-        <div align="center">
-          <p><br></p>
-        </div>
-
-        <p><b>タイムライン コントロール:<br></b> 上のスクリーンショットに示されている、タイムラインの主な７つの部分から説明しましょう。</p>
-
-        <div align="left">
-          <ol>
-            <li>タイムラインの左にある小さいアイコンの一団は、アニメーション作成に最もよく使われるコマンドを含んでいます。これらは "アニメーション" メニューでも見つける事ができます。<br>
-
-              <table width="300" border="1" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineFirstKeyOff.png" alt="" height="18" width="18" border="0"></td>
-
-                  <td align="left">
-                    <div align="left">
-                      アニメーションの最初のフレーム（アニメーションインターバルバーの最初）へ移動
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineFormerKeyOff.png" alt="" height="18" width="18" border="0"></td>
-
-                  <td align="left">１つ前のフレームへ移動</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLinePlayOff.png" alt="" height="18" width="18" border="0"></td>
-
-                  <td align="left">OpenGL アニメーションプレビュー（3D ビュー上で）を再生</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineRecordOff.png" alt="" height="18" width="18" border="0"></td>
-
-                  <td align="left">選択中のオブジェクト（タグ・マテリアル）の設定を記録</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineNextKeyOff.png" alt="" height="18" width="18" border="0"></td>
-
-                  <td align="left">１つ次のフレームへ移動</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineLastKeyOff.png" alt="" height="18" width="18" border="0"></td>
-
-                  <td align="left">アニメーションの最後のフレーム（アニメーションインターバルバーの最後）へ移動.</td>
-                </tr>
-              </table>
-            </li>
-
-            <li>青い四角は記録されたキーを示しています。</li>
-
-            <li>この小さいハンドルは、現在のアニメーション時間を示しています。左や右にドラッグする事で、現在のアニメーション時間を変更できます。</li>
-
-            <li>この記録マスク設定で、記録ボタンを押した時にどのパラメータが記録されるかを決めておく事ができます。デフォルトでは、位置、スケール、回転が記録されるように設定されています。<br>
-
-              <table width="400" border="1" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineParaPOn.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">
-                    <div align="left">
-                      位置パラメータを記録
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineParaSOn.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">スケールパラメータを記録</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineParaROn.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">回転パラメータを記録</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineParaOff.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">全てのパラメータを記録</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineAutokeyOff.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">自動記録を有効　有効な場合、Cheetah3D は変更したパラメータに自動的にキーを打ちます。</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineHirarchyOff.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">選択オブジェクトのすべての小オブジェクトを対象に記録</td>
-                </tr>
-
-                <tr>
-                  <td align="center" width="50"><img src="MWMTimeLineRecordChangedOff.png" alt="" height="16" width="16" border="0"></td>
-
-                  <td align="left">変更した値のみを記録</td>
-                </tr>
-              </table><br>
-              もしオブジェクトの１つのパラメータを記録したい場合は、記録ボタン上で右クリックし、記録したいパラメータをコンテクストメニューから選択します。<br>
-              <img src="Timeline2.jpg" alt="" height="224" width="293" border="0">
-            </li>
-
-            <li>現在のアニメーションフレーム</li>
-
-            <li>アニメーション全体の秒数（このフィールドは削除されました、シーン全体のアニメーション時間の長さは、テイクマネージャで確認・編集できます。）</li>
-
-            <li>このアニメーション（プレビュー）インターバルバーは、（実際にプレビュー／レンダリングされる）アニメーションの初めと終わりを示しています。もしプレビュー／レンダリングされるアニメーションの間隔を変更したい場合、バーの左端／右端／バー自体を左右にドラッグします。
-
-              <div align="left"></div>
-            </li>
-          </ol>
-        </div>
-
-        <div align="center"></div>
-
-        <div align="left">
-          <p><b>使い方<br></b> アニメーションを作成するには、次の手順を参照してください:</p>
-
-          <ol>
-            <li>まずアニメーションさせたいオブジェクト、タグ、またはマテリアルを選択します。</li>
-
-            <li>キーを記録したい時間（フレーム）に現在のアニメーションフレームをセットします。</li>
-
-            <li>オブジェクト、タグ、またはマテリアルのパラメータを設定します。</li>
-
-            <li>記録アイコンをクリック（特定のパラメータのみを記録したい場合は、右クリックしてコンテキストメニューから選択）し、新しいキーを記録します。</li>
-
-            <li>アニメーション全体を記録するまで、2 に戻って続けます。</li>
-          </ol>
-
-          <p><b>例<br></b> <a href="../Tutorials/HelloWorld/HelloWorld.html">ハローワールド</a>チュートリアルをチェックして、最初と最後の２つのキーを含むシンプルなアニメーションをどのように作成するかを見てください。</p>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+						</ol>
+						<p><b>Example<br>
+							</b>Check out the <a href="../Tutorials/HelloWorld/HelloWorld.html">Hello world</a> tutorial to see how to create a simple animation which just contains two keys. The starting and the ending position.</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

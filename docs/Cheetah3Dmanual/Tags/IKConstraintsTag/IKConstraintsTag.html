@@ -1,58 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>IK コンストレインタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>IK Constraint Tag</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>IK コンストレインタグ</h2>
-        </div>
-
-        <p>IK コンストレインタグは、IK ソルバーの振る舞いをより予想できるように補助します。特に 3D ソルバーの場合、角度は制限されるので、 IK ソルバーの可能な解のセットは制約されます。それは、肘のジョイントが曲がりすぎるといったIK チェインの不自然な動きの発生を防ぎます。</p>
-
-        <p>IK ハンドルタグで 3D ソルバーを使用している IK チェインのためにIK コンストレインをセットアップする事は、常に勧められます。IK チェインをセットアップする事は若干面倒ですが、キャラクターのアニメーションやポージングを始める時に役立つでしょう。</p>
-
-        <div align="center">
-          <p><img src="IKAngleConstraint1.jpg" alt="" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>コンストレイン:</b></i> タグの付けられたオブジェクトが制約される回転軸を選択します。（これは 3D ソルバーでのみ有効です。）</li>
-
-          <li><b><i>回転 (Heading):</i></b> オブジェクトが取れる最小／最大の回転 H （ heading ）角度を設定します。（これは 3D ソルバーでのみ有効です。）</li>
-
-          <li><b><i>回転 (Pitch):</i></b> オブジェクトが取れる最小／最大の回転 P （ pitch ）角度を設定します。（これは 3D ソルバーでのみ有効です。）</li>
-
-          <li><i><b>回転 (Bank):</b></i> オブジェクトが取れる最小／最大の回転 B （ Bank ）角度を設定します。（これは 3D ソルバーでのみ有効です。）</li>
-
-          <li><b><i>曲がりにくさ:</i></b> ジョイントがどの程度曲がるかを設定します。"曲がりにくさ" が 1 では、ジョイントは全く曲がりません。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>IK Constraint Tag</h2>
+					</div>
+					<p>The IK Constraint Tag helps to get a more predictable behavior of the IK solver. Especially the 3D solver, since the angle limits constraint the set of possible solutions of the IK solver. It also prevents IK chains from making unnatural movements like over bending of elbow joints for example.</p>
+					<p>So it is always recommended to set up the IK Constraints for IK chains which use the 3D solver of the IK Handle Tag. It might make some extra work to set up the IK chain but it will pay back when you start animating or posing your character.</p>
+					<div align="center">
+						<p><img src="IKAngleConstraint1.jpg" alt="" border="0"></p>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>constrain:</b></i> Choose which rotation coordinates of the tags owner should be constrain. (only works for 3D solver)					<li><b><i>heading: </i></b>Set the min./max. heading values the object can take.(only works for 3D solver)					<li><b><i>pitch:</i></b> Set the min./max. pitch values the object can take. (only works for 3D solver)						<li><i><b>bank:</b></i> Set the min./max. bank values the object can take. (only works for 3D solver)
+						<li><b><i>stiffness:</i></b> Determines how much the joint bends. With a stiffness of one the joint doesn't bend at all.
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

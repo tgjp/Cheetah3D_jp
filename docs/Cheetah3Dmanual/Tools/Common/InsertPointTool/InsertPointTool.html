@@ -1,84 +1,1 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ポイントを挿入 ツール</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
-<body>
-<!-- header -->
-<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
-<script language="javascript" type="text/javascript">header();</script>
-<!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ポイントを挿入 ツール</h2>
-        </div>
-
-        <p>ポイントを挿入 ツールは、既存のポリゴンやエッジ、スプラインカーブにポイントを挿入するために使用されます。また、ローポリゴンオブジェクトに新規にポイントを追加する場合にも使用可能です。これらのポイントは、後で<a href="../../Polygon/CreatePolygonTool/CreatePolygonTool.html">ポリゴンの作成</a>ツールで新しくメッシュを作成していくために使われるでしょう。</p>
-
-        <p><b><i>編集モード<br></i></b> ポイントを挿入 ツールは、その時点でハイライト表示されている要素に応じて異なる動作をします。</p>
-
-        <div align="left">
-          <ul>
-            <li><b>ローポリゴンオブジェクトの場合:</b> <img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>
-            マウスカーソルがポリゴンの上にある場合、その既存のポリゴンにポイントを追加する事ができます。その際、ポリゴンは三角ポリゴンに分割されます。ポイントはマウスカーソルがクリックされた位置に挿入されるでしょう。<br>
-            <br>
-            <img src="InsertPointToolPoly1.jpg" alt="" border="0"> <img src="InsertPointToolPoly2.jpg" alt="" border="0"><br>
-            <br>
-            マウスカーソルがエッジの上にある場合、そのポリゴンのエッジにポイントを追加する事ができます。その新しく追加されたポイントは <b>ポイントモード</b> でのみ確認する事ができるので、注意してください。<br>
-            <br>
-            <img src="InsertPointToolEdge1.jpg" alt="" border="0"> <img src="InsertPointToolEdge2.jpg" alt="" border="0"><br>
-            <br>
-            もし何もない空間でクリックした場合は、新しいポイントはアクティブなカメラにもっとも垂直に向いている平面上に作成されます。（訳注：アクティブなカメラではなく、3D ビュー上の表示による。アクティブなカメラでない場合もあります。）新しく追加されたポイントを確認するには、<b>ポイントモード</b>にしておく必要があります。<br>
-            <br>
-            <img src="InsertPointToolPoint1.jpg" alt="" border="0"> <img src="InsertPointToolPoint2.jpg" alt="" border="0"></li>
-          </ul>
-        </div>
-
-        <ul>
-          <li><b>ロースプラインオブジェクトの場合:</b> <img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>
-          スプラインオブジェクトにポイントを追加するには、<b>ポイントモード</b>にしておく必要があります。また、Cheetah3D のスプラインは黄色で始まり赤色で終わる事を確認しておいてください。すべてのパス要素は開始ポイントと終了ポイントを持ちます。パス要素にポイントを挿入するには、パス要素の終了ポイントをクリックしなければなりません。Cheetah3D はカーブの形状を変える事なくスプラインにポイントを挿入しようとします。<br>
-          <br>
-          <img src="InsertPointToolSpline1.jpg" alt="" height="217" width="217" border="0"> <img src="InsertPointToolSpline2.jpg" alt="" height="217" width="217" border="0"></li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>なし</b></i></li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
-<!-- footer -->
-<script language="javascript" type="text/javascript">footer();</script>
-<!-- footer end-->
-</body>
-
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">  <meta name="generator" content="Adobe GoLive 6">  <title>Insert Point Tool</title>  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">  <style type="text/css">div.c3 {margin-left: 2em; text-align: left}  div.c2 {text-align: left}  div.c1 {text-align: center}  </style></head><body>  <!-- header -->  <script language="javascript" type="text/javascript" src="../../../Images/common.js">  </script><script language="javascript" type="text/javascript">header();</script>  <!-- header end -->  <table width="100%" border="0" cellspacing="8" cellpadding="8">    <tr>      <td>        <div class="c1">          <h2>Insert Point Tool</h2>        </div>        <p>The insert point tool can be used to insert a point into an already existing polygon, edge or spline curve. It can also be used to add new points to raw polygon objects. This points can then be used to build up a new mesh with the <a href="../../Polygon/CreatePolygonTool/CreatePolygonTool.html">create polygon</a> tool.</p>        <p><strong><em>Modes<br></em></strong> The insert point tool performs different operations depending on which element is currently highlighted.</p>        <div class="c2">          <ul>            <li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>            When the mouse cursor is over a polygon, you can insert a point into an already existing polygon. The polygon will then be split into triangles. The point will be inserted at the position where the mouse cursor was clicked.<br>             <br>            <img src="InsertPointToolPoly1.jpg" alt="" border="0"> <img src="InsertPointToolPoly2.jpg" alt="" border="0"><br>            <br>            When the mouse cursor is over an edge, you can insert a point into the edge of a polygon. You can only see the new point when you are in <strong>point mode</strong><br>             <br>            <img src="InsertPointToolEdge1.jpg" alt="" border="0"> <img src="InsertPointToolEdge2.jpg" alt="" border="0"><br>            <br>            If you click into the empty space a new point will be created on the coordinate axis plain which is most straight forward to your active camera. You have to be in <strong>point mode</strong> to see the newly created point.<br>            <br>            <img src="InsertPointToolPoint1.jpg" alt="" border="0"> <img src="InsertPointToolPoint2.jpg" alt="" border="0"></li>          </ul>        </div>        <ul>          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>          To add a point into a spline object you have to be in <strong>point mode</strong>. To insert a point into a path just click on the path. Cheetah3D then inserts a point into the spline without changing the shape of the curve.<strong><br>          <img src="InsertPointToolSpline1.jpg" alt="" height="217" width="217" border="0"> <img src="InsertPointToolSpline2.jpg" alt="" height="217" width="217" border="0"></strong></li>        </ul>        <div class="c2">          <p><strong>Keys</strong></p>        </div>        <div class="c3">          <ul>            <li><strong><em>none</em></strong></li>          </ul>        </div>        <p><strong>Properties</strong></p>        <ul>          <li><em><strong>none</strong></em></li>        </ul>      </td>    </tr>  </table>    <!-- footer -->  <script language="javascript" type="text/javascript">footer();</script><!-- footer end--></body></html>

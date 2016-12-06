@@ -1,90 +1,75 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>パーティクルオブジェクト</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Particle Objects</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>Particle Object</h2>
+						</p></div>
+					<p>The Particle object is the base primitive of all particle system. All other parametric particle systems like the particle emitter or the particle mesh share its functionality.</p>
+					<p>The creation of a particle system in Cheetah3D couldn't be easier. Just add a particle system from the tool bar or the objects menu to your scene. Then add some particles to your particle system. This is done by dragging some polygon objects as child objects to the particle system. See the image below:</p>
+					<div align="center">
+						<p><img src="Particle1.jpg" alt="" border="0"></p>
+					</div>
+					<div align="left">
+						<p>Now you are already done. To initialize the various particle properties you can add a particle tag to each particle. If you don't add a particle tag the default values will be used.</p>
+					</div>
+					<div align="left">
+						<p>It is also possible to convert the parametric particle object to a base particle object by double clicking onto the object icon in the object browser.</p>
+						<p><b>Particle Properties<br>
+							</b>Every particle has various properties. These properties are normally set either by the particle system or by the <a href="../../Tags/ParticleTag/ParticleTag.html">particle tag</a>. But they also can be manipulated by <a href="../EffectorObjects/Effectors.html">effectors</a>. </p>
+						<div align="left">
+							<ul>
+								<li><i><b>Position: </b></i>The position of the particle in the local coordinate system of the particle.
+								<li><i><b>Rotation: </b></i>The XYZ rotation of the particle in the local coordinate system of the particle.
+								<li><i><b>Scale: </b></i>The scale of the particle in the local coordinate system of the particle.
+								<li><i><b>Position Speed: </b></i>The velocity of the particle in the local coordinate system of the particle.
+								<li><i><b>Rotation Speed: </b></i>The XYZ rotation speed of a particle in the local coordinate system of the particle.
+								<li><i><b>Scale Speed: </b></i>The X,Y,Z scale speed of a particle in the local coordinate system of the particle.
+								<li><i><b>Weight:</b></i> Sets the weight of the particle.
 
-    <tr>
-      <td>
-        <div align="center">
-          <h2>パーティクルオブジェクト</h2>
-        </div>
-
-        <p>パーティクルオブジェクトは、すべてのパーティクルシステムの基本プリミティブです。パーティクルエミッターや、パーティクルメッシュのようなその他全てのパラメトリックパーティクルシステムは、その機能を共有しています。</p>
-
-        <p>Cheetah3D でのパーティクルシステムの作成は、これ以上ないほど簡単です。あなたのシーンに、オブジェクトメニューやツールバーからパーティクルシステムを追加するだけです。次にこのパーティクルシステムにいくつかのパーティクルを追加します。これは、このパーティクルシステムに子オブジェクトとしていくつかのポリゴンオブジェクトをドラッグする事で完了します。下のイメージを見てください：</p>
-
-        <div align="center">
-          <p><img src="Particle1.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>これですっかり完了しました。様々なパーティクルのプロパティを初期化するために、それぞれのパーティクルにパーティクルを適用する事ができます。もしパーティクルを追加しなければ、初期値が使用されます。</p>
-        </div>
-
-        <div align="left">
-          <p>オブジェクトブラウザのオブジェクトアイコンをダブルクリックする事で、パラメトリックパーティクルオブジェクトを基本パーティクルオブジェクトに変換する事もできます。</p>
-
-          <p><b>パーティクル プロパティ<br></b> 全てのパーティクルは様々なプロパティを持っています。これらのプロパティは通常パーティクルシステムや<a href="../../Tags/ParticleTag/ParticleTag.html">パーティクル</a>によって設定されます。しかし、これらのパーティクルは<a href="../EffectorObjects/Effectors.html">エフェクター</a>によっても操作されるでしょう。</p>
-
-          <div align="left">
-            <ul>
-              <li><i><b>位置:</b></i> パーティクルのローカル座標系でのパーティクルの位置</li>
-
-              <li><i><b>回転:</b></i> パーティクルのローカル座標系でのパーティクルの XYZ 回転</li>
-
-              <li><i><b>スケール:</b></i> パーティクルのローカル座標系でのパーティクルの拡大縮小</li>
-
-              <li><i><b>位置 速度:</b></i> パーティクルのローカル座標系でのパーティクルの速度</li>
-
-              <li><i><b>回転 速度:</b></i> パーティクルのローカル座標系でのパーティクルの XYZ 回転速度</li>
-
-              <li><i><b>スケール 速度:</b></i> パーティクルのローカル座標系でのパーティクルの XYZ 拡大縮小速度</li>
-
-              <li><i><b>ウェイト:</b></i> パーティクルの重さの設定</li>
-
-              <li><i><b>カラー:</b></i> パーティクルのカラーの設定、"インスタンス" シェーシングノードのレンダリングの目的のためにこのカラーにアクセスする事ができます。</li>
-
-              <li><i><b>インスタンス化:</b></i> もしこのプロパティが On になっている場合、Cheetah3D はパーティクルのレンダリングにインスタンスを使用します。もしこのプロパティが Off の場合、パーティクルはレンダリングのために１つのポリゴンオブジェクトに焼き付けられます。これは多くのメモリを消費しますが、レンダリング時間はより速くなるでしょう。したがってパーティクルが少ないポリゴンしか持たない場合に、このプロパティを Off にします。より複雑なパーティクルのために、インスタンス化を勧めます。</li>
-            </ul>
-          </div>
-
-          <div align="center"></div>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>パーティクルの整列:</b></i>パーティクルシステムで複数のパーティクルがどのように並べられるかを決定します</li>
-
-          <li><i><b>乱数シード:</b></i>入力したシード値でパーティクルシステムの疑似乱数発生器を初期化します</li>
-
-          <li><i><b>表示タイプ:</b></i>パーティクルの表示を、ポイント／ライン／バウンディングボックス、または実際のパーティクルの形状のどれで表示されるのかを設定します</li>
-
-          <li><i><b>表示割合:</b></i> 3D ビューで表示されるパーティクルの分量を設定します</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+								<li><i><b>Color:</b></i> Sets the color of the particle. You can access this color for rendering purposes in the &quot;instance&quot; shading node.
+								<li><i><b>Instantiate:</b></i> If the property is turned on Cheetah3D uses instances to render the particles. If you turn this property one the particles will be baked to one polygon object for rendering. That uses much more memory but is also faster to render. So only turn this property off when you use particles which just have a few polygons. For more complex particles instancing is recommended.
+							</ul>
+						</div>
+						<div align="center">
+							<p></p>
+						</div>
+					</div>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Particle order:</b></i> Determines how the particles are ordered in a multiple particle system.
+						<li><i><b>Particle seed:</b></i> Initializes the random number generator of the particle system with a certain seed.
+						<li><i><b>Display type:</b></i> Determines if the particles will be displayed as points, lines, bounding boxes or the actual particle geometry.
+						<li><i><b>Visible:</b></i> Determine the percentage of the particles which will be displayed in the 3D preview. 
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

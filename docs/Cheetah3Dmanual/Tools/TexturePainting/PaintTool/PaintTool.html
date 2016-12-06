@@ -2,120 +2,111 @@
 
 <html>
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
   <meta name="generator" content="Adobe GoLive 6">
 
   <title>Paint</title>
   <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
+  <style type="text/css">
+div.c3 {margin-left: 2em; text-align: left}
+  div.c2 {text-align: left}
+  div.c1 {text-align: center}
+  </style>
 </head>
 
-
 <body>
-<!-- header -->
-<script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
-<script language="javascript" type="text/javascript">header();</script>
-<!-- header end -->
+  <!-- header -->
+  <script language="javascript" type="text/javascript" src="../../../Images/common.js">
+</script><script language="javascript" type="text/javascript">
+header();
+  </script><!-- header end -->
 
   <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
     <tr>
       <td>
-        <div align="center">
-          <h2>ペイントツール</h2>
+        <div class="c1">
+          <h2>Paint Tool</h2>
         </div>
 
-        <p>ペイントツールはラバー、円形状、矩形などの異なるブラシを使い基本的なテクスチャ作成が出来ます。そして、カラーテクスチャやディスプレイスメントテクスチャをひと筆描くごとに3D ビュー画面とUV エディタ画面にリアルタイムに反映されます。この機能のおかげであなたは他のペインティングアプリケーションを用いらずに3Dモデルで直接結果を確認できます。しかし、ペインティングアプリケーションに搭載されている特別な機能ををペイントツールは持っていないので、そのような場合はペインティングアプリケーションを使うと良いでしょう。</p>
+        <p>The paint tool offers basic texture painting tools like different brushes, rubber, circle, rect, etc. It can be used to paint from color textures to displacement textures while every stroke will be updated in the 3D view and the UV editor view in real time. So you can immediately see the results on your model in 3D and you don't have to switch between external painting apps and your 3D modeler. But if you want you can still use your external image processor if you want to achieve some special effects which aren't available in the Paint tool.</p>
 
-        <p>テクスチャに何か描く場合は、まず最初に編集したいテクスチャを選択してください。プロパティエディター内のマテリアルプロパティーを開いて編集したいテクスチャを選択してください。</p>
+        <p>To draw into a texture you first have to select a drawing target. To pick a drawing target chose any of the texture properties available throughout Cheetah3D.</p>
 
-        <div align="center">
+        <div class="c1">
           <p><img src="PaintTool2.jpg" alt="" border="0"></p>
         </div>
 
-        <p>今、4個のボタンが見えているはずです。もし、すでにテクスチャをロードしているなら"編集"ボタンを押す事が出来ます。まだ、テクスチャをロードしていない場合は、最初にテクスチャをロードするか"新規テクスチャ"ボタンを押してテクスチャを作成してください。その後、 "編集"ボタン を押して<a href="../../../UserInterface/UVEditor/UVEditor.html">UV エディタ</a>にテクスチャを表示するとテクスチャのペイント準備完了です。</p>
+        <p>On the left side of a texture property you will find four buttons. If you've already loaded a texture you can click on the "Edit" button immediately. If not you first have to load a texture or create a new one with the "Create" button. After clicking the "Edit" button the texture will show up in the <a href="../../../UserInterface/UVEditor/UVEditor.html">UV editor</a> and your are ready to paint.</p>
 
-        <div align="center">
+        <div class="c1">
           <p><img src="PaintTool1.jpg" alt="" border="0"><br></p>
         </div>
 
-        <div align="left">
-          <p>ペインティング作業を終了する場合は"編集終了" ボタンを押して保存してください。</p>
+        <div class="c2">
+          <p>When you are done with painting press the "Leave Edit" button to save the texture.</p>
 
-          <p><i>注意:</i></p>
+          <p><em>Attention:</em></p>
         </div>
 
-        <ol>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><i>24ビットのテクスチャのペイントのみ可能です。Cheetah3DはHDRIやEXRなどの浮動小数点色深度のテクスチャ はサポートしていません。</i></li>
+        <div class="c3">
+          <ul>
+            <li><em>You can only paint to image textures. Movie textures aren't supported yet.</em></li>
 
-                <li><i>JPEGやTIFFおよびPNG、BMP形式のテクスチャのみペイントができ、書き出すことが出来ます。</i></li>
+            <li><em>File formats with loss less compression like .tiff and .png are highly recommended. So the quality of the texture won't decrease with every texture save.</em></li>
+          </ul>
+        </div>
 
-                <li><i>画質の劣化がないTIFFやPNG形式を使用することをお奨めします。そうすれば、保存のたびにテクスチャの画質が劣化することがありません。</i></li>
-              </ul>
-            </div>
-          </li>
-        </ol>
-
-        <p><b><i>Modes<br></i></b> ペイント ツールは<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>にのみ使用できます。</p>
+        <p><strong><em>Modes<br></em></strong> The paint tool works in all modes.</p>
 
         <ul>
           <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
-          ペイント ツールを使うためにはまず最初に描きたいテクスチャを決める必要があります。その後、CTRL+マウスクリック、または右クリックでコンテキストメニュを表示し"ツール-&gt;UV ツール-&gt;ペイント"と選択します。そして、あなたが使用したいブラシ形状（ブラシ、ラバー、その他）をツールプロパティで選択します。これで、UV エディタ内でマウスを使いペイントをすることが出来ます。.</li>
+          To use the paint tool, you first have to define a texture to which you want to draw (see above). After having a valid texture you can select the paint tool from the context menu of the UV editor or at "Tools-&gt;UV-&gt;Paint". Select the tool you want to use (brush, rubber, etc.) and set the tool properties. Now you can use the tool by painting with the mouse into the UV editor.</li>
         </ul>
 
-        <div align="left">
-          <p><b>キー</b></p>
+        <div class="c2">
+          <p><strong>Keys</strong></p>
         </div>
 
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>無し</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        <div class="c3">
+          <ul>
+            <li><strong><em>none</em></strong></li>
+          </ul>
+        </div>
 
-        <p><b>プロパティ</b></p>
+        <p><strong>Properties</strong></p>
 
         <ul>
-          <li><b><i>タイプ:</i></b>クリックして使いたいツールを選択します。</li>
+          <li><strong><em>Type:</em></strong> Click on the buttons to select the tool you want to use</li>
 
-          <li><i><b>ブラシ形状:</b></i> ブラシの形状を指定します。</li>
+          <li><em><strong>Shape:</strong></em> The shape of the brush.</li>
 
-          <li><i><b>サイズ:</b></i> ブラシのサイズを指定します。</li>
+          <li><em><strong>Size:</strong></em> The maximum size in pixels of the brush.</li>
 
-          <li><b><i>間隔:</i></b> 描く間隔を指定します。</li>
+          <li><strong><em>Spacing:</em></strong> The ratio between the brush drawings.</li>
 
-          <li><b><i>カラー:</i></b> ブラシの色を指定します。この設定はブラシテクスチャには反映できません。</li>
+          <li><strong><em>Color:</em></strong> The color of the brush. This property doesn't have any effect if you use a brush texture..</li>
 
-          <li><b><i>バックグラウンド:</i></b> 背景の色を指定します。もし、ラバーを使うならばこの設定は重要です。</li>
+          <li><strong><em>Background:</em></strong> The background color. This property is especially important if you use the rubber.</li>
 
-          <li><b><i>ブラシテクスチャ:</i></b> ブラシのテクスチャを指定します。</li>
+          <li><strong><em>Brush texture:</em></strong> Sets the texture of the brush..</li>
 
-          <li><b><i>テクスチャサイズ:</i></b> ブラシのテクスチャのスケールを指定します。</li>
+          <li><strong><em>Scale:</em></strong> Sets the scaling factor of the brush texture.</li>
 
-          <li><b><i>回転:</i></b> ブラシのテクスチャの回転角度を指定します。</li>
+          <li><strong><em>Rotation:</em></strong> Sets the rotation of the brush texture.</li>
 
-          <li><b><i>Pressure sensitive:</i></b> ペンタブレットを使っている場合は筆圧検知によってブラシのサイズを変化させます。</li>
+          <li><strong><em>Pressure sensitive size:</em></strong> The size of the brush depends on the pen pressure if you use a tablet.</li>
 
-          <li><b><i>アルファを筆圧で可変:</i></b> ペンタブレットを使っている場合は筆圧検知によってブラシの不透明度を変化させます。</li>
+          <li><strong><em>Pressure sensitive alpha:</em></strong> The opacity of the brush depends on the pen pressure if you use a tablet.</li>
 
-          <li><b><i>ライブアップデート:</i></b> この設定が有効な場合は地形やディスプレイスメントテクスチャをリアルタイムに3D ビュー画面に反映させます。 この高度な機能を無効に設定した方が操作が軽く便利な場合があります。</li>
+          <li><strong><em>Live update:</em></strong> If this property is enabled relief and displacement textures are updated in realtime in the 3D view. Since that could be a quite expensive operation it could be sometimes convenient to disable the live update.</li>
 
-          <li><b><i>アルファを保持:</i></b> このブラシはテクスチャに合成されませんが、アルファ値はテクスチャに合成されます。このブラシは髪の毛の質感を作る場合にはとても便利です。</li>
+          <li><strong><em>Preserve alpha:</em></strong> The brush won't be composited over the texture but the alpha values of the brush will be written into the alpha channel of the texture. This can be very helpful to paint hair strains.</li>
         </ul>
       </td>
     </tr>
-
-  </table>
-
-<!-- footer -->
-<script language="javascript" type="text/javascript">footer();</script>
-<!-- footer end-->
+  </table><!-- footer -->
+  <script language="javascript" type="text/javascript">
+footer();
+  </script><!-- footer end-->
 </body>
-
 </html>

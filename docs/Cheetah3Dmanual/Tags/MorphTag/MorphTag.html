@@ -1,67 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>モーフタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Morph Tag</title>		<link href="../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>モーフタグ</h2>
-        </div>
-
-        <p>モーフタグで、違う位置のメッシュを記録する事が出来ます。例えば、微笑んでる、悲しんでいる、笑っている、起こっている顔を記録しておく事が出来ます。モーフターゲットを記録した後で、これらの異なる表情（モーフ）の中間にモーフさせる事も出来ます。<br>
-        またモーフターゲットで、顔を喋らせたり、筋肉を収縮をアニメーションさせる事もできます。</p>
-
-        <div align="center">
-          <p><img src="Morph1.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>モーフターゲットを記録するためには、まず<a href="../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>にモーフタグを追加しなければなりません。そして、すべての表情（モーフ）を記録するまで、次のこのような手順に従って下さい。</p>
-
-          <ol>
-            <li>モーフプロパティの左下の "+" ボタンをクリックして、"Base" モーフターゲットを追加します。</li>
-
-            <li>新しい表情（モーフ）になるようにポリゴンメッシュを修正します。修正を、メッシュの頂点（ポイント）の移動のみにする事は重要です。ポリゴンの追加・分離・削除でメッシュトポロジーを変更しないでください。</li>
-
-            <li>"+" ボタンで新しい表情（モーフ）を記録し、他のモーフと重ならない名称をつけます。</li>
-
-            <li>すべてのモーフターゲットを記録するまで、手順 2 を続けます。</li>
-
-            <li>最後に "Base" モーフを選択し、プロパティの一覧表のコンテキストメニュー（右クリックメニュー/Alt+クリックメニュー）から "Restore" メニューコマンドを選択します。</li>
-          </ol>
-
-          <p>これで、中間のモーフさせるためにスライダーを使用する事が可能になります。</p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>モーフターゲット</b></i> 記録されたモーフターゲットの一覧表。それぞれのモーフターゲットのウェイトを調整するには右のスライダーを使用します。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p>						<h2>Morph Tag</h2>					</div>					<p>The morph tag allows you to record the a mesh at different positions. For example your can record a smiling, a sad, a laughing or an angry face. Once the morph targets are recorded you can morph between these different gestures.<br>						With morph targets you can also animate a speaking face or the flexing of muscles.</p>					<div align="center">						<p><img src="Morph1.jpg" alt="" border="0"></p>						<p></p>					</div>					<div align="left">						<p>To record morph targets you first have to add a morph tag to a <a href="../../Objects/PolygonObjects/Polygonobject.html">polygon object</a>. Then follow these steps until you have recorded all you gestures.</p>						<ol>							<li>Add a &quot;Base&quot; morph target by clicking on the plus button in the lower left corner of the tags properties.							<li>Modify the polygon mesh to the new gesture. It is important that you only move the vertices of the mesh. Don't change the mesh topology by adding, splitting or removing polygons.							<li>Record the new pose with the plus button and give it a unique name.							<li>Continue with point 2. until you've recorded all morph targets.							<li>At the end select the &quot;Base&quot; morph target and select the &quot;Restore&quot; menu command from the tables context menu. 						</ol>						<p>Now you can use the sliders to morph between the different poses.</p>					</div>					<p><b>Properties</b></p>					<ul>						<li><i><b>Morph-Target</b></i> Table of recorded morph targets. Use the sliders on the right to  increase or decrease the weight of the certain morph target. 					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

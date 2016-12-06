@@ -1,93 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ミラーツール</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Mirror Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ミラーツール</h2>
-        </div>
-
-        <p>自然界の物体と人工物の多くは対称形をしています。モデリングの工程を単純にするために、常にオブジェクトの片側をそれぞれ２度モデリングする必要はありません。この目的のために、インタラクティブに指定した対称面で、ポリゴンやスプラインを対称複製するミラーツールを使用する事ができます。</p>
-
-        <div align="center">
-          <p><img src="MirrorTool1.jpg" alt="" height="323" width="209" border="0"> <img src="MirrorTool2.jpg" alt="" height="323" width="211" border="0"><br>
-          ミラーツールで円柱のもう片側を完成させています。</p>
-
-          <p><img src="MirrorTool3.jpg" alt="" height="243" width="200" border="0"> <img src="MirrorTool4.jpg" alt="" height="243" width="285" border="0"><br>
-          スプラインを対称複製しています。選択されたコントロールポイントを持つパスのみが対称複製されています</p>
-        </div>
-
-        <p><i>Tip: 対称性を持つオブジェクトの作成には、<a href="../../../Objects/CreatorObjects/SymmetryObject/Symmetry.html">シンメトリー</a> クリエータオブジェクト（やシンメトリーモディファイアオブジェクト）を使用する事も可能です。</i></p>
-
-        <p><b><i>編集モード<br></i></b> このツールは、<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a> や <a href="../../../Objects/SplineObjects/Spline.html">ロースプラインオブジェクト</a> に対してすべての編集モードで使用できます。</p>
-
-        <ul>
-          <li><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>
-          ミラーツールは、スプラインやポリゴンオブジェクトを構成するどんなデータ（ポイントやエッジ、ポリゴン）についても対称複製する事ができます。この操作を実際に実行するには、対称複製したいデータを選択します。次に "ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">ミラー" メニューからミラーツールを選択します。ミラーツールのプロパティが、ツールビューに表示されるでしょう。このツールのプロパティを設定し、インタラクティブにマウス操作で対称面を指定、またはマニュアル操作（"OK" ボタンをクリック）で実行します（それぞれのプロパティの説明は、下のプロパティの解説を参照してください）。<br>
-          インタラクティブに対称面を指定する場合、3D ビューをクリックし、クリックしたまま対称面にしたいポイントまでドラッグします。対称面はポイントにスナップし、対称ポイントは青色でハイライトされます。対称面の位置で、マウスボタンを離して対称複製を実行します。<br>
-          マニュアル対称複製の目的は、オブジェクトのポイントを通らない平面で対称複製することです。もし、マニュアル対称複製を実行したい場合、ツールのプロパティを設定してからツールのプロパティビューの "OK" ボタンを押します。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li>
-            <i><b>座標系:</b></i> 対称面が整列する座標系
-
-            <ul>
-              <li><b><i>オブジェクト:</i></b> 対称面はローカルなオブジェクトの座標系軸に直交します。</li>
-
-              <li><i><b>ワールド:</b></i> 対称面はグローバルな座標系軸に直交します。</li>
-            </ul>
-          </li>
-
-          <li><i><b>ミラー面:</b></i> 対称面が直交する軸を指定します。スクリーンモードの場合は、効果がありません。（訳注：仕様がかわり、スクリーンモードはなくなりました。）</li>
-
-          <li><i><b>複製:</b></i> チェックされている場合、対称複製されたジオメトリーは、元のジオメトリーを残したまま複製されます。チェックされていない場合、選択されたジオメトリーは対称に複製されコピー元のジオメトリーは削除されます。（訳注：チェックが外されている場合、元のポリゴンは削除されますがポイントはそのまま残る事に注意してください。）</li>
-
-          <li><i><b>距離:</b></i> マニュアル対称複製時の値を設定します。この値は、鏡面複製される<b>ミラー面</b>からの距離を定義します。</li>
-
-          <li><i><b>適用:</b></i> マニュアル対称複製を実行します。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Mirror Tool</h2></p>					</div>					<p>Many objects in nature and the technical world are symmetrical. To simplify the process of modelling it is not always necessary to model two identical sides of a object twice. For this purpose you can use the mirror tool which mirrors polygons or splines at a interactively defines mirror plane.</p>					<div align="center">						<p><img src="MirrorTool1.jpg" alt="" height="323" width="209" border="0">   <img src="MirrorTool2.jpg" alt="" height="323" width="211" border="0"><br>							Completing a half cylinder with the mirror tool.  </p>						<p><img src="MirrorTool3.jpg" alt="" height="243" width="200" border="0">  <img src="MirrorTool4.jpg" alt="" height="243" width="285" border="0"><br>							Mirroring a spline. Only paths which have a selected control point are mirrored.</p>					</div>					<p><i>Tip: You can also use the <a href="../../../Objects/CreatorObjects/SymmetryObject/Symmetry.html">symmetry </a>creator object to create symmetric objects.</i></p>					<p><b><i>Modes<br>							</i></b>This tool only works on <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon</a> or <a href="../../../Objects/SplineObjects/Spline.html">raw spline</a> objects. In all modes.</p>					<ul>						<li><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>The mirror tool can mirror any type of data (points, edges or polygons) which can be in spline or polygon objects. To perform the actual mirror operation select the data you want to mirror. Now choose the mirror tool from the menu &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Mirror&quot;. The properties of the mirror tool will now appear in the tool properties view. Set the properties of the tool (for an explanation of each property see the properties description below) and perform either an interactive mirror operation or a manual mirror operation.<br>In the case of the interactive mirror operation click into the 3D view and drag the mouse while still holding the button pressed too the point where you want to mirror. The mirror plan will snap to that point and the mirroring point will be highlighted blue. Once you've positioned the mirror plane perform the mirror operation by releasing the mouse button.<br>							The purpose of the manual mirror operation is to mirror at a plane which doesn't go through a point of the object. If you perform an manual mirror operation just press the perform &quot;OK&quot; button in the tool properties view after setting the tool properties.											</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>Coordinate system: </b></i>Coordinate system after which the mirror plane will be aligned. 						<ul>							<li><b><i>Object:</i></b> The mirror plane is perpendicular too the axes of the local object coordinate system.							<li><i><b>World: </b></i>The mirror plane is perpendicular too the axes of the world coordinate system.						</ul>						<li><i><b>Mirror plane: </b></i>The axis to which the mirror plane is perpendicular. Doesn't have any effect if you are in screen mode.							<li><i><b>Duplicate elements: </b></i>Duplicates the mirrored geometry if turned on. Otherwise the selected geometry will just be mirrored.							<li><i><b>Value: </b></i>Sets the value of the manual mirror operation. The value defines the direction into the <b>mirror plane</b> direction which should be mirrored.						<li><i><b>Apply: </b></i>Performs a manual mirror operation.					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

@@ -1,74 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>クォンタイズツール</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Quantize Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>クォンタイズツール</h2>
-        </div>
-
-        <p>クォンタイズツールはユーザーが設定可能なグリッドにポリゴンのポイントをスナップするために使用されます。これは、ポリゴンオブジェクトやスプラインオブジェクトがフリーハンドで作成、移動変形され、それを完璧に整列させたい場合に便利です。</p>
-
-        <div align="center">
-          <p><img src="Quantize1.jpg" alt="" width="600" height="239" border="0"></p>
-
-          <p><i>ポリゴンオブジェクトの２つのポイントを見てください。左の例では、ポイントがグリッドにのっていません。<br>
-          右の例では、ポイントが完全にグリッドにのるようにクォンタイズツールが使用されています。</i></p>
-        </div>
-
-        <p><b><i>編集モード<br></i></b></p>
-
-        <p><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
-        クォンタイズツールは、ポイントモード、エッジモード、ポリゴンモードの各モードで使用可能です。しかし、編集対象のオブジェクトを構成しているポイントの座標について操作を実行します。</p>
-
-        <div align="left">
-          <p><b>使い方</b></p>
-
-          <p>オブジェクトをクォンタイズ（整頓）するために、（訳注：このツールはローポリゴンオブジェクトにのみ使用できるので、オブジェクトがパラメトリックポリゴンオブジェクトやクリエータオブジェクトである場合、）まずそれを編集可能にしなければなりません（<a href="../../../Objects/PolygonObjects/Polygonobject.html">ポリゴンオブジェクト</a>を確認してください。）。次に "ツール" メニューから "クォンタイズ" を選択します。クォンタイズ（整頓）を実行したい軸を選択し、ポイントをスナップさせたいそれぞれのグリッドの間隔を入力します。クォンタイズ（整頓）を適用するために "OK" ボタンをクリックします。クォンタイズ（整頓）グリッドの初期値は、すべての軸で 0.05 です。それぞれの軸に同じ数値を使用する必要はない事に注意してください。（つまり、正方形グリッドではなく長方形のグリッドにスナップさせる事もできます。）</p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>X 軸にクォンタイズ:</b></i> チェックされている場合、選択されたポイントは X 軸でクォンタイズ（整頓）されます。</li>
-
-          <li><i><b>X 値:</b></i> X 軸上のポイントがスナップされるグリッド単位。初期値は 0.05 。</li>
-
-          <li><i><b>Y 軸にクォンタイズ:</b></i> チェックされている場合、選択されたポイントは Y 軸でクォンタイズ（整頓）されます。</li>
-
-          <li><i><b>Y 値:</b></i> Y 軸上のポイントがスナップされるグリッド単位。初期値は 0.05 。</li>
-
-          <li><i><b>Z 軸にクォンタイズ:</b></i> チェックされている場合、選択されたポイントは Z 軸でクォンタイズ（整頓）されます。</li>
-
-          <li><i><b>Z 値:</b></i> Z 軸上のポイントがスナップされるグリッド単位。初期値は 0.05 。</li>
-
-          <li><i><b>適用</b></i>: 選択されたポイントにクォンタイズ（整頓）を実行するためにクリックします。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Quantize Tool</h2></p>					</div>					<p>The Quantize Tool is used to snap the points of a polygon or spline to a grid that is user-definable. This is useful when a polygonobject, spline or other element has been created and transformed in a  &quot;freehand&quot; manner, and you'd like the end result to align perfectly.</p>					<div align="center">						<p><img src="Quantize1.jpg" alt="" width="600" height="239" border="0"></p>						<p><i>Two points of a polygon object. On the left, the points do not align to the grid.<br>								On the right, the Quantize tool has been used to make the points align perfectly.</i></p>					</div>					<p><b><i>Modes<br>							</i></b></p>					<p><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>						The quantize tool works in the Point, Edge, and Polygon modes, but always performs its operation on the coordinates of the points that make up the object you are editing.</p>					<ul>																								</ul>					<div align="left">						<p><b>Use</b></p>						<p>In order to quantize an object, you first must make it editable (see <a href="../../../Objects/PolygonObjects/Polygonobject.html">Polygonobject</a>). Then simply chose Quantize from the Tools menu, pick which axis you want to quantize to, and type the raster values for each axis you'd like the points to be snapped to. Click on the OK button to apply the quantize. The default value for the quantize grid are 0.05 on all axis. Note that you do not have to use the same value for each axis (ie, you can force your points to snap in an oblong manner, rather than square)</p>					</div>					<p><b>Properties</b></p>					<ul>						<li><i><b>Quantize:</b></i> When checked, the points will be quantized on that axis.						<li><i><b>Raster:</b></i> The unit value that points on the selected axises will be snapped to. Defaults to 0.05.						<li><i><b>Apply</b></i>: Click the OK button to apply the quantization to the selected points.					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

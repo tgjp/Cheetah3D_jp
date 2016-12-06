@@ -1,93 +1,75 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>Vertex Weight Tool</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Vertex Weight Tool</title>
+		<link href="../../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>バーテックスウェイトツール</h2>
-        </div>
-
-        <p><a href="../../../Tags/SkeletonTag/SkeletonTag.html">スケルトンタグ</a>とメッシュを関連づけすると、Cheetah3Dは自動でバーテックスウェイトの設定を各ジョイントに対して行います。しかし、バーテックスウェイトは常に完璧に設定されるわけでありません。その際はマニュアルで微調整する必要があります。</p>
-
-        <p>たとえば、Cheetah3Dは下図のように左足のつま先のジョイントへバーテックスウェイトの設定をしているのですが右足のつま先の一部についてもバーテックスウェイトを付与してしまいます。この状態で左足を動かすと右足も動き意図しない動作をしてしまいます。 バーテックスウェイトの間違った設定を修正する事が次の作業です。</p>
-
-        <div align="center">
-          <p><img src="VertexWeight1.jpg" alt="" height="228" width="239" border="0"></p>
-        </div>
-
-        <p><b><i>モード<br></i></b> このツールは全てのモードで動作します。</p>
-
-        <ul>
-          <li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>
-          メニューから"ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">キャラクターツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">バーテックスウェイト"を選択しバーテックスウェイトツールを使用します。バーテックスウェイトツールはツール プロパティに表示されます。バーテックスウェイトの調整は、調整するジョイントを<a href="../../../Tags/SkeletonTag/SkeletonTag.html">スケルトンタグ</a>のジョイント一覧から選択します。一度ジョイントが選択されるとウエイトが1の場合は赤色で表示され、ウエイトの値が小さくなるほど黄色になります。ウエイトの値が0になると灰色の表示になります。ウエイトの調整は3D ビュー画面内でマウスでペイントするようにして行います。</li>
-        </ul>
-
-        <div align="center"></div>
-
-        <div align="left">
-          <p><b>キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>無し</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>サイズ:</b></i> 画面上のブラシのサイズ。</li>
-
-          <li><i><b>強さ:</b></i> ブラシの強度。</li>
-
-          <li>
-            <i><b>モード:</b></i>
-
-            <ul>
-              <li><i>効果減:</i> バーテックスウェイトの値を小さくします。</li>
-
-              <li><i>効果追加:</i> バーテックスウェイトの値を大きくします。</li>
-            </ul>
-          </li>
-
-          <li><i><b>ブラシ:</b></i> ブラシの形状。 ベル とスムースを選択できます。</li>
-
-          <li><i><b>表示部分のみ:</b></i> これをチェックすると調整中のポイントのみ表示されます。裏面にあるポイントの調整を行う場合にはこれをチェックすると良いでしょう。</li>
-
-          <li><i><b>自動正規化:</b></i> ブラシのストロークごとにポイントのバーテックスウェイトの値は自動調整されます。それぞれのポイントのウエイトの合計を確実に1になるようにします。</li>
-        </ul>
-
-        <div align="center"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p> <h2>Vertex Weight Tool</h2></p>
+					</div>
+					<p>If you bind a skeleton to a mesh via the <a href="../../../Tags/SkeletonTag/SkeletonTag.html">skeleton tag</a> Cheetah3D automatically generates vertex weights for all joints. But these vertex weights are often not perfect and require some manual adjustments.</p>
+					<p>For example in the image below Cheetah3D assigned the toe joint in the left foot also some vertices in the right foot. If you now animate the left foot also the vertices in the right foot will move which isn't desired. It's now the job of the vertex weight tool to fix these wrongly assigned weights.</p>
+					<div align="center">
+						<p><img src="VertexWeight1.jpg" alt="" height="228" width="239" border="0"></p>
+					</div>
+					<p><b><i>Modes<br>
+							</i></b>This tool works in all modes equally.</p>
+					<ul>
+						<li><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"><br>To use the vertex weight tool just select &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Character<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Vertex Weight&quot; from the menu. The vertex weight tool will now show up in the tool properties. To modify the vertex weight of a certain joint you have to select that joint in the joint table of the <a href="../../../Tags/SkeletonTag/SkeletonTag.html">skeleton tag</a>. Once the appropriate joint is selected, areas with weight 1 will appear in a bright red while areas with a lower weight will fade to yellow. Vertices with zero weight appear grey. To adjust the weights just paint with the mouse in the 3D view.						
+						
+					</ul>
+					<div align="center">
+						<p> </p>
+					</div>
+					<div align="left">
+						<p><b>Keys</b></p>
+					</div>
+					<ul>
+						<div align="left">
+							<li><b><i>none</i></b>
+						</div>
+					</ul>
+					<p><b>Properties</b></p>
+					<ul>
+						<li><i><b>Size:</b></i> The size of the brush in screen space.						<li><i><b>intensity: </b></i>The intensity of the brush.
+						<li><i><b>Mode:</b></i>
+						<ul>
+							<li><i>Subtract:</i> Decreases vertex weights.
+							<li><i>Add:</i> Increases vertex weights.
+						</ul>
+						<li><i><b>Brush: </b></i>Shape of the brush. You can choose between a constant of a bell shaped brush.
+						<li><i><b>Only visible: </b></i>If checked on only visible vertices will be adjusted. Check this property of if you also want to adjust the vertices on the back of the model which are invisible.
+						<li><i><b>Auto-normalize: </b></i>After every brush stoke the vertex weights of the skeleton tag will be auto-normalized. That ensures that the sum of weights of each vertex is 1.
+					</ul>
+					<ul>
+											</ul>
+					<div align="center">
+						<p></p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

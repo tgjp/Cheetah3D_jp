@@ -1,108 +1,1 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>マテリアルタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
-<body>
-<!-- header -->
-<script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
-<script language="javascript" type="text/javascript">header();</script>
-<!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>マテリアルタグ</h2>
-        </div>
-
-        <p>オブジェクトブラウザでポリゴンオブジェクトにマテリアルをドラッグ・ドロップすると、マテリアルタグが自動的に作成されます。（訳注：現バージョンではマテリアルを3D ビュー上のポリゴンオブジェクトに直接ドラッグ・ドロップする事も可能です。）ポリゴンオブジェクト以外の他のオブジェクトにはマテリアルを適用する事はできません。マテリアルタグのアイコンは、使用したマテリアルの小さなプレビューを示しています。マテリアルブラウザで、マテリアルを削除した場合、すべてのマテリアルを参照しているマテリアルタグも削除されます。</p>
-
-        <p>マテリアルタグの設定でシェーディング空間は決定され、レンダラーに送られる前に UV 座標の最終変換が可能です。この UV 座標の最終変換は、特にパラメトリックポリゴンオブジェクトに付いている UV 座標を使う場合、便利でしょう。</p>
-
-        <div align="left">
-          <p><b>メッシュに複数のマテリアルを使用する<br></b> メッシュごとに 16 個の違うマテリアルを割り当てる事が可能です。全体のメッシュからポリゴンの選択範囲のみにマテリアルを適用するには、<a href="../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト（ raw polygon object ）</a>の別々のポリゴン選択セットを使用します。手順を説明していいる 例 3) を見てください。</p>
-
-          <p><i>注意: もし１つのポリゴンオブジェクトに１つ以上のマテリアルを適用している場合、オブジェクトブラウザに並んだ最も右のマテリアルタグがポリゴンのシェーディングに使用されます。例えば、もし５つのマテリアルタグを１つのメッシュ（ポリゴンオブジェクト）に適用していて、最後（一番右）のマテリアルタグの</i> <b><i>"ポリゴン選択セット"</i></b> が "<b>すべて</b>" に設定されいた場合、すべてのポリゴンはこの最後のマテリアルタグのマテリアルを使ってシェーディングされます。</p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>シェーダスペース:</b></i> オブジェクトがワールド座標系かオブジェクト座標系のどちらでシェーディングされるかを選択します。例 1) の図で２つのシェーディング空間の違いを見てください。</li>
-
-          <li><b><i>ポリゴン選択セット:</i></b> ポリゴン選択セットにマテリアルの適用を制限します。ポリゴンオブジェクトで設定されたポリゴン選択セットを使用します。</li>
-
-          <li><i><b>オフセット:</b></i> <i>オフセット</i>値で、シェーダスペースを移動します。</li>
-
-          <li><i><b>回転:</b></i> <i>回転</i>値で、シェーダスペースを回転します。</li>
-
-          <li><b>拡大縮小:</b> <i>拡大縮小</i>値で、シェーダスペースを拡大・縮小します</li>
-
-          <li><i><b>UV オフセット:</b></i> レンダラーに送られる前に、オフセットを UV 座標に追加します。</li>
-
-          <li><i><b>UV 回転:</b></i> レンダラーに送られる前に、回転を UV 座標に追加します。</li>
-
-          <li><b><i>UV 拡大縮小</i>:</b> レンダラーに送られる前に、拡大縮小を UV 座標に追加します。</li>
-        </ul>
-
-        <p>（訳注：プロパティの オフセット・回転・拡大縮小 と UV オフセット・UV 回転・UV 拡大縮小 の違いに注意してください。前者は Wood や Marble などプロシージャルに模様を生成するマテリアルに対応し、後者は Material 等のテクスチャを適用できるマテリアルに、それぞれ対応します。また UV オフセット・UV 回転・UV 拡大縮小 は UV 座標の２次元の移動変形である事にも注意が必要です。）</p>
-
-        <p><b>例 1)<br></b> この例では、"Wood" マテリアルを適用した回転した幹（オブジェクト）を見る事ができます。ワールドスペースでシェーディングしている場合、 "Wood" マテリアルは、木の幹が地球に垂直に立っているように計算されます。この振る舞いはあまり望まれないでしょう。オブジェクトスペースで幹（オブジェクト）をシェーディングした場合、シェーダスペースは幹で（の座標系に従って）回転させられるので、望む振る舞いを得る事になります。</p>
-
-        <p>シェーダスペースは、オフセット・回転・拡大縮小 プロパティで直接修正する事も可能です。</p>
-
-        <div align="center">
-          <p><img src="MaterialTagWorld.jpg" alt="" height="150" width="150" border="0"><img src="MaterialTagObject.jpg" alt="" height="150" width="150" border="0"></p>
-
-          <p>ワールド スペース オブジェクト スペース</p>
-        </div>
-
-        <div align="left">
-          <p><b>例 2)<br></b> この例では、ポリゴン選択セットにマテリアルを適用する方法を順に説明しています。</p>
-        </div>
-
-        <ol>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li>球体オブジェクトを作成し、"編集可能にする" を実行します。</li>
-
-                <li>そのポリゴンオブジェクト のプロパティの<b><i>ポリゴン選択セット</i></b> を 1 に設定します。</li>
-
-                <li>いくつかのポリゴンを選択します。</li>
-
-                <li>ポリゴンオブジェクト のプロパティの<b><i>ポリゴン選択セット</i></b> を 0 に戻します。ポリゴン選択セット 1 に先ほどのポリゴン選択範囲が保存されるように、これを行います。</li>
-
-                <li>青いマテリアルをポリゴンオブジェクト に適用します。オブジェクト全体は青になります。</li>
-
-                <li>オブジェクトブラウザの（先ほど適用した）マテリアルタグをクリックし、マテリアルタグのプロパティを表示させます。</li>
-
-                <li>マテリアルタグのプロパティの "ポリゴン選択セット" を 1 に設定します。これで、マテリアルの適用範囲はポリゴンオブジェクトの<b><i>ポリゴン選択セット</i></b> 1 の選択セットに制限されます。</li>
-              </ul>
-            </div>
-          </li>
-        </ol>（訳注：現バージョンでは、マテリアルを直接3D ビュー上のオブジェクトにドラッグ・ドロップして適用する事が可能になりました。その際ポリゴンが選択されている場合は、自動的に "ポリゴン選択セット" が設定され、選択ポリゴンのみにマテリアルが適用されるように調整されます。）
-
-        <div align="center">
-          <p><img src="MaterialTag1.jpg" alt="" height="192" width="195" border="0"></p>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
-<!-- footer -->
-<script language="javascript" type="text/javascript">footer();</script>
-<!-- footer end-->
-</body>
-
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>  <head>    <meta content="text/html; charset=iso-8859-1" http-equiv="content-type">    <meta name="generator" content="Adobe GoLive 6">    <title>Material Tag</title>    <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">    <style type="text/css">div.c3 {margin-left: 2em; text-align: left}  div.c2 {text-align: left}  div.c1 {text-align: center}  </style>  </head>  <body>    <!-- header -->    <script language="javascript" type="text/javascript" src="../../Images/common.js"></script><script language="javascript" type="text/javascript">header();  </script><!-- header end -->    <table border="0" cellpadding="8" cellspacing="8" width="100%">      <tbody>        <tr>          <td>            <div class="c1">              <h2>Material Tag</h2>            </div>            <div class="c2">              <p>The Material Tag will be created automatically when you drag                and drop a material onto a polygon object in the object browser.                You cannot assign materials to other objects that aren't polygon                objects. The icon of the Material Tag will show a small preview                of the used material. When you delete a material in the material                browser all Material Tags which reference the material will be                deleted too.</p>              <p>Within the Material Tag the shading space will be determined                and a final transformation to the UV coordinates is possible                before being sent to the renderer. This last transformation of                the UV coordinates is especially useful for parametric polygon                objects when natural UV coordinates are used.</p>              <p><strong>Multiple material per mesh<br>                </strong> It is possible to allocate up to 16 different                materials per mesh. Use the independent polygon selections of                the <a href="../../Objects/PolygonObjects/Polygonobject.html">raw                  polygon object</a> to constrain a material to a selection of                polygons from the entire mesh. See Example 3 for a step by step                explanation.</p>              <p><em>Attention: If you assign more than one material to one                  single polygon then the right most Material Tag in the object                  browser will be used for shading that polygon. For example, if                  you have five Material Tags assigned to one mesh, and in the                  last Material Tag</em> <strong><em>shading selection</em></strong>                <em>is set to <strong>all</strong> then all polygons will use                  the material of the last Material Tag.</em></p>              <p><strong>Properties</strong></p>              <ul>                <li><em><strong>Material:</strong></em> Links to the material                  which is used for shading.</li>                <li><strong><em>Shading selection:</em></strong> Constrain the                  material to a polygon selection. Use the index of the polygon                  selection you used in the Polygonobject.</li>                <li><em><strong>Shading space:</strong></em> Determines if the                  object will be shaded in world space or object space. See                  Example 1 for a visual example of the difference between these                  two shading spaces.</li>                <li><em><strong>Tangent space:</strong></em> Determines how the                  shading tangents are computed. The shading tangents are mainly                  needed for bump mapping.</li>                <li><em><strong>Offset:</strong></em> Translate the shading                  space by <em>offset</em>.</li>                <li><em><strong>Rotation:</strong></em> Rotate the shading space                  by <em>rotation</em>.</li>                <li><strong>Scale:</strong> Scale the shading space by <em>scale.</em></li>                <li><em><strong>UV offset:</strong></em> Gives the uv coordinate                  a final offset before being sent to the renderer.</li>                <li><em><strong>UV rotation:</strong></em> Gives the uv                  coordinate a final rotation before being sent to the renderer.</li>                <li><strong><em>UV scale</em>:</strong> Gives the uv coordinate                  a final scale before being sent to the renderer.</li>              </ul>              <p><strong>Example 1<br>                </strong> In this example you can see a rotated trunk with a                wood material added. If you shade in world space the wood                material will be calculated as if the tree trunk is standing                perpendicular to the earth. This behavior is often not what was                wanted. If we shade the trunk in object space the spading space                will be rotated with the trunk and we get the expected behavior.</p>              <p>The shading space could also be modified manually with the <em><strong>offset</strong></em>,                <em><strong>rotation</strong></em> and <strong><em>scale</em></strong>                properties.</p>            </div>            <div class="c1">              <p><img src="MaterialTagWorld.jpg" alt="" border="0" height="150"                  width="150"><img                  src="MaterialTagObject.jpg"                  alt=""                  border="0"                  height="150"                  width="150"></p>              <p>world space object space</p>            </div>            <div class="c2">              <p><strong>Example 2<br>                </strong> This example will explain step by step how to assign a                material to a polygon selection.</p>              <ul>                <li>Create a ball object and make it editable.</li>                <li>Set the Polygonobject property <strong><em>polygon                      selection</em></strong> to 1.</li>                <li>Select some polygons.</li>                <li>Set back the Polygonobject property <strong><em>polygon                      selection</em></strong> to 0. We do this so that our                  selection is saved in polygon selection 1.</li>                <li>Assign a blue material to the Polygonobject. The whole ball                  will be blue.</li>                <li>Click on the Material tag in the object browser. The                  properties of the material tag will appear.</li>                <li>Set the Material tag property <strong><em>shade selection</em></strong>                  to 1. Now the material will be constrained to polygon                  selection 1 of our Polygonobject.</li>              </ul>            </div>            <div class="c1">              <p><img src="MaterialTag1.jpg" alt="" border="0" height="192" width="195"></p>            </div>          </td>        </tr>      </tbody>    </table>    <!-- footer -->    <script language="javascript" type="text/javascript">footer();  </script><!-- footer end-->  </body></html>

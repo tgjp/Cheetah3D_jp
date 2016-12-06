@@ -1,101 +1,75 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>IK ハンドルタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>IK Handle Tag</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p>
+						<h2>IK Handle Tag</h2>
+					</div>
+					<p>The IK handle tag will be used to define an IK ( <u>I</u>nverse <u>K</u>inematics) chain. IK is often used to pose characters. For example to move arms and legs. With IK you no longer have to adjust the rotation of every single joint but just have to move the end of the IK chain. The IK handle. <br>
+					</p>
+					<p>If you want to position the hand in the example below you have two choices.</p>
+					<p>1. FK : With FK (<u>F</u>orward <u>K</u>inematics) we first have to rotate the shoulder joint and then we have to rotate the elbow joint to position the hand. That is not very efficient of course.  </p>
+					<p>2. IK : For inverse kinematics we have to attach a IK Handle Tag to the wrist joint once. Then we set the length property to 2 since we want that the IK chain goes until the shoulder joint. Once set up you just have to move the wrist joint to position the hand and Cheetah3D automatically sets the rotations of the shoulder and elbow joints.</p>
+					<p><b>Example:</b></p>
+					<p>Lets see at an example how to set up an IK chain for the right arm of an character. </p>
+					<ol>
+						<li>Lets assume you already have a skeleton. 
+						<li>Bend the elbow slightly in the direction into which the arm should bend later. It is important that you make that because the IK solver needs a small hint to know into which direction the arm should bend.
+						<li>Select the wrist joint and attach an IK handle tag to it via the toolbar. This also automatically sets the preferred angles of the joints. So it is important that you've bent the elbow before you've attached the IK tag.
+						<li>You are done. For a normal arm the default values of the IK Handle tag are already sufficient.
+						<li>Moving the wrist joint now bends the hole arm.
+					</ol>
+					<div align="center">
+						<p><img src="IKHandle1.jpg" alt="" height="227" width="184" border="0"><br>
+							IK chain with length=2.</p>
+					</div>
+					<div align="left">
+						<p>To constraint the IK chain you can use either the <a href="../IKConstraintsTag/IKConstraintsTag.html">IK Constraints Tag</a>. For example to limit set rotation values of a certain joint or to adjust the stiffness of a joint.</p>
+						<p>If you double click on a joint which have an IK tag with &quot;target&quot; object set, Cheetah3D doesn't select the joint but it's target object.</p>
+					</div>
+					<p><b>Properties:</b></p>
+					<ul>
+						<li><b><i>solver:</i></b>  
+						<ul>
+							<li>3D solver: It tries  to reach the target position by rotating with all rotation angles.
+							<li>2D solver: It tries to rotate the IK chain just in a plan spanned up by the root joint, the target joint and the second joint in the IK chain. The chain therefore just moves within a plane. This solver is especially useful for animating legs and arms of characters.						</ul>
+						<li><i><b>length:</b></i> The length of the IK chain.
+						<li><b><i>target:</i></b> An object which the IK handle tries to reach.
+						<li><b><i>pole:</i></b> The pole vector (vector from the root of the IK chain to the pole object) and the target vector (vector form the root to the target object) span up a plane in 3D space. The 2D IK solver now tries to move the IK chain within that plane.  						<li><b><i>color: </i></b>The color of the IK handle and the line connecting the IK handle with the root of the IK chain.
 
-    <tr>
-      <td>
-        <div align="center">
-          <h2>IK ハンドルタグ</h2>
-        </div>
-
-        <p>IK ハンドルタグは、IK （インバーキネマティクス）チェインを設定するために使用されるでしょう。例えば、腕や脚を動かすために。IK を使えば、１つ１つのジョイントの回転を調整する必要はなくなり、ただ IK チェインの最後のジョイントを移動させるだけで良くなります。その最後のジョイント（に付けられるタグ）が、IK ハンドルタグです。<br></p>
-
-        <p>例えば下のイメージの手の位置を調整したい場合、２つの方法を選択できます。</p>
-
-        <p>1. FK : FK （フォワードキネマティクス）を使う場合、手の位置を調整するには、まず肩のジョイントを回転させなければなりません。そして、肘のジョイントを回転させます。（この親ジョイントから順に調整する方法は）勿論充分便利な方法ではありません。</p>
-
-        <p>2. IK : インバーキネマティクスを使用するために、１度手首のジョイントにIK ハンドルタグを付ける必要があります。そして、IK チェインが肩のジョイントまで続かせたいので、"長さ" プロパティを 2 にセットします。１度セットアップすると、手の位置を調整するのに手首のジョイントのみを移動させるだけでよくなり、Cheetah3D は肩と肘のジョイントの回転を自動的にセットします。</p>
-
-        <p><b>例:</b></p>
-
-        <p>キャラクターの右腕の IK チェインをセットアップする方法をこの例で確認してください。</p>
-
-        <ol>
-          <li>すでに骨組みは作成済みであるとします。</li>
-
-          <li>後で腕を曲げる方向に、少し肘を曲げておきます。IK ソルバーが腕がどの方向に曲がるかを知るちょっとしたヒントが必要なため、これは重要です。</li>
-
-          <li>手首のジョイントを選択し、ツールバーからIK ハンドルタグを適用します。これはジョイントのデフォルト角度（ prefered angle ）を自動的に設定します。そのため IK タグを適用する前に、肘を曲げておく事は重要になります。</li>
-
-          <li>完了しました。通常の腕の場合は、IK ハンドルタグのデフォルト設定値で既に充分でしょう。</li>
-
-          <li>手首のジョイントの移動で、腕全体が曲がります。</li>
-        </ol>
-
-        <div align="center">
-          <p><img src="IKHandle1.jpg" alt="" height="227" width="184" border="0"><br>
-          長さ: 2 の IK チェイン</p>
-        </div>
-
-        <div align="left">
-          <p>IK チェインに制約をかけるために、<a href="../IKConstraintsTag/IKConstraintsTag.html">IK コンストレインタグ</a>も使う事ができます。例えば、特定のジョイントの角度を制限したり、ジョイントの曲がりにくさを調整したりできます。</p>
-
-          <p>オブジェクトブラウザ上で "ターゲット" がセットされた IK タグを持つジョイントをダブルクリックすると、Cheetah3D はジョイントの選択を解除し、そのターゲットオブジェクトを選択します。</p>
-        </div>
-
-        <p><b>プロパティ:</b></p>
-
-        <ul>
-          <li>
-            <b><i>IK ソルバー:</i></b>
-
-            <ul>
-              <li>3D: すべての回転角度を回転させる事によって、ターゲット位置にとどこうとします。</li>
-
-              <li>2D: ルートジョイント、ターゲットジョイント、 IK チェインの２番目のジョイントによって上に伸張して構成された平面上でのみ IK を回転させようとします。このソルバーは、特にキャラクターの脚や腕をアニメーションさせる場合に便利でしょう。</li>
-            </ul>
-          </li>
-
-          <li><i><b>長さ:</b></i> IK チェインの長さ</li>
-
-          <li><b><i>ターゲット:</i></b> IK ハンドルが届こうとするオブジェクト</li>
-
-          <li><b><i>ポール:</i></b> ポールベクトル（ IK チェインのルートオブジェクトからポールオブジェクトへ向いたベクトル）と、ターゲットベクトル（ルートオブジェクトからターゲットオブジェクトへ向いたベクトル）は、3D 空間に平面を構成します。2D IK ソルバーは、この平面上で IK チェインを移動させようとします。</li>
-
-          <li><b><i>カラー:</i></b> IK ハンドルと、IK ハンドルと IK チェインのルートオブジェクトを結ぶラインのカラー。</li>
-
-          <li><i><b>デフォルト角度を使用:</b></i> IK チェインのデフォルト角度（ preferred angle ）は、IK ソルバーがターゲット位置にとどき始める最初のポーズを定義します。このプロパティは、デフォルトで有効で、オブジェクトに IK ハンドルタグを適用した時点でこのデフォルト角度は自動的にセットされます。</li>
-
-          <li><i><b>デフォルト角度の設定:</b></i> IK チェイン内のジョイントのデフォルト角度（ preferred angle ）をセットします。</li>
-
-          <li><i><b>ターゲットの追加:</b></i> シーンにフォルダオブジェクトを追加し、自動的にその新規に作られたフォルダオブジェクトを IK チェインのターゲットに設定します。</li>
-
-          <li><i><b>ポールの追加:</b></i> シーンにフォルダオブジェクトを追加し、自動的にその新規に作られたフォルダオブジェクトを IK チェインのポールに設定します。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+						<li><i><b>use preferred angle:</b></i> The preferred angles of an IK chain defines the start pose where the IK solver starts to reach the target position. This property is enabled by default and the preferred angles are set automatically when you attach am IK handle tag to an object.
+						<li><i><b>set preferred angle:</b></i> Sets the preferred angles of the joints in an IK chain. 
+						<li><i><b>add target:</b></i> Adds a folder object to the scene and automatically sets the newly created folder as the target object of the IK chain.
+						<li><i><b>add pole:</b></i> Adds a folder object to the scene and automatically sets the newly created folder as the pole object of the IK chain.
+					</ul>
+					<p></p>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

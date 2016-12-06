@@ -1,58 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>パレントコンストレインタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Parent Constraint Tag</title>		<link href="../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <div align="center">
-            <h2>パレントコンストレインタグ</h2>
-          </div>
-        </div>
-
-        <div align="left">
-          <p>このタグは表現式(Expression)タグです。タグを持つオブジェクトとターゲットオブジェクトである子オブジェクトの相対位置と相対方向を修正します。（ターゲットオブジェクトに追従してタグを持つオブジェクトが移動します。）</p>
-
-          <p>例えば、キャラクタがオブジェクトを持ち上げるようなことをさせることが出来ます。</p>
-
-          <p><b>プロパティ</b></p>
-
-          <ul>
-            <li><i><b>制限:</b></i> 選択したタグの要素に対し修正を許可します。</li>
-
-            <li><b><i>位置オフセット:</i></b> ターゲットの原点をオフセットした位置にグローバル位置をセットします。</li>
-
-            <li><b><i>回転オフセット:</i></b>ターゲットの原点を回転オフセットした向きにグローバル向きをセットします。</li>
-
-            <li><b><i>ターゲット:</i></b> タグを持つオブジェクトはターゲットオブジェクトに従って動かされます。</li>
-
-            <li><b><i>オフセット自動設定:</i></b> これがチェックされていると、タグを持つオブジェクトの位置は保持されターゲットオブジェクトの位置はタグを持つオブジェクトとの相対位置となります。 従って、ターゲットオブジェクトをターゲットプロパティ欄にドラッグドロップすると、オフセットプロパティは自動的に調整されます。よって、現在の位置を保持したい場合はオフセット自動設定をチェックしておき、ターゲットオブジェクトをドラッグドロップしてください。</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p></p>						<div align="center">							<h2>Parent Constraint Tag</h2>						</div>					</div>					<div align="left">						<p>This tag is an expression tag. It modifies the tags owners position and rotation in such a manner that the tags owner behaves has it was a child object of the target object.</p>						<p>You can use this for example to let you character pick up object.</p>						<p><b>Properties</b></p>						<ul>							<li><i><b>Constrain:</b></i> Chose which components of the tag are allowed to be modified.							<li><b><i>Position offset:</i></b> Set a global position offset of the targets origin.							<li><b><i>Rotation offset:</i></b> Set a global rotation offset of the targets origin.							<li><b><i>Target: </i></b>The target object according to which the tag owner is moved.							<li><b><i>Maintain: </i></b>If this property is checked on the original transformation of the tags owner will be maintained and the position of the target object will be relative to this position. Therefore the offset property of this tag will be adjusted automatically when you drag &amp; drop the target object on the target property field. So if you want to maintain the position first check on the maintain property and then assign the target object.						</ul>					</div>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

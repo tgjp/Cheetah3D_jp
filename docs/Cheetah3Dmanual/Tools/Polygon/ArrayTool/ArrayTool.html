@@ -1,89 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>配列複製ツール</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Array Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>配列複製ツール</h2>
-        </div>
-
-        <p>配列複製ツールは、ポリゴン選択範囲の複数コピーを作成するために使われる事ができます。これは、ほとんど<a href="../CloneTool/CloneTool.html">複写ツール</a>と同じですが、３次元の配列にコピーを作成し、そのコピーはローカル座標の X / Y / Z 軸に整列している点が違います。</p>
-
-        <div align="center">
-          <p><img src="ArrayTool1.jpg" alt="" height="270" width="317" border="0"> <img src="ArrayTool2.jpg" alt="" height="270" width="317" border="0"><br>
-          -X 軸に沿ってポリゴン選択範囲を２回複製しています。</p>
-        </div>
-
-        <p><b>編集モード</b><br>
-        配列複製ツールは、<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>にのみ適用する事ができます。これはポリゴンモードでのみ使用可能です。</p>
-
-        <ul>
-          <li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>
-          配列複製ツールを使用するために、<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>の任意のポリゴンを選択します。もし何もポリゴンを選択していない場合は、すべてのポリゴンメッシュが複製されます。そして、" ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴン<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">配列複製 " メニューコマンドを呼び出します。次に、プロパティエディタで配列複製ツールの必要なすべてのパラメータを設定します。"適用" をクリックすると、選択されたポリゴンが配列上に複製されます。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>X方向のコピー配置数:</b></i> X 軸方向のコピー数</li>
-
-          <li><i><b>Y方向のコピー配置数:</b></i> Y 軸方向のコピー数</li>
-
-          <li><b><i>Z方向のコピー配置数:</i></b> Z 軸方向のコピー数</li>
-
-          <li><b><i>除外率:</i></b> コピーされない割合</li>
-
-          <li><b><i>オフセット配置:</i></b> コピーが作成される間隔の距離</li>
-
-          <li><b><i>位置ランダム値:</i></b> 各複製の位置にランダムな値を追加</li>
-
-          <li><b><i>拡大縮小ランダム値:</i></b> 複製の拡大縮小値に乗算されるランダムな拡大縮小値</li>
-
-          <li><b><i>比率を保持:</i></b> "<b><i>拡大縮小ランダム値</i></b>" プロパティを使用した場合に、オブジェクトの比率を保持</li>
-
-          <li><b><i>回転ランダム値:</i></b> 複製にランダムな回転値を追加</li>
-
-          <li><b><i>適用:</i></b> "適用" ボタンをクリックして、配列複製ツールを実行</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Array Tool</h2></p>					</div>					<p>The array tool can be used to create multiple shifted copies of a polygon selection. It is quite similar to the <a href="../CloneTool/CloneTool.html">clone tool</a> with the  difference that it creates it copies in a three dimensional array and that the copies are always aligned to the local X-, Y- and Z-axis.</p>					<div align="center">						<p><img src="ArrayTool1.jpg" alt="" height="270" width="317" border="0"> <img src="ArrayTool2.jpg" alt="" height="270" width="317" border="0"><br>Cloning the polygon selection two times along the negative X axis.</p>					</div>					<p><b><i>Modes<br>							</i></b>The array tool can only be applied to <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon objects</a>. It's only available in polygon mode.</p>					<ul>						<li><img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><br>To use the array tool, select some polygons of a <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon object</a>. If you don't select any polygons, all polygons of the mesh will be cloned. Then call the menu command &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Polygon<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Array&quot;. Now set all the necessary parameters of the array tool in the tool properties editor. After clicking the apply button, the selected polygons will be cloned into an array.				</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>Copies: </b></i>The number of copies into the X/Y/Z direction.						<li><b><i>Holes: </i></b>The percentage of copies which will be left.						<li><b><i>Offset: </i></b>The offset between the copies.												<li><b><i>Position variation: </i></b>Adds a random vector to the position of the clone.						<li><b><i>Scale variation: </i></b>Multiplies the scale of the clone by a random scale.						<li><b><i>Keep ratio: </i></b>The object proportions will be retained while using the <b><i>scale variation</i></b> property.						<li><b><i>Rotation variation: </i></b>Adds a random rotation to the clone.						<li><b><i>Apply: </i></b>Press the apply button to perform the array tool.					</ul>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

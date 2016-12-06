@@ -1,185 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>押し出しオブジェクト</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Extrude Object</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>押し出しオブジェクト</h2>
-        </div>
-
-        <div align="left">
-          <p>押し出しオブジェクトは、下の画像のようにスプラインを立体のポリゴンオブジェクトへ変形させる、素早く融通のきく方法を提供します。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Extrude1.jpg" alt="" width="380" height="184" border="0"></p>
-        </div>
-
-        <p><b><i>使い方</i></b><br>
-        押し出しクリエータオブジェクトを使うには、<a href="../../SplineObjects/Spline.html">スプラインオブジェクト</a>を１つの押し出しオブジェクトにドラッグ＆ドロップし、X 方向距離、Y 方向距離, Z 方向距離パラメータを変更してどのくらい押し出したいかを決定します。それから、カバーを指定するといった、押し出しがどのように働くかを定義する若干の追加パラメータを任意に設定する事が出来ます。時計回りでないスプラインのため、押し出されたポリゴンが外側ではなく内側を向いているような場合（それは意図したかもしれませんし、意図したものではないかもしれませんが）に、法線を反転をチェックする事が必要かもしれません。</p>
-
-        <div align="center">
-          <p><img src="Extrude2.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>押し出しを使った、3D テキストの作成は大変簡単です。スプラインテキストオブジェクトを作成し、押し出しオブジェクトを作成し、スプラインテキストオブジェクトをそれにドロップするだけです。すぐに、3D テキストが完成します。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="Extrude3.jpg" alt="" width="340" height="160" border="0"></p>
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>分割数:</b></i>押し出されたポリゴンを作成する際に、どれくらい分割するかを定義します。</li>
-
-          <li><i><b>X 方向距離:</b></i> X 軸にスプラインが押し出されるべきオフセット量</li>
-
-          <li><i><b>Y 方向距離:</b></i> Y 軸にスプラインが押し出されるべきオフセット量</li>
-
-          <li><i><b>Z 方向距離:</b></i> Z 軸にスプラインが押し出されるべきオフセット量</li>
-
-          <li><i><b>法線を反転:</b></i> オフの場合（デフォルト）、時計回りのスプラインは外側を向いた押し出されたポリゴンを生成します。これをチェックすると、法線が反転するので、ポリゴンは内側を向きます。</li>
-
-          <li><b><i>カバー:</i></b> 押し出されたスプラインが、空洞であるか、または正面、背面、両面でフタをされるかを決定します。</li>
-
-          <li><b><i>半径:</i></b> ベベルの半径</li>
-
-          <li><b><i>マイター制限角度:</i></b> マイター制限角度は、ポリゴンの角が傾斜しているどの段階で覆われるかを決定します。高いマイター制限角度の値は、鋭い角を許容します。下のテーブルを参照してください。</li>
-        </ul>
-
-        <div align="center">
-          <table width="122" border="1" cellspacing="2" cellpadding="0">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="Extrude10.jpg" alt="" height="150" width="150" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Extrude9.jpg" alt="" height="150" width="150" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div align="center">
-                  マイター制限角度=1.5
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  マイター制限角度=3.0
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <ul>
-          <li><b><i>タイプ:</i></b> 押し出しのエッジのベベルタイプを決定します。</li>
-        </ul>
-
-        <div align="center">
-          <table width="196" border="1" cellspacing="2" cellpadding="0">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="Extrude7.jpg" alt="" height="100" width="100" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Extrude6.jpg" alt="" height="100" width="100" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Extrude5.jpg" alt="" height="100" width="100" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Extrude8.jpg" alt="" height="100" width="100" border="0">
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  <img src="Extrude4.jpg" alt="" height="100" width="100" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div align="center">
-                  なし
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  リニア
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  凸面カーブ
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  凹面カーブ
-                </div>
-              </td>
-
-              <td>
-                <div align="center">
-                  階段
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Extrude Object</h2>						</p></div>					<div align="left">						<p>The extrude object offers a quick and versatile way of transforming a spline into a solid polygon object, as in the images below.</p>					</div>					<div align="center">						<p><img src="Extrude1.jpg" alt="" width="380" height="184" border="0"></p>					</div>					<p><b><i>Usage</i></b><br>						To use the extrude creator object, you just have to drag and drop a <a href="../../SplineObjects/Spline.html">spline object</a> into a single extrude object, then determine how large you want the extrude by changing the X-direction, Y-direction and Z-direction parameters. You can then optionally set some additional parameters which determines how the extrude operation will operate, such as specifying a cover. For some splines that do not have a clockwise winding, you may need to chose to Flip Normals, since the extruded polygons will be facing inwards instead of outwards (which may or may not be what you intended).</p>					<div align="center">						<p><img src="Extrude2.jpg" alt="" border="0"></p>					</div>					<div align="left">						<p>Making 3D text is very easy with the Extrude object. Simply create a Text object with the text you'd like, create an Extrude Object, and drop the text object inside of it. Instantly, you'll get 3D text.</p>					</div>					<div align="center">						<p><img src="Extrude3.jpg" alt="" width="340" height="160" border="0"></p>						<p></p>						<p></p>					</div>					<p><b>Properties</b></p>					<ul>						<li><i><b>Sections:</b></i> Determines how many subsections to use when creating the extruded polygons.										<li><i><b>X-direction:</b></i> The X offset amount by which the spline should be extruded.												<li><i><b>Y-direction:</b></i> The Y offset amount by which the spline should be extruded.												<li><i><b>Z-direction:</b></i> The Z offset amount by which the spline should be extruded.												<li><i><b>Flip normals:</b></i> When off (by default), clockwise-winding splines result in the extruded polygons to be outward-facing. Tick this to flip the normals so that they face inwards instead.						<li><b><i>Cover: </i></b>Determines if the extruded spline will be hollow, or will incorporate a covered front, back, or both.						<li><b><i>Radius: </i></b>The radius of the bevel.						<li><b><i>Miter limit: </i></b>The miter limit determines when an corner of an polygon will be capped while beveling. The higher the miter limit the sharper corners will be allowed. See the table below.					</ul>					<div align="center">						<table width="122" border="0" cellspacing="5" cellpadding="0">							<tr>								<td>									<div align="center">										<img src="Extrude10.jpg" alt="" height="150" width="150" border="0"></div>								</td>								<td>									<div align="center">										<img src="Extrude9.jpg" alt="" height="150" width="150" border="0"></div>								</td>							</tr>							<tr>								<td>									<div align="center">										<i>miter limit=1.5</i></div>								</td>								<td>									<div align="center">										miter limit=3.0</div>								</td>							</tr>						</table>						<p></p>					</div>					<ul>						<li><b><i>type: </i></b>Determines the bevel type at the edges of the extrude. See table below.					</ul>					<div align="center">						<table width="196" border="0" cellspacing="5" cellpadding="0">							<tr>								<td>									<div align="center">										<img src="Extrude7.jpg" alt="" height="100" width="100" border="0"></div>								</td>								<td>									<div align="center">										<img src="Extrude6.jpg" alt="" height="100" width="100" border="0"></div>								</td>								<td>									<div align="center">										<img src="Extrude5.jpg" alt="" height="100" width="100" border="0"></div>								</td>								<td>									<div align="center">										<img src="Extrude8.jpg" alt="" height="100" width="100" border="0"></div>								</td>								<td>									<div align="center">										<img src="Extrude4.jpg" alt="" height="100" width="100" border="0"></div>								</td>							</tr>							<tr>								<td>									<div align="center">										<i>none</i></div>								</td>								<td>									<div align="center">										<i>linear</i></div>								</td>								<td>									<div align="center">										<i>convex</i></div>								</td>								<td>									<div align="center">										<i>concave</i></div>								</td>								<td>									<div align="center">										<i>stair</i></div>								</td>							</tr>						</table>						<p></p>					</div>					<div align="left">						<p><b></b></p>					</div>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

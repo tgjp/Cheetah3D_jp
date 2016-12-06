@@ -1,79 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>最適化ツール</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Optimize Tool</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>最適化ツール</h2>
-        </div>
-
-        <p><b>（訳注：バージョン 4.3 から 最適化ツールは、プロパティ無しのヘッドレスツールではなくプロパティ付きのツールに変更されました。この記述では、各プロパティのオプションについて簡単に解説を加えています。）</b></p>
-
-        <p><b>最適化ツール</b> の目的は、使用されていないポイント（孤立ポイント）を削除する事です。例えば、ポリゴンのみを削除すると、ポリゴンの面は削除されますが、それを構成していたポイントは削除されません。すべての使用されていないポイントを１クリックで削除するには、このツールを使用します。より理解するために下のイメージを見てください。（訳注：現バージョンでは、ツールを選択した後で、ツールプロパティの "OK" ボタンを押す必要があります。）</p>
-
-        <div align="center">
-          <p><img src="OptimizeTool1.jpg" alt="" height="212" width="242" border="0"> <img src="OptimizeTool2.jpg" alt="" height="212" width="242" border="0"></p>
-        </div>
-
-        <p><b><i>編集モード<br></i></b> このツールは<a href="../../../Objects/PolygonObjects/Polygonobject.html">ローポリゴンオブジェクト</a>に対してのみ使用できます。</p>
-
-        <ul>
-          <li><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>
-          最適化ツールは、ツールビューに表示されないヘッドレスツールです。（訳注：バージョン 4.3 で変更されました。）これを使用するには、使用されていないポイントを除去したいローポリゴンオブジェクトを選択し、"ツール<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">ポリゴン<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">最適化" メニューコマンドを呼び出します。（ "OK" ボタンをクリックすると）ポリゴンオブジェクトのすべての使用されていないポイントが削除されます。</li>
-        </ul>
-
-        <div align="left">
-          <p><b>補助キー</b></p>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><b><i>なし</i></b></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><b>プロパティ</b></p>
-
-        <p>（訳注：以下の各プロパティの解説は訳者が付け加えたもので公式なドキュメントではありません。）</p>
-
-        <ul>
-          <li><i><b>孤立ポイントを削除</b>:</i> ポリゴンを構成していない未使用のポイントを除去します。</li>
-
-          <li><i><b>近いポイントを接合</b>:</i> "接合半径" で設定した距離内のポイント同士を接合します。</li>
-
-          <li><i><b>接合半径</b>:</i> "近いポイントを接合" が適用される距離を設定します。</li>
-
-          <li><i><b>ポリゴンを最適化</b>:</i> 公式ドキュメント待ちです。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Optimize Tool</h2></p>					</div>					<p>The purpose of the <b>optimize tool </b>is to remove unused points. For example, when you delete a polygon only, the polygon face will be removed but not the points which built the polygon. To remove all unused points with one simple click, use this tool. See the images below for a better understanding.</p>					<div align="center">						<p><img src="OptimizeTool1.jpg" alt="" height="212" width="242" border="0"> <img src="OptimizeTool2.jpg" alt="" height="212" width="242" border="0"></p>					</div>					<p><b><i>Modes<br>							</i></b>This tool works only on <a href="../../../Objects/PolygonObjects/Polygonobject.html">raw polygon </a>objects.</p>					<ul>						<li><img src="../../../Images/Objectmode.jpg" alt="" height="32" width="32" border="0"> <img src="../../../Images/Polygonmode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Edgemode.jpg" alt="" height="32" width="32" border="0"><img src="../../../Images/Pointmode.jpg" alt="" height="32" width="32" border="0"><br>The optimize tool is a headless tool which means that it doesn't show up in the tool view. To use it you just have to select the raw polygon object from which you want to remove unused points and call the menu command &quot;Tools<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Polygon<img src="../../../Images/arrow.gif" alt="" width="10" height="10" border="0">Optimize&quot;. Now all unused points of the polygon object should have disappeared.					</ul>					<div align="left">						<p><b>Keys</b></p>					</div>					<ul>						<div align="left">							<li><b><i>none</i></b>						</div>					</ul>					<p><b>Properties</b></p>					<ul>						<li><i><b>none</b></i>					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

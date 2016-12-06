@@ -1,146 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ジョイント</title>
-  <link href="../../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Joint</title>		<link href="../../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>ジョイントオブジェクト</h2>
-        </div>
-
-        <p>ジョイントは、骨組み（スケルトン）を作る元になるオブジェクトです。これらは、（人型の場合）通常骨盤から始まる階層構造で作成されます。ですから、お尻を回転させると、ひざ、足首とそれに続くオブジェクトが合わせて動くように、お尻のジョイントは常に骨盤の小オブジェクトである事が重要です。ひざのジョイントはお尻の小オブジェクト、足首のジョイントはひざの小オブジェクト、というように。階層構造の中でどのように異なるジョイントを構成するか、ちょっとした例を見てください。</p>
-
-        <div align="center">
-          <p><img src="Joint4.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>骨組み（スケルトン）を作成するには、とてもシンプルに作業できるので、<a href="../../../Tools/Character/JointTool/JointTool.html">ジョイントツール</a>の使用を強くお勧めします。</p>骨組み（スケルトン）を作成すると、<a href="../../../Tags/SkeletonTag/SkeletonTag.html">スケルトン</a>を使って、ポリゴンメッシュにバインドする（関連づける）事ができます。
-        </div>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li>
-            <i><b>タイプ:</b></i> ２つのタイプがあります。
-
-            <ul>
-              <li><i>ノーマル</i>: "ノーマル" に設定されている場合、ジョイント自身と、（親オブジェクトがジョイントの場合に）親オブジェクトの間に骨が描画されます。</li>
-
-              <li><i>ルート</i>: "ルート" に設定されている場合、親オブジェクトとの間に骨は描画されません。このジョイントのタイプは、お尻や肩のジョイントによく使われます。</li>
-            </ul>
-          </li>
-        </ul>
-
-        <div align="center">
-          <table width="258" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="Joint1.jpg" alt="" height="180" width="136" border="0">
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  <img src="Joint3.jpg" alt="" height="180" width="136" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div align="center">
-                  このイメージでは、お尻のジョイントは "ノーマル" に設定されています。
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  このイメージでは、お尻のジョイントは "ルート" に設定されています。
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <ul>
-          <li style="list-style: none">
-            <div align="left">
-              <ul>
-                <li><i><b>表示モード:</b></i> 骨の形を設定します。デフォルトでは、各ジョイント間は線（ラインモード）で描画されますが、より一般的な四面体（ダイヤモード）で描画するモードを選択する事もできます。</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <div align="center">
-          <table width="258" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="Joint1.jpg" alt="" height="180" width="136" border="0">
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  <img src="Joint2.jpg" alt="" height="180" width="136" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div align="center">
-                  ライン モード
-                </div>
-              </td>
-
-              <td></td>
-
-              <td>
-                <div align="center">
-                  ダイヤ モード
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <ul>
-          <li><i><b>カラー:</b></i> ジョイントと ジョイントから始まる骨を描画するカラーを設定します。</li>
-        </ul>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>Joint Object</h2>						</p></div>					<p>Joints are the base objects to build a skeleton. They are organized in a hierarchy where you usually start with the pelvis. Hereby it is important that the hips are always the children of the pelvis, the knees are the children of the hips, the ankles are the children of the knees, and so on. So that if you rotate the hip also the knee, ankle and so one will follow its movement. Here you can see a small example of how the different joints are organized in a hierarchy.</p>					<div align="center">						<p><img src="Joint4.jpg" alt="" border="0"></p>					</div>					<div align="left">						<p>For creating a skeleton the usage of the <a href="../../../Tools/Character/JointTool/JointTool.html">Joint Tool</a> is highly recommended. Since it simplifies the work dramatically. </p>						Once a skeleton is created it can be bound to a mesh with help of the <a href="../../../Tags/SkeletonTag/SkeletonTag.html">Skeleton Tag</a>.</div>					<p><b>Properties</b></p>					<ul>						<li><i><b>Type: </b></i>There are two joint types.						<ul>							<li><i>Normal</i>: If a joint is set to &quot;normal&quot; a bone will be drawn between the joints  and its parent if the parent is also a joint.							<li><i>Root</i>: If a joint is set to &quot;root&quot; there will be no bone drawn to its parent. This type of joint is often used for hip or the shoulder joints.						</ul>					</ul>					<div align="center">						<table width="258" border="0" cellspacing="0" cellpadding="0">							<tr>								<td>									<div align="center">										<img src="Joint1.jpg" alt="" height="180" width="136" border="0"></div>								</td>								<td></td>								<td>									<div align="center">										<img src="Joint3.jpg" alt="" height="180" width="136" border="0"></div>								</td>							</tr>							<tr>								<td>									<div align="center">										In this image the hip joints are set &quot;normal&quot;.</div>								</td>								<td></td>								<td>									<div align="center">										In this image the hip joints are set &quot;root&quot;</div>								</td>							</tr>						</table>					</div>					<ul>						<div align="left">							<li><i><b>Display mode:</b></i> Sets the shape of the bones. By defaults there will be drawn just lines between the joints. But you can also use the quite popular diamond shaped bones.						</div>					</ul>					<div align="center">						<table width="258" border="0" cellspacing="0" cellpadding="0">							<tr>								<td>									<div align="center">										<img src="Joint1.jpg" alt="" height="180" width="136" border="0"></div>								</td>								<td></td>								<td>									<div align="center">										<img src="Joint2.jpg" alt="" height="180" width="136" border="0"></div>								</td>							</tr>							<tr>								<td>									<div align="center">										line mode</div>								</td>								<td></td>								<td>									<div align="center">										diamond mode</div>								</td>							</tr>						</table>					</div>					<ul>						<li><i><b>Color:</b></i> Use this property to the color of the joint and the bones starting from that joint. 					</ul>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

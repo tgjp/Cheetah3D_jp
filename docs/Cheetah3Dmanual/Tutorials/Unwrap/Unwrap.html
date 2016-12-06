@@ -1,164 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>UV unwrapping</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.15), see www.w3.org">  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">  <meta name="generator" content="Adobe GoLive 6">  <title>UV unwrapping</title>  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css"></head>
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>UV 展開</h2>
-        </div>
-
-        <div align="left">
-          <p>このチュートリアルでは複雑な形状のオブジェクトにUV座標値を設定します。そのためには、全ての3D空間の頂点に2次元のUV 座標値を設定しなければいけません。形状が複雑なほどUV 座標値を設定することは難しくなります。しかし、UV 展開ツールを使うことにより数回のマウスクリックでUV 座標値を設定できます。</p>
-        </div>
-
-        <div align="center">
-          <table width="80%" border="1" cellspacing="0" cellpadding="0">
-            <tr>
-              <td valign="top" width="300">
-                <b>1. 形状データの読み込み</b><br>
-                まず最初に、形状データを読み込まなければいけません。Cheetah3Dフォルダーの"Example"フォルダーの中に"Pig"というファイル名で豚の形状データがあります。
-
-                <p>まず、ウインドウレイアウトを"UV 編集"に切り替えます。これで、3D ビュー画面とUV エディタツールが表示されます。</p>
-
-                <p>オブジェクトブラウザで豚のオブジェクトのメッシュを選択するとUV エディタツールに豚のUV座標が表示されます。しかし、3番目の図のように形状が一部分重なっていたりいびつになっていたりしてUV座標値は不規則になっています。このようなUVは全て使い物になりません。そこで、形状が重なり合わない整然としたUVにする必要があります。</p>
-              </td>
-
-              <td valign="top">
-                <div align="center">
-                  <br>
-                  <img src="Unwrap6.jpg" alt="" height="150" width="115" border="0">
-
-                  <p><img src="Unwrap1.jpg" alt="" height="283" width="306" border="0"></p>
-
-                  <p><img src="Unwrap2.jpg" alt="" height="283" width="306" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>2.</b> <b>UV 展開ツールを使ってみる。</b><br>
-                さて、UV 展開ツールを初めて使ってみよう。まず、 メニューから "ツール-&gt;UV ツール-&gt;UV 展開"を選択します。 すると、右図のような表示になります。しかし、表意jされたメッシュは一部は規則的に並んでいますがほとんどの箇所は形状が重なっています。あわてなくて大丈夫、これが正常なのです。
-
-                <p>ゴムボールを想像してください。ゴムボールを切り裂かずに平らに広げることは出来ません。 出来ることは押しつぶして平らにすることだけです。 しかし、それでは上下の面が重なり合ったままです。決して平らに広がりません。そう、ボールを平らに広げるには 一部に切り目を入れる必要があります。そして、それは次の段階で正確に行う必要があります。</p>
-              </td>
-
-              <td valign="top">
-                <div align="center">
-                  <br>
-                  <img src="Unwrap3.jpg" alt="" height="283" width="306" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>3. 切れ目の設定</b><br>
-                UV 展開コマンドにより切れ目としてメッシュの端を指示します。 切れ目の指定の方法はハードエッジの指定より簡単です。（斧のチュートリアルを参照）切れ目の設定は切れ目にしたいエッジを選択し、メニューコマンドから "選択範囲-&gt;切れ目の設定/解除" を選択します。
-
-                <p>今回の豚のケースではお腹の部分を切れ目とします。正常に指示したメッシュの端が切れ目と設定されたら線の色が緑色に変わります。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Unwrap4.jpg" alt="" height="282" width="306" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>4. UV 展開ツールでの設定の調整</b><br>
-                さて、UV 展開ツールで先ほどの切れ目の設定を使い調整します。再度メニューから "ツール-&gt;UV ツール-&gt;UV 展開"を選択します。
-
-                <p>これで、ほぼ問題ない形状になりました。.体は全て大丈夫なようです。しかし、耳だけはメッシュが重なり合っています。</p>
-
-                <p>さて、ゴムボールの例えに戻ります。ボールを豚の形に置き換えてみましょう。もし、お腹の部分を切って押しつぶすと耳の部分は押しつぶしても持ち上がるでしょう。さて、どうしましょう？そう、耳の部分が広がるまで切れ目を引っぱって広げれば良いですね。 そして、ボールを木の板の上に置いて引っぱった部分を画鋲で固定できます。ただし、その場所は重なってはいけません。</p>
-
-                <p>これと同じ事をCheetah3Dの中で行うのです。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Unwrap5.jpg" alt="" height="282" width="306" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300"><b>5. UV ピンの設定/解除と UV 展開の有効範囲座標</b><br>
-              まず、UV ピンの設定/解除でUV 展開の有効範囲座標を固定しなければいけません。これは、とても簡単です。右図のように2カ所のポイントを選択ツールツールで選択します。次に、マウスの右ボタンをクリックしてコンテキストメニューから"UV ピンの設定/解除" を選択します。ポイントの選択を解除するとポイントの色が黄色に変わります。</td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Unwrap7.jpg" alt="" height="280" width="306" border="0">
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td valign="top" width="300">
-                <b>6. UV 展開で最後の調整</b><br>
-                ピンで固定した部分の移動する状態は右図の画面の中央に表示されています。注意して欲しいのは下の段の図を見れば分かるようにUV 展開コマンドを使用してもピンで固定された位置は変わらない事です。
-
-                <p>それでは、最後に再度UV 展開ツールを選択します。これで、完璧な形状にUV展開した豚となりました。</p>
-
-                <p>これでテクスチャーの割り当て準備完了です。</p>
-              </td>
-
-              <td>
-                <div align="center">
-                  <br>
-                  <img src="Unwrap9.jpg" alt="" height="280" width="306" border="0">
-
-                  <p><img src="Unwrap8.jpg" alt="" height="280" width="306" border="0"></p>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="2">
-                <div align="left">
-                  <b>ここからは、あなたが考えて決めることです。同じ要領で異なる形状のUV展開をあなたは出来るでしょう。例えば、耳の根元を切れ目とすれば、もっと良い形状のになったはずです。 きっと、均一の間隔のメッシュで構成されていたはずです。そう、ピンで固定しなくても大丈夫だったのです。</b>
-                </div>
-
-                <div align="center">
-                  <p><img src="Unwrap10.jpg" alt="" height="282" width="613" border="0"></p>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+  <table width="100%" border="0" cellspacing="8" cellpadding="8">    <tr>      <td>        <div class="c1">          <h2>UV unwrapping</h2>        </div>        <div class="c2">          <p>In this tutorial we're going to assign UV coordinates to a complex surface. So we have to assign to every three dimensional vertex a 2 dimensional UV coordinate. Assigning UV coords to characters can be especially complicated since characters have quite irregular shapes. But with the Unwrap UV tool it is just a few mouse clicks to create the UV coords.</p>        </div>        <div align="center">          <table width="95%" border="1" cellspacing="0" cellpadding="5">            <tr>              <td valign="center" width="320">                <strong>1. Loading a mesh</strong><br>                The first thing we have to do is to load a mesh. You can find the mesh of the Pig in the "Examples" folder which comes with Cheetah3D.                <p>Now change the window layout to "UV Editing". You should now have a 3D view and a UV Editor.</p>                <p>After selecting the mesh of the pig in the object browser the UV coords of the pig will be displayed in the UV editor. But as you can see on the third image the UV coords are very irregular and some even overlap. Such UVs are totally unusable. We are interested in a UV atlas with non overlapping unique UV coords.</p>              </td>              <td valign="top">                <div class="c1">                  <br>                  <img src="Unwrap6.jpg" alt="" border="0">                  <p><img src="Unwrap1.jpg" alt="" border="0"></p>                  <p><img src="Unwrap2.jpg" alt="" border="0"></p>                </div>              </td>            </tr>            <tr>              <td valign="center" width="320">                <strong>2.</strong> <strong>First try with the Unwrap UV tool</strong><br>                Now we can make a first try with the Unwrap UV tool. Just call the menu command "Tools-&gt;UV-&gt;Unwrap UV". The result can be seen on the right image. It already looks a little bit more regular but the mesh is still overlapping. But that is normal.                <p>Imagine a rubber ball. It is impossible to unwrap a closed rubber ball. You can only press it flat. But it is still overlapping. To unwrap the ball you have to make a cut into it. And that's exactly what we have to do in the next step.</p>              </td>              <td valign="top">                <div class="c1">                  <br>                  <img src="Unwrap3.jpg" alt="" border="0">                </div>              </td>            </tr>            <tr>              <td valign="center" width="320">                <strong>3. Setting seams</strong><br>                A seam is an edge where the mesh will tear up when calling the Unwrap UV command. Setting seams is as easy as setting creases (see the Axe tutorial). To set the seams we simply have to select the edges and call the "Selection-&gt;Toggle Seam" menu command.                <p>In our case we set the seam at the belly of our pig. As you can see on the right image the seam edges will become green.</p>              </td>              <td>                <div class="c1">                  <br>                  <img src="Unwrap4.jpg" alt="" border="0">                </div>              </td>            </tr>            <tr>              <td valign="center" width="320">                <strong>4. Second try with the Unwrap UV tool</strong><br>                Now we can make a second try with the Unwrap UV tool. Once again call the menu command "Tools-&gt;UV-&gt;Unwrap UV".                <p>That was already an improvement. The body looks quite OK. But the ears are still overlapping.</p>                <p>Lets turn back to the rubber ball example. Assume the rubber ball has the shape of our pig. If you make a cut into it's belly and press it flat the ears will probably still stand up. So what would you to in practise? Yes, you would pull at the edges (seams) until it gets flat. Now you can pin the rubber ball onto a wood board and it should be totally non overlapping.</p>                <p>The same can be done with Cheetah3D.</p>              </td>              <td>                <div class="c1">                  <br>                  <img src="Unwrap5.jpg" alt="" border="0">                </div>              </td>            </tr>            <tr>              <td valign="center" width="320"><strong>5. Pin UV coords</strong><br>              We now have to pin some UV coords. To do that simply select the two points which you can see on the right image with the select tool. Then call the "Toggle Pinned UV" menu command from the UV editor context menu. The pinned UVs will become yellow (after unselecting the points).</td>              <td>                <div class="c1">                  <br>                  <img src="Unwrap7.jpg" alt="" border="0">                </div>              </td>            </tr>            <tr>              <td valign="center" width="320">                <strong>6. Third try with the Unwrap UV too</strong><br>                But first we move the pinned you coords to the middle of the screen (with the transform tool) as you can see on the image on the right. The position of pinned UVs won't be changed when calling the Unwrap UV command.                <p>Finally call the Unwrap UV tool a last time. Et voila we have a nice unwrapped pig.</p>                <p>Now the pig is really for assigning him a texture.</p>              </td>              <td>                <div class="c1">                  <br>                  <img src="Unwrap9.jpg" alt="" border="0">                  <p><img src="Unwrap8.jpg" alt="" border="0"></p>                </div>              </td>            </tr>            <tr>              <td colspan="2">                <div class="c2">                  <strong>Now it is your turn. Using the same technique, you can produce many different types of unwrappings. For our pig example it would be probably even better if we also set seams around the ears. That will result in a much more evenly spaced UV mesh. And we can even avoid the pinned UVs.</strong>                </div>                <div class="c1">                  <p><img src="Unwrap10.jpg" alt="" border="0"></p>                </div>              </td>            </tr>          </table>        </div>      </td>    </tr>  </table>
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

@@ -1,117 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>ソフトボディ タグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <meta name="generator" content="Adobe GoLive 6">    <title>Soft Body Tag</title>    <link href="../../style.css" rel="stylesheet" media="screen">  </head>  
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div class="c1">
-          <h2>ソフトボディ タグ</h2>
-        </div>
-
-        <p>ソフトボディ タグは、やわらかな物体や布などの物質の振る舞いをシミュレート出来ます。使い方は編集可能なポリゴンオブジェクトにソフトボディ タグを設定し、<a href="../../Animation/Dynamics/Dynamics.html">ダイナミクス</a>をオンにするだけです。剛体の頂点をピンで固定する時は、<a href="../AnchorTag/AnchorTag.html">アンカー</a> タグをご使用下さい。</p>
-
-        <p>ソフトボディシミュレーションはグローバル座標系で行われます。従ってオブジェクトの移動変形プロパティはソフトボディシミュレーションの影響を受けません。</p>
-
-        <div class="c1">
-          <p><img src="SoftBody1.gif" alt="" height="435" width="300" border="0"><br>
-          旗竿にソフトボディが設定された旗のシミュレーション</p>
-
-          <p><img src="SoftBody2.jpg" alt="" border="0"></p>
-        </div>
-
-        <div class="c2">
-          <p><strong>Tips:</strong></p>
-        </div>
-
-        <ul>
-          <li class="c3">
-            <div class="c2">
-              <div class="c2">
-                <ul>
-                  <li>ソフトボディのシミュレーションは、頂点数が 10000 個に制限されています!!!</li>
-
-                  <li>ソフトボディが他のオブジェクトを突き抜けてしまう様な場合には、ソフトボディタグの<em>ソルバー解析回数</em>プロパティか、ダイナミクス環境設定の<em>精度</em>プロパティを増やしてやると改善するかもしれません。</li>
-                </ul>
-              </div>
-
-              <ul>
-                <li>シミュレーションが不安定な結果になるので、マージンはメッシュの一番近い頂点同士の距離よりも大きくならないように注意して下さい。</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-
-        <p><em>注意：ソフトボディタグは、編集可能なポリゴンオブジェクトにのみ適用できます。</em></p>
-
-        <p><strong>プロパティ</strong></p>
-
-        <ul>
-          <li><em><strong>質量:</strong></em> ソフトボディの総重量を指定します。</li>
-
-          <li><strong><em>剛性:</em></strong> ソフトボディがどのくらい固いかを指定します。低い値は、より弾力性のあるオブジェクトになり、高い値では、より固いオブジェクトになります。</li>
-
-          <li><strong><em>減衰:</em></strong> ソフトボディの頂点の移動がどれくらいの強さで減衰するかを指定します。高い減衰値の場合、すぐにソフトボディの動きは遅くなります。</li>
-
-          <li><strong><em>抗力:</em></strong> ソフトボディがどれくらい強く抗力（ Lift Force ）の影響を受けるかを指定します。</li>
-
-          <li><strong><em>揚力:</em></strong> ソフトボディがどれくらい強く揚力（ Drag Force ）の影響を受けるかを指定します。</li>
-
-          <li><strong><em>動摩擦:</em></strong> ソフトボディが２つのオブジェクト間の摩擦による影響をどれくらい強く受けるかを指定します。</li>
-
-          <li><strong><em>容積保護:</em></strong> ソフトボディが押しつぶされた時に、その容積がどれくらい維持されるかを指定します。</li>
-
-          <li><strong><em>圧力:</em></strong> ソフトボディ内の圧力を指定します。オブジェクト内の圧力が外側の圧力より高い場合、オブジェクトは膨らみます。</li>
-
-          <li><strong><em>形状維持:</em></strong> このプロパティが使用されると、ソフトボディは最初の形状を記憶し、その形状に戻ろうとします。</li>
-
-          <li><strong><em>マージン:</em></strong> 当たり判定の許容値のマージン。このマージンは 0 に設定しないで下さい。</li>
-
-          <li><strong><em>曲げ抵抗:</em></strong> 曲げ抵抗は相互に影響する頂点同士が隣接する最大範囲を指定します。体積のあるソフトボディの場合、この値は最低でも２であるべきです。一般にこの値は変更しないでよいでしょう。</li>
-
-          <li><strong><em>両面を計算:</em></strong> このプロパティは、クロスシミュレーションのみに必要になります。抗力と揚力を、ポリゴンの両面で適用したい場合に使用します。</li>
-
-          <li><strong><em>自己干渉:</em></strong> オブジェクト内でメッシュの衝突判定をするかどうかを指定します。</li>
-
-          <li><strong><em>クラスターを使用:</em></strong> このプロパティが On になっている場合、メッシュ（の頂点）それ自体は衝突判定テストに使用せず、メッシュの近似値が計算されます。そのため、メッシュの形状はクラスターと呼ばれる近似のものになります。</li>
-
-          <li><strong><em>クラスター:</em></strong> ソフトボディ形状に近づけるために使用されるクラスターの最大数を指定します。</li>
-
-          <li><strong><em>ソルバー解析回数:</em></strong> 高い値にすると、物理ソルバーがフレーム毎のシミュレーション計算回数が多くなります。より高い値にすると、計算時間は増えますが、より精度の高いシミュレーション結果を生成します。特にソフトボディが他のオブジェクトを突き抜ける様な場合には、高いソルバー解析回数の値でこの問題が解決するかもしれません。</li>
-        </ul>
-
-        <div class="c1"></div>
-
-        <ul>
-          <li class="c3">
-            <div class="c2"></div>
-          </li>
-        </ul>
-
-        <div class="c1"></div>
-      </td>
-    </tr>
-
-  </table>
-
+    <table border="0" cellpadding="8" cellspacing="8" width="100%">      <tbody>        <tr>          <td>            <div align="center">              <p></p>              <p> </p>              <h2>Soft Body Tag</h2>            </div>            <p>The soft body tag can be used to simulate the physical behavior              of soft bodies or cloth. To do that you just have to add the soft              body tag to an editable polygon object and turn on <a href="../../Animation/Dynamics/Dynamics.html">Dynamics</a>.              For pinning mesh vertices to rigid bodies please use the <a href="../AnchorTag/AnchorTag.html">Anchor</a>              tag.</p>            <p>The soft body simulation is performed in the global coordinate              system. So the transformation properties of the object are not              influenced by a soft body simulation.</p>            <div align="center">              <p><img src="SoftBody1.gif" alt="" height="435" border="0" width="300">                <br>                Simulation of a soft body flag attached to a flagpole.</p>              <p><img src="SoftBody2.jpg" alt="" border="0"></p>            </div>            <div align="left">              <p><b>Tips: </b></p>            </div>            <ul>              <div align="left">                <div align="left">                  <li>The soft body simulation is limited to a max. of 10.000                    vertices!!! </li>                  <li>Should soft bodies penetrate other objects increasing the                    <i>Solver Iterations</i> property of the soft body tag or                    the <i>Accuracy</i> property of the Dynamics settings might                    help. </li>                </div>                <li>Be careful that the margin is never bigger than the closest                  distance between two mesh vertices since that can pretty fast                  results in instable simulation results. </li>              </div>            </ul>            <p><i>Attention: You can only add a soft body tag to an editable                polygon object.<b> </b></i></p>            <p><b>Properties</b></p>            <ul>              <li><i><b>Mass:</b></i> Specifies the total mass of the soft body.              </li>              <li><b><i>Stiffness:</i></b> Specifies how stiff the soft body is.                Low values result in more elastic objects while higher values                generate stiffer objects. </li>              <li><b><i>Damping: </i></b>Specifies how strong the linear                movement of the soft body vertices is damped. The higher the                damping value the faster the soft body movement slows down. </li>              <li><b><i>Drag:</i></b> Specifies how strongly the soft body is                influenced by drag forces. </li>              <li><b><i>Lift:</i></b> Specifies how strongly the soft body is                influenced by lift forces. </li>              <li><b><i>Friction:</i></b> Specifies how strong the soft body is                influenced by frictional forces between two objects. </li>              <li><b><i>Volume conservation:</i></b> Specifies if the volume of                the soft body should be maintained when it is squashed. </li>              <li><b><i>Pressure:</i></b> Specifies the pressure within the soft                body. If the pressure within the object is higher than the                pressure outside this will blow up the object. </li>              <li><b><i>Recover shape: </i></b>When using this property the                soft body remembers its original shape and tries to recover it.              </li>              <li><b><i>Margin:</i></b> The margin adds some additional                collision tolerance. The margin should never be zero. </li>              <li><b><i>Bending constraints:</i></b> The bending constraints                specify the max. adjacency distance of control point influencing                each other. For volumetric soft bodies this value should be at                least 2. In general it is recommended to keep that value                unchanged. </li>              <li><b><i>Two sided:</i></b> This property is only needed for                cloth simulation. It is required that drag and lift forces are                applied on both sides of the surface. </li>              <li><b><i>Self collision:</i></b> Specifies if the soft body is                checked for self intersections. </li>              <li><b><i>User clusters:</i></b> If this property is turned on the                mesh itself is no longer used for the collision test but an                approximation of the mesh is computed. Hereby the shape of the                mesh is approximated by so called clusters. </li>              <li><b><i>Clusters: </i></b>Specifies the max. number of clusters                which are used to approximate the shape of the soft body. </li>              <li><b><i>Solver iterations:</i></b> The higher this value is the                more simulation steps the physics solver will calculate for each                simulation frame. So higher values generate more accurate                simulations results at the cost of longer calculation times.                Especially when soft bodies penetrate into other objects higher                solver iterations can solve that problem. </li>            </ul>            <div align="center"> </div>            <ul>              <div align="left"> </div>            </ul>            <div align="center"> </div>            <p></p>          </td>        </tr>      </tbody>    </table>  
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

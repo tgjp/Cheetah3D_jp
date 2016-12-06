@@ -1,56 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>オリエントコンストレインタグ</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>Orient Constraint Tag</title>		<link href="../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-    
-    <tr>
-      <td>
-        <div align="center">
-          <h2>オリエントコンストレインタグ</h2>
-        </div>
-
-        <p>このタグは、表現タグといわれるものです。これは、グローバル空間でターゲットと同じ回転値を持つように、タグのオーナーの回転値を修正します。</p>
-
-        <p>例えば、すべての船艦が同じ方向を向いている艦隊をアニメーションさせる場合に使えるでしょう。</p>
-
-        <p><b>プロパティ</b></p>
-
-        <ul>
-          <li><i><b>制限:</b></i> タグによって修正される回転軸を選択します。</li>
-
-          <li><b><i>オフセット:</i></b> ターゲットの回転の回転オフセットを設定します。</li>
-
-          <li><b><i>ウエイト:</i></b> （オーナーの）現在の回転値とターゲットの回転値をミックスさせる割合。アニメーションでは、この値が 1 より小さい場合、回転の遅れが発生します。</li>
-
-          <li><b><i>ターゲット:</i></b> タグオーナーがその回転値によって回転させられる参照先のオブジェクト。</li>
-
-          <li><b><i>オフセット自動設定:</i></b> このプロパティがチェックされている場合、タグのオーナーの元の回転値は保持され、ターゲットオブジェクトの回転はこの回転と相対的になります。従って、このタグのオフセットプロパティは、"ターゲット" プロパティフィールドにターゲットオブジェクトをドラッグ＆ドロップした時に、自動的に調整されます。元の回転値を維持したい場合には、まず "オフセット自動設定" プロパティを On にしてから、ターゲットオブジェクトを適用します。</li>
-        </ul>
-
-        <div align="center"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p></p>						<h2>Orient Constraint Tag</h2>					</div>					<p>This tag is an expression tag. It modifies the tags owners rotation values in such a manner that the tags owners coordinate system has the same rotation as the targets coordinate system in global space.</p>					<p>You can use this tag for example to animate a hole fleet of ships pointing all in the same direction. </p>					<p><b>Properties</b></p>					<ul>						<li><i><b>Constrain:</b></i> Chose which rotation coordinates the tag is allowed to modify.						<li><b><i>Offset:</i></b> Set a rotation offset of the targets rotation.						<li><b><i>Weight: </i></b>Mix the current rotation with the targets rotation. In animations a mix value smaller than 1 causes a delay of the rotation.						<li><b><i>Target: </i></b>The target object according to which the tag owner is oriented.						<li><b><i>Maintain: </i></b>If this property is checked on the original rotation of the tags owner will be maintained and the rotation of the target object will be relative to this rotation. Therefore the offset property of this tag will be adjusted automatically when you drag &amp; drop the target object on the target property field. So if you want to maintain the rotation first check on the maintain property and then assign the target object.					</ul>					<div align="center">											</div>					<p></p>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>

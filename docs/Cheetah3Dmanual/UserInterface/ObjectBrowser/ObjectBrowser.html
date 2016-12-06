@@ -1,77 +1,59 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
 
-  <title>Object Browser</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+		<meta name="generator" content="Adobe GoLive 6">
+		<title>Object Browser</title>
+		<link href="../../style.css" rel="stylesheet" media="screen">
+	</head>
 
-
+	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
 
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>オブジェクトブラウザ</h2>
-        </div>
-
-        <div align="left">
-          <p>オブジェクトブラウザは、3D シーン内に存在するオブジェクトを階層表示します。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="ObjectBrowser1.jpg" alt="" border="0"></p>
-        </div>
-
-        <div align="left">
-          <p>Cheetah3D で新規にドキュメントを開くと、デフォルトで一つの<a href="../../Objects/SceneObjects/Camera/Camera.html">カメラ</a>が存在しているでしょう。このカメラはあなたが現在の 3D ビュー内の何を見ているかを示しています。シーンにオブジェクトを追加すると、それらがオブジェクトブラウザ上の各行に一つずつ現れてくるのが見えるでしょう。さらに、各オブジェクトはそれぞれ一つ以上の<a href="../ObjectsAndTags/ObjectsAndTags.html">タグ</a>を持っています。</p>
-
-          <p>Cheetah3D で作業していくと、しばしばオブジェクトの "内側" に別のもの (物理的にでは無く、あくまで概念的に...) を入れなければならない場面に遭遇します。たとえばあなたがオブジェクトを<a href="../../Objects/SceneObjects/Folder/Folder.html">フォルダ</a>で分類する時がそれです。しかし<a href="../../Objects/CreatorObjects/CreatorObjects.html">クリエータオブジェクト</a>のなどの場合は、その効果を出すには目的のオブジェクトの内部にそれが入っている必要があります。中に入れるのはとても簡単。子にするオブジェクトをクリックして選択し、親にするオブジェクトにドラッグして重ねるだけです。同様に、オブジェクトのオーダーはクリック &amp; ドラッグによって変更する事が可能です。</p>
-
-          <p>オブジェクトブラウザは異なった二色でオブジェクトの選択状態を表示します (以下の画像を見てください)。暗い青色で表示されているのがプライマリ選択状態のオブジェクトです。この状態では、あらゆるツールがこのオブジェクトのみに適用されます。<br>
-          オブジェクトを複数選択すると、二つ目以降に選択したオブジェクトが明るい青色でハイライトされているのに気付くでしょう。これらのオブジェクトはセカンダリ選択状態です。この複数選択は、たとえばシーングラフやオブジェクトをグループでまとめる時に使用します。</p>
-
-          <p>ではグループオブジェクトにしてみましょう。すべてのオブジェクトを選択してください。次に、オブジェクトブラウザ上でコンテキストメニュを出し、そこから "グループ" コマンドを選んでください。すぐさま新しいフォルダオブジェクトが先ほど選択したオブジェクトを内包した状態で作成されるでしょう。</p>
-        </div>
-
-        <div align="center">
-          <table width="180" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td>
-                <div align="center">
-                  <img src="ObjectBrowser3.jpg" alt="" height="129" width="201" border="0">
-                </div>
-              </td>
-
-              <td width="16"></td>
-
-              <td>
-                <div align="center">
-                  <img src="ObjectBrowser2.jpg" alt="" height="129" width="201" border="0">
-                </div>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div align="left"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td>
+					<div align="center">
+						<p></p>
+						<p> <h2>Object Browser </h2></p>
+					</div>
+					<div align="left">
+						<p>The Object Browser is a hierarchical view of objects that make up your 3D scene.</p>
+					</div>
+					<div align="center">
+						<p><img src="ObjectBrowser1.jpg" alt="" border="0"></br><i>The appearance of the object browser can be customized.</i></p>
+					</div>
+					<div align="left">
+						<p>When you start a new Cheetah3D document, there will be one <a href="../../Objects/SceneObjects/Camera/Camera.html">Camera</a> by default, since this camera shows you what you currently see in the 3D View. As you add objects to your scene, you will see them appear in the Object Browser, one per line.</p>
+						<p>The appearance of the object browser can be customized using the <i>Display</i> context menu. That allows you to access certain often used properties faster. <center><img src="ObjectBrowser2.jpg" alt="" border="0"></center></p>
+						<p>Sometimes you need to put objects &quot;inside&quot; other ones (conceptually, not physically). A simple form of this is when you use a <a href="../../Objects/SceneObjects/Folder/Folder.html">Folder</a> to group objects together. Some <a href="../../Objects/CreatorObjects/CreatorObjects.html">Creator Objects</a> however, need objects to be placed inside of them before they will create any results. To do this, simply click on the desired child object, and drag it on top of the parent object. You can also change the order of objects by clicking and dragging them to the right place.</p>
+						<p>The object browser will display object selections in two different colors (see image below). The darker blue hereby shows the primary selected object. All tools only apply to this object.<br>
+							If you make a multi object selection you will see that the other object are highlighted with a lighter blue. These objects are secondary selections. You can use multi object selections for example to organize your scene graph and for building object groups.</p>
+						
+					</div>
+					<div align="center">
+						<img src="ObjectBrowser3.jpg" alt="" border="0">
+					</div>
+					
+					</div>
+					<div align="left">
+						<p></p>
+						<p></p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
+
 
 </html>

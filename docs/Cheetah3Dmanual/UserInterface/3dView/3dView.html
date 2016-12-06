@@ -1,174 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Adobe GoLive 6">
-
-  <title>3D ビュー</title>
-  <link href="../../style.css" rel="stylesheet" media="screen" type="text/css">
-</head>
-
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>	<head>		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">		<meta name="generator" content="Adobe GoLive 6">		<title>3D View</title>		<link href="../../style.css" rel="stylesheet" media="screen">	</head>	
 <body>
 <!-- header -->
 <script language="javascript" type="text/javascript" src="../../Images/common.js"></script>
 <script language="javascript" type="text/javascript">header();</script>
 <!-- header end -->
-
-  <table width="100%" border="0" cellspacing="8" cellpadding="8">
-
-    <tr>
-      <td>
-        <div align="center">
-          <h2>3D ビュー</h2>
-        </div>
-
-        <div align="left">
-          <p>3D ビューは、Cheetah3D ウィンドウの主な部分を構成しています。それは、シーンの OpenGL レビューを表示し、シーンの構成を編集するためのガイドライン、操作ハンドル、マトリックスをそれに補助的に表示します。</p>
-        </div>
-
-        <div align="center">
-          <p><img src="3dView.jpg" alt="" width="331" height="322" border="0"></p>
-
-          <p><i>3D ビュー: ３つのオブジェクトと１つのライト（ライトが選択され、移動変形ツールの操作ハンドルが付いています。）</i></p>
-        </div>
-
-        <div align="left">
-          <div align="center">
-            <p><img src="3dView1.jpg" alt="" border="0"></p>
-          </div>
-
-          <div align="left">
-            <p>アクティブなカメラの位置と回転は3D ビュー上部の小さいアイコンバーを使って便利に変更する事ができます。これらのアイコン（での操作）はアクティブなカメラにのみ影響します。これらの機能は、左から順に:</p>
-          </div>
-
-          <ul>
-            <li style="list-style: none">
-              <div align="left">
-                <ul>
-                  <li>カメラの投影タイプを選択</li>
-
-                  <li>様々なビュースタイルを選択（下を参照）</li>
-
-                  <li>選択オブジェクト（または選択範囲）にフォーカス（訳注：オブジェクト・選択範囲が3D ビュー内におさまるようにカメラ位置を調整します。）</li>
-
-                  <li>カメラを上下左右に移動</li>
-
-                  <li>視点方向に沿ってカメラをズームイン / ズームアウト</li>
-
-                  <li>選択オブジェクトを中心にカメラを回転（下の<a href="#cautJP1">訳注</a>も参照してください）</li>
-
-                  <li>カメラを上下左右に回転</li>
-
-                  <li>四分割画面に切り替え</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
-          <div align="left">
-            <p>カメラ位置 / 回転は、3D ビュー上でのキーコンビネーション + マウスドラッグでも変更する事ができます。（訳注：これらの設定は "Preferences" のマウスタブで設定します。）:</p>
-          </div>
-
-          <ul>
-            <li style="list-style: none">
-              <div align="left">
-                <ul>
-                  <li>１ボタンマウスの場合:</li>
-                </ul>
-              </div>
-
-              <ul>
-                <li style="list-style: none">
-                  <div align="left">
-                    <ul>
-                      <li>alt + マウスドラッグ: 選択オブジェクトを中心にカメラを回転（下の<a href="#cautJP1">訳注</a>も参照してください）</li>
-
-                      <li>alt + command + マウスドラッグ: 視点方向に沿ってカメラをズームイン / ズームアウト</li>
-
-                      <li>alt + ctrl + マウスドラッグ: カメラを上下左右に移動</li>
-
-                      <li>alt + shift + マウスドラッグ: カメラを上下左右に回転（パーン）</li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-
-              <div align="left">
-                <ul>
-                  <li>３ボタンマウス（Maya）の場合:</li>
-                </ul>
-              </div>
-
-              <ul>
-                <li style="list-style: none">
-                  <div align="left">
-                    <ul>
-                      <li>alt + 左マウスボタンドラッグ: 選択オブジェクトを中心にカメラを回転（下の<a href="#cautJP1">訳注</a>も参照してください）</li>
-
-                      <li>alt + 中マウスボタンドラッグ: カメラを上下左右に移動</li>
-
-                      <li>alt + 右マウスボタンドラッグ: 視点方向に沿ってカメラをズームイン / ズームアウト</li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-          <p>（訳注：これ以外に３ボタンマウス（Mirai）タイプの操作も可能です。）</p>
-
-          <div align="left">
-            <p>上部の "表示" メニューを使用して、3D ビューの OpenGL プロパティのいくつかを変更する事が可能です:</p>
-          </div>
-
-          <ul>
-            <li style="list-style: none">
-              <div align="left">
-                <ul>
-                  <li>
-                    <i><b>裏面を描画しない:</b></i> OpenGL のバックフェースカリングの On/Off を切り替えます。On の場合、カメラに法線が向いていない面は描画されず、向いている面のみが描画されます。
-
-                    <div align="left">
-                      <div align="left">
-                        <ul>
-                          <li><i><b>ワイヤーフレーム:</b></i> シーン全体をワイヤーフレームで描画する場合、On に設定します。</li>
-
-                          <li><i><b>アンチエイリアス:</b></i> グラフィックカードがサポートし、ライン描画のアンチエイリアスを有効にする場合、On に設定します。</li>
-
-                          <li><b><i>両面をライティング:</i></b> カメラに法線が向いている面だけでなく、すべてのポリゴンの両面をライティングする場合、On に設定します。</li>
-
-                          <li><b><i>グリッド:</i></b> グリッドを描画する場合、On に設定します。</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
-          <p>3D ビュー内をクリックした時に、起こる事は現在アクティブな編集モードやツールに大きく依存しています。（現在アクティブなツール）これはツールビューで確認する事ができます。主に、オブジェクトの配置に3D ビューを使用するでしょう。（その場合には、<a href="../ObjectBrowser/ObjectBrowser.html">オブジェクトブラウザ</a>からオブジェクトを選択し、<a href="../../Tools/Common/TransformTool/TransformTool.html">移動変形ツール</a>を選んで、上のイメージで示されている移動変形ツールハンドルの部品の１つをクリックしドラッグして調整します。）しかし、<a href="../Modes/Modes.html">ポイントモード、エッジモードまたはポリゴンモード</a>で作業するならば、あなたは3D ビューで編集するオブジェクトの選択部分をクリックするでしょう。（訳注補足：編集モードによって、3D ビュー上で選択できる対象が変わります。オブジェクトモードでは、3D ビュー上でオブジェクトブラウザリストの各オブジェクトを選択できますが、その他のモードでは、オブジェクトブラウザで選択されているオブジェクトの各パーツ（ポリゴン・エッジ・ポイントなど）が3D ビュー上での選択対象になります。）</p>
-
-          <p>クリック・ドラッグでカメラを回転させる事も可能です。Alt キーを押している場合、カメラは中心点を基準に回転します。（下の<a href="#cautJP1">訳注</a>を参照してください）</p>
-
-          <p><b>ノート</b><br>
-          3D ビューの表示は、OpenGL を使用したプレビューなので、複雑なマテリアルプロパティのような、いくつかのより高度な機能は表示されません。これらの効果を見るためには、<a href="../../Render/Renderer.html">レンダラー</a>を使用してシーンをレンダリングする必要があります。</p>
-
-          <p><a name="cautJp1"><b>訳注："選択オブジェクトを中心に回転" 使用時の動作について</b></a><br>
-          それぞれのカメラには、内部的にカメラからの距離を示す隠しプロパティが設定されています。"選択オブジェクトを中心に回転" の動作時に、その回転の基準点は、選択オブジェクトの位置ではなく、カメラから視線をこの距離だけ伸ばした点が使用されます。オブジェクトブラウザでオブジェクトを選択した時に、このプロパティが自動的に設置されるわけではない事に注意してください。これを手動で設定するには、"選択範囲を見る" コマンドを使用します。これを使用すると、選択オブジェクト（または選択範囲）が3D ビューに収まるように表示されると同時に、カメラのこの隠しプロパティもその選択オブジェクト（選択範囲）の中心点になるように設定されます。</p>
-        </div>
-
-        <div align="center"></div>
-      </td>
-    </tr>
-
-  </table>
-
+		<table width="100%" border="0" cellspacing="8" cellpadding="8">			<tr>				<td>					<div align="center">						<p></p>						<p> <h2>3D View </h2></p>					</div>					<div align="left">						<p>The 3D View makes up the main portion of the Cheetah3D window. It shows you an OpenGL preview of your scene, and supplements it with guidelines, handles and matrices that allow you to modify your scenes layout.</p>					</div>					<div align="center">						<p><img src="3dView.jpg" alt="" border="0"></p>						<p><i>A typical 3D View, showing a rigged character.</i></p>					</div>					<div align="left">						<p></p>						<div align="left">							<p>The position and rotation of the active camera can be changed conveniently by the small icon bar above the 3D view. These icons only effect the active camera. The functions of these icons from left to right are:</p>						</div>						<ul>							<div align="left">								<li>select the camera projection								<li>select different view styles (see below)								<li>focus on selected object								<li>move the camera to the left, right, up and down								<li>zoom camera in and out along the viewing direction								<li>rotate camera around the selected object								<li>rotate camera to the left, right, up and down								<li>change into the quad view mode							</div>						</ul>						<div align="left">							<p>The camera position can also be changed by pressing a key combination + dragging the mouse in the 3D view:</p>						</div>						<ul>							<div align="left">								<li>If you have a one button mouse:							</div>							<ul>								<div align="left">									<li>alt + mouse drag: rotate camera around the selected object									<li>alt + command + mouse drag: move camera in and out									<li>alt + ctrl + mouse drag: move camera left, right, up and down									<li>alt + shift + mouse drag: turn camera								</div>							</ul>							<div align="left">								<li>If you have a three button mouse:							</div>							<ul>								<div align="left">									<li>alt + left mouse button drag: rotate camera around the selected object									<li>alt + middle mouse button drag: move camera left, right, up and down									<li>alt + right mouse button drag: zoom camera in and out								</div>							</ul>						</ul>						<div align="left">							<p>Using the &quot;Style&quot; menu you can set some OpenGL properties of the 3D view:</p>						</div>						<ul>							<div align="left">								<li><i><b>backface culling: </b></i>Turn on and off OpenGL backface culling. When turned on only polygons which face the camera are drawn, whilst polygons facing away are not.								<div align="left">									<div align="left">										<li><i><b>wireframe: </b></i>Turn this on to draw the whole scene in wireframe.										<li><i><b>antialiasing: </b></i>Turn this on to activate line antialiasing, should your garphics card support it.										<li><b><i>light both sides: </i></b>Turn this on if both sides of all polygons should be lit, not just the ones that face the camera.									</div>								</div>							</div>						</ul>						<p>When you click inside the 3D View, what happens depends largely on which tool is currently active - you can see this by looking at the lower portion of the <a href="../PropertyEditor/PropertyEditor.html">Property Editor</a>. Mostly, you'll use the 3D View to position objects (in which case, you would select an object from the <a href="../ObjectBrowser/ObjectBrowser.html">Object Browser</a>, choose the <a href="../../Tools/Common/TransformTool/TransformTool.html">Transform tool</a>, and click and drag on one of the transform widgets on the Transform guide shown). However, if you're working in <a href="../Modes/Modes.html">Point, Edge or Polygon mode</a>, you may also click in the 3D View to select parts of objects to edit.</p>						<p>You can also move the camera around by clicking and dragging. If you hold down the Alt key, the camera will rotate around a central point.</p>						<p><b>Note</b><br>							Since the 3D View is an OpenGL preview, some advanced features do not show up, such as complex material properties. You must render a scene using the <a href="../../Render/Renderer.html">Renderer</a> before these effects will be visible.</p>					</div>					<div align="center">						<p></p>					</div>				</td>			</tr>		</table>	
 <!-- footer -->
 <script language="javascript" type="text/javascript">footer();</script>
 <!-- footer end-->
 </body>
-
-</html>
+</html>
